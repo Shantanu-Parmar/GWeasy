@@ -1,25 +1,28 @@
 import tkinter as tk
-from tkinter import filedialog, scrolledtext, ttk,Canvas,messagebox
+from tkinter import filedialog, scrolledtext, ttk,Canvas,messagebox,Entry, Button
 import threading
 import subprocess
 import os
 from PIL import Image, ImageTk
-import tkinter as tk
-from tkinter import scrolledtext
+from cefpython3 import cefpython as cef
+import sys
+
 
 class Application:
     def __init__(self, root):
         self.root = root
-        self.root.title("Gravfetch and OMICRON Processing")
-
+        self.root.title("GWEasy")
+        self.root.geometry("1024x768")
         # Setup the main notebook (tab structure)
         self.notebook = ttk.Notebook(self.root)
         self.notebook.grid(row=0, column=0, sticky="nsew")
-
+        
         # Configure root window to allow resizing
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
-
+        self.gwosc_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.gwosc_tab, text="GWOSCRef")
+        self.gwosc_tab = GWOSCApp(self.gwosc_tab,self.root)
         # Add the first tab for script execution (Gravfetch)
         self.gravfetch_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.gravfetch_tab, text="Gravfetch")
@@ -28,10 +31,13 @@ class Application:
         self.omicron_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.omicron_tab, text="OMICRON")
 
+        
         # Initialize both GUIs (Gravfetch and OMICRON) in their respective tabs
+        
         self.gravfetch_app = GravfetchApp(self.gravfetch_tab)
         self.omicron_app = OmicronApp(self.omicron_tab)
-
+        
+        
 class TerminalFrame(tk.Frame):
     def __init__(self, parent, row, column, rowspan=1, columnspan=1, height=15, width=100):
         super().__init__(parent)
@@ -43,41 +49,8 @@ class TerminalFrame(tk.Frame):
                                                      height=height, width=width)
         self.output_text.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
         self.output_text.config(state="disabled")  # Prevent user editing
-
-        # Image label for logo
-        self.image_label = tk.Label(self, bg="black")
-        self.image_label.place(relx=0.5, rely=0.5, anchor="center")  # Initial centering
-
-        # Trigger image update
-        self.after(100, self.update_logo_image)
-
-        # Bind resize event
-        self.bind("<Configure>", lambda event: self.update_logo_image())
-
         # Place frame using grid
         self.grid(row=row, column=column, rowspan=rowspan, columnspan=columnspan, sticky="nsew", padx=10, pady=10)
-
-    def update_logo_image(self):
-        """Loads 'bkl.png', scales it 30% larger, and keeps it centered."""
-        try:
-            img = Image.open("bkl.png")
-
-            # Get terminal frame size
-            frame_width = self.output_text.winfo_width()
-            frame_height = self.output_text.winfo_height()
-
-            # Scale logo to 40% of terminal height (30% larger than before)
-            logo_size = int(frame_height * 0.4)  # Adjusted for increased size
-            img = img.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
-
-            self.bg_image = ImageTk.PhotoImage(img)
-            self.image_label.config(image=self.bg_image)
-
-            # Recenter image
-            self.image_label.place(relx=0.5, rely=0.5, anchor="center")
-
-        except Exception as e:
-            print("Error loading logo image:", e)
 
     def append_output(self, text, color="white"):
         """Append text to the terminal and auto-scroll."""
@@ -503,7 +476,7 @@ class GravfetchApp:
         self.channel_csv_file = ""
         self.execution_running = False
         self.process = None
-        self.gwfout_path = ""
+        self.gwfout_path = "./gwfout/"
         # Setup Execution Tab
         self.setup_execution_tab()
 
@@ -620,7 +593,90 @@ class GravfetchApp:
         """Send output to the terminal"""
         self.terminal.append_output(text)
 
+
+class GWOSCApp:
+    def __init__(self, master, root):
+        self.master = master
+        self.root = root  # Needed for scheduling CEF events
+        self.browser = None
+
+        # Navigation Bar UI
+        self.navbar = tk.Frame(master, bg="gray", height=40)
+        self.navbar.pack(fill="x")
+
+        self.back_btn = Button(self.navbar, text="◀", command=self.go_back)
+        self.back_btn.pack(side="left")
+
+        self.forward_btn = Button(self.navbar, text="▶", command=self.go_forward)
+        self.forward_btn.pack(side="left")
+
+        self.reload_btn = Button(self.navbar, text="🔄", command=self.reload_page)
+        self.reload_btn.pack(side="left")
+
+        self.url_entry = Entry(self.navbar, width=50)
+        self.url_entry.pack(side="left", fill="x", expand=True)
+        self.url_entry.bind("<Return>", self.load_url)
+
+        # Frame for Browser
+        self.browser_frame = tk.Frame(master, bg="black")
+        self.browser_frame.pack(fill="both", expand=True)
+
+        # Initialize CEF in the UI thread
+        self.root.after(100, self.init_cef)
+        self.master.bind("<Configure>", self.on_resize)  # Resize handling
+
+    def init_cef(self):
+        """Initializes CEF and creates the browser."""
+        sys.excepthook = cef.ExceptHook  # Catch CEF exceptions
+        cef.Initialize()
+
+        # Create browser after the widget is ready
+        self.master.after(500, self.create_browser)
+
+        # Start CEF message loop inside Tkinter's event loop
+        self.master.after(10, self.cef_loop)
+
+    def create_browser(self):
+        """Embeds the browser inside the GWOSCRef tab."""
+        window_info = cef.WindowInfo()
+        window_info.SetAsChild(self.browser_frame.winfo_id())
+
+        self.browser = cef.CreateBrowserSync(window_info, url="https://gwosc.org/data/")
+        self.url_entry.insert(0, "https://gwosc.org/data/")  # Show URL
+
+    def cef_loop(self):
+        """Runs CEF's message loop inside Tkinter's event loop."""
+        cef.MessageLoopWork()
+        self.master.after(10, self.cef_loop)
+
+    def on_resize(self, event=None):
+        """Handles resizing the browser when the window changes."""
+        if self.browser:
+            width = self.browser_frame.winfo_width()
+            height = self.browser_frame.winfo_height()
+            if width > 0 and height > 0:
+                self.browser.SetBounds(0, 0, width, height)
+
+    def go_back(self):
+        if self.browser:
+            self.browser.GoBack()
+
+    def go_forward(self):
+        if self.browser:
+            self.browser.GoForward()
+
+    def reload_page(self):
+        if self.browser:
+            self.browser.Reload()
+
+    def load_url(self, event=None):
+        url = self.url_entry.get()
+        if self.browser and url:
+            self.browser.LoadUrl(url)
+
 if __name__ == "__main__":
     root = tk.Tk()
     app = Application(root)
     root.mainloop()
+
+    cef.Shutdown()  # Ensure CEF shuts down properly
