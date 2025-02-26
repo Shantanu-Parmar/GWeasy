@@ -71,8 +71,10 @@ with open(omicron_script, 'a') as omicron_file:
                     dt = end_time - start_time  # Duration of the data (file_duration)
                     print(f"Data start time: {t0}, Duration: {dt}")
 
+                    # Convert backslashes to double forward slashes for fin.ffl
+                    relative_path = os.path.relpath(output_file, current_dir).replace("\\", "")
+                    
                     # Write the information to the channel-specific fin.ffl file
-                    relative_path = os.path.relpath(output_file, current_dir)
                     fin.write(f"./{relative_path} {start_time} {dt} 0 0\n")
                     print(f"Added to {fin_file_path}: ./{relative_path} {start_time} {dt} 0 0")
 

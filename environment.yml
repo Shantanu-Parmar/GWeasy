@@ -1,0 +1,16 @@
+name: GWeasy
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - python=3.8
+  - omicron
+  - gwpy
+  - gwosc
+  - nds2-client
+  - python-nds2-client
+  - pandas
+  - python-framel
+  - pip
+  - pip:
+      - -r requirements.txt
