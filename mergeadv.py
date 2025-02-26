@@ -137,6 +137,9 @@ class OmicronApp:
         self.save_button.pack(side="left", padx=10)  
         self.start_button = tk.Button(button_frame, text="Start OMICRON", command=self.run_omicron_script)
         self.start_button.pack(side="left", padx=10)  
+        self.custom_segs_btn = tk.Button(button_frame, text="Custom Segs", command=self.open_custom_segs_dialog)
+        self.custom_segs_btn.pack(side="left", padx=10)  # Adjust position as needed
+
 
         # Parameter Frame
         param_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
@@ -312,25 +315,43 @@ class OmicronApp:
     
     
     def start_omicron_process(self):
-        """Run the OMICRON script in a separate process."""
+        """Run the OMICRON command directly in WSL."""
         try:
-            commands = [
-                "wsl bash -c \"source /root/miniconda3/bin/activate omicron && cd /mnt/c/Users/HP/Desktop/GWeasy && ./run_omicron.sh\""
-            ]
-            for cmd in commands:
-                self.append_output(f"Running: {cmd}\n")
-                process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-                for line in process.stdout:
-                    self.append_output(line)
-                for line in process.stderr:
-                    self.append_output(f"ERROR: {line}")
-                process.wait()
-                if process.returncode != 0:
-                    self.append_output(f"Error: Command failed with return code {process.returncode}.\n")
-                    break  # Stop execution if a command fails
-            self.append_output("OMICRON process completed.\n")
-        except subprocess.CalledProcessError as e:
-            self.append_output(f"Error executing the OMICRON script: {e}\n")
+            # Get the currently selected FFL file
+            ffl_file = self.ui_elements["DATA FFL"].get()
+            if not ffl_file or not os.path.exists(ffl_file):
+                self.append_output("Error: No valid .ffl file selected.\n")
+                return
+
+            # Extract first and last time segment from the .ffl file
+            with open(ffl_file, "r") as f:
+                lines = f.readlines()
+                if len(lines) == 0:
+                    self.append_output("Error: The .ffl file is empty.\n")
+                    return
+                first_time_segment = lines[0].split()[1]  # Extract first time segment
+                last_time_segment = lines[-1].split()[1]  # Extract last time segment
+
+            # Construct the OMICRON command
+            omicron_cmd = f"omicron {first_time_segment} {last_time_segment} ./config.txt > omicron.out 2>&1"
+
+            # Full WSL command
+            wsl_command = f"wsl bash -c \"source /root/miniconda3/bin/activate omicron && cd /mnt/c/Users/HP/Desktop/GWeasy && {omicron_cmd}\""
+
+            # Run command in a separate process
+            self.append_output(f"Running: {wsl_command}\n")
+            process = subprocess.Popen(wsl_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+            for line in process.stdout:
+                self.append_output(line)
+            for line in process.stderr:
+                self.append_output(f"ERROR: {line}")
+
+            process.wait()
+            if process.returncode != 0:
+                self.append_output(f"Error: Command failed with return code {process.returncode}.\n")
+            else:
+                self.append_output("OMICRON process completed successfully.\n")
         except Exception as e:
             self.append_output(f"Unexpected error: {e}\n")
 
@@ -338,6 +359,83 @@ class OmicronApp:
             """Send output to the terminal"""
             self.terminal.append_output(text)
     
+
+    
+    #custom ffl
+    def open_custom_segs_dialog(self):
+        """ Opens a GUI window to select a channel and time segments (grid layout). """
+        channel_dir = filedialog.askdirectory(initialdir="./gwfout", title="Select Channel Directory")
+        if not channel_dir:
+            return  # User canceled selection
+
+        segments = [d for d in os.listdir(channel_dir) if os.path.isdir(os.path.join(channel_dir, d))]
+        if not segments:
+            messagebox.showerror("Error", "No time segments found in selected channel.")
+            return
+
+        # Create selection window
+        selection_window = tk.Toplevel(self.root)
+        selection_window.title("Select Time Segments")
+        
+        tk.Label(selection_window, text="Select Time Segments:", font=("Arial", 12)).grid(row=0, column=0, columnspan=2)
+
+        # Create checkboxes for each segment
+        selected_segments = {}
+        for idx, segment in enumerate(segments):
+            selected_segments[segment] = tk.BooleanVar()
+            chk = tk.Checkbutton(selection_window, text=segment, variable=selected_segments[segment])
+            chk.grid(row=(idx // 2) + 1, column=idx % 2, sticky="w", padx=5, pady=2)
+
+        # Confirm button
+        def confirm_selection():
+            selected = [seg for seg, var in selected_segments.items() if var.get()]
+            if not selected:
+                messagebox.showerror("Error", "No segments selected.")
+            else:
+                self.generate_fin_ffl(channel_dir, selected)
+                selection_window.destroy()
+
+        # Toggle All button functionality
+        def toggle_all():
+            all_selected = all(var.get() for var in selected_segments.values())
+            for var in selected_segments.values():
+                var.set(not all_selected)  # Toggle the selection state
+
+        tk.Button(selection_window, text="Confirm", command=confirm_selection).grid(row=(len(segments) // 2) + 2, column=0, columnspan=2, pady=10)
+        tk.Button(selection_window, text="Toggle All", command=toggle_all).grid(row=(len(segments) // 2) + 2, column=1, columnspan=2, pady=10)
+
+    def generate_fin_ffl(self, channel_dir, selected_segments):
+        """ Generates fin.ffl file with correctly formatted paths and timestamps, then preselects it in the UI. """
+        fin_ffl_path = os.path.join(channel_dir, "fin.ffl")
+        
+        with open(fin_ffl_path, "w") as ffl_file:
+            for segment in selected_segments:
+                segment_path = os.path.join(channel_dir, segment)
+                gwf_files = [file for file in os.listdir(segment_path) if file.endswith(".gwf")]
+                
+                if not gwf_files:
+                    continue  # Skip if no GWF files
+                
+                gwf_file_path = os.path.join(segment_path, gwf_files[0])
+                gwf_file_path = os.path.relpath(gwf_file_path, start=".")  # Truncate path to start from `./`
+                gwf_file_path = gwf_file_path.replace("\\", "/")  # Convert \ to /
+
+                segment_parts = segment.split("_")
+                start_time = segment_parts[0]  # Use the first timestamp as is
+                duration = int(segment_parts[1]) - int(segment_parts[0])  # Calculate duration
+                
+                ffl_file.write(f"./{gwf_file_path} {start_time} {duration} 0 0\n")
+
+        # **Automatically select the generated fin.ffl file**
+        relative_ffl_path = os.path.relpath(fin_ffl_path, os.getcwd()).replace("\\", "/")
+        self.ui_elements["DATA FFL"].set(relative_ffl_path)
+        
+        messagebox.showinfo("Success", f"fin.ffl created and selected: {relative_ffl_path}")
+
+
+
+
+
 
 
 class GravfetchApp:
