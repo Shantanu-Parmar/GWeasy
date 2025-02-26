@@ -7,8 +7,6 @@ from PIL import Image, ImageTk
 import tkinter as tk
 from tkinter import scrolledtext
 
-
-
 class Application:
     def __init__(self, root):
         self.root = root
@@ -130,6 +128,7 @@ class OmicronApp:
         for i in range(4):
             self.scrollable_frame.grid_columnconfigure(i, weight=1)
 
+
         # Button Frame
         button_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
         button_frame.grid(row=10, column=0, columnspan=4, pady=10, sticky="ew")
@@ -139,8 +138,6 @@ class OmicronApp:
         self.start_button.pack(side="left", padx=10)  
         self.custom_segs_btn = tk.Button(button_frame, text="Custom Segs", command=self.open_custom_segs_dialog)
         self.custom_segs_btn.pack(side="left", padx=10)  # Adjust position as needed
-
-
         # Parameter Frame
         param_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
         param_frame.grid(row=11, column=0, columnspan=4, pady=10, sticky="ew")
@@ -150,7 +147,6 @@ class OmicronApp:
         self.create_entry("Mismatch Max:", "PARAMETER MISMATCHMAX", param_frame, 1, 10)
         self.create_entry("SNR Threshold:", "PARAMETER SNRTHRESHOLD", param_frame, 2, 0)
         self.create_entry("PSD Length:", "PARAMETER PSDLENGTH", param_frame, 2, 10)
-
         # Output Frame
         output_frame = tk.Frame(self.scrollable_frame, bd=2, relief="groove", padx=5, pady=5)
         output_frame.grid(row=12, column=0, columnspan=4, pady=10, sticky="ew")
@@ -193,15 +189,52 @@ class OmicronApp:
         entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
         self.ui_elements[key] = var
 
-    def create_folder_selector(self, label, key, is_directory=False, frame=None,row=0,column=0):
-        """Creates a file/directory selector inside the given frame (or default to scrollable_frame)."""
+    def create_folder_selector(self, label, key, is_directory=False, frame=None, row=0, column=0):
+        """Creates a file/directory selector inside the given frame (or default to scrollable_frame).
+        Additionally, sets a default output path if not specified and creates the directory if needed,
+        while ensuring the path is relative from the current working directory."""
+        
+        # Target frame for the UI element
         target_frame = frame if frame else self.scrollable_frame
+        
+        # Create the label
         tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
+        
+        # Get the value for the directory path, or set a default if not provided
         var = tk.StringVar(value=self.config_data.get(key, ""))  # Preserve previous selection
+        
+        # Check if a directory path is provided, otherwise set default
+        dir_path = var.get()
+        if not dir_path:
+            # Default directory (e.g., "OmicronOut" in the current directory)
+            dir_path = os.path.join(os.getcwd(), "OmicronOut")
+            var.set(dir_path)  # Set the default path
+        
+        # Convert the path to a relative path based on the current working directory
+        abs_path = os.path.abspath(dir_path)  # Get absolute path first
+        rel_path = os.path.relpath(abs_path, os.getcwd())  # Convert to relative path
+        
+        # Ensure the relative path starts with './'
+        if not rel_path.startswith('./'):
+            rel_path = './' + rel_path
+        
+        # Set the relative path back to the variable
+        var.set(rel_path)
+        
+        # Check if the directory exists, if not, create it
+        if not os.path.exists(rel_path):
+            os.makedirs(rel_path)
+            self.append_output(f"Directory '{rel_path}' was created as it didn't exist.\n")
+        
+        # Create the 'Select' button to choose the folder
         button = tk.Button(target_frame, text="Select", command=lambda: self.select_file(var, is_directory))
-        button.grid(row=row, column=2,columnspan=5, padx=5, pady=5)
+        button.grid(row=row, column=2, columnspan=5, padx=5, pady=5)
+        
+        # Create the readonly entry for displaying the selected folder path
         entry = tk.Entry(target_frame, textvariable=var, width=40, state="readonly")
         entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
+        
+        # Store the variable in ui_elements
         self.ui_elements[key] = var
 
     def create_output_products_selection(self, frame=None, row=0, column=0):
@@ -236,19 +269,55 @@ class OmicronApp:
         self.ui_elements[key] = var
 
     def create_channel_dropdown(self, row=0):
+        """Creates a dropdown for selecting a channel and updates it dynamically every few seconds."""
+        # Label for the dropdown
         tk.Label(self.scrollable_frame, text="Select Channel:").grid(row=row, column=0, sticky="w")
-        channel_options = self.populate_channels()
-        self.ui_elements["DATA CHANNELS"] = tk.StringVar(value=channel_options[0])
-        self.channel_dropdown = ttk.Combobox(self.scrollable_frame, textvariable=self.ui_elements["DATA CHANNELS"], values=channel_options)
+
+        # Function to populate the channels
+        def populate_channels():
+            """Populate the channel list by reading the files in the gwfout directory."""
+            gwfout_path = os.path.join(os.getcwd(), "gwfout")
+            if os.path.exists(gwfout_path) and os.path.isdir(gwfout_path):
+                # Get the list of subdirectories (channels)
+                channels = [d for d in os.listdir(gwfout_path) if os.path.isdir(os.path.join(gwfout_path, d))]
+                if not channels:  # If no channels found
+                    channels = ["No Channels Available"]
+            else:
+                channels = ["No Channels Available"]
+            return channels
+
+        # Function to update the dropdown with the current list of channels
+        def update_channel_dropdown():
+            """Update the channel dropdown in real-time based on current contents of the gwfout directory."""
+            current_selection = self.ui_elements["DATA CHANNELS"].get()  # Save the current selection
+            channel_options = populate_channels()
+            
+            # Update the combobox with the new list of channels
+            self.channel_dropdown['values'] = channel_options
+            
+            # Restore the previous selection if possible
+            if current_selection in channel_options:
+                self.ui_elements["DATA CHANNELS"].set(current_selection)
+            else:
+                self.ui_elements["DATA CHANNELS"].set(channel_options[0])  # Default to the first channel if the previous selection is no longer available
+
+        # Create the dropdown (Combobox) with initial values
+        self.ui_elements["DATA CHANNELS"] = tk.StringVar()
+        self.channel_dropdown = ttk.Combobox(self.scrollable_frame, textvariable=self.ui_elements["DATA CHANNELS"], values=[])
         self.channel_dropdown.grid(row=row, column=1, sticky="ew")
 
-    def populate_channels(self):
-        gwfout_path = os.path.join(os.getcwd(), "gwfout")
-        if os.path.exists(gwfout_path) and os.path.isdir(gwfout_path):
-            channels = [d for d in os.listdir(gwfout_path) if os.path.isdir(os.path.join(gwfout_path, d))]
-        else:
-            channels = ["No Channels Found"]
-        return channels
+        # Initial population of the dropdown
+        update_channel_dropdown()
+
+        # Periodic checking for new channels every 2 seconds
+        def check_for_new_channels():
+            """Check for new channels periodically and update the dropdown."""
+            update_channel_dropdown()
+            self.scrollable_frame.after(4000, check_for_new_channels)  # Check again in 2 seconds
+
+        # Start checking for new channels
+        check_for_new_channels()
+
 
     def select_file(self, var, is_directory=False):
         file_path = filedialog.askdirectory() if is_directory else filedialog.askopenfilename()
@@ -301,6 +370,7 @@ class OmicronApp:
                 else:
                     formatted_line = f"{key}\t{value}\n"  # Default formatting
                 file.write(formatted_line)
+
         self.append_output(f"Config file saved at '{self.config_path}' with the correct format.\n")
         
         messagebox.showinfo("Success", "Configuration has been saved successfully!")
@@ -360,7 +430,6 @@ class OmicronApp:
             self.terminal.append_output(text)
     
 
-    
     #custom ffl
     def open_custom_segs_dialog(self):
         """ Opens a GUI window to select a channel and time segments (grid layout). """
@@ -412,31 +481,20 @@ class OmicronApp:
             for segment in selected_segments:
                 segment_path = os.path.join(channel_dir, segment)
                 gwf_files = [file for file in os.listdir(segment_path) if file.endswith(".gwf")]
-                
                 if not gwf_files:
                     continue  # Skip if no GWF files
-                
                 gwf_file_path = os.path.join(segment_path, gwf_files[0])
                 gwf_file_path = os.path.relpath(gwf_file_path, start=".")  # Truncate path to start from `./`
                 gwf_file_path = gwf_file_path.replace("\\", "/")  # Convert \ to /
-
                 segment_parts = segment.split("_")
                 start_time = segment_parts[0]  # Use the first timestamp as is
                 duration = int(segment_parts[1]) - int(segment_parts[0])  # Calculate duration
-                
                 ffl_file.write(f"./{gwf_file_path} {start_time} {duration} 0 0\n")
 
         # **Automatically select the generated fin.ffl file**
         relative_ffl_path = os.path.relpath(fin_ffl_path, os.getcwd()).replace("\\", "/")
         self.ui_elements["DATA FFL"].set(relative_ffl_path)
-        
         messagebox.showinfo("Success", f"fin.ffl created and selected: {relative_ffl_path}")
-
-
-
-
-
-
 
 class GravfetchApp:
     def __init__(self, root):
