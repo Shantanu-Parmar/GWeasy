@@ -3,6 +3,10 @@ from tkinter import filedialog, scrolledtext, ttk,Canvas,messagebox
 import threading
 import subprocess
 import os
+from PIL import Image, ImageTk
+import tkinter as tk
+from tkinter import scrolledtext
+
 
 
 class Application:
@@ -30,12 +34,10 @@ class Application:
         self.gravfetch_app = GravfetchApp(self.gravfetch_tab)
         self.omicron_app = OmicronApp(self.omicron_tab)
 
-
-
 class TerminalFrame(tk.Frame):
     def __init__(self, parent, row, column, rowspan=1, columnspan=1, height=15, width=100):
         super().__init__(parent)
-        
+
         # Configure terminal output widget
         self.output_text = scrolledtext.ScrolledText(self, wrap=tk.WORD, 
                                                      bg="black", fg="white",
@@ -44,20 +46,52 @@ class TerminalFrame(tk.Frame):
         self.output_text.grid(row=0, column=0, sticky="nsew", padx=5, pady=5)
         self.output_text.config(state="disabled")  # Prevent user editing
 
-        # Place this frame using grid
+        # Image label for logo
+        self.image_label = tk.Label(self, bg="black")
+        self.image_label.place(relx=0.5, rely=0.5, anchor="center")  # Initial centering
+
+        # Trigger image update
+        self.after(100, self.update_logo_image)
+
+        # Bind resize event
+        self.bind("<Configure>", lambda event: self.update_logo_image())
+
+        # Place frame using grid
         self.grid(row=row, column=column, rowspan=rowspan, columnspan=columnspan, sticky="nsew", padx=10, pady=10)
+
+    def update_logo_image(self):
+        """Loads 'bkl.png', scales it 30% larger, and keeps it centered."""
+        try:
+            img = Image.open("bkl.png")
+
+            # Get terminal frame size
+            frame_width = self.output_text.winfo_width()
+            frame_height = self.output_text.winfo_height()
+
+            # Scale logo to 40% of terminal height (30% larger than before)
+            logo_size = int(frame_height * 0.4)  # Adjusted for increased size
+            img = img.resize((logo_size, logo_size), Image.Resampling.LANCZOS)
+
+            self.bg_image = ImageTk.PhotoImage(img)
+            self.image_label.config(image=self.bg_image)
+
+            # Recenter image
+            self.image_label.place(relx=0.5, rely=0.5, anchor="center")
+
+        except Exception as e:
+            print("Error loading logo image:", e)
 
     def append_output(self, text, color="white"):
         """Append text to the terminal and auto-scroll."""
         self.output_text.config(state="normal")
-        self.output_text.insert(tk.END, text, color)
+        self.output_text.insert(tk.END, text + "\n")
         self.output_text.yview(tk.END)  # Auto-scroll to latest output
         self.output_text.config(state="disabled")
+
 
 class OmicronApp:
     def __init__(self, root):
         self.root = root
-        
         self.config_path = "config.txt"
         self.config_data = {}
         self.entries = {}
@@ -84,51 +118,126 @@ class OmicronApp:
 
         # Terminal Output
         # Use shared terminal frame
-        self.terminal = TerminalFrame(self.root, row=4, column=0, columnspan=2, height=20, width=80)  # Pass the shared terminal instance
-
+        self.terminal = TerminalFrame(self.root, row=4, column=0, columnspan=2, height=10, width=80)  # Pass the shared terminal instance
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
-
         self.create_widgets()
 
     def create_widgets(self):
-        self.create_channel_dropdown()
-        self.create_file_selector("Select .ffl File:", "DATA FFL")
-        self.create_dropdown("Sampling Frequency:", "DATA SAMPLEFREQUENCY", ["1024", "2048", "4096"])
-        self.create_double_entry("Timing (Start, End):", "PARAMETER TIMING")
-        self.create_double_entry("Frequency Range (Min, Max):", "PARAMETER FREQUENCYRANGE")
-        self.create_double_entry("Q-Range (Min, Max):", "PARAMETER QRANGE")
-        self.create_entry("Mismatch Max:", "PARAMETER MISMATCHMAX")
-        self.create_entry("SNR Threshold:", "PARAMETER SNRTHRESHOLD")
-        self.create_entry("PSD Length:", "PARAMETER PSDLENGTH")
-        self.create_file_selector("Select Output Directory:", "OUTPUT DIRECTORY", is_directory=True)
-        self.create_output_products_selection()
-        self.create_dropdown("Select Format:", "OUTPUT FORMAT", ["root", "hdf5", "Format3"])
-        self.create_slider("Verbosity (0-5):", "OUTPUT VERBOSITY", 0, 5)
+        self.create_channel_dropdown(row=1)
+        self.create_file_selector("Select .ffl File:", "DATA FFL",row=2,column=0)
+        self.create_dropdown("Sampling Frequency:", "DATA SAMPLEFREQUENCY", ["1024", "2048", "4096"],row=3,column=0)
+        # Ensure proper column expansion
+        for i in range(4):
+            self.scrollable_frame.grid_columnconfigure(i, weight=1)
 
-        # Buttons
-        self.save_button = tk.Button(self.scrollable_frame, text="Save Config", command=self.save_config)
-        self.save_button.grid(row=10, column=0, pady=5, sticky="ew")
-        
-        self.start_button = tk.Button(self.scrollable_frame, text="Start OMICRON", command=self.run_omicron_script)
-        self.start_button.grid(row=11, column=0, pady=10, sticky="ew")
-       
-    def create_output_products_selection(self):
-        tk.Label(self.scrollable_frame, text="Select Output Products:").grid(row=12, column=0, sticky="w")
+        # Button Frame
+        button_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
+        button_frame.grid(row=10, column=0, columnspan=4, pady=10, sticky="ew")
+        self.save_button = tk.Button(button_frame, text="Save Config", command=self.save_config)
+        self.save_button.pack(side="left", padx=10)  
+        self.start_button = tk.Button(button_frame, text="Start OMICRON", command=self.run_omicron_script)
+        self.start_button.pack(side="left", padx=10)  
+
+        # Parameter Frame
+        param_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
+        param_frame.grid(row=11, column=0, columnspan=4, pady=10, sticky="ew")
+        self.create_double_entry("Timing:", "PARAMETER TIMING", param_frame, 0, 0)
+        self.create_double_entry("Frequency Range:", "PARAMETER FREQUENCYRANGE", param_frame, 0, 10)
+        self.create_double_entry("Q-Range:", "PARAMETER QRANGE", param_frame, 1, 0)
+        self.create_entry("Mismatch Max:", "PARAMETER MISMATCHMAX", param_frame, 1, 10)
+        self.create_entry("SNR Threshold:", "PARAMETER SNRTHRESHOLD", param_frame, 2, 0)
+        self.create_entry("PSD Length:", "PARAMETER PSDLENGTH", param_frame, 2, 10)
+
+        # Output Frame
+        output_frame = tk.Frame(self.scrollable_frame, bd=2, relief="groove", padx=5, pady=5)
+        output_frame.grid(row=12, column=0, columnspan=4, pady=10, sticky="ew")
+        self.create_folder_selector("Select Output Directory:", "OUTPUT DIRECTORY", is_directory=True, frame=output_frame,row=13,column=0)
+        self.create_output_products_selection(output_frame, row=14, column=0)
+        self.create_dropdown("Select Format:", "OUTPUT FORMAT", ["root", "hdf5", "Format3"], frame=output_frame,row=15,column=0)
+        self.create_slider("Verbosity (0-5):", "OUTPUT VERBOSITY", 0, 5, frame=output_frame,row=16,column=0)
+
+
+    #Parameters entry 
+    def create_entry(self, label, key, frame=None, row=0, col=0):
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=col, sticky="w", padx=5, pady=5)
+        var = tk.StringVar(value=self.config_data.get(key, ""))
+        entry = tk.Entry(target_frame, textvariable=var, width=15)  # Uniform width
+        entry.grid(row=row, column=col + 1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def create_double_entry(self, label, key, frame=None, row=0, col=0):
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=col, sticky="w", padx=5, pady=5)
+        var1 = tk.StringVar()
+        var2 = tk.StringVar()
+        entry_width = 15  # Same width for both fields
+        entry1 = tk.Entry(target_frame, textvariable=var1, width=entry_width)
+        entry2 = tk.Entry(target_frame, textvariable=var2, width=entry_width)
+        entry1.grid(row=row, column=col + 1, sticky="ew", padx=5, pady=5)
+        entry2.grid(row=row, column=col + 2, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = (var1, var2)
+
+    #Output fields 
+    def create_file_selector(self, label, key, is_directory=False, frame=None,row=0,column=0):
+        """Creates a file/directory selector inside the given frame (or default to scrollable_frame)."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
+        var = tk.StringVar(value=self.config_data.get(key, ""))  # Preserve previous selection
+        button = tk.Button(target_frame, text="Select", command=lambda: self.select_file(var))
+        button.grid(row=row, column=2,columnspan=5, padx=5, pady=5)
+        entry = tk.Entry(target_frame, textvariable=var, width=40, state="readonly")
+        entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def create_folder_selector(self, label, key, is_directory=False, frame=None,row=0,column=0):
+        """Creates a file/directory selector inside the given frame (or default to scrollable_frame)."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
+        var = tk.StringVar(value=self.config_data.get(key, ""))  # Preserve previous selection
+        button = tk.Button(target_frame, text="Select", command=lambda: self.select_file(var, is_directory))
+        button.grid(row=row, column=2,columnspan=5, padx=5, pady=5)
+        entry = tk.Entry(target_frame, textvariable=var, width=40, state="readonly")
+        entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def create_output_products_selection(self, frame=None, row=0, column=0):
+        """Creates checkboxes for selecting output products inside a given frame."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text="Select Output Products:").grid(row=row,column=column, sticky="w", padx=5, pady=5)
         self.ui_elements["OUTPUT PRODUCTS"] = {}
         product_options = ["triggers", "html"]
-        row_offset = 13
         for idx, product in enumerate(product_options):
             var = tk.BooleanVar(value=product in self.config_data.get("OUTPUT PRODUCTS", ""))
-            chk = tk.Checkbutton(self.scrollable_frame, text=product, variable=var)
-            chk.grid(row=row_offset + idx, column=0, sticky="w")
+            chk = tk.Checkbutton(target_frame, text=product, variable=var)
+            chk.grid(row=row, column=idx+1, sticky="w", padx=5)
             self.ui_elements["OUTPUT PRODUCTS"][product] = var
+            print(idx)
 
-    def create_channel_dropdown(self):
-        tk.Label(self.scrollable_frame, text="Select Channel:").grid(row=15, column=0, sticky="w")
+    def create_dropdown(self, label, key, options, frame=None,row=0,column=0):
+        """Creates a dropdown menu inside a given frame."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column,columnspan=5, sticky="w", padx=5, pady=5)
+        var = tk.StringVar(value=self.config_data.get(key, options[0]))
+        dropdown = ttk.Combobox(target_frame, textvariable=var, values=options)
+        dropdown.grid(row=row, column=column+1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def create_slider(self, label, key, min_val, max_val, frame=None,row=0,column=0):
+        """Creates a slider for selecting a numerical value."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
+        var = tk.IntVar(value=self.config_data.get(key, min_val))
+        slider = tk.Scale(target_frame, from_=min_val, to=max_val, orient="horizontal", variable=var)
+        slider.grid(row=row, column=column+1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def create_channel_dropdown(self, row=0):
+        tk.Label(self.scrollable_frame, text="Select Channel:").grid(row=row, column=0, sticky="w")
         channel_options = self.populate_channels()
         self.ui_elements["DATA CHANNELS"] = tk.StringVar(value=channel_options[0])
         self.channel_dropdown = ttk.Combobox(self.scrollable_frame, textvariable=self.ui_elements["DATA CHANNELS"], values=channel_options)
-        self.channel_dropdown.grid(row=16, column=0, sticky="ew")
+        self.channel_dropdown.grid(row=row, column=1, sticky="ew")
 
     def populate_channels(self):
         gwfout_path = os.path.join(os.getcwd(), "gwfout")
@@ -138,49 +247,12 @@ class OmicronApp:
             channels = ["No Channels Found"]
         return channels
 
-    def create_dropdown(self, label, key, options):
-        tk.Label(self.scrollable_frame, text=label).grid(sticky="w")
-        var = tk.StringVar(value=self.config_data.get(key, options[0]))
-        dropdown = ttk.Combobox(self.scrollable_frame, textvariable=var, values=options)
-        dropdown.grid(sticky="ew")
-        self.ui_elements[key] = var
-
-
-    def create_entry(self, label, key):
-        tk.Label(self.scrollable_frame, text=label).grid(sticky="w")
-        var = tk.StringVar(value=self.config_data.get(key, ""))
-        entry = tk.Entry(self.scrollable_frame, textvariable=var)
-        entry.grid(sticky="ew")
-        self.ui_elements[key] = var
-
-    def create_double_entry(self, label, key):
-        tk.Label(self.scrollable_frame, text=label).grid(sticky="w")
-        var1 = tk.StringVar()
-        var2 = tk.StringVar()
-        entry1 = tk.Entry(self.scrollable_frame, textvariable=var1)
-        entry2 = tk.Entry(self.scrollable_frame, textvariable=var2)
-        entry1.grid(sticky="ew")
-        entry2.grid(sticky="ew")
-        self.ui_elements[key] = (var1, var2)
-
-    def create_file_selector(self, label, key, is_directory=False):
-        tk.Label(self.scrollable_frame, text=label).grid(sticky="w")
-        var = tk.StringVar()
-        button = tk.Button(self.scrollable_frame, text="Select", command=lambda: self.select_file(var, is_directory))
-        button.grid(sticky="ew")
-        self.ui_elements[key] = var
-
-    def create_slider(self, label, key, min_val, max_val):
-        tk.Label(self.scrollable_frame, text=label).grid(sticky="w")
-        var = tk.IntVar()
-        tk.Scale(self.scrollable_frame, from_=min_val, to=max_val, orient=tk.HORIZONTAL, variable=var).grid(sticky="ew")
-        self.ui_elements[key] = var
-
-
     def select_file(self, var, is_directory=False):
         file_path = filedialog.askdirectory() if is_directory else filedialog.askopenfilename()
         if file_path:
-            var.set(file_path)
+            relative_path = os.path.relpath(file_path, os.getcwd())  # Convert to relative path
+            var.set(relative_path)
+            print(f"FFL file selected: {relative_path}")  # DEBUGGING
 
     def load_config(self):
         try:
@@ -193,7 +265,8 @@ class OmicronApp:
             self.append_output("Config file not found. Using defaults.\n")
 
     def save_config(self):
-        with open(self.config_path, 'w') as file:
+        base_path = os.getcwd().replace("\\", "/")  # Get current working directory with forward slashes
+        with open(self.config_path, 'w', encoding='utf-8') as file:
             for key, var in self.ui_elements.items():
                 if isinstance(var, tuple):  # For double-entry fields
                     value = f"{var[0].get()} {var[1].get()}"
@@ -202,29 +275,31 @@ class OmicronApp:
                     value = " ".join(selected_products)
                 else:
                     value = var.get()
-
                 if key == "DATA CHANNELS":
                     parts = value.split("_", 1)  # Split at the first underscore
                     if len(parts) == 2:
                         value = parts[0] + ":" + parts[1]  # Replace only the first underscore with a colon
-
-                # If the value is a file path, keep only the last part (filename)
-                if key in ["DATA FFL", "OUTPUT DIRECTORY"]:  # Add more keys if needed
-                    value = f"./{os.path.basename(value)}" if value else value  # Avoid errors if empty
-
-                # Define spacing rules to match `config (1).txt`
+                # Convert absolute paths to relative paths based on current directory
+                if key in ["DATA FFL", "OUTPUT DIRECTORY"]:  
+                    if value:
+                        abs_path = os.path.abspath(value).replace("\\", "/")  # Convert to absolute path with `/`
+                        if abs_path.startswith(base_path):  
+                            rel_path = os.path.relpath(abs_path, base_path).replace("\\", "/")  # Convert to relative
+                            value = f"./{rel_path}"  # Format correctly
+                            print(value)
+                            print(abs_path)
+                # Keep output parameter paths relative
                 if key.startswith("DATA "):
                     formatted_line = f"{key}\t{value}\n"
                 elif key.startswith("PARAMETER "):
                     formatted_line = f"PARAMETER\t{key.split()[1]}\t{value}\n"
-                elif key.startswith("OUTPUT "):
-                    formatted_line = f"OUTPUT\t{key.split()[1]}\t{value}\n"
+                elif key.startswith("OUTPUT "):  
+                    formatted_line = f"OUTPUT\t{key.split()[1]}\t{value}\n"  # Keep paths as given
                 else:
                     formatted_line = f"{key}\t{value}\n"  # Default formatting
-
                 file.write(formatted_line)
-
-        self.append_output("Config file saved in 'config.txt' with exact format.\n")
+        self.append_output(f"Config file saved at '{self.config_path}' with the correct format.\n")
+        
         messagebox.showinfo("Success", "Configuration has been saved successfully!")
 
     def run_omicron_script(self):
@@ -242,23 +317,18 @@ class OmicronApp:
             commands = [
                 "wsl bash -c \"source /root/miniconda3/bin/activate omicron && cd /mnt/c/Users/HP/Desktop/GWeasy && ./run_omicron.sh\""
             ]
-
             for cmd in commands:
                 self.append_output(f"Running: {cmd}\n")
                 process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
                 for line in process.stdout:
                     self.append_output(line)
                 for line in process.stderr:
                     self.append_output(f"ERROR: {line}")
-                
                 process.wait()
-
                 if process.returncode != 0:
                     self.append_output(f"Error: Command failed with return code {process.returncode}.\n")
                     break  # Stop execution if a command fails
             self.append_output("OMICRON process completed.\n")
-
         except subprocess.CalledProcessError as e:
             self.append_output(f"Error executing the OMICRON script: {e}\n")
         except Exception as e:
@@ -268,6 +338,7 @@ class OmicronApp:
             """Send output to the terminal"""
             self.terminal.append_output(text)
     
+
 
 class GravfetchApp:
     def __init__(self, root):
