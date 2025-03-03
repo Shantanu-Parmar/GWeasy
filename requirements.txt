@@ -1,8 +1,5 @@
 PyQt5
-Pillow
-cefPython3
-sys
-threading
-subprocess
-os
-tkinter
+pillow
+cefpython3
+tk
+pandas

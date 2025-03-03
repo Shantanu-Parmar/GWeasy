@@ -3,8 +3,7 @@ channels:
   - conda-forge
   - anaconda
 dependencies:
-  - python=3.8
-  - omicron
+  - python = 3.9
   - gwpy
   - gwosc
   - nds2-client
@@ -12,5 +11,6 @@ dependencies:
   - pandas
   - python-framel
   - pip
+  - pillow
   - pip:
       - -r requirements.txt

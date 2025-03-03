@@ -9,6 +9,7 @@ import sys
 
 
 class Application:
+    
     def __init__(self, root):
         self.root = root
         self.root.title("GWEasy")
@@ -30,7 +31,6 @@ class Application:
         # Add the second tab for OMICRON
         self.omicron_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.omicron_tab, text="OMICRON")
-
         
         # Initialize both GUIs (Gravfetch and OMICRON) in their respective tabs
         
@@ -69,7 +69,11 @@ class OmicronApp:
         self.output_products = {}
         self.ui_elements = {}
         self.load_config()
-
+        self.project_dir = os.getcwd().replace("\\", "/")  
+        self.wsl_project_dir = f"/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}"  
+        print(f"WSL Project Directory: {self.wsl_project_dir}")  # Debugging output
+   
+   
         # Scrollable Frame
         self.canvas = tk.Canvas(root)
         self.scrollbar = ttk.Scrollbar(root, orient="vertical", command=self.canvas.yview)
@@ -164,50 +168,45 @@ class OmicronApp:
 
     def create_folder_selector(self, label, key, is_directory=False, frame=None, row=0, column=0):
         """Creates a file/directory selector inside the given frame (or default to scrollable_frame).
-        Additionally, sets a default output path if not specified and creates the directory if needed,
-        while ensuring the path is relative from the current working directory."""
-        
-        # Target frame for the UI element
+        Ensures paths are relative to the current working directory and creates the directory if missing."""
+
         target_frame = frame if frame else self.scrollable_frame
-        
-        # Create the label
+
+        # Label for the field
         tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
-        
-        # Get the value for the directory path, or set a default if not provided
-        var = tk.StringVar(value=self.config_data.get(key, ""))  # Preserve previous selection
-        
-        # Check if a directory path is provided, otherwise set default
-        dir_path = var.get()
+
+        # Get stored path or set a default
+        var = tk.StringVar(value=self.config_data.get(key, ""))
+        dir_path = var.get().strip()
+
         if not dir_path:
-            # Default directory (e.g., "OmicronOut" in the current directory)
+            # Default output directory: "./OmicronOut"
             dir_path = os.path.join(os.getcwd(), "OmicronOut")
-            var.set(dir_path)  # Set the default path
-        
-        # Convert the path to a relative path based on the current working directory
-        abs_path = os.path.abspath(dir_path)  # Get absolute path first
-        rel_path = os.path.relpath(abs_path, os.getcwd())  # Convert to relative path
-        
-        # Ensure the relative path starts with './'
-        if not rel_path.startswith('./'):
-            rel_path = './' + rel_path
-        
-        # Set the relative path back to the variable
+
+        # Convert to absolute, then to a relative path
+        abs_path = os.path.abspath(dir_path)
+        rel_path = os.path.relpath(abs_path, os.getcwd())
+
+        # Ensure the relative path starts with "./" (cross-platform compatibility)
+        if not rel_path.startswith("."):
+            rel_path = f"./{rel_path}"
+
         var.set(rel_path)
-        
-        # Check if the directory exists, if not, create it
-        if not os.path.exists(rel_path):
-            os.makedirs(rel_path)
-            self.append_output(f"Directory '{rel_path}' was created as it didn't exist.\n")
-        
-        # Create the 'Select' button to choose the folder
-        button = tk.Button(target_frame, text="Select", command=lambda: self.select_file(var, is_directory))
-        button.grid(row=row, column=2, columnspan=5, padx=5, pady=5)
-        
-        # Create the readonly entry for displaying the selected folder path
-        entry = tk.Entry(target_frame, textvariable=var, width=40, state="readonly")
+
+        # Ensure directory exists (prevent errors)
+        if not os.path.exists(abs_path):
+            os.makedirs(abs_path, exist_ok=True)  # `exist_ok=True` prevents errors if it already exists
+            self.append_output(f"Created missing directory: {rel_path}\n")
+
+        # Readonly Entry Field to display selected path
+        entry = tk.Entry(target_frame, textvariable=var, width=50, state="readonly")
         entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
-        
-        # Store the variable in ui_elements
+
+        # Select Button for File/Folder
+        button = tk.Button(target_frame, text="Select", command=lambda: self.select_file(var, is_directory))
+        button.grid(row=row, column=2, padx=5, pady=5)
+
+        # Store the variable reference
         self.ui_elements[key] = var
 
     def create_output_products_selection(self, frame=None, row=0, column=0):
@@ -356,38 +355,50 @@ class OmicronApp:
         omicron_thread = threading.Thread(target=self.start_omicron_process, daemon=True)
         omicron_thread.start()
     
-    
     def start_omicron_process(self):
-        """Run the OMICRON command directly in WSL."""
+        """Run the OMICRON command dynamically in WSL."""
         try:
-            # Get the currently selected FFL file
-            ffl_file = self.ui_elements["DATA FFL"].get()
+            # Get the selected FFL file from UI
+            ffl_file = self.ui_elements.get("DATA FFL", "").get().strip()
             if not ffl_file or not os.path.exists(ffl_file):
                 self.append_output("Error: No valid .ffl file selected.\n")
                 return
 
             # Extract first and last time segment from the .ffl file
             with open(ffl_file, "r") as f:
-                lines = f.readlines()
-                if len(lines) == 0:
-                    self.append_output("Error: The .ffl file is empty.\n")
-                    return
-                first_time_segment = lines[0].split()[1]  # Extract first time segment
-                last_time_segment = lines[-1].split()[1]  # Extract last time segment
+                lines = [line.strip().split() for line in f if line.strip()]
+            
+            if not lines or len(lines[0]) < 2 or len(lines[-1]) < 2:
+                self.append_output("Error: Invalid .ffl file format.\n")
+                return
 
+            first_time_segment = lines[0][1]
+            last_time_segment = lines[-1][1]
+
+            # Dynamically determine project directory (instead of hardcoding paths)
+            
             # Construct the OMICRON command
             omicron_cmd = f"omicron {first_time_segment} {last_time_segment} ./config.txt > omicron.out 2>&1"
 
-            # Full WSL command
-            wsl_command = f"wsl bash -c \"source /root/miniconda3/bin/activate omicron && cd /mnt/c/Users/HP/Desktop/GWeasy && {omicron_cmd}\""
+            # Full WSL command (activating the conda environment dynamically)
+            # Full WSL command (activating the conda environment dynamically)
+            wsl_command = (
+                f'wsl bash -c "source ~/.bashrc &&conda activate base && {omicron_cmd}"'
+            )
 
-            # Run command in a separate process
+
             self.append_output(f"Running: {wsl_command}\n")
-            process = subprocess.Popen(wsl_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-            for line in process.stdout:
+            # Run command asynchronously with real-time output capture
+            process = subprocess.Popen(
+                wsl_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+            )
+
+            # Stream output dynamically to the terminal
+            for line in iter(process.stdout.readline, ""):
                 self.append_output(line)
-            for line in process.stderr:
+
+            for line in iter(process.stderr.readline, ""):
                 self.append_output(f"ERROR: {line}")
 
             process.wait()
@@ -395,13 +406,14 @@ class OmicronApp:
                 self.append_output(f"Error: Command failed with return code {process.returncode}.\n")
             else:
                 self.append_output("OMICRON process completed successfully.\n")
+
         except Exception as e:
             self.append_output(f"Unexpected error: {e}\n")
 
     def append_output(self, text):
-            """Send output to the terminal"""
-            self.terminal.append_output(text)
-    
+        """Append output to the shared terminal frame."""
+        self.terminal.append_output(text)
+        
 
     #custom ffl
     def open_custom_segs_dialog(self):
