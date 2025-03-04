@@ -6,8 +6,11 @@ import os
 from PIL import Image, ImageTk
 from cefpython3 import cefpython as cef
 import sys
-
-
+import os
+import pandas as pd
+from gwpy.timeseries import TimeSeries
+import json
+HISTORY_FILE = "gravfetch_history.json"  # Define history file
 class Application:
     
     def __init__(self, root):
@@ -72,7 +75,7 @@ class OmicronApp:
         self.project_dir = os.getcwd().replace("\\", "/")  
         self.wsl_project_dir = f"/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}"  
         print(f"WSL Project Directory: {self.wsl_project_dir}")  # Debugging output
-   
+        self.GWFOUT_DIRECTORY = "./gwfout"
    
         # Scrollable Frame
         self.canvas = tk.Canvas(root)
@@ -168,10 +171,11 @@ class OmicronApp:
 
     def create_folder_selector(self, label, key, is_directory=False, frame=None, row=0, column=0):
         """Creates a file/directory selector inside the given frame (or default to scrollable_frame).
-        Ensures paths are relative to the current working directory and creates the directory if missing."""
-
+        Ensures paths are relative to the current working directory and creates the directory if missing.
+        Returns the selected relative path.
+        """
         target_frame = frame if frame else self.scrollable_frame
-
+        
         # Label for the field
         tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
 
@@ -187,15 +191,16 @@ class OmicronApp:
         abs_path = os.path.abspath(dir_path)
         rel_path = os.path.relpath(abs_path, os.getcwd())
 
-        # Ensure the relative path starts with "./" (cross-platform compatibility)
-        if not rel_path.startswith("."):
+        # Ensure the relative path uses Unix-style slashes and starts with "./" or "../"
+        rel_path = rel_path.replace("\\", "/")
+        if not rel_path.startswith(".") and not rel_path.startswith(".."):
             rel_path = f"./{rel_path}"
 
         var.set(rel_path)
 
-        # Ensure directory exists (prevent errors)
+        # Ensure directory exists
         if not os.path.exists(abs_path):
-            os.makedirs(abs_path, exist_ok=True)  # `exist_ok=True` prevents errors if it already exists
+            os.makedirs(abs_path, exist_ok=True)
             self.append_output(f"Created missing directory: {rel_path}\n")
 
         # Readonly Entry Field to display selected path
@@ -208,6 +213,9 @@ class OmicronApp:
 
         # Store the variable reference
         self.ui_elements[key] = var
+        
+        # Return the selected relative path
+        return rel_path
 
     def create_output_products_selection(self, frame=None, row=0, column=0):
         """Creates checkboxes for selecting output products inside a given frame."""
@@ -247,23 +255,40 @@ class OmicronApp:
 
         # Function to populate the channels
         def populate_channels():
-            """Populate the channel list by reading the files in the gwfout directory."""
-            gwfout_path = os.path.join(os.getcwd(), "gwfout")
-            if os.path.exists(gwfout_path) and os.path.isdir(gwfout_path):
-                # Get the list of subdirectories (channels)
-                channels = [d for d in os.listdir(gwfout_path) if os.path.isdir(os.path.join(gwfout_path, d))]
-                if not channels:  # If no channels found
-                    channels = ["No Channels Available"]
-            else:
-                channels = ["No Channels Available"]
-            return channels
+            """Get available channels from the directory and saved history."""
+            base_path = self.GWFOUT_DIRECTORY
+            channels = []  # Initialize an empty list for the channels
+
+            # Load channels from the gravfetch_history.json file if it exists
+            history_file = "gravfetch_history.json"
+            if os.path.exists(history_file):
+                try:
+                    with open(history_file, "r") as file:
+                        history_data = json.load(file)
+                        # Extract the channels from the history file
+                        if "channels" in history_data:
+                            channels.extend(history_data["channels"])
+                except (json.JSONDecodeError, KeyError) as e:
+                    print(f"Error reading history file: {e}")
+            
+            # Add directories from the base path
+            if os.path.exists(base_path) and os.path.isdir(base_path):
+                dir_channels = [
+                    d[:d.find(":", d.find(":") + 1)].replace(":", "_") + d[d.find(":", d.find(":") + 1):]  # Replace second colon
+                    if d.count(":") > 1 else d  # Only process if there are more than one colon
+                    for d in os.listdir(base_path)
+                    if os.path.isdir(os.path.join(base_path, d))
+                ]
+                channels.extend(dir_channels)  # Add found directories to the list
+
+            # Remove duplicates and return the list of available channels
+            return list(set(channels)) if channels else ["No Channels Available"]
 
         # Function to update the dropdown with the current list of channels
         def update_channel_dropdown():
             """Update the channel dropdown in real-time based on current contents of the gwfout directory."""
             current_selection = self.ui_elements["DATA CHANNELS"].get()  # Save the current selection
             channel_options = populate_channels()
-            
             # Update the combobox with the new list of channels
             self.channel_dropdown['values'] = channel_options
             
@@ -321,26 +346,34 @@ class OmicronApp:
                     value = var.get()
                 if key == "DATA CHANNELS":
                     parts = value.split("_", 1)  # Split at the first underscore
-                    if len(parts) == 2:
-                        value = parts[0] + ":" + parts[1]  # Replace only the first underscore with a colon
+                    #if len(parts) == 2:
+                        #value = parts[0] + ":" + parts[1]  # Replace only the first underscore with a colon
                 # Convert absolute paths to relative paths based on current directory
                 if key in ["DATA FFL", "OUTPUT DIRECTORY"]:  
+                    print(key)  # Debugging
                     if value:
-                        abs_path = os.path.abspath(value).replace("\\", "/")  # Convert to absolute path with `/`
+                        value = value.replace("\\", "/")  
+                        abs_path = os.path.abspath(value).replace("\\", "/")  # Ensure absolute path uses `/`
                         if abs_path.startswith(base_path):  
-                            rel_path = os.path.relpath(abs_path, base_path).replace("\\", "/")  # Convert to relative
-                            value = f"./{rel_path}"  # Format correctly
-                            print(value)
-                            print(abs_path)
-                # Keep output parameter paths relative
+                            rel_path = os.path.relpath(abs_path, base_path).replace("\\", "/")  # Convert to relative path
+                            if not rel_path.startswith(".") and not rel_path.startswith(".."):
+                                rel_path = f"./{rel_path}"
+                            value = rel_path  # Assign the corrected relative path
+                            print("Relative Path:", value)  # Debugging
+                            print("Absolute Path:", abs_path)  # Debugging
+
+                # Reconstruct the formatted line
                 if key.startswith("DATA "):
                     formatted_line = f"{key}\t{value}\n"
                 elif key.startswith("PARAMETER "):
                     formatted_line = f"PARAMETER\t{key.split()[1]}\t{value}\n"
                 elif key.startswith("OUTPUT "):  
-                    formatted_line = f"OUTPUT\t{key.split()[1]}\t{value}\n"  # Keep paths as given
+                
+                    formatted_line = f"OUTPUT\t{key.split()[1]}\t{value}\n"
                 else:
-                    formatted_line = f"{key}\t{value}\n"  # Default formatting
+                    formatted_line = f"{key}\t{value}\n"
+
+                print(f"Saving to config: {formatted_line.strip()}")  # Debugging
                 file.write(formatted_line)
 
         self.append_output(f"Config file saved at '{self.config_path}' with the correct format.\n")
@@ -489,6 +522,17 @@ class GravfetchApp:
         self.execution_running = False
         self.process = None
         self.gwfout_path = "./gwfout/"
+        self.loaded_channels = []  # Store previously used channels
+
+        # Load previous selections from JSON if available
+        if os.path.exists(HISTORY_FILE):
+            try:
+                with open(HISTORY_FILE, "r") as f:
+                    history_data = json.load(f)
+                    self.gwfout_path = history_data.get("gwfout_path", "./gwfout/")
+                    self.loaded_channels = history_data.get("channels", [])
+            except json.JSONDecodeError:
+                print("Error reading history file, starting fresh.")
         # Setup Execution Tab
         self.setup_execution_tab()
 
@@ -535,6 +579,7 @@ class GravfetchApp:
         self.gwfout_path = filedialog.askdirectory()  # Use askdirectory instead of askopenfilename
         if self.gwfout_path:  # Check if a directory was selected
             self.status_label.config(text=f"Selected Output Dir: {self.gwfout_path}")
+            self.gwfout_path = self.gwfout_path
         else:
             self.status_label.config(text="No directory selected", fg="red")
  
@@ -565,32 +610,92 @@ class GravfetchApp:
             self.execution_thread.start()
 
     def run_gravfetch_script(self):
-        """Runs the Gravfetch script."""
+        """Runs the Gravfetch script logic directly within the GUI."""
         try:
-            script_path = os.path.abspath("gravfetch.py")
-            
-            # Set the input path to be passed to the Gravfetch script
-            input_path = os.path.dirname(self.gwfout_path)
+            # Ensure the input path exists
+            if not os.path.exists(self.gwfout_path):
+                print(f"The path {self.gwfout_path} does not exist. Creating the path...")
+                os.makedirs(self.gwfout_path)
 
-            # Modify the command to include the input path as an argument
-            command = ["python", script_path, self.time_csv_file, self.channel_csv_file, input_path]
+            # Load the CSV files (time ranges and channel data)
+            time_ranges = pd.read_csv(self.time_csv_file, header=None, names=["start", "end"])
+            channels = pd.read_csv(self.channel_csv_file, header=None, skiprows=1, names=["Channel", "Sample Rate"])
 
-            # Start the process with the command and capture output
-            self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            # Debug: Check the loaded data
+            print("Loaded time ranges:")
+            print(time_ranges)
+            print("Loaded channels:")
+            print(channels)
 
-            # Process stdout and stderr to append to the output
-            for line in self.process.stdout:
-                self.append_output(line)
-            for line in self.process.stderr:
-                self.append_output(f"ERROR: {line}")
-            
-            # Wait for the process to finish
-            self.process.wait()
+            # Get the current working directory (dynamic path)
+            current_dir = os.getcwd()
 
-            # Update the UI after the script has finished running
+            # Process data for each channel
+            self.loaded_channels = []  # Reset before fetching
+            for _, channel_row in channels.iterrows():
+                channel_name = channel_row['Channel']
+                self.loaded_channels.append(channel_name)  # Store the channel name
+                sampling_rate = channel_row['Sample Rate']
+                print(f"Processing channel: {channel_name}")
+
+                # Create a directory for the channel within the input path
+                channel_dir = os.path.join(self.gwfout_path, channel_name.replace(":", "_"))  # Replace ':' with '_'
+                os.makedirs(channel_dir, exist_ok=True)
+                print(f"Created channel directory: {channel_dir}")
+
+                # Create a separate fin.ffl file for each channel inside its directory
+                fin_file_path = os.path.join(channel_dir, "fin.ffl")
+
+                # Open the channel-specific fin.ffl file for appending
+                with open(fin_file_path, 'a') as fin:
+                    for _, time_row in time_ranges.iterrows():
+                        start_time = int(time_row["start"])
+                        end_time = int(time_row["end"])
+
+                        # Try fetching data, skip if error occurs
+                        try:
+                            print(f"Fetching data for channel '{channel_name}' from {start_time} to {end_time}...")
+                            # Fetch data from GWPy
+                            data = TimeSeries.fetch(channel_name, start=start_time, end=end_time, host='nds.gwosc.org')
+
+                            # Create a subfolder for the time range within the channel folder
+                            time_dir_path = os.path.join(channel_dir, f"{start_time}_{end_time}")
+                            os.makedirs(time_dir_path, exist_ok=True)
+                            print(f"Created time directory: {time_dir_path}")
+
+                            # File path to save the GWF file
+                            output_file = os.path.join(time_dir_path, f"{channel_name.replace(':', '_')}_{start_time}_{end_time}.gwf")
+
+                            # Save the strain data in `gwf` format
+                            data.write(output_file)
+                            print(f"Aux data for channel '{channel_name}' from {start_time} to {end_time} saved to {output_file}")
+
+                            # Extract relevant data for fin.ffl
+                            t0 = data.t0  # Start time (gps_start_time)
+                            dt = end_time - start_time  # Duration of the data (file_duration)
+                            print(f"Data start time: {t0}, Duration: {dt}")
+
+                            # Convert backslashes to double forward slashes for fin.ffl
+                            relative_path = os.path.relpath(output_file, current_dir).replace("\\", "")
+
+                            # Write the information to the channel-specific fin.ffl file
+                            fin.write(f"./{relative_path} {start_time} {dt} 0 0\n")
+                            print(f"Added to {fin_file_path}: ./{relative_path} {start_time} {dt} 0 0")
+
+                        except RuntimeError as e:
+                            # If data fetching fails, log the error and continue with the next time segment
+                            print(f"Error fetching data for {channel_name} from {start_time} to {end_time}: {e}")
+                            continue  # Skip to the next time segment
+
+            # Notify user of completion
+            self.append_output("All channel-specific fin.ffl files created.\n")
+            self.append_output("Data fetching and file creation completed successfully.\n")
+
+            # Update status
             self.execution_running = False
             self.start_stop_button.config(text="Start Execution")
             self.status_label.config(text="Execution Finished", fg="green")
+            self.save_channel_history()
             self.append_output("Execution finished.\n")
 
         except Exception as e:
@@ -604,6 +709,14 @@ class GravfetchApp:
     def append_output(self, text):
         """Send output to the terminal"""
         self.terminal.append_output(text)
+    def save_channel_history(self):
+        """Save the selected channels to a JSON file for persistence."""
+        history_data = {
+            "gwfout_path": self.gwfout_path,
+            "channels": self.loaded_channels
+        }
+        with open(HISTORY_FILE, "w") as f:
+            json.dump(history_data, f, indent=4)
 
 
 class GWOSCApp:

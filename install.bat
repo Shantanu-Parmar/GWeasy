@@ -1,14 +1,14 @@
 @echo off
 echo Setting up Conda environment on Windows...
 
-:: Check if Conda is installed on Windows
+:: Step 1: Check if Conda is installed on Windows
 call conda --version >nul 2>nul
 if %errorlevel% neq 0 (
     echo Conda is not installed on Windows. Please install Anaconda or Miniconda manually.
     exit /b 1
 )
 
-:: Check if Windows Conda environment 'GWeasy' exists
+:: Step 2: Check if GWeasy Conda environment exists on Windows
 call conda env list | findstr /C:"GWeasy" >nul
 if %errorlevel% neq 0 (
     echo Creating Windows GWeasy environment...
@@ -16,32 +16,27 @@ if %errorlevel% neq 0 (
 ) else (
     echo GWeasy environment already exists in Windows.
 )
-pause
 
-:: WSL Setup
+:: Step 3: Check for WSL
 echo Checking for WSL...
 wsl echo "WSL is available."
-pause
 
-:: Ensure Miniconda is installed in WSL (User Directory)
+:: Step 4: Ensure Miniconda is installed in WSL if not present
 wsl bash -c "[ ! -d $HOME/miniconda ] && echo 'Installing Miniconda in WSL...' && wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && bash ~/miniconda.sh -b -p $HOME/miniconda && rm ~/miniconda.sh || echo 'Miniconda is already installed in WSL.'"
-pause
 
-:: Ensure Miniconda is in PATH permanently
-wsl bash -c "echo 'export PATH=$HOME/miniconda/bin:$PATH' >> ~/.bashrc && echo 'export PATH=$HOME/miniconda/bin:$PATH' >> ~/.profile"
-pause
+:: Step 5: Ensure Miniconda is in PATH permanently in WSL
+wsl bash -c "if ! grep -q 'miniconda' ~/.bashrc; then echo 'export PATH=\$HOME/miniconda/bin:\$PATH' >> ~/.bashrc; fi"
 
-:: Apply PATH changes for this session and install Omicron
-wsl bash -c "export PATH=$HOME/miniconda/bin:$PATH && $HOME/miniconda/bin/conda install -c conda-forge omicron -y"
-pause
+:: Step 6: Apply changes to PATH and install Omicron (if not installed)
+wsl bash -c "source ~/.bashrc && conda activate base && conda list | grep -q omicron || conda install -c conda-forge omicron -y"
 
 echo WSL setup done.
 
-:: Ensure Windows Conda environment has necessary packages
+:: Step 7: Ensure Windows Conda environment has necessary packages
 call conda activate GWeasy 
 call pip install -r requirements.txt
 
-:: Run Python script (LAST STEP)
+:: Step 8: Run Python script (LAST STEP)
 python GWeasy.py
 
 pause >nul
