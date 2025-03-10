@@ -6,10 +6,10 @@ import os
 from PIL import Image, ImageTk
 from cefpython3 import cefpython as cef
 import sys
-import os
 import pandas as pd
 from gwpy.timeseries import TimeSeries
 import json
+
 HISTORY_FILE = "gravfetch_history.json"  # Define history file
 class Application:
     
@@ -257,32 +257,55 @@ class OmicronApp:
         def populate_channels():
             """Get available channels from the directory and saved history."""
             base_path = self.GWFOUT_DIRECTORY
-            channels = []  # Initialize an empty list for the channels
-
-            # Load channels from the gravfetch_history.json file if it exists
             history_file = "gravfetch_history.json"
-            if os.path.exists(history_file):
-                try:
-                    with open(history_file, "r") as file:
-                        history_data = json.load(file)
-                        # Extract the channels from the history file
-                        if "channels" in history_data:
-                            channels.extend(history_data["channels"])
-                except (json.JSONDecodeError, KeyError) as e:
-                    print(f"Error reading history file: {e}")
-            
-            # Add directories from the base path
-            if os.path.exists(base_path) and os.path.isdir(base_path):
-                dir_channels = [
-                    d[:d.find(":", d.find(":") + 1)].replace(":", "_") + d[d.find(":", d.find(":") + 1):]  # Replace second colon
-                    if d.count(":") > 1 else d  # Only process if there are more than one colon
-                    for d in os.listdir(base_path)
-                    if os.path.isdir(os.path.join(base_path, d))
-                ]
-                channels.extend(dir_channels)  # Add found directories to the list
+            channels = set()  # Use a set to avoid duplicates
 
-            # Remove duplicates and return the list of available channels
-            return list(set(channels)) if channels else ["No Channels Available"]
+            # Default structure for history file
+            default_structure = {
+                "gwfout_path": str(base_path),
+                "channels": []
+            }
+
+            # If the history file doesn't exist, create it with the default structure
+            if not os.path.exists(history_file):
+                with open(history_file, "w") as file:
+                    json.dump(default_structure, file, indent=4)
+                print(f"Created missing history file: {history_file}")
+
+            # Load channels from the history file
+            try:
+                with open(history_file, "r") as file:
+                    history_data = json.load(file)
+
+                # Validate structure, fix if necessary
+                if not isinstance(history_data, dict) or "channels" not in history_data:
+                    history_data = default_structure
+                    with open(history_file, "w") as file:
+                        json.dump(history_data, file, indent=4)
+                    print(f"Fixed malformed history file: {history_file}")
+
+                # Add channels from history
+                channels.update(history_data["channels"])
+
+            except (json.JSONDecodeError, KeyError, TypeError) as e:
+                print(f"Warning: History file corrupted, resetting: {e}")
+                history_data = default_structure
+                with open(history_file, "w") as file:
+                    json.dump(history_data, file, indent=4)
+
+            # Add channels from the base directory
+            if os.path.exists(base_path) and os.path.isdir(base_path):
+                for d in os.listdir(base_path):
+                    dir_path = os.path.join(base_path, d)
+                    if os.path.isdir(dir_path):
+                        # Convert directory name to match channel format
+                        if d.count(":") > 1:
+                            d = d[:d.find(":", d.find(":") + 1)].replace(":", "_") + d[d.find(":", d.find(":") + 1):]
+                        channels.add(d)
+
+            # Return sorted list of unique channels, or a default message if none found
+            return sorted(channels) if channels else ["No Channels Available"]
+
 
         # Function to update the dropdown with the current list of channels
         def update_channel_dropdown():
@@ -408,18 +431,13 @@ class OmicronApp:
             first_time_segment = lines[0][1]
             last_time_segment = lines[-1][1]
 
-            # Dynamically determine project directory (instead of hardcoding paths)
-            
             # Construct the OMICRON command
             omicron_cmd = f"omicron {first_time_segment} {last_time_segment} ./config.txt > omicron.out 2>&1"
 
-            # Full WSL command (activating the conda environment dynamically)
-            # Full WSL command (activating the conda environment dynamically)
+            # Full WSL command (fixing conda initialization issue)
             wsl_command = (
-                f'wsl bash -c "source ~/.bashrc &&conda activate base && {omicron_cmd}"'
+                'wsl -u root bash -ic "conda activate base && ' + omicron_cmd + '"'
             )
-
-
             self.append_output(f"Running: {wsl_command}\n")
 
             # Run command asynchronously with real-time output capture
@@ -428,11 +446,19 @@ class OmicronApp:
             )
 
             # Stream output dynamically to the terminal
-            for line in iter(process.stdout.readline, ""):
-                self.append_output(line)
+            while True:
+                output = process.stdout.readline()
+                if output == "" and process.poll() is not None:
+                    break
+                if output:
+                    self.append_output(output)
 
-            for line in iter(process.stderr.readline, ""):
-                self.append_output(f"ERROR: {line}")
+            while True:
+                error = process.stderr.readline()
+                if error == "" and process.poll() is not None:
+                    break
+                if error:
+                    self.append_output(f"ERROR: {error}")
 
             process.wait()
             if process.returncode != 0:
@@ -442,6 +468,7 @@ class OmicronApp:
 
         except Exception as e:
             self.append_output(f"Unexpected error: {e}\n")
+
 
     def append_output(self, text):
         """Append output to the shared terminal frame."""
