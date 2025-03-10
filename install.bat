@@ -27,8 +27,11 @@ call conda env list | findstr /C:"GWeasy" >nul
 if %errorlevel% neq 0 (
     echo Creating Windows GWeasy environment...
     call conda env create -f environment.yml
+    call conda init
+    call conda activate GWeasy
 ) else (
     echo GWeasy environment already exists in Windows.
+    call conda activate GWeasy
 )
 
 :: Step 3: Check for WSL
@@ -42,7 +45,7 @@ wsl bash -c "[ ! -d $HOME/miniconda ] && echo 'Installing Miniconda in WSL...' &
 wsl bash -c "if ! grep -q 'miniconda' ~/.bashrc; then echo 'export PATH=\$HOME/miniconda/bin:\$PATH' >> ~/.bashrc; fi"
 
 :: Step 6: Apply changes to PATH and install Omicron (if not installed)
-wsl bash -c "source ~/.bashrc && conda activate base && conda list | grep -q omicron || conda install -c conda-forge omicron -y"
+wsl bash -c "source ~/.bashrc && conda init && conda activate base && conda list | grep -q omicron || conda install -c conda-forge omicron -y"
 
 echo WSL setup done.
 
