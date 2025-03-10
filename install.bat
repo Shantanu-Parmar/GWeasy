@@ -4,9 +4,23 @@ echo Setting up Conda environment on Windows...
 :: Step 1: Check if Conda is installed on Windows
 call conda --version >nul 2>nul
 if %errorlevel% neq 0 (
-    echo Conda is not installed on Windows. Please install Anaconda or Miniconda manually.
-    exit /b 1
+    echo Conda is not installed on Windows. Downloading and installing Miniconda...
+    
+    :: Download Miniconda installer
+    powershell -Command "Invoke-WebRequest -Uri 'https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe' -OutFile 'Miniconda3.exe'"
+    
+    :: Install Miniconda silently
+    start /wait Miniconda3.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%USERPROFILE%\Miniconda3
+    
+    :: Remove installer
+    del Miniconda3.exe
+    
+    :: Add Miniconda to PATH temporarily for this session
+    set "PATH=%USERPROFILE%\Miniconda3\Scripts;%USERPROFILE%\Miniconda3;%PATH%"
 )
+
+
+echo Conda is installed on Windows.
 
 :: Step 2: Check if GWeasy Conda environment exists on Windows
 call conda env list | findstr /C:"GWeasy" >nul

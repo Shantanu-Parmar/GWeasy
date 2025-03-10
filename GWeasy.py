@@ -800,6 +800,9 @@ class GWOSCApp:
             self.browser.LoadUrl(url)
 
 if __name__ == "__main__":
+    conda_env_path = os.path.join(os.path.dirname(sys.executable), "conda_env")
+    sys.path.insert(0, os.path.join(conda_env_path, "Lib", "site-packages"))
+    os.environ["PATH"] = conda_env_path + ";" + os.environ["PATH"]
     root = tk.Tk()
     app = Application(root)
     root.mainloop()

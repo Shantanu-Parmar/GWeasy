@@ -8,10 +8,6 @@ setup(
         "PyQt5",
         "Pillow",
         "cefPython3",
-        "sys",
-        "threading",
-        "subprocess",
-        "os",
         "tkinter"
     ],
     entry_points={
