@@ -73,16 +73,18 @@ conda activate GWeasy
 ```
 #### **Step 2: Install Required Packages**
 ```sh
-conda install conda-forge::omicron
 conda install conda-forge::gwpy
 conda install conda-forge::gwosc
 conda install conda-forge::nds2-client
 conda install conda-forge::python-nds2-client
 conda install anaconda::pandas
 conda install conda-forge::python-framel
-pip install PyQt5 PIL cefPython3 sys threading subprocess os tkinter
+pip install PyQt5 PIL cefPython3 tkinter
 ```
-
+run this in wsl or any other linux system
+```wsl
+conda install conda-forge::omicron
+```
 #### **Step 3: Set Up the OMICRON Environment (WSL/Linux)**
 ```sh
 conda create --name omicron python=3.8
@@ -90,6 +92,7 @@ conda activate omicron
 ```
 
 ### **Building the Executable (Windows Only)**
+### not recommended as of right now, use install.bat as an exe currently
 To generate a standalone `.exe` file, use **PyInstaller**:
 ```sh
 pip install pyinstaller
