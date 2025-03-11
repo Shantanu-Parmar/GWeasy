@@ -36,7 +36,7 @@ wsl -u root bash -c "echo 'export PATH=$HOME/miniconda/bin:\$PATH' >> ~/.bashrc 
 wsl -u root bash -c "source ~/.bashrc"
 
 :: ==== Step 5: Ensure Omicron is Installed in WSL (Root Mode) ====
-wsl -u root bash -ic "conda init && conda activate base && conda list | grep -q omicron || conda install -c conda-forge omicron -y"
+wsl -u root bash -ic "conda list | grep -q omicron || conda install -c conda-forge omicron -y"
 
 echo WSL setup completed.
 

@@ -2,6 +2,8 @@
     "gwfout_path": "C:/Users/HP/Desktop/GWEasy/gw",
     "channels": [
         "H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ",
-        "H1:PEM-VAULT_MAG_1030X195Y_COIL_Y_DQ"
+        "H1:PEM-VAULT_MAG_1030X195Y_COIL_Y_DQ",
+        "H1:DCS-CALIB_STRAIN_CLEAN-SUB60HZ_C01",
+        "H1:GWOSC-4KHZ_R1_STRAIN"
     ]
 }

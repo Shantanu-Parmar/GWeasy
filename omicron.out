@@ -15,2089 +15,435 @@
 
 
 IO::ParseFile: Parse file ./config.txt		ok
-Omicron::ReadOptions: number of options = 43
-ffl::ffl: detect file format
-ffl::ffl: detected file format = ffl
-ffl::DefineTmpDir: working ffl file = ./gw/H1_PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/fin.ffl
-ffl::DefineTmpDir: working ffl file = ./gw/H1_PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/fin.ffl
-ffl::Reset: reset ffl
-ffl::LoadFrameFile: load FFL file
-ffl::LoadFrameFile: extract frame information
-ffl::LoadFrameFile: check frame information
-ffl::ExtractChannels: extracted information = 
-H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 4096
-Streams::MakeDetector: this stream (H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ) is associated to detector: Hanford1 (H1)
-Sample::SetFrequencies: new native sampling frequency (4096Hz)
-Sample::SetFrequencies: new working sampling frequency (2048Hz)
-Sample::MakeSamplingFilters: building butterworth filters
-Sample::SetHighPassFrequency: building high-pass filters
-Otile::Otile: creating 4 Q-planes
-Oqplane::PrintParameters:
-	- Q                         = 5.98140
-	- Time range                = 64 s
-	- Time resolution           = 0.00098 s - 0.03125 s
-	- Frequency range           = 16.00000-658.73688 Hz
-	- Number of frequency bands = 20
-	- Frequency resolution      = 3.26857 Hz - 111.74311 Hz
-	- Number of tiles           = 501760
-	- Number of bins (internal) = 1310720
-Oqplane::PrintParameters:
-	- Q                         = 13.37481
-	- Time range                = 64 s
-	- Time resolution           = 0.00098 s - 0.06250 s
-	- Frequency range           = 16.00000-820.52890 Hz
-	- Number of frequency bands = 42
-	- Frequency resolution      = 1.57250 Hz - 73.42635 Hz
-	- Number of tiles           = 596992
-	- Number of bins (internal) = 2752512
-Oqplane::PrintParameters:
-	- Q                         = 29.90698
-	- Time range                = 64 s
-	- Time resolution           = 0.00195 s - 0.12500 s
-	- Frequency range           = 16.00000-921.77677 Hz
-	- Number of frequency bands = 96
-	- Frequency resolution      = 0.69009 Hz - 38.11278 Hz
-	- Number of tiles           = 662528
-	- Number of bins (internal) = 3145728
-Oqplane::PrintParameters:
-	- Q                         = 66.87403
-	- Time range                = 64 s
-	- Time resolution           = 0.00391 s - 0.25000 s
-	- Frequency range           = 16.00000-975.61430 Hz
-	- Number of frequency bands = 218
-	- Frequency resolution      = 0.30455 Hz - 18.22326 Hz
-	- Number of tiles           = 700416
-	- Number of bins (internal) = 3571712
-************* Spectrum::Spectrum *************
-Input data sampling frequency = 2048 Hz
-PSD size                      = 2049 points
-PSD resolution                = 0.50000 Hz
-Number of even samples        = 150
-Number of odd samples         = 149
-**********************************************
-************* Spectrum::Spectrum *************
-Input data sampling frequency = 2048 Hz
-PSD size                      = 2049 points
-PSD resolution                = 0.50000 Hz
-Number of even samples        = 150
-Number of odd samples         = 149
-**********************************************
-InjRea::InjRea: 0 injections are loaded
-
->>>>>>>>>> (22:42:24 UTC) [+7s]: Omicron has been successfully initiated <<<<<<<<<<
-
-Omicron::InitSegments: initiate data segments...
-	- save input segments
-Osequence::SetSegments: setting new segments
-	- in: 1240853610.00000-1240860330.00000
-	- extract channels (FFL)
-ffl::ExtractChannels: extracted information = 
-H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 4096
-	- N input segments   = 1
-	- Input livetime     = 6720.00000
-Omicron::MakeDirectories: make directory structure...
-	- create channel directories
-	- open injection report file
-
->>>>>>>>>> (22:42:24 UTC) [+7s]: Start looping over channels and chunks <<<<<<<<<<
-
-Omicron::NewChannel: load a new channel...
-	- channel H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ (1/1) is loaded
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853610-1240853674
-	- chunk 1240853610-1240853674 is loaded (start a new segment)
-
->>>>>>>>>> (22:42:24 UTC) [+7s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853610-1240853674 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853610.00000 and 1240853674.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 30/29 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 30/29 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 5142 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853612.00000-1240853672.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 5142 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 5142 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 5142 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853612-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853670-1240853734
-	- chunk 1240853670-1240853734 is loaded
-
->>>>>>>>>> (22:42:25 UTC) [+8s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853670-1240853734 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853670.00000 and 1240853734.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 60/58 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 60/58 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 7801 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853672.00000-1240853732.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 7801 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 7801 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 7801 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853672-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853730-1240853794
-	- chunk 1240853730-1240853794 is loaded
-
->>>>>>>>>> (22:42:26 UTC) [+9s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853730-1240853794 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853730.00000 and 1240853794.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 90/87 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 90/87 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6276 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853732.00000-1240853792.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6276 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6276 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6276 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853732-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853790-1240853854
-	- chunk 1240853790-1240853854 is loaded
-
->>>>>>>>>> (22:42:26 UTC) [+9s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853790-1240853854 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853790.00000 and 1240853854.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 120/116 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 120/116 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 9746 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853792.00000-1240853852.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 9746 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 9746 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 9746 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853792-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853850-1240853914
-	- chunk 1240853850-1240853914 is loaded
-
->>>>>>>>>> (22:42:27 UTC) [+10s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853850-1240853914 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853850.00000 and 1240853914.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 150/145 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-Spectrum::ComputeMedianMean: the PSD estimation is not nominal: 150/145 subPSDs are used instead of 150/149
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 8619 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853852.00000-1240853912.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 8619 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 8619 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 8619 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853852-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853910-1240853974
-	- chunk 1240853910-1240853974 is loaded
-
->>>>>>>>>> (22:42:27 UTC) [+10s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853910-1240853974 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853910.00000 and 1240853974.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6941 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853912.00000-1240853972.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6941 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6941 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6941 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853912-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240853970-1240854034
-	- chunk 1240853970-1240854034 is loaded
-
->>>>>>>>>> (22:42:28 UTC) [+11s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853970-1240854034 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240853970.00000 and 1240854034.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 3453 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240853972.00000-1240854032.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 3453 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 3453 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 3453 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240853972-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854030-1240854094
-	- chunk 1240854030-1240854094 is loaded
-
->>>>>>>>>> (22:42:29 UTC) [+12s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854030-1240854094 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854030.00000 and 1240854094.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 3703 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854032.00000-1240854092.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 3703 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 3703 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 3703 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854032-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854090-1240854154
-	- chunk 1240854090-1240854154 is loaded
-
->>>>>>>>>> (22:42:29 UTC) [+12s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854090-1240854154 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854090.00000 and 1240854154.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 15537 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854092.00000-1240854152.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 15537 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 15537 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 15537 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854092-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854150-1240854214
-	- chunk 1240854150-1240854214 is loaded
-
->>>>>>>>>> (22:42:30 UTC) [+13s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854150-1240854214 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854150.00000 and 1240854214.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6054 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854152.00000-1240854212.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6054 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6054 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6054 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854152-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854210-1240854274
-	- chunk 1240854210-1240854274 is loaded
-
->>>>>>>>>> (22:42:30 UTC) [+13s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854210-1240854274 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854210.00000 and 1240854274.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 3396 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854212.00000-1240854272.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 3396 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 3396 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 3396 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854212-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854270-1240854334
-	- chunk 1240854270-1240854334 is loaded
-
->>>>>>>>>> (22:42:31 UTC) [+14s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854270-1240854334 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854270.00000 and 1240854334.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 4884 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854272.00000-1240854332.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 4884 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 4884 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 4884 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854272-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854330-1240854394
-	- chunk 1240854330-1240854394 is loaded
-
->>>>>>>>>> (22:42:32 UTC) [+15s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854330-1240854394 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854330.00000 and 1240854394.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6105 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854332.00000-1240854392.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6105 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6105 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6105 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854332-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854390-1240854454
-	- chunk 1240854390-1240854454 is loaded
-
->>>>>>>>>> (22:42:32 UTC) [+15s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854390-1240854454 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854390.00000 and 1240854454.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 7928 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854392.00000-1240854452.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 7928 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 7928 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 7928 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854392-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854450-1240854514
-	- chunk 1240854450-1240854514 is loaded
-
->>>>>>>>>> (22:42:33 UTC) [+16s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854450-1240854514 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854450.00000 and 1240854514.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6045 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854452.00000-1240854512.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6045 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6045 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6045 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854452-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854510-1240854574
-	- chunk 1240854510-1240854574 is loaded
-
->>>>>>>>>> (22:42:33 UTC) [+16s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854510-1240854574 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854510.00000 and 1240854574.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 7960 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854512.00000-1240854572.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 7960 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 7960 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 7960 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854512-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854570-1240854634
-	- chunk 1240854570-1240854634 is loaded
-
->>>>>>>>>> (22:42:34 UTC) [+17s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854570-1240854634 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854570.00000 and 1240854634.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 10059 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854572.00000-1240854632.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 10059 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 10059 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 10059 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854572-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854630-1240854694
-	- chunk 1240854630-1240854694 is loaded
-
->>>>>>>>>> (22:42:35 UTC) [+18s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854630-1240854694 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854630.00000 and 1240854694.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 5028 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854632.00000-1240854692.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 5028 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 5028 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 5028 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854632-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854690-1240854754
-	- chunk 1240854690-1240854754 is loaded
-
->>>>>>>>>> (22:42:35 UTC) [+18s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854690-1240854754 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854690.00000 and 1240854754.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6380 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854692.00000-1240854752.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6380 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6380 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6380 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854692-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854750-1240854814
-	- chunk 1240854750-1240854814 is loaded
-
->>>>>>>>>> (22:42:36 UTC) [+19s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854750-1240854814 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854750.00000 and 1240854814.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 5561 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854752.00000-1240854812.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 5561 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 5561 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 5561 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854752-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854810-1240854874
-	- chunk 1240854810-1240854874 is loaded
-
->>>>>>>>>> (22:42:36 UTC) [+19s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854810-1240854874 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854810.00000 and 1240854874.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 6713 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854812.00000-1240854872.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 6713 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 6713 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 6713 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854812-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854870-1240854934
-	- chunk 1240854870-1240854934 is loaded
-
->>>>>>>>>> (22:42:37 UTC) [+20s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854870-1240854934 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854870.00000 and 1240854934.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 9843 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854872.00000-1240854932.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 9843 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 9843 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 9843 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854872-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854930-1240854994
-	- chunk 1240854930-1240854994 is loaded
-
->>>>>>>>>> (22:42:38 UTC) [+21s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854930-1240854994 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854930.00000 and 1240854994.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 9042 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854932.00000-1240854992.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 9042 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 9042 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 9042 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854932-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240854990-1240855054
-	- chunk 1240854990-1240855054 is loaded
-
->>>>>>>>>> (22:42:38 UTC) [+21s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854990-1240855054 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240854990.00000 and 1240855054.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 5724 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240854992.00000-1240855052.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 5724 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 5724 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 5724 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240854992-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855050-1240855114
-	- chunk 1240855050-1240855114 is loaded
-
->>>>>>>>>> (22:42:39 UTC) [+22s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855050-1240855114 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240855050.00000 and 1240855114.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 8047 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240855052.00000-1240855112.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 8047 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 8047 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 8047 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240855052-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855110-1240855174
-	- chunk 1240855110-1240855174 is loaded
-
->>>>>>>>>> (22:42:40 UTC) [+23s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855110-1240855174 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240855110.00000 and 1240855174.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 9279 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240855112.00000-1240855172.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 9279 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 9279 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 9279 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240855112-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855170-1240855234
-	- chunk 1240855170-1240855234 is loaded
-
->>>>>>>>>> (22:42:40 UTC) [+23s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855170-1240855234 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: read data for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ between 1240855170.00000 and 1240855234.00000
-ffl::GetData: 262144 samples
-	- perform software injections...
-Omicron::Condition: condition data vector...
-	- transform data vector...
-Sample::Transform: remove DC component...
-Sample::Transform: resample input data...
-Sample::Resample: apply anti-aliasing filters
-Sample::Resample: decimate time-series
-	- apply Tukey window...
-	- update spectrum 1...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (1)
-	- move the data back in the time domain...
-	- update spectrum 2...
-Spectrum::AddData: compute PSD
-	- move the data in the frequency domain...
-	- whiten chunk (2)
-	- compute tiling power...
-Omicron::Project: project data onto the tiles...
-Otile::ProjectData: project the data on the Q planes
-Omicron::WriteOutput: write chunk output...
-	- write triggers 
-Omicron::ExtractTriggers: 21272 triggers
-Otile::SaveTriggers: saving triggers for H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ in 1240855172.00000-1240855232.00000
-Omicron::FlushTriggers
-TriggerBuffer::Flush: 21272 triggers
-	 - flushed
-Triggers::SortTriggers: sorting triggers
-	 - triggers sorted
-	 - 21272 triggers
-Omicron::WriteTriggers
-MakeTriggers::Write: 21272 triggers
-                     1 segments
-                     in ./OmicronOut/H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ/H1-PEM_VAULT_MAG_1030X195Y_COIL_X_DQ_OMICRON-1240855172-60.root
-MakeTriggers::Reset: reset all
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855230-1240855294
-	- chunk 1240855230-1240855294 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855230-1240855294 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855290-1240855354
-	- chunk 1240855290-1240855354 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855290-1240855354 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855350-1240855414
-	- chunk 1240855350-1240855414 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855350-1240855414 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855410-1240855474
-	- chunk 1240855410-1240855474 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855410-1240855474 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855470-1240855534
-	- chunk 1240855470-1240855534 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855470-1240855534 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855530-1240855594
-	- chunk 1240855530-1240855594 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855530-1240855594 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855590-1240855654
-	- chunk 1240855590-1240855654 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855590-1240855654 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855650-1240855714
-	- chunk 1240855650-1240855714 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855650-1240855714 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855710-1240855774
-	- chunk 1240855710-1240855774 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855710-1240855774 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855770-1240855834
-	- chunk 1240855770-1240855834 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855770-1240855834 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855830-1240855894
-	- chunk 1240855830-1240855894 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855830-1240855894 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855890-1240855954
-	- chunk 1240855890-1240855954 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855890-1240855954 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240855950-1240856014
-	- chunk 1240855950-1240856014 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855950-1240856014 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856010-1240856074
-	- chunk 1240856010-1240856074 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856010-1240856074 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856070-1240856134
-	- chunk 1240856070-1240856134 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856070-1240856134 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856130-1240856194
-	- chunk 1240856130-1240856194 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856130-1240856194 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856190-1240856254
-	- chunk 1240856190-1240856254 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856190-1240856254 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856250-1240856314
-	- chunk 1240856250-1240856314 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856250-1240856314 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856310-1240856374
-	- chunk 1240856310-1240856374 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856310-1240856374 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856370-1240856434
-	- chunk 1240856370-1240856434 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856370-1240856434 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856430-1240856494
-	- chunk 1240856430-1240856494 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856430-1240856494 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856490-1240856554
-	- chunk 1240856490-1240856554 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856490-1240856554 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856550-1240856614
-	- chunk 1240856550-1240856614 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856550-1240856614 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856610-1240856674
-	- chunk 1240856610-1240856674 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856610-1240856674 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856670-1240856734
-	- chunk 1240856670-1240856734 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856670-1240856734 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856730-1240856794
-	- chunk 1240856730-1240856794 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856730-1240856794 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856790-1240856854
-	- chunk 1240856790-1240856854 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856790-1240856854 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856850-1240856914
-	- chunk 1240856850-1240856914 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856850-1240856914 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856910-1240856974
-	- chunk 1240856910-1240856974 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856910-1240856974 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240856970-1240857034
-	- chunk 1240856970-1240857034 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856970-1240857034 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857030-1240857094
-	- chunk 1240857030-1240857094 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857030-1240857094 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857090-1240857154
-	- chunk 1240857090-1240857154 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857090-1240857154 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857150-1240857214
-	- chunk 1240857150-1240857214 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857150-1240857214 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857210-1240857274
-	- chunk 1240857210-1240857274 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857210-1240857274 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857270-1240857334
-	- chunk 1240857270-1240857334 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857270-1240857334 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857330-1240857394
-	- chunk 1240857330-1240857394 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857330-1240857394 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857390-1240857454
-	- chunk 1240857390-1240857454 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857390-1240857454 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857450-1240857514
-	- chunk 1240857450-1240857514 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857450-1240857514 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857510-1240857574
-	- chunk 1240857510-1240857574 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857510-1240857574 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857570-1240857634
-	- chunk 1240857570-1240857634 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857570-1240857634 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857630-1240857694
-	- chunk 1240857630-1240857694 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857630-1240857694 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857690-1240857754
-	- chunk 1240857690-1240857754 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857690-1240857754 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857750-1240857814
-	- chunk 1240857750-1240857814 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857750-1240857814 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857810-1240857874
-	- chunk 1240857810-1240857874 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857810-1240857874 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857870-1240857934
-	- chunk 1240857870-1240857934 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857870-1240857934 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857930-1240857994
-	- chunk 1240857930-1240857994 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857930-1240857994 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240857990-1240858054
-	- chunk 1240857990-1240858054 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857990-1240858054 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858050-1240858114
-	- chunk 1240858050-1240858114 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858050-1240858114 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858110-1240858174
-	- chunk 1240858110-1240858174 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858110-1240858174 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858170-1240858234
-	- chunk 1240858170-1240858234 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858170-1240858234 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858230-1240858294
-	- chunk 1240858230-1240858294 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858230-1240858294 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858290-1240858354
-	- chunk 1240858290-1240858354 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858290-1240858354 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858350-1240858414
-	- chunk 1240858350-1240858414 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858350-1240858414 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858410-1240858474
-	- chunk 1240858410-1240858474 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858410-1240858474 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858470-1240858534
-	- chunk 1240858470-1240858534 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858470-1240858534 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858530-1240858594
-	- chunk 1240858530-1240858594 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858530-1240858594 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858590-1240858654
-	- chunk 1240858590-1240858654 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858590-1240858654 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858650-1240858714
-	- chunk 1240858650-1240858714 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858650-1240858714 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858710-1240858774
-	- chunk 1240858710-1240858774 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858710-1240858774 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858770-1240858834
-	- chunk 1240858770-1240858834 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858770-1240858834 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858830-1240858894
-	- chunk 1240858830-1240858894 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858830-1240858894 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858890-1240858954
-	- chunk 1240858890-1240858954 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858890-1240858954 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240858950-1240859014
-	- chunk 1240858950-1240859014 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858950-1240859014 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859010-1240859074
-	- chunk 1240859010-1240859074 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859010-1240859074 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859070-1240859134
-	- chunk 1240859070-1240859134 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859070-1240859134 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859130-1240859194
-	- chunk 1240859130-1240859194 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859130-1240859194 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859190-1240859254
-	- chunk 1240859190-1240859254 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859190-1240859254 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859250-1240859314
-	- chunk 1240859250-1240859314 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859250-1240859314 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859310-1240859374
-	- chunk 1240859310-1240859374 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859310-1240859374 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859370-1240859434
-	- chunk 1240859370-1240859434 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859370-1240859434 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859430-1240859494
-	- chunk 1240859430-1240859494 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859430-1240859494 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859490-1240859554
-	- chunk 1240859490-1240859554 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859490-1240859554 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859550-1240859614
-	- chunk 1240859550-1240859614 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859550-1240859614 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859610-1240859674
-	- chunk 1240859610-1240859674 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859610-1240859674 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859670-1240859734
-	- chunk 1240859670-1240859734 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859670-1240859734 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859730-1240859794
-	- chunk 1240859730-1240859794 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859730-1240859794 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859790-1240859854
-	- chunk 1240859790-1240859854 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859790-1240859854 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859850-1240859914
-	- chunk 1240859850-1240859914 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859850-1240859914 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859910-1240859974
-	- chunk 1240859910-1240859974 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859910-1240859974 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240859970-1240860034
-	- chunk 1240859970-1240860034 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859970-1240860034 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240860030-1240860094
-	- chunk 1240860030-1240860094 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860030-1240860094 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240860090-1240860154
-	- chunk 1240860090-1240860154 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860090-1240860154 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240860150-1240860214
-	- chunk 1240860150-1240860214 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860150-1240860214 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: 1240860210-1240860274
-	- chunk 1240860210-1240860274 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860210-1240860274 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-	- chunk 1240860266-1240860330 is loaded
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860266-1240860330 <<<<<<<<<<
-
-Omicron::LoadData: load data vector...
-	- get data from frames...
-ffl::GetData: the requested GPS range is not entirely covered by the ffl
-Omicron::NewChunk: call a new chunk...
-Osequence::NewChunk: end of segments
-Omicron::NewChannel: load a new channel...
-	- no more channels to load
-
->>>>>>>>>> (22:42:41 UTC) [+24s]: Omicron processing is over <<<<<<<<<<
+
+>>>>>>>>>> (18:27:52 UTC) [+8s]: Omicron has been successfully initiated <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:52 UTC) [+8s]: Start looping over channels and chunks <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:52 UTC) [+8s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853610-1240853674 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:53 UTC) [+9s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853670-1240853734 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:54 UTC) [+10s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853730-1240853794 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:54 UTC) [+10s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853790-1240853854 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:55 UTC) [+11s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853850-1240853914 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:55 UTC) [+11s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853910-1240853974 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:56 UTC) [+12s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240853970-1240854034 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:57 UTC) [+13s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854030-1240854094 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:57 UTC) [+13s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854090-1240854154 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:58 UTC) [+14s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854150-1240854214 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:59 UTC) [+15s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854210-1240854274 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:27:59 UTC) [+15s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854270-1240854334 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:00 UTC) [+16s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854330-1240854394 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:01 UTC) [+17s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854390-1240854454 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:02 UTC) [+18s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854450-1240854514 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:02 UTC) [+18s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854510-1240854574 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:03 UTC) [+19s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854570-1240854634 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:04 UTC) [+20s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854630-1240854694 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:04 UTC) [+20s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854690-1240854754 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:05 UTC) [+21s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854750-1240854814 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:06 UTC) [+22s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854810-1240854874 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:06 UTC) [+22s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854870-1240854934 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:07 UTC) [+23s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854930-1240854994 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:08 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240854990-1240855054 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:08 UTC) [+24s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855050-1240855114 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:09 UTC) [+25s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855110-1240855174 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:10 UTC) [+26s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855170-1240855234 <<<<<<<<<<
+
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855230-1240855294 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855290-1240855354 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855350-1240855414 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855410-1240855474 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855470-1240855534 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855530-1240855594 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855590-1240855654 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855650-1240855714 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855710-1240855774 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855770-1240855834 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855830-1240855894 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855890-1240855954 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240855950-1240856014 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856010-1240856074 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856070-1240856134 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856130-1240856194 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856190-1240856254 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856250-1240856314 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856310-1240856374 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856370-1240856434 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856430-1240856494 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856490-1240856554 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856550-1240856614 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856610-1240856674 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856670-1240856734 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856730-1240856794 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856790-1240856854 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856850-1240856914 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856910-1240856974 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240856970-1240857034 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857030-1240857094 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857090-1240857154 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857150-1240857214 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857210-1240857274 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857270-1240857334 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857330-1240857394 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857390-1240857454 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857450-1240857514 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857510-1240857574 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857570-1240857634 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857630-1240857694 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857690-1240857754 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857750-1240857814 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857810-1240857874 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857870-1240857934 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857930-1240857994 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240857990-1240858054 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858050-1240858114 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858110-1240858174 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858170-1240858234 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858230-1240858294 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858290-1240858354 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858350-1240858414 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858410-1240858474 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858470-1240858534 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858530-1240858594 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858590-1240858654 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858650-1240858714 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858710-1240858774 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858770-1240858834 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858830-1240858894 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858890-1240858954 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240858950-1240859014 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859010-1240859074 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859070-1240859134 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859130-1240859194 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859190-1240859254 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859250-1240859314 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859310-1240859374 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859370-1240859434 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859430-1240859494 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859490-1240859554 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859550-1240859614 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859610-1240859674 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859670-1240859734 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859730-1240859794 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859790-1240859854 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859850-1240859914 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859910-1240859974 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240859970-1240860034 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860030-1240860094 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860090-1240860154 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860150-1240860214 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860210-1240860274 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Processing H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ 1240860266-1240860330 <<<<<<<<<<
+
+ffl::GetData: the requested GPS range is not entirely covered by the ffl
+
+>>>>>>>>>> (18:28:11 UTC) [+27s]: Omicron processing is over <<<<<<<<<<
 
 
 ************* Omicron status info *************
@@ -2116,15 +462,3 @@ end_out                      = 1240855232
 trigger livetime             = 1620s (24.10714%)
 ***********************************************
 
-Omicron::~Omicron
-
- *** Break *** segmentation violation
- Generating stack trace...
- 0x00007fd8b42f9d0e in std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) at /home/conda/feedstock_root/build_artifacts/gcc_compilers_1740238128824/work/build/x86_64-conda-linux-gnu/libstdc++-v3/include/bits/ostream_insert.h:105 from /root/miniconda/bin/../lib/libstdc++.so.6
- 0x00007fd8b4676a3c in Omicron::MakeHtml() at /home/conda/feedstock_root/build_artifacts/omicron_1739878654991/_build_env/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/basic_string.h:4037 (discriminator 2) from /root/miniconda/bin/../lib/libOmicron.so
- 0x00007fd8b467eb72 in Omicron::~Omicron() at /home/conda/feedstock_root/build_artifacts/omicron_1739878654991/work/src/Oomicron.cc:84 (discriminator 7) from /root/miniconda/bin/../lib/libOmicron.so
- 0x00007fd8b467ecea in Omicron::~Omicron() at /home/conda/feedstock_root/build_artifacts/omicron_1739878654991/work/src/Oomicron.cc:124 (discriminator 1) from /root/miniconda/bin/../lib/libOmicron.so
- 0x000056123bb60e5f in <unknown> from omicron
- 0x00007fd8b3efc1ca in <unknown> from /lib/x86_64-linux-gnu/libc.so.6
- 0x00007fd8b3efc28b in __libc_start_main + 0x8b from /lib/x86_64-linux-gnu/libc.so.6
- 0x000056123bb611ac in <unknown> from omicron
