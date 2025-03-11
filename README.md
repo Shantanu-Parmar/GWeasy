@@ -81,6 +81,7 @@ conda install anaconda::pandas
 conda install conda-forge::python-framel
 pip install PyQt5 PIL cefPython3 tkinter
 ```
+run this in wsl or any other linux system
 ```wsl
 conda install conda-forge::omicron
 ```
