@@ -103,7 +103,8 @@ class OmicronApp:
     def create_widgets(self):
         self.create_channel_dropdown(row=1)
         self.create_file_selector("Select .ffl File:", "DATA FFL",row=2,column=0)
-        self.create_dropdown("Sampling Frequency:", "DATA SAMPLEFREQUENCY", ["1024", "2048", "4096"],row=3,column=0)
+        self.create_editable_dropdown("Sampling Frequency:", "DATA SAMPLEFREQUENCY", ["1024", "2048", "4096"], row=3, column=0)
+
         # Ensure proper column expansion
         for i in range(4):
             self.scrollable_frame.grid_columnconfigure(i, weight=1)
@@ -112,12 +113,13 @@ class OmicronApp:
         # Button Frame
         button_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
         button_frame.grid(row=10, column=0, columnspan=4, pady=10, sticky="ew")
-        self.save_button = tk.Button(button_frame, text="Save Config", command=self.save_config)
-        self.save_button.pack(side="left", padx=10)  
-        self.start_button = tk.Button(button_frame, text="Start OMICRON", command=self.run_omicron_script)
-        self.start_button.pack(side="left", padx=10)  
         self.custom_segs_btn = tk.Button(button_frame, text="Custom Segs", command=self.open_custom_segs_dialog)
-        self.custom_segs_btn.pack(side="left", padx=10)  # Adjust position as needed
+        self.custom_segs_btn.pack(side="left", padx=20)  # Adjust position as needed
+        self.save_button = tk.Button(button_frame, text="Save Config", command=self.save_config)
+        self.save_button.pack(side="left", padx=20)  
+        self.start_button = tk.Button(button_frame, text="Start OMICRON", command=self.run_omicron_script)
+        self.start_button.pack(side="left", padx=20)  
+       
         # Parameter Frame
         param_frame = tk.Frame(self.scrollable_frame,bd=2, relief="groove", padx=5, pady=5)
         param_frame.grid(row=11, column=0, columnspan=4, pady=10, sticky="ew")
@@ -239,6 +241,20 @@ class OmicronApp:
         dropdown.grid(row=row, column=column+1, sticky="ew", padx=5, pady=5)
         self.ui_elements[key] = var
 
+    def create_editable_dropdown(self, label, key, options, frame=None, row=0, column=0):
+        """Creates an editable dropdown menu inside a given frame."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column, columnspan=5, sticky="w", padx=5, pady=5)
+
+        var = tk.StringVar(value=self.config_data.get(key, options[0]))
+        dropdown = ttk.Combobox(target_frame, textvariable=var, values=options, state="normal")  # Enable text input
+        dropdown.grid(row=row, column=column+1, sticky="ew", padx=5, pady=5)
+
+        self.ui_elements[key] = var  # Store variable for config access
+
+        return dropdown  # Return the dropdown so it can be modified if needed
+
+
     def create_slider(self, label, key, min_val, max_val, frame=None,row=0,column=0):
         """Creates a slider for selecting a numerical value."""
         target_frame = frame if frame else self.scrollable_frame
@@ -249,42 +265,47 @@ class OmicronApp:
         self.ui_elements[key] = var
 
     def create_channel_dropdown(self, row=0):
-        """Creates a dropdown for selecting a channel and updates it dynamically every few seconds."""
-        # Label for the dropdown
+        """Creates an editable dropdown for selecting a channel, updating dynamically in the background."""
+
+        # Label
         tk.Label(self.scrollable_frame, text="Select Channel:").grid(row=row, column=0, sticky="w")
 
-        # Function to populate the channels
+        # StringVar for dropdown
+        self.ui_elements["DATA CHANNELS"] = tk.StringVar()
+
+        # Create an editable dropdown
+        self.channel_dropdown = ttk.Combobox(
+            self.scrollable_frame,
+            textvariable=self.ui_elements["DATA CHANNELS"],
+            values=[],  # Start empty, will be populated dynamically
+            state="normal"  # Allows manual input
+        )
+        self.channel_dropdown.grid(row=row, column=1, sticky="ew")
+
+        # Function to fetch available channels
         def populate_channels():
             """Get available channels from the directory and saved history."""
             base_path = self.GWFOUT_DIRECTORY
             history_file = "gravfetch_history.json"
-            channels = set()  # Use a set to avoid duplicates
+            channels = set()
 
-            # Default structure for history file
-            default_structure = {
-                "gwfout_path": str(base_path),
-                "channels": []
-            }
+            default_structure = {"gwfout_path": str(base_path), "channels": []}
 
-            # If the history file doesn't exist, create it with the default structure
             if not os.path.exists(history_file):
                 with open(history_file, "w") as file:
                     json.dump(default_structure, file, indent=4)
                 print(f"Created missing history file: {history_file}")
 
-            # Load channels from the history file
             try:
                 with open(history_file, "r") as file:
                     history_data = json.load(file)
 
-                # Validate structure, fix if necessary
                 if not isinstance(history_data, dict) or "channels" not in history_data:
                     history_data = default_structure
                     with open(history_file, "w") as file:
                         json.dump(history_data, file, indent=4)
                     print(f"Fixed malformed history file: {history_file}")
 
-                # Add channels from history
                 channels.update(history_data["channels"])
 
             except (json.JSONDecodeError, KeyError, TypeError) as e:
@@ -293,50 +314,32 @@ class OmicronApp:
                 with open(history_file, "w") as file:
                     json.dump(history_data, file, indent=4)
 
-            # Add channels from the base directory
             if os.path.exists(base_path) and os.path.isdir(base_path):
                 for d in os.listdir(base_path):
                     dir_path = os.path.join(base_path, d)
                     if os.path.isdir(dir_path):
-                        # Convert directory name to match channel format
                         if d.count(":") > 1:
                             d = d[:d.find(":", d.find(":") + 1)].replace(":", "_") + d[d.find(":", d.find(":") + 1):]
                         channels.add(d)
 
-            # Return sorted list of unique channels, or a default message if none found
             return sorted(channels) if channels else ["No Channels Available"]
 
+        # Function to update the channel list in the background
+        def update_channel_options():
+            """Update the dropdown values without affecting user input."""
+            current_input = self.ui_elements["DATA CHANNELS"].get()  # Get user input
+            channel_options = populate_channels()  # Get the latest channel list
 
-        # Function to update the dropdown with the current list of channels
-        def update_channel_dropdown():
-            """Update the channel dropdown in real-time based on current contents of the gwfout directory."""
-            current_selection = self.ui_elements["DATA CHANNELS"].get()  # Save the current selection
-            channel_options = populate_channels()
-            # Update the combobox with the new list of channels
+            # Update only the dropdown values without resetting user input
             self.channel_dropdown['values'] = channel_options
-            
-            # Restore the previous selection if possible
-            if current_selection in channel_options:
-                self.ui_elements["DATA CHANNELS"].set(current_selection)
-            else:
-                self.ui_elements["DATA CHANNELS"].set(channel_options[0])  # Default to the first channel if the previous selection is no longer available
 
-        # Create the dropdown (Combobox) with initial values
-        self.ui_elements["DATA CHANNELS"] = tk.StringVar()
-        self.channel_dropdown = ttk.Combobox(self.scrollable_frame, textvariable=self.ui_elements["DATA CHANNELS"], values=[])
-        self.channel_dropdown.grid(row=row, column=1, sticky="ew")
+            # Do NOT modify the user's input, just update the dropdown options
+            self.scrollable_frame.after(4000, update_channel_options)  # Refresh every 4 seconds
 
-        # Initial population of the dropdown
-        update_channel_dropdown()
+        # Start the update process in the background
+        update_channel_options()
 
-        # Periodic checking for new channels every 2 seconds
-        def check_for_new_channels():
-            """Check for new channels periodically and update the dropdown."""
-            update_channel_dropdown()
-            self.scrollable_frame.after(4000, check_for_new_channels)  # Check again in 2 seconds
-
-        # Start checking for new channels
-        check_for_new_channels()
+        return self.channel_dropdown
 
 
     def select_file(self, var, is_directory=False):
