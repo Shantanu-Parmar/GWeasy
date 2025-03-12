@@ -28,15 +28,15 @@ if %errorlevel% neq 0 (
 call conda activate GWeasy
 call pip install -r requirements.txt
 
-:: ==== Step 3: Ensure Miniconda is Installed in WSL (Root Mode) ====
-wsl -u root bash -c "[ ! -d $HOME/miniconda ] && echo 'Installing Miniconda in WSL...' && wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && bash ~/miniconda.sh -b -p $HOME/miniconda && rm ~/miniconda.sh || echo 'Miniconda is already installed in WSL.'"
+:: ==== Step 3: Ensure Miniconda is Installed in WSL (User Mode) ====
+wsl bash -c "[ ! -d $HOME/miniconda ] && echo 'Installing Miniconda in WSL...' && wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && bash ~/miniconda.sh -b -p $HOME/miniconda && rm ~/miniconda.sh || echo 'Miniconda is already installed in WSL.'"
 
-:: ==== Step 4: Ensure Conda is in PATH in WSL (Root Mode) ====
-wsl -u root bash -c "echo 'export PATH=$HOME/miniconda/bin:\$PATH' >> ~/.bashrc && echo 'export PATH=$HOME/miniconda/bin:\$PATH' >> ~/.bash_profile"
-wsl -u root bash -c "source ~/.bashrc"
+:: ==== Step 4: Ensure Conda is in PATH in WSL (User Mode) ====
+wsl bash -c "echo 'export PATH=$HOME/miniconda/bin:\$PATH' >> ~/.bashrc && echo 'export PATH=$HOME/miniconda/bin:\$PATH' >> ~/.bash_profile"
+wsl bash -c "source ~/.bashrc"
 
-:: ==== Step 5: Ensure Omicron is Installed in WSL (Root Mode) ====
-wsl -u root bash -ic "conda list | grep -q omicron || conda install -c conda-forge omicron -y"
+:: ==== Step 5: Ensure Omicron is Installed in WSL (User Mode) ====
+wsl bash -ic "conda list | grep -q omicron || conda install -c conda-forge omicron -y"
 
 echo WSL setup completed.
 
