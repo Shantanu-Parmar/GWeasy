@@ -438,7 +438,7 @@ class OmicronApp:
             omicron_cmd = f"omicron {first_time_segment} {last_time_segment} ./config.txt > omicron.out 2>&1"
 
             # Full WSL command (fixing conda initialization issue)
-            wsl_command = 'wsl -u root bash -ic "' + omicron_cmd + '"'
+            wsl_command = 'wsl bash -ic "' + omicron_cmd + '"'
             self.append_output(f"Running: {wsl_command}\n")
 
             # Run command asynchronously with real-time output capture
