@@ -135,7 +135,7 @@ class OmicronApp:
         self.create_folder_selector("Select Output Directory:", "OUTPUT DIRECTORY", is_directory=True, frame=output_frame,row=13,column=0)
         self.create_output_products_selection(output_frame, row=14, column=0)
         self.create_dropdown("Select Format:", "OUTPUT FORMAT", ["root", "hdf5", "Format3"], frame=output_frame,row=15,column=0)
-        self.create_slider("Verbosity (0-5):", "OUTPUT VERBOSITY", 0, 5, frame=output_frame,row=16,column=0)
+        self.create_slider("Verbosity (0-3):", "OUTPUT VERBOSITY", 0, 3, frame=output_frame,row=16,column=0)
 
 
     #Parameters entry 
