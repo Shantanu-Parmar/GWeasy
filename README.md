@@ -76,7 +76,7 @@ Download the ZIP file or clone the repository from:
 
 ## First-Time Setup  
 - The initial run of `install.bat` may take some time, depending on your internet speed, as it installs dependencies and sets up the environment.  
-- After installation, you can reuse `install.bat` as an executable launcher until a dedicated installer is available.
+- After installation, you can reuse `install.bat` as an executable launcher for now. Exe setup coming up soon.
 
 
 
