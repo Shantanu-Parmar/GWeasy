@@ -146,7 +146,6 @@ If you have worked with **Omicron configuration files**, this setup will feel fa
 
 ## **7. Contributors**
 - **Shantanusinh Parmar** (Lead Developer)
-- **Prof. Chandrasinh Parmar** (Project Supervisor)
 
 ## **8. License**
 This project is open-source under the **MIT License**.
