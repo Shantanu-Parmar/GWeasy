@@ -103,7 +103,9 @@ Next, we will select the ffl files, these can be found within each channel withi
 Once that is done, all fields filled, and the output path set or kept as defualt Omicronout, click on the Save config. This will create a config file with input values
 ![image](https://github.com/user-attachments/assets/279a8508-e12e-4e64-93bc-679bc56aa4eb)
 
-That's it, press on start omicron and if all goes well, 
+That's it, press on start omicron and if all goes well, the terminal after processing would show successful execution.
+![image](https://github.com/user-attachments/assets/7fb1b036-c71b-4e96-816a-b954491f0b47)
+
 
 ---
 
