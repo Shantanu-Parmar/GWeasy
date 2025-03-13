@@ -63,33 +63,8 @@ Many astrophysicists spend more time setting up the software than analyzing the 
 
 ---
 ## **4. Installation & Dependencies**
-### **Conda Environment Setup**
-GW DatFetch relies on **Conda** for package and environment management. To install the required dependencies, follow these steps:
-
-#### **Step 1: Set Up the Main Environment (Windows/Linux)**
-```sh
-conda create --name GWeasy python=3.8
-conda activate GWeasy
-```
-#### **Step 2: Install Required Packages**
-```sh
-conda install conda-forge::gwpy
-conda install conda-forge::gwosc
-conda install conda-forge::nds2-client
-conda install conda-forge::python-nds2-client
-conda install anaconda::pandas
-conda install conda-forge::python-framel
-pip install PyQt5 PIL cefPython3 tkinter
-```
-run this in wsl or any other linux system
-```wsl
-conda install conda-forge::omicron
-```
-#### **Step 3: Set Up the OMICRON Environment (WSL/Linux)**
-```sh
-conda create --name omicron python=3.8
-conda activate omicron
-```
+Double click on install.bat
+It doubles as an exe file for now till the installer setup is done. It wont re-download on relaunching the bat file so feel free to create a shortcut of it to launch GWeasy.
 
 ### **Building the Executable (Windows Only)**
 ### not recommended as of right now, use install.bat as an exe currently
@@ -134,9 +109,7 @@ If you’d like to contribute:
 3. **Create a new branch**: `git checkout -b feature-branch`
 4. **Make your changes and commit**
 5. **Push to your fork and create a pull request**
-
 For any issues, feel free to open a GitHub **issue**!
-
 ---
 ### 🚀 **Join the GW DatFetch Project – Making Gravitational Wave Analysis Accessible to All!** 🚀
 
