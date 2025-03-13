@@ -135,7 +135,7 @@ class OmicronApp:
         self.create_folder_selector("Select Output Directory:", "OUTPUT DIRECTORY", is_directory=True, frame=output_frame,row=13,column=0)
         self.create_output_products_selection(output_frame, row=14, column=0)
         self.create_dropdown("Select Format:", "OUTPUT FORMAT", ["root", "hdf5", "Format3"], frame=output_frame,row=15,column=0)
-        self.create_slider("Verbosity (0-3):", "OUTPUT VERBOSITY", 0, 3, frame=output_frame,row=16,column=0)
+        self.create_slider("Verbosity (0-5):", "OUTPUT VERBOSITY", 0, 5, frame=output_frame,row=16,column=0)
 
 
     #Parameters entry 
@@ -438,7 +438,7 @@ class OmicronApp:
             omicron_cmd = f"omicron {first_time_segment} {last_time_segment} ./config.txt > omicron.out 2>&1"
 
             # Full WSL command (fixing conda initialization issue)
-            wsl_command = 'wsl bash -ic "' + omicron_cmd + '"'
+            wsl_command = 'wsl -u root bash -ic "' + omicron_cmd + '"'
             self.append_output(f"Running: {wsl_command}\n")
 
             # Run command asynchronously with real-time output capture
