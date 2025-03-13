@@ -63,20 +63,23 @@ Many astrophysicists spend more time setting up the software than analyzing the 
 
 ---
 ## **4. Installation & Dependencies**
-**Download the repo as a zip or clone it.
-Double click on install.bat
-It doubles as an exe file for now till the installer setup is done. It wont re-download on relaunching the bat file so feel free to create a shortcut of it to launch GWeasy.
-**
-### **Building the Executable (Windows Only)**
-### not recommended as of right now, use install.bat as an exe currently
-To generate a standalone `.exe` file, use **PyInstaller**:
-```sh
-pip install pyinstaller
-pyinstaller --onefile --windowed --hidden-import PIL --hidden-import PIL.Image --hidden-import PIL.ImageTk GWeasy.py
-```
-The executable will be found in the `dist/` directory.
+## Download or Clone the Repository  
+Download the ZIP file or clone the repository from:  
+[https://github.com/Shantanu909/GWeasy](https://github.com/Shantanu909/GWeasy)  
 
----
+## Run the Installer  
+- Open a terminal, navigate to the downloaded directory, and run:  
+  ```sh
+  install.bat
+  ```
+- Alternatively, you can simply double-click `install.bat`.
+
+## First-Time Setup  
+- The initial run of `install.bat` may take some time, depending on your internet speed, as it installs dependencies and sets up the environment.  
+- After installation, you can reuse `install.bat` as an executable launcher until a dedicated installer is available.
+
+
+
 ## **5. Development Timeline**
 | Task | Expected Completion |
 |-------|------------------|
