@@ -79,35 +79,55 @@ Download the ZIP file or clone the repository from:
 - After installation, you can reuse `install.bat` as an executable launcher for now. Exe setup coming up soon.
 
 ## Verification
-A succesful setup will launch a window like this:
-![image](https://github.com/user-attachments/assets/84124f67-21e0-41c5-a926-83a15f8944e1)
-
-Then, to run test on the gravfetch tab, select test.csv for time segement input and 4KCHANS.csv for channels input. You can set output path, by default a new folder called gwfout in same directory will be created.
-![image](https://github.com/user-attachments/assets/e1a0d90a-5e6e-4828-bec1-f00df2352ab0)
-
-A successful initiation and message to terminal about execution finished or added to ffl will indicate succesful run. This might take some time ~5-7 mins as time segment 2 for chan 2 is a bit longer. Alternatively you can just run it on one time segment and/or on 1 channel to begin with.
-![image](https://github.com/user-attachments/assets/ac8725ca-4924-466c-9bff-7bb7a3f5d4aa)
-
-Once gwf files are created, we can switch over to the Omicron tab to verify its working.
-![image](https://github.com/user-attachments/assets/3d5e3aba-e804-4540-bde5-530d1eaeac54)
-
-If you have worked with OMICRON config files, the setup will feel familiar:
-![image](https://github.com/user-attachments/assets/9b928017-f844-4bf4-9810-da309442b438)
-
-The values can be now filled with channel and sampling rate to be done first(there's a glitch where those two have to be worked on before values can be put in other fields, working on it). there's a dropdown for some values, for eg the channel's are autopopulated upon run of gravfetch so it will have all channels from previous runs. Alternativelty, you can type in any channel name.
-![image](https://github.com/user-attachments/assets/f93af41a-59cf-4d1b-a9a5-afd9ff075a33)
-
-Next, we will select the ffl files, these can be found within each channel within the gwfout or your path for the gwf files. Typically, eahc channel has a ffl file describing all time segments. You can build a custom ffl within a channel by use of custom segments button that let's user choose the time segments for omicron analysis.
-![image](https://github.com/user-attachments/assets/50fcbae3-4685-4f20-80ba-98fd88dca8a8)
-
-Once that is done, all fields filled, and the output path set or kept as defualt Omicronout, click on the Save config. This will create a config file with input values
-![image](https://github.com/user-attachments/assets/279a8508-e12e-4e64-93bc-679bc56aa4eb)
-
-That's it, press on start omicron and if all goes well, the terminal after processing would show successful execution.
-![image](https://github.com/user-attachments/assets/7fb1b036-c71b-4e96-816a-b954491f0b47)
-
 
 ---
+
+### 1. Running a Test in the Gravfetch Tab
+To perform a test run:
+- Select **`test.csv`** as the time segment input.
+- Select **`4KCHANS.csv`** as the channels input.
+- Optionally, specify an output directory. By default, GWEasy will create a folder named `gwfout` in the same directory.
+
+![Gravfetch Tab](https://github.com/user-attachments/assets/e1a0d90a-5e6e-4828-bec1-f00df2352ab0)
+
+Once execution starts, a completion message will appear in the terminal, indicating a successful run. Processing time varies (~5-7 minutes) depending on the number of time segments and channels selected. To speed up testing, start with a single time segment and channel.
+
+![Execution Completion](https://github.com/user-attachments/assets/ac8725ca-4924-466c-9bff-7bb7a3f5d4aa)
+
+
+### 2. Running Omicron Analysis
+After generating `gwf` files, switch to the **Omicron** tab to proceed with analysis.
+
+![Omicron Tab](https://github.com/user-attachments/assets/e1a0d90a-5e6e-4828-bec1-f00df2352ab0)
+
+#### Configuring Omicron Settings
+If you have worked with **Omicron configuration files**, this setup will feel familiar:
+
+![Omicron Config](https://github.com/user-attachments/assets/9b928017-f844-4bf4-9810-da309442b438)
+
+**Steps:**
+1. **Set Channel & Sampling Rate First** (due to an existing UI issue, these must be configured before modifying other fields).
+2. Channels are pre-populated based on the **Gravfetch** output, but you can also manually enter any channel name.
+
+![Channel Selection](https://github.com/user-attachments/assets/f93af41a-59cf-4d1b-a9a5-afd9ff075a33)
+
+3. **Select the `.ffl` files** corresponding to each channel. These are located in the **`gwfout`** directory or your chosen output path. Each channel has an `.ffl` file listing all time segments.
+4. Use the **Custom Segments** feature to manually specify time segments for analysis if needed.
+
+![Custom Segments](https://github.com/user-attachments/assets/50fcbae3-4685-4f20-80ba-98fd88dca8a8)
+
+5. Once all fields are filled, specify an output directory (default: `Omicronout`).
+6. Click **Save Config** to generate a configuration file with the selected inputs.
+
+![Save Config](https://github.com/user-attachments/assets/279a8508-e12e-4e64-93bc-679bc56aa4eb)
+
+7. Press **Start Omicron** to begin processing. Upon successful execution, a completion message will be displayed in the terminal.
+
+![Omicron Execution](https://github.com/user-attachments/assets/7fb1b036-c71b-4e96-816a-b954491f0b47)
+
+---
+
+
 
 
 ## **5. Development Timeline**
