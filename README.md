@@ -63,9 +63,10 @@ Many astrophysicists spend more time setting up the software than analyzing the 
 
 ---
 ## **4. Installation & Dependencies**
+**Download the repo as a zip or clone it.
 Double click on install.bat
 It doubles as an exe file for now till the installer setup is done. It wont re-download on relaunching the bat file so feel free to create a shortcut of it to launch GWeasy.
-
+**
 ### **Building the Executable (Windows Only)**
 ### not recommended as of right now, use install.bat as an exe currently
 To generate a standalone `.exe` file, use **PyInstaller**:
