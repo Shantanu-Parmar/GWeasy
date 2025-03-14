@@ -1,9 +1,9 @@
-# ECLIPTA FORGE - GW DatFetch
+# GWeasy
 
-## GW DatFetch: Multiplatform GUI Software for Gravitational Wave Data Analysis
+## GWeasy: Multiplatform GUI Software for Gravitational Wave Data Analysis
 
 ### **Overview**
-**ECLIPTA FORGE** is a user-friendly, GUI-based software designed to streamline the process of **fetching, analyzing, and visualizing gravitational wave (GW) data**. This software aims to reduce the complexity of installing and running GW analysis tools by integrating all necessary software requirements into a single, easy-to-use platform.
+**GWeasy** is a user-friendly, GUI-based software designed to streamline the process of **fetching, analyzing, and visualizing gravitational wave (GW) data**. This software aims to reduce the complexity of installing and running GW analysis tools by integrating all necessary software requirements into a single, easy-to-use platform.
 
 ### **Project Details**
 - **Project Timeline:** February - April 2025
@@ -37,7 +37,7 @@ This experience highlighted the need for a **user-friendly, platform-independent
 - Provide an **intuitive GUI** for data selection, analysis, and visualization.
 - Offer a **one-click** install and execution process.
 
-Many astrophysicists spend more time setting up the software than analyzing the data. **GW DatFetch** aims to **eliminate this technical barrier**, allowing researchers to focus on their primary goal: **gravitational wave science**.
+Many astrophysicists spend more time setting up the software than analyzing the data. **GWeasy** aims to **eliminate this technical barrier**, allowing researchers to focus on their primary goal: **gravitational wave science**.
 
 ---
 ## **3. Features & Functionalities**
@@ -164,5 +164,5 @@ If you’d like to contribute:
 5. **Push to your fork and create a pull request**
 For any issues, feel free to open a GitHub **issue**!
 ---
-### 🚀 **Join the GW DatFetch Project – Making Gravitational Wave Analysis Accessible to All!** 🚀
+### 🚀 **Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!** 🚀
 
