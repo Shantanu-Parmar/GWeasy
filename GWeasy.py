@@ -9,7 +9,14 @@ import sys
 import pandas as pd
 from gwpy.timeseries import TimeSeries
 import json
-
+import logging
+from PIL import Image, ImageTk
+# Configure logging
+logging.basicConfig(
+    filename="omicron_plot.log",
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 HISTORY_FILE = "gravfetch_history.json"  # Define history file
 class Application:
     
@@ -35,11 +42,15 @@ class Application:
         self.omicron_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.omicron_tab, text="OMICRON")
         
+        # Omiviz Tab (NEW)
+        self.omiviz_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.omiviz_tab, text="Omiviz")
+     
         # Initialize both GUIs (Gravfetch and OMICRON) in their respective tabs
         
         self.gravfetch_app = GravfetchApp(self.gravfetch_tab)
         self.omicron_app = OmicronApp(self.omicron_tab)
-        
+        self.omiviz_app = Omiviz(self.omiviz_tab)  # Add Omiviz GUI
         
 class TerminalFrame(tk.Frame):
     def __init__(self, parent, row, column, rowspan=1, columnspan=1, height=15, width=100):
@@ -778,6 +789,7 @@ class GWOSCApp:
         self.root.after(100, self.init_cef)
         self.master.bind("<Configure>", self.on_resize)  # Resize handling
 
+        
     def init_cef(self):
         """Initializes CEF and creates the browser."""
         sys.excepthook = cef.ExceptHook  # Catch CEF exceptions
@@ -826,6 +838,318 @@ class GWOSCApp:
         url = self.url_entry.get()
         if self.browser and url:
             self.browser.LoadUrl(url)
+
+
+class Omiviz:
+    def __init__(self, root):
+        self.root = root
+        self.config_data = {}
+        self.ui_elements = {}
+        self.plot_files = []  # Store generated plots
+        self.current_plot_index = 0  # Track displayed plot
+
+        # Scrollable Frame
+        self.canvas = tk.Canvas(root)
+        self.scrollbar = ttk.Scrollbar(root, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = ttk.Frame(self.canvas)
+
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all"))
+        )
+        
+        self.window_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")
+        self.scrollbar.grid(row=0, column=1, sticky="ns")
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
+        # Create GUI elements
+        self.create_widgets()
+
+    def start_loading(self):
+        """Start the loading animation."""
+        self.progress.start()
+
+    def stop_loading(self):
+        """Stop the loading animation."""
+        self.progress.stop()
+
+    def update_progress(self, text):
+        """Update progress based on Omicron output."""
+        if "Processing" in text or "Generating" in text:
+            self.progress.step(10)  # Move progress slightly
+
+    def show_previous_plot(self):
+        """Scrolls backward through the plots."""
+        if self.current_plot_index > 0:
+            self.current_plot_index -= 1
+            self.show_plot()
+        self.update_navigation_buttons()
+
+    def show_next_plot(self):
+        """Scrolls forward through the plots."""
+        if self.current_plot_index < len(self.plot_files) - 1:
+            self.current_plot_index += 1
+            self.show_plot()
+        self.update_navigation_buttons()
+
+    def update_navigation_buttons(self):
+        """Updates the state of navigation buttons."""
+        self.prev_button.config(state=tk.NORMAL if self.current_plot_index > 0 else tk.DISABLED)
+        self.next_button.config(state=tk.NORMAL if self.current_plot_index < len(self.plot_files) - 1 else tk.DISABLED)
+
+
+    def create_widgets(self):
+        # File/Folder Selector
+        self.create_file_selector("Select Root File(s) or Folder:", "OMICRON FILE", row=1, column=0)
+
+        # Channel Input (Defaults to folder name)
+        self.valent("Channel Name:", "OMICRON CHANNEL", row=2, col=0)
+
+        # GPS Start and End Time (Editable)
+        self.valent("GPS Start Time:", "OMICRON GPS-START", row=3, col=0)
+        self.valent("GPS End Time:", "OMICRON GPS-END", row=4, col=0)
+
+        # Button Frame
+        button_frame = tk.Frame(self.scrollable_frame, bd=2, relief="groove", padx=5, pady=5)
+        button_frame.grid(row=10, column=0, columnspan=4, pady=10, sticky="ew")
+        self.run_button = tk.Button(button_frame, text="Run Omicron Plot", command=self.run_omicron_plot)
+        self.run_button.pack(side="left", padx=20)
+
+        # Image Display Frame
+        self.image_frame = tk.Frame(self.scrollable_frame)
+        self.image_frame.grid(row=11, column=0, columnspan=4, pady=10, sticky="ew")
+
+        self.image_label = tk.Label(self.image_frame, text="No Plot Available", width=50, height=25, bg="gray")
+        self.image_label.pack()
+
+        # Navigation Buttons
+        nav_frame = tk.Frame(self.scrollable_frame)
+        nav_frame.grid(row=12, column=0, columnspan=4, pady=10, sticky="ew")
+
+        self.prev_button = tk.Button(nav_frame, text="⬅ Previous", command=self.show_previous_plot, state=tk.DISABLED)
+        self.prev_button.pack(side="left", padx=20)
+
+        self.next_button = tk.Button(nav_frame, text="Next ➡", command=self.show_next_plot, state=tk.DISABLED)
+        self.next_button.pack(side="right", padx=20)
+        self.progress = ttk.Progressbar(self.scrollable_frame, orient="horizontal", length=300, mode="indeterminate")
+        self.progress.grid(row=13, column=0, columnspan=4, pady=10, sticky="ew")
+
+    def valent(self, label, key, frame=None, row=0, col=0, editable=True):
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=col, sticky="w", padx=5, pady=5)
+        var = tk.StringVar(value=self.config_data.get(key, ""))
+        entry = tk.Entry(target_frame, textvariable=var, width=15, state="normal")  
+        entry.grid(row=row, column=col + 1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+
+    def create_file_selector(self, label, key, frame=None, row=0, column=0):
+        """Allows selecting either a single file or a folder containing `.root` files."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
+
+        var = tk.StringVar(value=self.config_data.get(key, ""))
+        button = tk.Button(target_frame, text="Browse", command=lambda: self.select_file_or_folder(var))
+        button.grid(row=row, column=2, padx=5, pady=5)
+
+        entry = tk.Entry(target_frame, textvariable=var, width=40, state="readonly")
+        entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def select_file_or_folder(self, var):
+        """Allows selecting a folder (grabs all `.root` files) or an individual file."""
+        path = filedialog.askdirectory() or filedialog.askopenfilename(filetypes=[("Root Files", "*.root")])
+
+        if os.path.isdir(path):  # If a folder is selected
+            root_files = [os.path.join(path, f) for f in os.listdir(path) if f.endswith(".root")]
+            if not root_files:
+                messagebox.showwarning("Warning", "No .root files found in selected folder.")
+                return
+            var.set(path)  # Store folder path
+            # Auto-set channel name based on folder name
+            folder_name = os.path.basename(path).replace("", ":")
+            self.ui_elements["OMICRON CHANNEL"].set(folder_name)
+            #print("folder name ", folder_name)
+
+            # Convert all root file paths to WSL format
+            root_files_wsl = []
+            for f in root_files:
+                abs_path = os.path.abspath(f)  # Get the absolute path
+                norm_path = os.path.normpath(abs_path)  # Normalize path to handle slashes properly
+                wsl_path = "/mnt/c/" + norm_path.replace("\\", "/")[2:]  # Convert backslashes to slashes and remove "C:" part
+                root_files_wsl.append(wsl_path)
+            #print("Converted root files:", root_files_wsl)
+
+        elif path:  # If a single file is selected
+            var.set(path)
+            # Auto-set channel name based on file's parent folder
+            folder_name = os.path.basename(os.path.dirname(path)).replace("_", ":")
+            self.ui_elements["OMICRON CHANNEL"].set(folder_name)
+
+            # Convert the single file path to WSL format
+            abs_path = os.path.abspath(path)  # Get the absolute path
+            norm_path = os.path.normpath(abs_path)  # Normalize path to handle slashes properly
+            path_wsl = "/mnt/c/" + norm_path.replace("\\", "/")[2:]  # Convert backslashes to slashes and remove "C:" part
+            #print("Converted file path:", path_wsl)
+
+            return path_wsl  # Return the WSL-formatted path for use in further commands
+
+    def run_omicron_plot(self):
+        selected_path = self.ui_elements["OMICRON FILE"].get()
+        gps_start = self.ui_elements["OMICRON GPS-START"].get()
+        gps_end = self.ui_elements["OMICRON GPS-END"].get()
+        channel_name = self.ui_elements["OMICRON CHANNEL"].get()
+
+        if not selected_path or not gps_start or not gps_end or not channel_name:
+            messagebox.showerror("Error", "Please fill in all fields!")
+            return
+
+        # Convert selected path to WSL format
+        if os.path.isdir(selected_path):
+            root_files = []
+            for f in os.listdir(selected_path):
+                if f.endswith(".root"):
+                    abs_path = os.path.abspath(os.path.join(selected_path, f))  # Get the absolute path
+                    norm_path = os.path.normpath(abs_path)  # Normalize path to handle slashes properly
+                    wsl_path = "/mnt/c/" + norm_path.replace("\\", "/")[2:]  # Convert backslashes to slashes and remove "C:" part
+                    root_files.append(wsl_path)
+            input_files = " ".join(root_files)
+
+            #print("Converted root files:", root_files)
+            input_files = " ".join(root_files)
+
+            #print("Converted root files:", root_files)
+
+        else:
+            # Convert the single file to WSL format
+            abs_path = os.path.abspath(selected_path)  # Get the absolute path
+            norm_path = os.path.normpath(abs_path)  # Normalize path to handle slashes properly
+            input_files = "/mnt/c/" + norm_path.replace("\\", "/")[2:]  # Convert backslashes to slashes and remove "C:" part
+            #print("Converted file path:", input_files)
+
+        output_folder_name = f"{channel_name}_{gps_start}_{gps_end}".replace(":", "_")
+        output_folder_path = os.path.join(os.getcwd(), output_folder_name)
+
+        os.makedirs(output_folder_path, exist_ok=True)
+        abs_path = os.path.abspath(output_folder_path).replace("\\", "/")
+        drive_letter = abs_path[0].lower()
+        path_without_drive = abs_path[3:]
+        self.wsl_project_dir = f"/mnt/{drive_letter}/{path_without_drive}"
+
+        #print(f"WSL Project Directory: {self.wsl_project_dir}")
+
+
+        # Construct the command to run omicron-plot
+        command = [
+            "export C_INCLUDE_PATH=/usr/include",
+            "export CPLUS_INCLUDE_PATH=/usr/include", 
+            f"omicron-plot file={input_files} gps-start={gps_start} gps-end={gps_end} outformat=png outdir=/mnt/c/Users/HP/Desktop/GWeasy/OmicronPlots/" 
+        ]
+
+        # Use threading to run the command in the background
+        threading.Thread(target=self.execute_command, args=(command, gps_start, gps_end, self.wsl_project_dir), daemon=True).start()
+
+    def execute_command(self, command, gps_start, gps_end, output_folder):
+        """Runs the Omicron plot command inside a full WSL shell session with logging."""
+        try:
+            for cmd in command:
+                log_message = f"Executing WSL Command: {cmd}"
+                logging.info(log_message)
+                #print(log_message)  # Debug Output
+
+                # Start loading animation
+                self.start_loading()
+
+                # Run full WSL session and execute command
+                wsl_command = f"wsl bash -ic '{cmd}'"
+                process = subprocess.Popen(wsl_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            
+                for line in process.stdout:
+                    logging.info(line.strip())  # Log output
+                   # print(line.strip())  # Console output
+                    self.update_progress(line.strip())  # Update progress bar
+
+                for line in process.stderr:
+                    logging.error(line.strip())  # Log errors
+                   # print("ERROR:", line.strip())
+
+                # Stop loading and load plots
+                self.stop_loading()
+                self.load_plots("OmicronPlots")
+                logging.info("Omicron plot execution completed successfully.")
+
+        except Exception as e:
+            error_message = f"Execution failed: {e}"
+            logging.error(error_message)
+            #print(error_message)
+            self.stop_loading()
+
+
+    def show_plot(self):
+        """Displays the current plot in the GUI."""
+        if not self.plot_files:
+            self.image_label.config(text="No plots available", image="", bg="gray")
+            return
+
+        try:
+            # Ensure current_plot_index is within bounds
+            if 0 <= self.current_plot_index < len(self.plot_files):
+                image_path = self.plot_files[self.current_plot_index]
+                logging.info(f"Displaying plot: {image_path}")  # Log the displayed plot
+
+                image = Image.open(image_path)
+
+                # Set the size of the image label based on the size of the image
+                image_width, image_height = image.size
+
+                # Set max width and height based on available space
+                max_width = 600  # You can adjust this value
+                max_height = 300  # You can adjust this value
+
+                # Resize the image to fit within the available space
+                if image_width > max_width or image_height > max_height:
+                    image = image.resize((max_width, int(max_width * image_height / image_width)), Image.LANCZOS)
+
+                self.photo = ImageTk.PhotoImage(image)  # Store reference to prevent garbage collection
+
+                # Resize the image_label widget to match the image size
+                self.image_label.config(image=self.photo, text="", bg="white", width=max_width, height=max_height)
+                self.image_label.image = self.photo  # Explicitly store the image reference
+
+            else:
+                logging.error(f"Invalid plot index: {self.current_plot_index}")
+                self.image_label.config(text="Invalid plot index", bg="red")
+
+        except Exception as e:
+            logging.error(f"Error displaying plot: {e}")
+            self.image_label.config(text="Error loading plot", bg="red")
+
+    def load_plots(self, folder):
+        """Loads the plots from WSL and updates the GUI."""
+        try:
+            if not os.path.exists(folder):
+                raise FileNotFoundError(f"The folder {folder} does not exist.")
+            
+            self.plot_files = sorted([os.path.join(folder, f) for f in os.listdir(folder) if f.endswith(".png")])
+            
+            if self.plot_files:
+                self.current_plot_index = 0
+                self.show_plot()
+                self.update_navigation_buttons()
+            else:
+                logging.warning("No PNG files found in the folder.")
+                messagebox.showwarning("Warning", "No plots found. Check if Omicron-plot executed correctly.")
+                
+        except FileNotFoundError as e:
+            logging.error(f"Folder not found: {e}")
+            messagebox.showerror("Error", f"Folder not found: {e}")
+        except Exception as e:
+            logging.error(f"Failed to load plots: {e}")
+            messagebox.showerror("Error", f"Failed to load plots: {e}")
+
 
 if __name__ == "__main__":
     conda_env_path = os.path.join(os.path.dirname(sys.executable), "conda_env")
