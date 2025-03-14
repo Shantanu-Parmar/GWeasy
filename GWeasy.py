@@ -911,7 +911,8 @@ class Omiviz:
         # GPS Start and End Time (Editable)
         self.valent("GPS Start Time:", "OMICRON GPS-START", row=3, col=0)
         self.valent("GPS End Time:", "OMICRON GPS-END", row=4, col=0)
-
+        self.create_output_path_selector("Select Output Folder:", "OMICRON OUTPUT", row=5, column=0)
+    
         # Button Frame
         button_frame = tk.Frame(self.scrollable_frame, bd=2, relief="groove", padx=5, pady=5)
         button_frame.grid(row=10, column=0, columnspan=4, pady=10, sticky="ew")
@@ -945,6 +946,24 @@ class Omiviz:
         entry.grid(row=row, column=col + 1, sticky="ew", padx=5, pady=5)
         self.ui_elements[key] = var
 
+    def create_output_path_selector(self, label, key, frame=None, row=0, column=0):
+        """Allows selecting an output folder."""
+        target_frame = frame if frame else self.scrollable_frame
+        tk.Label(target_frame, text=label).grid(row=row, column=column, sticky="w", padx=5, pady=5)
+
+        var = tk.StringVar(value=self.config_data.get(key, ""))
+        button = tk.Button(target_frame, text="Browse", command=lambda: self.select_output_folder(var))
+        button.grid(row=row, column=2, padx=5, pady=5)
+
+        entry = tk.Entry(target_frame, textvariable=var, width=40, state="readonly")
+        entry.grid(row=row, column=1, sticky="ew", padx=5, pady=5)
+        self.ui_elements[key] = var
+
+    def select_output_folder(self, var):
+        """Allows selecting an output folder."""
+        folder_path = filedialog.askdirectory()  # Open directory selection dialog
+        if folder_path:
+            var.set(folder_path)  # Store the selected folder path
 
     def create_file_selector(self, label, key, frame=None, row=0, column=0):
         """Allows selecting either a single file or a folder containing `.root` files."""
@@ -1002,6 +1021,7 @@ class Omiviz:
         gps_start = self.ui_elements["OMICRON GPS-START"].get()
         gps_end = self.ui_elements["OMICRON GPS-END"].get()
         channel_name = self.ui_elements["OMICRON CHANNEL"].get()
+        output_folder = self.ui_elements["OMICRON OUTPUT"].get()  # Get the output folder
 
         if not selected_path or not gps_start or not gps_end or not channel_name:
             messagebox.showerror("Error", "Please fill in all fields!")
@@ -1030,25 +1050,31 @@ class Omiviz:
             input_files = "/mnt/c/" + norm_path.replace("\\", "/")[2:]  # Convert backslashes to slashes and remove "C:" part
             #print("Converted file path:", input_files)
 
-        output_folder_name = f"{channel_name}_{gps_start}_{gps_end}".replace(":", "_")
-        output_folder_path = os.path.join(os.getcwd(), output_folder_name)
+        # output_folder_name = f"{channel_name}_{gps_start}_{gps_end}".replace(":", "_")
+        # #print("*****************",channel_name)
+        # output_folder_path = os.path.join(os.getcwd(), output_folder_name)
 
-        os.makedirs(output_folder_path, exist_ok=True)
-        abs_path = os.path.abspath(output_folder_path).replace("\\", "/")
-        drive_letter = abs_path[0].lower()
-        path_without_drive = abs_path[3:]
-        self.wsl_project_dir = f"/mnt/{drive_letter}/{path_without_drive}"
+        # os.makedirs(output_folder_path, exist_ok=True)
+        # abs_path = os.path.abspath(output_folder_path).replace("\\", "/")
+        # drive_letter = abs_path[0].lower()
+        # path_without_drive = abs_path[3:]
+        # self.wsl_project_dir = f"/mnt/{drive_letter}/{path_without_drive}"
 
-        #print(f"WSL Project Directory: {self.wsl_project_dir}")
+        # #print(f"WSL Project Directory: {self.wsl_project_dir}")
 
-
-        # Construct the command to run omicron-plot
+        #print("++++++++++",input_files,"++++++++++++++")
+        # Construct the command to run omicron-plot4
+        print(output_folder)
+        self.wsl_project_dir = output_folder
+        output_fil = "/mnt/c/" + output_folder.replace("\\", "/")[2:]  # Convert backslashes to slashes and remove "C:" part
+        output_fil = output_fil.replace("//", "/")
+        print(output_fil)
+        output_folder = output_fil
         command = [
             "export C_INCLUDE_PATH=/usr/include",
             "export CPLUS_INCLUDE_PATH=/usr/include", 
-            f"omicron-plot file={input_files} gps-start={gps_start} gps-end={gps_end} outformat=png outdir=/mnt/c/Users/HP/Desktop/GWeasy/OmicronPlots/" 
+            f"omicron-plot file={input_files} gps-start={gps_start} gps-end={gps_end} outformat=png outdir={output_fil}" 
         ]
-
         # Use threading to run the command in the background
         threading.Thread(target=self.execute_command, args=(command, gps_start, gps_end, self.wsl_project_dir), daemon=True).start()
 
@@ -1078,7 +1104,7 @@ class Omiviz:
 
                 # Stop loading and load plots
                 self.stop_loading()
-                self.load_plots("OmicronPlots")
+                self.load_plots(output_folder)
                 logging.info("Omicron plot execution completed successfully.")
 
         except Exception as e:
