@@ -481,38 +481,59 @@ class OmicronApp:
         except Exception as e:
             self.append_output(f"Unexpected error: {e}\n")
 
-
     def append_output(self, text):
         """Append output to the shared terminal frame."""
         self.terminal.append_output(text)
         
-
-    #custom ffl
     def open_custom_segs_dialog(self):
-        """ Opens a GUI window to select a channel and time segments (grid layout). """
+        """Opens a GUI window to select a channel and time segments with scrolling and dynamic layout."""
         channel_dir = filedialog.askdirectory(initialdir="./gwfout", title="Select Channel Directory")
         if not channel_dir:
-            return  # User canceled selection
+            return
 
         segments = [d for d in os.listdir(channel_dir) if os.path.isdir(os.path.join(channel_dir, d))]
         if not segments:
             messagebox.showerror("Error", "No time segments found in selected channel.")
             return
 
-        # Create selection window
+        # Create the selection window
         selection_window = tk.Toplevel(self.root)
         selection_window.title("Select Time Segments")
-        
-        tk.Label(selection_window, text="Select Time Segments:", font=("Arial", 12)).grid(row=0, column=0, columnspan=2)
+        selection_window.geometry("400x400")  # Adjustable window size
 
-        # Create checkboxes for each segment
+        # Header label
+        tk.Label(selection_window, text="Select Time Segments:", font=("Arial", 12)).pack(pady=5)
+
+        # Create canvas inside a frame with scrollbar
+        container = tk.Frame(selection_window)
+        container.pack(fill="both", expand=True)
+
+        canvas = tk.Canvas(container)
+        scrollbar = tk.Scrollbar(container, orient="vertical", command=canvas.yview)
+        scrollable_frame = tk.Frame(canvas)
+
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+
+        canvas.pack(side="left", fill="both", expand=True)
+        scrollbar.pack(side="right", fill="y")
+
+        # Checkbox variables and widgets
         selected_segments = {}
         for idx, segment in enumerate(segments):
             selected_segments[segment] = tk.BooleanVar()
-            chk = tk.Checkbutton(selection_window, text=segment, variable=selected_segments[segment])
-            chk.grid(row=(idx // 2) + 1, column=idx % 2, sticky="w", padx=5, pady=2)
+            chk = tk.Checkbutton(scrollable_frame, text=segment, variable=selected_segments[segment])
+            chk.grid(row=idx, column=0, sticky="w", padx=5, pady=2)
 
-        # Confirm button
+        # Bottom button frame (always visible)
+        bottom_frame = tk.Frame(selection_window)
+        bottom_frame.pack(fill="x", pady=10)
+
         def confirm_selection():
             selected = [seg for seg, var in selected_segments.items() if var.get()]
             if not selected:
@@ -521,14 +542,13 @@ class OmicronApp:
                 self.generate_fin_ffl(channel_dir, selected)
                 selection_window.destroy()
 
-        # Toggle All button functionality
         def toggle_all():
             all_selected = all(var.get() for var in selected_segments.values())
             for var in selected_segments.values():
-                var.set(not all_selected)  # Toggle the selection state
+                var.set(not all_selected)
 
-        tk.Button(selection_window, text="Confirm", command=confirm_selection).grid(row=(len(segments) // 2) + 2, column=0, columnspan=2, pady=10)
-        tk.Button(selection_window, text="Toggle All", command=toggle_all).grid(row=(len(segments) // 2) + 2, column=1, columnspan=2, pady=10)
+        tk.Button(bottom_frame, text="Confirm", command=confirm_selection).pack(side="left", padx=20)
+        tk.Button(bottom_frame, text="Toggle All", command=toggle_all).pack(side="right", padx=20)
 
     def generate_fin_ffl(self, channel_dir, selected_segments):
         """ Generates fin.ffl file with correctly formatted paths and timestamps, then preselects it in the UI. """
