@@ -11,6 +11,17 @@ from gwpy.timeseries import TimeSeries
 import json
 import logging
 from PIL import Image, ImageTk
+from gwosc.datasets import find_datasets, event_gps
+from gwosc.locate import get_event_urls
+from gwpy import time as gp_time
+from gwosc import datasets
+from datetime import datetime
+from gwpy.timeseries import TimeSeries
+from scipy.signal import get_window
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
+import csv
+
 # Configure logging
 logging.basicConfig(
     filename="omicron_plot.log",
@@ -46,11 +57,24 @@ class Application:
         self.omiviz_tab = ttk.Frame(self.notebook)
         self.notebook.add(self.omiviz_tab, text="Omiviz")
      
+        self.TimeSeriesWav = ttk.Frame(self.notebook)
+        self.notebook.add(self.TimeSeriesWav, text="TimeSeriesWav")
+
+        self.FFT = ttk.Frame(self.notebook)
+        self.notebook.add(self.FFT, text="FFT")
+
+        self.PSDs = ttk.Frame(self.notebook)
+        self.notebook.add(self.PSDs, text="Power Spectral Density")
+
+
         # Initialize both GUIs (Gravfetch and OMICRON) in their respective tabs
-        
         self.gravfetch_app = GravfetchApp(self.gravfetch_tab)
         self.omicron_app = OmicronApp(self.omicron_tab)
         self.omiviz_app = Omiviz(self.omiviz_tab)  # Add Omiviz GUI
+        self.TimeSeriesWav_app = TimeSrswaveform(self.TimeSeriesWav) 
+        self.FFT = FFT(self.FFT)
+        self.PSDs = PSDs(self.PSDs)
+         
         
 class TerminalFrame(tk.Frame):
     def __init__(self, parent, row, column, rowspan=1, columnspan=1, height=15, width=100):
@@ -1196,6 +1220,883 @@ class Omiviz:
             logging.error(f"Failed to load plots: {e}")
             messagebox.showerror("Error", f"Failed to load plots: {e}")
 
+###############################################################################Time Series Waveforms#############################################################
+
+
+class TimeSrswaveform:
+    def __init__(self, root):
+        self.root = root
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
+        # Canvas for scrolling
+        self.canvas = tk.Canvas(root)
+        self.scroll_y = ttk.Scrollbar(root, orient="vertical", command=self.canvas.yview)
+        self.scroll_x = ttk.Scrollbar(root, orient="horizontal", command=self.canvas.xview)
+        self.scroll_y.grid(row=0, column=1, sticky="ns")
+        self.scroll_x.grid(row=1, column=0, sticky="ew")
+
+        self.frame = ttk.Frame(self.canvas)
+        self.frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
+
+        self.canvas.create_window((0, 0), window=self.frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scroll_y.set, xscrollcommand=self.scroll_x.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")  
+
+
+        # Main Input Frame
+        input_frame = ttk.LabelFrame(self.frame, text="Input Parameters")
+        input_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+
+        # Catalog Selection
+        ttk.Label(input_frame, text="Catalog:").grid(row=0, column=0, padx=5, pady=5, sticky="w")
+        self.catalog_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.catalog_dropdown.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        self.catalog_dropdown.bind("<<ComboboxSelected>>", self.fetch_events)
+
+        # Event Selection
+        ttk.Label(input_frame, text="Event:").grid(row=1, column=0, padx=5, pady=5, sticky="w")
+        self.event_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.event_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        self.event_dropdown.bind("<<ComboboxSelected>>",self.fetch_event_details)
+
+        # Run Selection
+        ttk.Label(input_frame, text="Run:").grid(row=2, column=0, padx=5, pady=5, sticky="w")
+        self.run_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.run_dropdown.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+
+        # Detector Selection
+        ttk.Label(input_frame, text="Detector:").grid(row=1, column=2, padx=5, pady=5, sticky="w")
+        self.detector_dropdown = tk.Listbox(input_frame, selectmode="multiple", height=3)
+        for det in ["L1", "H1", "V1"]:
+            self.detector_dropdown.insert(tk.END, det)
+        self.detector_dropdown.grid(row=1, column=3, padx=5, pady=5, sticky="ew")
+        self.detector_dropdown.bind("<<ComboboxSelected>>",self.update_urls)
+
+        # GPS Time Inputs
+        ttk.Label(input_frame, text="Start Time:").grid(row=0, column=2, padx=5, pady=5, sticky="w")
+        self.gps_start_entry = ttk.Entry(input_frame, width=20)
+        self.gps_start_entry.grid(row=0, column=3, padx=5, pady=5, sticky="ew")
+
+        ttk.Label(input_frame, text="End Time (Optional):").grid(row=0, column=4, padx=5, pady=5, sticky="w")
+        self.gps_end_entry = ttk.Entry(input_frame, width=20)
+        self.gps_end_entry.grid(row=0, column=5, padx=5, pady=5, sticky="ew")
+
+        # GPS ⇄ UTC Converter
+        self.mode = tk.StringVar(value="gps_to_utc")
+        conversion_frame = ttk.LabelFrame(self.frame, text="GPS ⇄ UTC Converter")
+        conversion_frame.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
+
+        self.convert_entry = ttk.Entry(conversion_frame, width=20)
+        self.convert_entry.grid(row=0, column=0, padx=5, pady=5)
+
+        self.convert_button = ttk.Button(conversion_frame, text="Convert", command=self.convert_time)
+        self.convert_button.grid(row=0, column=1, padx=5, pady=5)
+
+        self.result_label = ttk.Label(conversion_frame, text="Result: ")
+        self.result_label.grid(row=0, column=2, padx=5, pady=5)
+
+        self.toggle_button = ttk.Button(conversion_frame, text="Switch to UTC → GPS", command=self.toggle_mode)
+        self.toggle_button.grid(row=0, column=3, padx=5, pady=5)
+
+        # Event URLs Frame
+        url_frame = ttk.LabelFrame(self.frame, text="Event URLs")
+        url_frame.grid(row=1, column=1, padx=5, pady=5, sticky="nsew")
+
+        self.url_dropdown = ttk.Combobox(url_frame, state="readonly")
+        self.url_dropdown.grid(row=0, column=0, padx=5, pady=5, sticky="ew")
+
+        self.copy_button = ttk.Button(url_frame, text="Copy URL", command=self.copy_url)
+        self.copy_button.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        
+        # Save Parameters Button
+        self.save_button = ttk.Button(input_frame, text="Save Parameters", command=self.save_params)
+        self.save_button.grid(row=2, column=0, columnspan=2, padx=5, pady=10, sticky="ew")
+        self.plot_frame = ttk.Frame(self.frame)
+        self.plot_frame.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
+
+        self.prefetch_data()
+        self.plot_button = tk.Button(root, text="Plot TimeSeries", command=lambda: self.plot_gw_event(self.catalog_dropdown.get(),[self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get())))
+        self.plot_button.grid(row=0, column=3, columnspan=2, pady=10)
+
+
+    def copy_url(self):
+        selected_url = self.url_dropdown.get()
+        if selected_url:
+            self.root.clipboard_clear()
+            self.root.clipboard_append(selected_url)
+            self.root.update()  # Keep clipboard data even after the app closes
+            messagebox.showinfo("Copied", "URL copied to clipboard!")
+        else:
+            messagebox.showwarning("Warning", "No URL selected!")
+
+    # 🔹 Prefetch Catalogs & Runs at Startup
+    def prefetch_data(self):
+        try:
+            catalogs = find_datasets(type="catalog")
+            self.catalog_dropdown["values"] = catalogs
+            if catalogs:
+                self.catalog_dropdown.current(0)
+
+            runs = find_datasets(type="run")
+            self.run_dropdown["values"] = runs
+            if runs:
+                self.run_dropdown.current(0)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching catalogs/runs: {e}")
+
+    # 🔹 Fetch Events Based on Selected Catalog
+    def fetch_events(self, event=None):
+        selected_catalog = self.catalog_dropdown.get()
+        if not selected_catalog:
+            return
+
+        try:
+            events = datasets.find_datasets(type="events", catalog=selected_catalog)
+            self.event_dropdown["values"] = events
+            if events:
+                self.event_dropdown.current(0)
+                self.fetch_event_details()  # Auto-update details for first event
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching events: {e}")
+
+    # 🔹 Fetch Event GPS & URLs
+    def fetch_event_details(self, event=None):
+        selected_event = self.event_dropdown.get()
+        if not selected_event:
+            return
+        try:
+            gps_time = event_gps(selected_event)
+            self.gps_start_entry.delete(0, tk.END)
+            self.gps_start_entry.insert(0, str(gps_time))
+
+            self.update_urls()
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event details: {e}")
+
+    # 🔹 Update URLs Based on Event & Detector
+    def update_urls(self, event=None):
+        selected_event = self.event_dropdown.get()
+        selected_detectors = [self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()]
+        if not selected_event or not selected_detectors:
+            return
+
+        try:
+            urls = get_event_urls(selected_event)
+            filtered_urls = [url for url in urls if any(det in url for det in selected_detectors)]
+            self.url_dropdown["values"] = filtered_urls
+            if filtered_urls:
+                self.url_dropdown.current(0)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event URLs: {e}")
+
+    # 🔹 Toggle GPS ⇄ UTC Mode
+    def toggle_mode(self):
+        if self.mode.get() == "gps_to_utc":
+            self.mode.set("utc_to_gps")
+            self.toggle_button.config(text="Switch to GPS → UTC")
+        else:
+            self.mode.set("gps_to_utc")
+            self.toggle_button.config(text="Switch to UTC → GPS")
+
+    # 🔹 Convert GPS ⇄ UTC
+    def convert_time(self):
+        time_input = self.convert_entry.get().strip()
+        if not time_input:
+            messagebox.showerror("Error", "Please enter a valid time!")
+            return
+
+        try:
+            if self.mode.get() == "gps_to_utc":
+                gps_time = float(time_input)
+                utc_time = gp_time.from_gps(int(gps_time))
+                self.result_label.config(text=f"UTC Time: {utc_time}")
+            else:
+                utc_time = datetime.strptime(time_input, "%Y-%m-%d %H:%M:%S")
+                gps_time = gp_time.to_gps(utc_time)
+                self.result_label.config(text=f"GPS Time: {gps_time}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Conversion failed: {e}")
+ 
+
+    def save_params(self):
+        """Overwrite 'gwfparams.csv' with the latest input values, including headers."""
+        file_path = "gwfparams.csv"
+
+        # Define column headers
+        headers = ["Catalog", "Event", "Run", "Detector(s)", "Start Time (GPS)", "End Time (GPS)", "Event URL"]
+
+        # Collect values
+        selected_detectors = ", ".join([self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()])
+        params = [
+            self.catalog_dropdown.get(),
+            self.event_dropdown.get(),
+            self.run_dropdown.get(),
+            selected_detectors,  # Updated for multiple detectors
+            self.gps_start_entry.get(),
+            self.gps_end_entry.get(),
+            self.url_dropdown.get(),  # Assuming this holds the event URL
+        ]
+
+        try:
+            with open(file_path, mode="w", newline="") as file:  # "w" mode overwrites the file
+                writer = csv.writer(file)
+                writer.writerow(headers)  # Always write headers
+                writer.writerow(params)   # Write only the latest values
+
+            messagebox.showinfo("Success", f"Parameters saved to {file_path}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to save parameters: {e}")
+
+    def plot_gw_event(self, event_name, detectors, gps_start, gps_end):
+        """Plot gravitational wave event data for multiple detectors."""
+
+        # Generate the figure and axes
+        fig, ax = plt.subplots(figsize=(8, 5))
+        colors = ['b', 'r', 'g']  # Blue, Red, Green for H1, L1, V1
+
+        for i, det in enumerate(detectors):
+            try:
+                # Fetch GWOSC data for each detector
+                data = TimeSeries.fetch_open_data(det, gps_start, gps_end, verbose=True)
+
+                # Plot with different colors
+                ax.plot(data.times, data, label=f"{det} - {event_name}", color=colors[i % len(colors)])
+
+            except Exception as e:
+                print(f"Error fetching data for {det}: {e}")
+
+        # Labels and grid
+        ax.set_xlabel("Time (s)")
+        ax.set_ylabel("Strain")
+        ax.set_title(f"Gravitational Wave Event: {event_name}")
+        ax.legend()
+        ax.grid(True)
+
+        # Improve layout
+        plt.tight_layout()
+
+        # Embed plot in Tkinter
+        canvas = FigureCanvasTkAgg(fig, master=self.root)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.grid(row=2, column=0, columnspan=4, sticky="nsew")
+        canvas.draw()
+
+        # Add Matplotlib toolbar
+        toolbar_fft = NavigationToolbar2Tk(canvas, self.root)
+        toolbar_fft.grid(row=3, column=0, columnspan=1, pady=5)
+
+        # Save Button
+        def save_plot():
+            file_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png"), ("All Files", "*.*")])
+            if file_path:
+                fig.savefig(file_path)
+                print(f"Plot saved as {file_path}")
+
+        # Configure grid for resizing
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_columnconfigure(1, weight=1)
+
+        
+########################################################################################################################################################################
+#########################################################################################################FFT############################################################
+class FFT:
+    def __init__(self, root):
+        self.root = root
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
+        # Canvas for scrolling
+        self.canvas = tk.Canvas(root)
+        self.scroll_y = ttk.Scrollbar(root, orient="vertical", command=self.canvas.yview)
+        self.scroll_x = ttk.Scrollbar(root, orient="horizontal", command=self.canvas.xview)
+        self.scroll_y.grid(row=0, column=1, sticky="ns")
+        self.scroll_x.grid(row=1, column=0, sticky="ew")
+
+        self.frame = ttk.Frame(self.canvas)
+        self.frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
+
+        self.canvas.create_window((0, 0), window=self.frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scroll_y.set, xscrollcommand=self.scroll_x.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")  
+
+
+        # Main Input Frame
+        input_frame = ttk.LabelFrame(self.frame, text="Input Parameters")
+        input_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+
+        # Catalog Selection
+        ttk.Label(input_frame, text="Catalog:").grid(row=0, column=0, padx=5, pady=5, sticky="w")
+        self.catalog_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.catalog_dropdown.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        self.catalog_dropdown.bind("<<ComboboxSelected>>", self.fetch_events)
+
+        # Event Selection
+        ttk.Label(input_frame, text="Event:").grid(row=1, column=0, padx=5, pady=5, sticky="w")
+        self.event_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.event_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        self.event_dropdown.bind("<<ComboboxSelected>>",self.fetch_event_details)
+
+        # Run Selection
+        ttk.Label(input_frame, text="Run:").grid(row=2, column=0, padx=5, pady=5, sticky="w")
+        self.run_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.run_dropdown.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+
+        # Detector Selection
+        ttk.Label(input_frame, text="Detector:").grid(row=1, column=2, padx=5, pady=5, sticky="w")
+        self.detector_listbox = tk.Listbox(input_frame, selectmode="multiple", exportselection=False, height=3)
+        for detector in ["L1", "H1", "V1"]:
+            self.detector_listbox.insert(tk.END, detector)
+        self.detector_listbox.grid(row=1, column=3, padx=5, pady=5, sticky="ew")
+
+
+        # GPS Time Inputs
+        ttk.Label(input_frame, text="Start Time:").grid(row=0, column=2, padx=5, pady=5, sticky="w")
+        self.gps_start_entry = ttk.Entry(input_frame, width=20)
+        self.gps_start_entry.grid(row=0, column=3, padx=5, pady=5, sticky="ew")
+
+        ttk.Label(input_frame, text="End Time (Optional):").grid(row=0, column=4, padx=5, pady=5, sticky="w")
+        self.gps_end_entry = ttk.Entry(input_frame, width=20)
+        self.gps_end_entry.grid(row=0, column=5, padx=5, pady=5, sticky="ew")
+
+        # GPS ⇄ UTC Converter
+        self.mode = tk.StringVar(value="gps_to_utc")
+        conversion_frame = ttk.LabelFrame(self.frame, text="GPS ⇄ UTC Converter")
+        conversion_frame.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
+
+        self.convert_entry = ttk.Entry(conversion_frame, width=20)
+        self.convert_entry.grid(row=0, column=0, padx=5, pady=5)
+
+        self.convert_button = ttk.Button(conversion_frame, text="Convert", command=self.convert_time)
+        self.convert_button.grid(row=0, column=1, padx=5, pady=5)
+
+        self.result_label = ttk.Label(conversion_frame, text="Result: ")
+        self.result_label.grid(row=0, column=2, padx=5, pady=5)
+
+        self.toggle_button = ttk.Button(conversion_frame, text="Switch to UTC → GPS", command=self.toggle_mode)
+        self.toggle_button.grid(row=0, column=3, padx=5, pady=5)
+
+        # Event URLs Frame
+        url_frame = ttk.LabelFrame(self.frame, text="Event URLs")
+        url_frame.grid(row=1, column=1, padx=5, pady=5, sticky="nsew")
+
+        self.url_dropdown = ttk.Combobox(url_frame, state="readonly")
+        self.url_dropdown.grid(row=0, column=0, padx=5, pady=5, sticky="ew")
+
+        self.copy_button = ttk.Button(url_frame, text="Copy URL", command=self.copy_url)
+        self.copy_button.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        
+        # Save Parameters Button
+        self.save_button = ttk.Button(input_frame, text="Save Parameters", command=self.save_params)
+        self.save_button.grid(row=2, column=0, columnspan=2, padx=5, pady=10, sticky="ew")
+        self.plot_frame = ttk.Frame(self.frame)
+        self.plot_frame.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
+        self.prefetch_data()
+        self.fft_button = tk.Button(root, text="Run FFT", command=lambda: self.fft(
+        self.catalog_dropdown.get(),[self.detector_listbox.get(i) for i in self.detector_listbox.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get())))
+        self.fft_button.grid(row=4, column=3, columnspan=2, pady=10)
+
+    def copy_url(self):
+        selected_url = self.url_dropdown.get()
+        if selected_url:
+            self.root.clipboard_clear()
+            self.root.clipboard_append(selected_url)
+            self.root.update()  # Keep clipboard data even after the app closes
+            messagebox.showinfo("Copied", "URL copied to clipboard!")
+        else:
+            messagebox.showwarning("Warning", "No URL selected!")
+
+    # 🔹 Prefetch Catalogs & Runs at Startup
+    def prefetch_data(self):
+        try:
+            catalogs = find_datasets(type="catalog")
+            self.catalog_dropdown["values"] = catalogs
+            if catalogs:
+                self.catalog_dropdown.current(0)
+
+            runs = find_datasets(type="run")
+            self.run_dropdown["values"] = runs
+            if runs:
+                self.run_dropdown.current(0)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching catalogs/runs: {e}")
+
+    # 🔹 Fetch Events Based on Selected Catalog
+    def fetch_events(self, event=None):
+        selected_catalog = self.catalog_dropdown.get()
+        if not selected_catalog:
+            return
+
+        try:
+            events = datasets.find_datasets(type="events", catalog=selected_catalog)
+            self.event_dropdown["values"] = events
+            if events:
+                self.event_dropdown.current(0)
+                self.fetch_event_details()  # Auto-update details for first event
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching events: {e}")
+
+    # 🔹 Fetch Event GPS & URLs
+    def fetch_event_details(self, event=None):
+        selected_event = self.event_dropdown.get()
+        if not selected_event:
+            return
+        try:
+            gps_time = event_gps(selected_event)
+            self.gps_start_entry.delete(0, tk.END)
+            self.gps_start_entry.insert(0, str(gps_time))
+
+            self.update_urls()
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event details: {e}")
+
+    # 🔹 Update URLs Based on Event & Detector
+    def update_urls(self, event=None):
+        selected_event = self.event_dropdown.get()
+        selected_detectors = [self.detector_listbox.get(i) for i in self.detector_listbox.curselection()]
+        if not selected_event or not selected_detectors:
+            return
+        try:
+            urls = get_event_urls(selected_event)
+            filtered_urls = [url for url in urls if any(det in url for det in selected_detectors)]
+            self.url_dropdown["values"] = filtered_urls
+            if filtered_urls:
+                self.url_dropdown.current(0)
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event URLs: {e}")
+
+    # 🔹 Toggle GPS ⇄ UTC Mode
+    def toggle_mode(self):
+        if self.mode.get() == "gps_to_utc":
+            self.mode.set("utc_to_gps")
+            self.toggle_button.config(text="Switch to GPS → UTC")
+        else:
+            self.mode.set("gps_to_utc")
+            self.toggle_button.config(text="Switch to UTC → GPS")
+
+    # 🔹 Convert GPS ⇄ UTC
+    def convert_time(self):
+        time_input = self.convert_entry.get().strip()
+        if not time_input:
+            messagebox.showerror("Error", "Please enter a valid time!")
+            return
+
+        try:
+            if self.mode.get() == "gps_to_utc":
+                gps_time = float(time_input)
+                utc_time = gp_time.from_gps(int(gps_time))
+                self.result_label.config(text=f"UTC Time: {utc_time}")
+            else:
+                utc_time = datetime.strptime(time_input, "%Y-%m-%d %H:%M:%S")
+                gps_time = gp_time.to_gps(utc_time)
+                self.result_label.config(text=f"GPS Time: {gps_time}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Conversion failed: {e}")
+ 
+
+    def save_params(self):
+        """Overwrite 'gwfparams.csv' with the latest input values, including headers."""
+        file_path = "gwfparams.csv"
+
+        # Define column headers
+        headers = ["Catalog", "Event", "Run", "Detector", "Start Time (GPS)", "End Time (GPS)", "Event URL"]
+
+        # Collect values
+        params = [
+            self.catalog_dropdown.get(),
+            self.event_dropdown.get(),
+            self.run_dropdown.get(),
+            ", ".join([self.detector_listbox.get(i) for i in self.detector_listbox.curselection()]),
+            self.gps_start_entry.get(),
+            self.gps_end_entry.get(),
+            self.url_dropdown.get(),  # Assuming this holds the event URL
+        ]
+
+        try:
+            with open(file_path, mode="w", newline="") as file:  # "w" mode overwrites the file
+                writer = csv.writer(file)
+                writer.writerow(headers)  # Always write headers
+                writer.writerow(params)   # Write only the latest values
+
+            messagebox.showinfo("Success", f"Parameters saved to {file_path}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to save parameters: {e}")
+
+
+    def fft(self, event_name, detectors, gps_start, gps_end):
+        fig_fft, ax_fft = plt.subplots(figsize=(8, 5))
+        data_dict = {}  # Dictionary to store TimeSeries data for each selected detector
+        for detector in detectors:  # Loop through selected detectors
+            if detector == "L1":
+                var_name = "ldata"
+            elif detector == "H1":
+                var_name = "hdata"
+            elif detector == "V1":
+                var_name = "vdata"
+            else:
+                var_name = f"{detector.lower()}data"  # Fallback for unexpected detectors
+            data_dict[var_name] = TimeSeries.fetch_open_data(detector, gps_start, gps_end, verbose=True)
+            window = get_window('hann', data_dict[var_name].size)
+            win_data = data_dict[var_name] * window  
+            fftamp = win_data.fft().abs()
+            ax_fft.plot(fftamp.frequencies.value, fftamp, label=f"FFT Amplitude ({detector})")
+        ax_fft.set_xlabel("Frequency (Hz)")
+        ax_fft.set_ylabel("Amplitude")
+        ax_fft.set_xscale("log")
+        ax_fft.set_yscale("log")
+        ax_fft.set_title(f"FFT of {event_name}")
+        ax_fft.legend()
+        ax_fft.grid(True)
+        canvas_fft = FigureCanvasTkAgg(fig_fft, master=self.root)
+        canvas_fft_widget = canvas_fft.get_tk_widget()
+        canvas_fft_widget.grid(row=3, column=0, columnspan=1, sticky="nsew")
+        canvas_fft.draw()
+        toolbar_fft = NavigationToolbar2Tk(canvas_fft, self.root)
+        toolbar_fft.grid(row=5, column=0, columnspan=1, pady=5)
+
+        # Save Button
+        def save_plot():
+            file_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png"), ("All Files", "*.*")])
+            if file_path:
+                fig_fft.savefig(file_path)  # Use fig_fft instead of fig
+                print(f"Plot saved as {file_path}")
+
+        save_button = tk.Button(self.root, text="Save FFT Plot", command=save_plot)
+        save_button.grid(row=4, column=1, columnspan=2, pady=10)
+
+        # Configure grid for resizing
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_columnconfigure(1, weight=1)
+########################################################################################################################################################################
+#########################################################################################PSDs############################################################################
+
+class PSDs:
+    def __init__(self, root):
+        self.root = root
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
+        # Canvas for scrolling
+        self.canvas = tk.Canvas(root)
+        self.scroll_y = ttk.Scrollbar(root, orient="vertical", command=self.canvas.yview)
+        self.scroll_x = ttk.Scrollbar(root, orient="horizontal", command=self.canvas.xview)
+        self.scroll_y.grid(row=0, column=1, sticky="ns")
+        self.scroll_x.grid(row=1, column=0, sticky="ew")
+
+        self.frame = ttk.Frame(self.canvas)
+        self.frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
+
+        self.canvas.create_window((0, 0), window=self.frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scroll_y.set, xscrollcommand=self.scroll_x.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")  
+
+
+        # Main Input Frame
+        input_frame = ttk.LabelFrame(self.frame, text="Input Parameters")
+        input_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+
+        # Catalog Selection
+        ttk.Label(input_frame, text="Catalog:").grid(row=0, column=0, padx=5, pady=5, sticky="w")
+        self.catalog_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.catalog_dropdown.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        self.catalog_dropdown.bind("<<ComboboxSelected>>", self.fetch_events)
+
+        # Event Selection
+        ttk.Label(input_frame, text="Event:").grid(row=1, column=0, padx=5, pady=5, sticky="w")
+        self.event_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.event_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        self.event_dropdown.bind("<<ComboboxSelected>>",self.fetch_event_details)
+
+        # Run Selection
+        ttk.Label(input_frame, text="Run:").grid(row=2, column=0, padx=5, pady=5, sticky="w")
+        self.run_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.run_dropdown.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+
+        # Detector Selection
+        ttk.Label(input_frame, text="Detector:").grid(row=1, column=2, padx=5, pady=5, sticky="w")
+        self.detector_dropdown = tk.Listbox(input_frame, selectmode="multiple", height=3)
+        for det in ["L1", "H1", "V1"]:
+            self.detector_dropdown.insert(tk.END, det)
+        self.detector_dropdown.grid(row=1, column=3, padx=5, pady=5, sticky="ew")
+        self.detector_dropdown.bind("<<ComboboxSelected>>",self.update_urls)
+
+        # GPS Time Inputs
+        ttk.Label(input_frame, text="Start Time:").grid(row=0, column=2, padx=5, pady=5, sticky="w")
+        self.gps_start_entry = ttk.Entry(input_frame, width=20)
+        self.gps_start_entry.grid(row=0, column=3, padx=5, pady=5, sticky="ew")
+
+        ttk.Label(input_frame, text="End Time (Optional):").grid(row=0, column=4, padx=5, pady=5, sticky="w")
+        self.gps_end_entry = ttk.Entry(input_frame, width=20)
+        self.gps_end_entry.grid(row=0, column=5, padx=5, pady=5, sticky="ew")
+        # FFT & Method Inputs
+        ttk.Label(input_frame, text="FFT Length:").grid(row=1, column=4, padx=5, pady=5, sticky="w")
+        self.fft_length_entry = ttk.Entry(input_frame, width=10)
+        self.fft_length_entry.grid(row=1, column=5, padx=5, pady=5, sticky="ew")
+
+        ttk.Label(input_frame, text="Method:").grid(row=1, column=6, padx=5, pady=5, sticky="w")
+        self.method_entry = ttk.Combobox(input_frame, width=10, values=["median", "welch"], state="readonly")
+        self.method_entry.grid(row=1, column=7, padx=5, pady=5, sticky="ew")
+        self.method_entry.current(0)  # Default selection to "median"
+        # GPS ⇄ UTC Converter
+        self.mode = tk.StringVar(value="gps_to_utc")
+        conversion_frame = ttk.LabelFrame(self.frame, text="GPS ⇄ UTC Converter")
+        conversion_frame.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
+
+        self.convert_entry = ttk.Entry(conversion_frame, width=20)
+        self.convert_entry.grid(row=0, column=0, padx=5, pady=5)
+
+        self.convert_button = ttk.Button(conversion_frame, text="Convert", command=self.convert_time)
+        self.convert_button.grid(row=0, column=1, padx=5, pady=5)
+
+        self.result_label = ttk.Label(conversion_frame, text="Result: ")
+        self.result_label.grid(row=0, column=2, padx=5, pady=5)
+
+        self.toggle_button = ttk.Button(conversion_frame, text="Switch to UTC → GPS", command=self.toggle_mode)
+        self.toggle_button.grid(row=0, column=3, padx=5, pady=5)
+
+        # Event URLs Frame
+        url_frame = ttk.LabelFrame(self.frame, text="Event URLs")
+        url_frame.grid(row=1, column=1, padx=5, pady=5, sticky="nsew")
+
+        self.url_dropdown = ttk.Combobox(url_frame, state="readonly")
+        self.url_dropdown.grid(row=0, column=0, padx=5, pady=5, sticky="ew")
+
+        self.copy_button = ttk.Button(url_frame, text="Copy URL", command=self.copy_url)
+        self.copy_button.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        
+        # Save Parameters Button
+        self.save_button = ttk.Button(input_frame, text="Save Parameters", command=self.save_params)
+        self.save_button.grid(row=2, column=0, columnspan=2, padx=5, pady=10, sticky="ew")
+        self.plot_frame = ttk.Frame(self.frame)
+        self.plot_frame.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
+
+        self.prefetch_data()
+        self.plot_button = tk.Button(root, text="Plot TimeSeries", command=lambda: self.psds(self.catalog_dropdown.get(),[self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get()),int(self.fft_length_entry.get()),self.method_entry.get()))
+        self.plot_button.grid(row=0, column=3, columnspan=2, pady=10)
+
+
+    def copy_url(self):
+        selected_url = self.url_dropdown.get()
+        if selected_url:
+            self.root.clipboard_clear()
+            self.root.clipboard_append(selected_url)
+            self.root.update()  # Keep clipboard data even after the app closes
+            messagebox.showinfo("Copied", "URL copied to clipboard!")
+        else:
+            messagebox.showwarning("Warning", "No URL selected!")
+
+    # 🔹 Prefetch Catalogs & Runs at Startup
+    def prefetch_data(self):
+        try:
+            catalogs = find_datasets(type="catalog")
+            self.catalog_dropdown["values"] = catalogs
+            if catalogs:
+                self.catalog_dropdown.current(0)
+
+            runs = find_datasets(type="run")
+            self.run_dropdown["values"] = runs
+            if runs:
+                self.run_dropdown.current(0)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching catalogs/runs: {e}")
+
+    # 🔹 Fetch Events Based on Selected Catalog
+    def fetch_events(self, event=None):
+        selected_catalog = self.catalog_dropdown.get()
+        if not selected_catalog:
+            return
+
+        try:
+            events = datasets.find_datasets(type="events", catalog=selected_catalog)
+            self.event_dropdown["values"] = events
+            if events:
+                self.event_dropdown.current(0)
+                self.fetch_event_details()  # Auto-update details for first event
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching events: {e}")
+
+    # 🔹 Fetch Event GPS & URLs
+    def fetch_event_details(self, event=None):
+        selected_event = self.event_dropdown.get()
+        if not selected_event:
+            return
+        try:
+            gps_time = event_gps(selected_event)
+            self.gps_start_entry.delete(0, tk.END)
+            self.gps_start_entry.insert(0, str(gps_time))
+
+            self.update_urls()
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event details: {e}")
+
+    # 🔹 Update URLs Based on Event & Detector
+    def update_urls(self, event=None):
+        selected_event = self.event_dropdown.get()
+        selected_detectors = [self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()]
+        if not selected_event or not selected_detectors:
+            return
+
+        try:
+            urls = get_event_urls(selected_event)
+            filtered_urls = [url for url in urls if any(det in url for det in selected_detectors)]
+            self.url_dropdown["values"] = filtered_urls
+            if filtered_urls:
+                self.url_dropdown.current(0)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event URLs: {e}")
+
+    # 🔹 Toggle GPS ⇄ UTC Mode
+    def toggle_mode(self):
+        if self.mode.get() == "gps_to_utc":
+            self.mode.set("utc_to_gps")
+            self.toggle_button.config(text="Switch to GPS → UTC")
+        else:
+            self.mode.set("gps_to_utc")
+            self.toggle_button.config(text="Switch to UTC → GPS")
+
+    # 🔹 Convert GPS ⇄ UTC
+    def convert_time(self):
+        time_input = self.convert_entry.get().strip()
+        if not time_input:
+            messagebox.showerror("Error", "Please enter a valid time!")
+            return
+
+        try:
+            if self.mode.get() == "gps_to_utc":
+                gps_time = float(time_input)
+                utc_time = gp_time.from_gps(int(gps_time))
+                self.result_label.config(text=f"UTC Time: {utc_time}")
+            else:
+                utc_time = datetime.strptime(time_input, "%Y-%m-%d %H:%M:%S")
+                gps_time = gp_time.to_gps(utc_time)
+                self.result_label.config(text=f"GPS Time: {gps_time}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Conversion failed: {e}")
+ 
+
+    def save_params(self):
+        """Overwrite 'gwfparams.csv' with the latest input values, including headers."""
+        file_path = "gwfparams.csv"
+
+        # Define column headers
+        headers = ["Catalog", "Event", "Run", "Detector(s)", "Start Time (GPS)", "End Time (GPS)", "Event URL"]
+
+        # Collect values
+        selected_detectors = ", ".join([self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()])
+        params = [
+            self.catalog_dropdown.get(),
+            self.event_dropdown.get(),
+            self.run_dropdown.get(),
+            selected_detectors,  # Updated for multiple detectors
+            self.gps_start_entry.get(),
+            self.gps_end_entry.get(),
+            self.url_dropdown.get(),  # Assuming this holds the event URL
+        ]
+
+        try:
+            with open(file_path, mode="w", newline="") as file:  # "w" mode overwrites the file
+                writer = csv.writer(file)
+                writer.writerow(headers)  # Always write headers
+                writer.writerow(params)   # Write only the latest values
+
+            messagebox.showinfo("Success", f"Parameters saved to {file_path}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to save parameters: {e}")
+
+    def psds(self, event_name, detectors, gps_start, gps_end, fftlengths, methods):
+        """
+        Plot Power Spectral Densities (PSDs) for multiple detectors in Tkinter.
+
+        Parameters:
+        - event_name: Name of the gravitational wave event
+        - detectors: List of detector names (e.g., ['H1', 'L1', 'V1'])
+        - gps_start: GPS start time
+        - gps_end: GPS end time
+        - fftlengths: List of FFT lengths (same length as detectors)
+        - methods: List of ASD computation methods (same length as detectors)
+        """
+
+        fig, ax = plt.subplots(figsize=(8, 5))
+        colors = ['b', 'r', 'g', 'm', 'c', 'y']  # More colors for multiple detectors
+
+        for i, det in enumerate(detectors):
+            try:
+                # Fetch GWOSC data
+                print(i,det)
+                data = TimeSeries.fetch_open_data(det, gps_start, gps_end, verbose=True)
+                print(data)
+                # Get user-specified FFT length and method
+                fft_len = fftlengths
+                method = methods
+                # Compute ASD
+                asd = data.asd(fftlength=fft_len, method=method)
+                print(asd)
+                freqs = asd.frequencies.value
+                asd_values = asd.value
+
+                # Plot ASD manually using `ax.plot()`
+                ax.plot(freqs, asd_values, color=colors[i % len(colors)], 
+                    label=f"{det} - {method.capitalize()} FFT={fft_len}")
+            except Exception as e:
+                print(f"Error fetching data for {det}: {e}")
+
+        # Set plot labels and limits
+        ax.set_xlabel("Frequency [Hz]")
+        ax.set_ylabel("ASD [strain/$\sqrt{Hz}$]")
+        ax.set_xscale("log")
+        ax.set_yscale("log")
+        ax.set_xlim(10, 1400)
+        ax.set_ylim(1e-24, 1e-20)
+        ax.grid(True, which="both", linestyle="--", alpha=0.5)
+        ax.legend()
+
+        plt.title(f"ASD for {event_name}")
+        
+        # Embed plot in Tkinter
+        canvas = FigureCanvasTkAgg(fig, master=self.root)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.grid(row=2, column=0, columnspan=4, sticky="nsew")
+        canvas.draw()
+
+        # Add Matplotlib toolbar
+        toolbar_fft = NavigationToolbar2Tk(canvas, self.root)
+        toolbar_fft.grid(row=3, column=0, columnspan=1, pady=5)
+
+        # Save Button
+        def save_plot():
+            file_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png"), ("All Files", "*.*")])
+            if file_path:
+                fig.savefig(file_path)
+                print(f"Plot saved as {file_path}")
+
+        save_button = tk.Button(self.root, text="Save Plot", command=save_plot)
+        save_button.grid(row=3, column=1, pady=5)
+
+        # Configure grid for resizing
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_columnconfigure(1, weight=1)
+
+########################################################################################################################################################################
 
 if __name__ == "__main__":
     conda_env_path = os.path.join(os.path.dirname(sys.executable), "conda_env")
@@ -1204,5 +2105,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = Application(root)
     root.mainloop()
-
     cef.Shutdown()  # Ensure CEF shuts down properly
