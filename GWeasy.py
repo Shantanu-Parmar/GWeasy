@@ -29,6 +29,8 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
 HISTORY_FILE = "gravfetch_history.json"  # Define history file
+
+
 class Application:
     
     def __init__(self, root):
@@ -66,6 +68,8 @@ class Application:
         self.PSDs = ttk.Frame(self.notebook)
         self.notebook.add(self.PSDs, text="Power Spectral Density")
 
+        self.Spectrogram = ttk.Frame(self.notebook)
+        self.notebook.add(self.Spectrogram, text="Spectrogram")
 
         # Initialize both GUIs (Gravfetch and OMICRON) in their respective tabs
         self.gravfetch_app = GravfetchApp(self.gravfetch_tab)
@@ -74,6 +78,7 @@ class Application:
         self.TimeSeriesWav_app = TimeSrswaveform(self.TimeSeriesWav) 
         self.FFT = FFT(self.FFT)
         self.PSDs = PSDs(self.PSDs)
+        self.Spectrogram=Spectrogram(self.Spectrogram)
          
         
 class TerminalFrame(tk.Frame):
@@ -106,7 +111,7 @@ class OmicronApp:
         self.entries = {}
         self.output_products = {}
         self.ui_elements = {}
-        
+       
         self.project_dir = os.getcwd().replace("\\", "/")  
         self.wsl_project_dir = f"/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}"  
         print(f"WSL Project Directory: {self.wsl_project_dir}")  # Debugging output
@@ -135,7 +140,6 @@ class OmicronApp:
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
         self.create_widgets()
         self.load_config()
-        
     def create_widgets(self):
         self.create_channel_dropdown(row=1)
         self.create_file_selector("Select .ffl File:", "DATA FFL",row=2,column=0)
@@ -2098,11 +2102,216 @@ class PSDs:
         self.root.grid_columnconfigure(1, weight=1)
 
 ########################################################################################################################################################################
+########################################################################################################################################################################
 
+class Spectrogram:
+    def __init__(self, root):
+        self.root = root
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
+        # Canvas for scrolling
+        self.canvas = tk.Canvas(root)
+        self.scroll_y = ttk.Scrollbar(root, orient="vertical", command=self.canvas.yview)
+        self.scroll_x = ttk.Scrollbar(root, orient="horizontal", command=self.canvas.xview)
+        self.scroll_y.grid(row=0, column=1, sticky="ns")
+        self.scroll_x.grid(row=1, column=0, sticky="ew")
+
+        self.frame = ttk.Frame(self.canvas)
+        self.frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
+
+        self.canvas.create_window((0, 0), window=self.frame, anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scroll_y.set, xscrollcommand=self.scroll_x.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")  
+
+
+        # Main Input Frame
+        input_frame = ttk.LabelFrame(self.frame, text="Input Parameters")
+        input_frame.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
+
+        # Catalog Selection
+        ttk.Label(input_frame, text="Catalog:").grid(row=0, column=0, padx=5, pady=5, sticky="w")
+        self.catalog_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.catalog_dropdown.grid(row=0, column=1, padx=5, pady=5, sticky="ew")
+        self.catalog_dropdown.bind("<<ComboboxSelected>>", self.fetch_events)
+
+        # Event Selection
+        ttk.Label(input_frame, text="Event:").grid(row=1, column=0, padx=5, pady=5, sticky="w")
+        self.event_dropdown = ttk.Combobox(input_frame, state="readonly")
+        self.event_dropdown.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        self.event_dropdown.bind("<<ComboboxSelected>>",self.fetch_event_details)
+
+        # Detector Selection
+        ttk.Label(input_frame, text="Detector:").grid(row=1, column=2, padx=5, pady=5, sticky="w")
+        self.detector_dropdown = tk.Listbox(input_frame, selectmode="multiple", height=3)
+        for det in ["L1", "H1", "V1"]:
+            self.detector_dropdown.insert(tk.END, det)
+        self.detector_dropdown.grid(row=1, column=3, padx=5, pady=5, sticky="ew")
+        
+
+        # GPS Time Inputs
+        ttk.Label(input_frame, text="Start Time:").grid(row=0, column=2, padx=5, pady=5, sticky="w")
+        self.gps_start_entry = ttk.Entry(input_frame, width=20)
+        self.gps_start_entry.grid(row=0, column=3, padx=5, pady=5, sticky="ew")
+
+        ttk.Label(input_frame, text="End Time (Optional):").grid(row=0, column=4, padx=5, pady=5, sticky="w")
+        self.gps_end_entry = ttk.Entry(input_frame, width=20)
+        self.gps_end_entry.grid(row=0, column=5, padx=5, pady=5, sticky="ew")
+
+        # FFT & Method Inputs
+        ttk.Label(input_frame, text="FFT Length:").grid(row=1, column=4, padx=5, pady=5, sticky="w")
+        self.fft_length_entry = ttk.Entry(input_frame, width=10)
+        self.fft_length_entry.grid(row=1, column=5, padx=5, pady=5, sticky="ew")
+
+        ttk.Label(input_frame, text="Window:").grid(row=1, column=6, padx=5, pady=5, sticky="w")
+        self.window_entry = ttk.Combobox(input_frame, width=10, values=["hann", "option2"], state="readonly")
+        self.window_entry.grid(row=1, column=7, padx=5, pady=5, sticky="ew")
+        self.window_entry.current(0)
+        
+        ttk.Label(input_frame, text="Overlap duration").grid(row=2, column=4, padx=5, pady=5, sticky="w")
+        self.overlap_entry = ttk.Entry(input_frame, width=20)
+        self.overlap_entry.grid(row=2, column=7, padx=5, pady=5, sticky="ew")
+
+        # GPS ⇄ UTC Converter
+        self.mode = tk.StringVar(value="gps_to_utc")
+        conversion_frame = ttk.LabelFrame(self.frame, text="GPS ⇄ UTC Converter")
+        conversion_frame.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
+
+        self.convert_entry = ttk.Entry(conversion_frame, width=20)
+        self.convert_entry.grid(row=0, column=0, padx=5, pady=5)
+
+        self.convert_button = ttk.Button(conversion_frame, text="Convert", command=self.convert_time)
+        self.convert_button.grid(row=0, column=1, padx=5, pady=5)
+
+        self.result_label = ttk.Label(conversion_frame, text="Result: ")
+        self.result_label.grid(row=0, column=2, padx=5, pady=5)
+
+        self.toggle_button = ttk.Button(conversion_frame, text="Switch to UTC → GPS", command=self.toggle_mode)
+        self.toggle_button.grid(row=0, column=3, padx=5, pady=5)
+        
+
+        self.prefetch_data()
+        self.plot_button = tk.Button(root, text="Plot TimeSeries", command=lambda: self.specgrams([self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],gps_start=float(self.gps_start_entry.get()),gps_end = float(self.gps_end_entry.get()),fftlengths=int(self.fft_length_entry.get()),window=self.window_entry.get(),overlap=self.overlap_entry.get()))
+        self.plot_button.grid(row=0, column=3, columnspan=2, pady=10)
+
+    # 🔹 Prefetch Catalogs & Runs at Startup
+    def prefetch_data(self):
+        try:
+            catalogs = find_datasets(type="catalog")
+            self.catalog_dropdown["values"] = catalogs
+            if catalogs:
+                self.catalog_dropdown.current(0)
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching catalogs: {e}")
+
+    # 🔹 Fetch Events Based on Selected Catalog
+    def fetch_events(self, event=None):
+        selected_catalog = self.catalog_dropdown.get()
+        if not selected_catalog:
+            return
+        try:
+            events = datasets.find_datasets(type="events", catalog=selected_catalog)
+            self.event_dropdown["values"] = events
+            if events:
+                self.event_dropdown.current(0)
+                self.fetch_event_details()  # Auto-update details for first event
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching events: {e}")
+
+    # 🔹 Fetch Event GPS & URLs
+    def fetch_event_details(self, event=None):
+        selected_event = self.event_dropdown.get()
+        if not selected_event:
+            return
+        try:
+            gps_time = event_gps(selected_event)
+            self.gps_start_entry.delete(0, tk.END)
+            self.gps_start_entry.insert(0, str(gps_time))
+
+            
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Error fetching event details: {e}")
+
+    # 🔹 Toggle GPS ⇄ UTC Mode
+    def toggle_mode(self):
+        if self.mode.get() == "gps_to_utc":
+            self.mode.set("utc_to_gps")
+            self.toggle_button.config(text="Switch to GPS → UTC")
+        else:
+            self.mode.set("gps_to_utc")
+            self.toggle_button.config(text="Switch to UTC → GPS")
+
+    # 🔹 Convert GPS ⇄ UTC
+    def convert_time(self):
+        time_input = self.convert_entry.get().strip()
+        if not time_input:
+            messagebox.showerror("Error", "Please enter a valid time!")
+            return
+        try:
+            if self.mode.get() == "gps_to_utc":
+                gps_time = float(time_input)
+                utc_time = gp_time.from_gps(int(gps_time))
+                self.result_label.config(text=f"UTC Time: {utc_time}")
+            else:
+                utc_time = datetime.strptime(time_input, "%Y-%m-%d %H:%M:%S")
+                gps_time = gp_time.to_gps(utc_time)
+                self.result_label.config(text=f"GPS Time: {gps_time}")
+
+        except Exception as e:
+            messagebox.showerror("Error", f"Conversion failed: {e}")
+ 
+
+    def specgrams(self, detectors, gps_start, gps_end, fftlengths, window,overlap):
+
+        fig, ax = plt.subplots(figsize=(8, 5))
+        for i, det in enumerate(detectors):
+            try:
+                # Fetch GWOSC data
+                print(i,det)
+                data = TimeSeries.fetch_open_data(det, gps_start, gps_end,cache=True)
+                print(data)
+                specgram = data.spectrogram2(fftlength=fftlengths, overlap=overlap, window=window) ** (1/2.)
+                plot = specgram.plot()
+                ax = plot.gca()
+                ax.set_yscale('log')
+                ax.set_ylim(10, 1400)
+                ax.colorbar(
+                    clim=(1e-24, 1e-20),
+                    norm="log",
+                    label=r"Strain noise [$1/\sqrt{\mathrm{Hz}}$]",
+                )
+            except Exception as e:
+                print(f"Error fetching data for {det}: {e}")
+
+        canvas = FigureCanvasTkAgg(plot, master=self.root)
+        canvas_widget = canvas.get_tk_widget()
+        canvas_widget.grid(row=2, column=0, columnspan=4, sticky="nsew")
+        canvas.draw()
+
+        # Add Matplotlib toolbar
+        toolbar_fft = NavigationToolbar2Tk(canvas, self.root)
+        toolbar_fft.grid(row=3, column=0, columnspan=1, pady=5)
+
+        # Save Button
+        def save_plot():
+            file_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png"), ("All Files", "*.*")])
+            if file_path:
+                fig.savefig(file_path)
+                print(f"Plot saved as {file_path}")
+
+        save_button = tk.Button(self.root, text="Save Plot", command=save_plot)
+        save_button.grid(row=3, column=1, pady=5)
+
+        # Configure grid for resizing
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_columnconfigure(1, weight=1)
+
+#########################################################################################################################################################################
 if __name__ == "__main__":
-    conda_env_path = os.path.join(os.path.dirname(sys.executable), "conda_env")
-    sys.path.insert(0, os.path.join(conda_env_path, "Lib", "site-packages"))
-    os.environ["PATH"] = conda_env_path + ";" + os.environ["PATH"]
     root = tk.Tk()
     app = Application(root)
     root.mainloop()
