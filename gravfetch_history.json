@@ -1,7 +1,0 @@
-{
-    "gwfout_path": "./gwfout",
-    "channels": [
-        "H1:PEM-VAULT_MAG_1030X195Y_COIL_X_DQ",
-        "H1:PEM-VAULT_MAG_1030X195Y_COIL_Y_DQ"
-    ]
-}
