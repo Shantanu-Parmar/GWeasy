@@ -106,7 +106,7 @@ class OmicronApp:
         self.entries = {}
         self.output_products = {}
         self.ui_elements = {}
-        self.load_config()
+        
         self.project_dir = os.getcwd().replace("\\", "/")  
         self.wsl_project_dir = f"/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}"  
         print(f"WSL Project Directory: {self.wsl_project_dir}")  # Debugging output
@@ -134,7 +134,8 @@ class OmicronApp:
         self.terminal = TerminalFrame(self.root, row=4, column=0, columnspan=2, height=10, width=80)  # Pass the shared terminal instance
         self.scrollable_frame.grid_columnconfigure(0, weight=1)
         self.create_widgets()
-
+        self.load_config()
+        
     def create_widgets(self):
         self.create_channel_dropdown(row=1)
         self.create_file_selector("Select .ffl File:", "DATA FFL",row=2,column=0)
