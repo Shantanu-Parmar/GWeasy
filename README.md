@@ -66,6 +66,8 @@ Many astrophysicists spend more time setting up the software than analyzing the 
 ## Download or Clone the Repository  
 Download the ZIP file or clone the repository from:  
 [https://github.com/Shantanu909/GWeasy](https://github.com/Shantanu909/GWeasy)  
+Alternatively, download a prepackaged bundle of all libararies for WSL and conda within windows through:
+[https://drive.google.com/drive/folders/1P4sjy4w6m63KSCEu4XFm3C9VN7iWJUlK](https://drive.google.com/drive/folders/1P4sjy4w6m63KSCEu4XFm3C9VN7iWJUlK)
 
 ## Run the Installer  
 - Open a terminal, navigate to the downloaded directory, and run:  
@@ -73,7 +75,11 @@ Download the ZIP file or clone the repository from:
   install.bat
   ```
 - Alternatively, you can simply double-click `install.bat`.
-
+  ------------------------------------
+- If you are working with the prepackaged bundle,follow the same steps by running install.bat
+- This is unpack a conda envrionment with all libraries except Omicron
+- Omicron is in the wsl.tar.gz, a Linux image that will be extracted into your wsl as a separate distro
+- Password for wsl is omicronuser or omicron.
 ## First-Time Setup  
 - The initial run of `install.bat` may take some time, depending on your internet speed, as it installs dependencies and sets up the environment.  
 - After installation, you can reuse `install.bat` as an executable launcher for now. Exe setup coming up soon.
@@ -93,7 +99,6 @@ To perform a test run:
 Once execution starts, a completion message will appear in the terminal, indicating a successful run. Processing time varies (~5-7 minutes) depending on the number of time segments and channels selected. To speed up testing, start with a single time segment and channel.
 
 ![Execution Completion](https://github.com/user-attachments/assets/ac8725ca-4924-466c-9bff-7bb7a3f5d4aa)
-
 
 ### 2. Running Omicron Analysis
 After generating `gwf` files, switch to the **Omicron** tab to proceed with analysis.
@@ -126,8 +131,6 @@ If you have worked with **Omicron configuration files**, this setup will feel fa
 ![Omicron Execution](https://github.com/user-attachments/assets/7fb1b036-c71b-4e96-816a-b954491f0b47)
 
 ---
-
-
 
 
 ## **5. Development Timeline**
