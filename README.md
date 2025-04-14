@@ -131,6 +131,13 @@ If you have worked with **Omicron configuration files**, this setup will feel fa
 ![Omicron Execution](https://github.com/user-attachments/assets/7fb1b036-c71b-4e96-816a-b954491f0b47)
 
 ---
+Additonal tabs
+
+![image](https://github.com/user-attachments/assets/5255dcde-fcd2-4dcd-a59c-074b6588bd01)
+
+![image](https://github.com/user-attachments/assets/9c5b8f3f-48d8-4114-9873-044423973a8d)
+
+![image](https://github.com/user-attachments/assets/abb221ec-b5b9-4266-9e3e-4b35bffa1fb7)
 
 
 ## **5. Development Timeline**
