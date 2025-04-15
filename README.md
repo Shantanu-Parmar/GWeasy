@@ -3,8 +3,8 @@
 ## GWeasy: Multiplatform GUI Software for Gravitational Wave Data Analysis
 
 ### **Overview**
-[![YouTube]([gw]https://github.com/user-attachments/assets/c7156814-c61c-4177-8220-e5359fa43fb8)
-](https://www.youtube.com/watch?v=WbjKwl0-VA0)
+[![YouTube](https://github.com/user-attachments/assets/727bb4a4-e390-4a24-9525-012bb05f29f1)
+(https://www.youtube.com/watch?v=WbjKwl0-VA0)
 
 **GWeasy** is a user-friendly, GUI-based software designed to streamline the process of **fetching, analyzing, and visualizing gravitational wave (GW) data**. This software aims to reduce the complexity of installing and running GW analysis tools by integrating all necessary software requirements into a single, easy-to-use platform.
 
