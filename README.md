@@ -96,8 +96,7 @@ To perform a test run:
 - Select **`4KCHANS.csv`** as the channels input.
 - Optionally, specify an output directory. By default, GWEasy will create a folder named `gwfout` in the same directory.
 
-![Gravfetch Tab](https://github.com/user-attachments/assets/40dbf0f5-e345-4d2e-9eae-40934842270e)
-
+![Gravfetch Tab](https://github.com/user-attachments/assets/e1a0d90a-5e6e-4828-bec1-f00df2352ab0)
 
 Once execution starts, a completion message will appear in the terminal, indicating a successful run. Processing time varies (~5-7 minutes) depending on the number of time segments and channels selected. To speed up testing, start with a single time segment and channel.
 
@@ -178,4 +177,3 @@ If you’d like to contribute:
 For any issues, feel free to open a GitHub **issue**!
 ---
 ### 🚀 **Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!** 🚀
-
