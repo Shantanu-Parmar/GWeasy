@@ -44,13 +44,13 @@ Many astrophysicists spend more time setting up the software than analyzing the 
 ---
 ## **3. Features & Functionalities**
 ### **✔ Multi-Platform Support**
-- **Windows (initial release)**
-- **Linux (future support planned)**
-
-### **✔ Automated Setup & Installation**
-- **Installs and configures** all necessary software components.
-- **Manages dependencies** within a Conda environment.
-- **Single executable (.exe) for Windows** with future plans for .msi installer.
+- **Windows**
+- **Linux (Beta Version)**
+- **MacOS (Planned)**
+  
+### **✔ Minimal Setup & Installation**
+-- Only WSL needs to be set up for Windows version, pre-loaded WSL Image also available
+-- No installtion or setup for Linux app required
 
 ### **✔ User-Friendly GUI**
 - **Data fetching** from LIGO databases.
@@ -58,37 +58,22 @@ Many astrophysicists spend more time setting up the software than analyzing the 
 - **Pipeline execution for OMICRON and other analyses**.
 - **Graphical visualization** of results.
 - **Format conversion tools**.
-
-### **✔ Additional Features**
-- **Convert GW data to audio**.
-- **Black hole merger visualizations**.
-
 ---
 ## **4. Installation & Dependencies**
-## Download or Clone the Repository  
-Download the ZIP file or clone the repository from:  
-[https://github.com/Shantanu909/GWeasy](https://github.com/Shantanu909/GWeasy)  
-Alternatively, download a prepackaged bundle of all libararies for WSL and conda within windows through:
-[https://drive.google.com/drive/folders/1P4sjy4w6m63KSCEu4XFm3C9VN7iWJUlK](https://drive.google.com/drive/folders/1P4sjy4w6m63KSCEu4XFm3C9VN7iWJUlK)
+## For Windows
+--  If you want to use Omicron only, go to Windows/ and download the Omeasy.exe app and install.bat.
 
-## Run the Installer  
-- Open a terminal, navigate to the downloaded directory, and run:  
-  ```sh
-  install.bat
-  ```
-- Alternatively, you can simply double-click `install.bat`.
-  ------------------------------------
-- If you are working with the prepackaged bundle,follow the same steps by running install.bat
-- This is unpack a conda envrionment with all libraries except Omicron
-- Omicron is in the wsl.tar.gz, a Linux image that will be extracted into your wsl as a separate distro
-- Password for wsl is omicronuser or omicron.
-## First-Time Setup  
-- The initial run of `install.bat` may take some time, depending on your internet speed, as it installs dependencies and sets up the environment.  
-- After installation, you can reuse `install.bat` as an executable launcher for now. Exe setup coming up soon.
+--  Next, you can either set up Omicron library in wsl by yourself or if you don't want to get into the hassle of setup follow next instructions
 
-## Verification
+--  Donwload GWeasywsl.tar(https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link) and download the tar file.
 
----
+--  Put install.bat, GWeasywsl.tar in same directory, double click on install.bat.
+
+--  That's it, run the Omicron on Windows using the Omeasy.exe from here on. 
+##For Linux
+--  Download GWeasy from /Linux
+--  On terminal write chmod +x GWeasy
+--  Run GWeasy via ./GWeasy command
 
 ### 1. Running a Test in the Gravfetch Tab
 To perform a test run:
@@ -145,20 +130,24 @@ Additonal tabs
 ## **5. Development Timeline**
 | Task | Expected Completion |
 |-------|------------------|
-| **Project Start** | February 2025 |
-| **Workflow Documentation** | March 2025 |
-| **Prototype Development** | Mid-March 2025 |
-| **Windows Version Testing** | April 2025 |
-| **Linux Version Development** | Future Update |
+| **Project Start** | February 2025 | Done
+| **Workflow Documentation** | March 2025 | Done
+| **Prototype Development** | Mid-March 2025 | Done
+| **Windows Version Testing** | April 2025 | Done
+| **Linux Version Development** | Future Update | Done
 
 ## **6. Future Enhancements**
-- **Cross-platform compatibility (Linux & MacOS)**
+- **Cross-platform compatibility (Linux & MacOS)** Partially Done
 - **Expanded support for additional pipelines**
 - **Real-time visualization improvements**
 
 ## **7. Contributors**
 - **Shantanusinh Parmar** (Lead Developer)
-
+- **Dr. Kai Staats** (Mentor, Software Development)
+- **Dr. Marco Cavaglia** (Mentor, Linux Development)
+- **Dr. Florent Robinet** (Mentor, Omicron)
+- **Dr. Jonah Kanner** (Mentor, GWOSC support)
+  
 ## **8. License**
 This project is open-source under the **MIT License**.
 
@@ -176,4 +165,4 @@ If you’d like to contribute:
 5. **Push to your fork and create a pull request**
 For any issues, feel free to open a GitHub **issue**!
 ---
-### 🚀 **Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!** 🚀
+###  **Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!** 
