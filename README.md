@@ -11,7 +11,7 @@
 - **Project Timeline:** February - April 2025
 - **Lead Developer:** Shantanusinh Parmar
 - **Supervisor:** Prof. Chandrasinh Parmar
-- **Target Platforms:** Windows (initially), Linux (future compatibility planned)
+- **Target Platforms:** Windows , Linux 
 - **Primary Software Components:**
   - LIGO data fetching
   - OMICRON analysis pipeline
