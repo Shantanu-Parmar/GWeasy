@@ -1,0 +1,26 @@
+var class_g_weasy_1_1_g_w_o_s_c_app =
+[
+    [ "__init__", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a05db5e1c35d33b7461e56565c78fe585", null ],
+    [ "cef_loop", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a9f832065a5c7e195b4d99d93a0a7199f", null ],
+    [ "create_browser", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a1bb741bff392d751cc98da2ea1b36d0c", null ],
+    [ "go_back", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a350a13129ff86fea29441ae27849c98a", null ],
+    [ "go_forward", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#ab3acba2cd3f173e833a52e8aaf142b13", null ],
+    [ "init_cef", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a54082d6a5e7209dc995a25c44881dfc9", null ],
+    [ "load_url", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#ab1baf3de1f243939e59b4fc61e2f7609", null ],
+    [ "on_resize", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a7298a36b9bd14857ec5abaf5ac4a9588", null ],
+    [ "reload_page", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a4ba56c85e771ea55e926633d1d511595", null ],
+    [ "back_btn", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a5fd28662abb166bab06d891af561bc67", null ],
+    [ "browser", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#ab17be2c8990aa9fdb34038db9e61926c", null ],
+    [ "browser_frame", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a83b2f1dd72ff15befa16af187663a765", null ],
+    [ "cef_loop", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a25f1e3083573d6ef58e40a5ff0eebbb8", null ],
+    [ "create_browser", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a69bf09479832f7fb11d77f6840b591ea", null ],
+    [ "forward_btn", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a242da9b9d0be1898f672a661ec969866", null ],
+    [ "init_cef", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#af5020c9f28f2b95ba4d1c6a5704c904e", null ],
+    [ "load_url", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a2ec4551d2c3a78a30c47184895365b20", null ],
+    [ "master", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#ace644dfe251fbcb2425d035c21e8ea30", null ],
+    [ "navbar", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#ac08794c7d881fecc74b97651b37b151c", null ],
+    [ "on_resize", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a7b9baa73ff160ae0d8a090932c334501", null ],
+    [ "reload_btn", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#ad99702f54284fa21b654818e9f53389f", null ],
+    [ "root", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a977d01be0fa607ad542f8f63ed4581e6", null ],
+    [ "url_entry", "df/de5/class_g_weasy_1_1_g_w_o_s_c_app.html#a7526c888cbf751d4e298e903f1defbb5", null ]
+];

@@ -1,0 +1,8 @@
+<map id="GWeasy.OmicronApp.start_omicron_process" name="GWeasy.OmicronApp.start_omicron_process">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,182,105"/>
+<area shape="rect" id="Node000002" href="$d6/d74/class_g_weasy_1_1_omicron_app.html#a636cf0031aba5421ec9a6b61ed6a095c" title=" " alt="" coords="237,29,429,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,69,221,64,221,69,183,74"/>
+<area shape="rect" id="Node000003" href="$dd/db1/class_g_weasy_1_1_terminal_frame.html#a6c6f56116c93ef28c984f0541217a8be" title=" " alt="" coords="230,96,436,139"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="183,94,214,98,214,103,182,99"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="287,29,286,19,293,10,309,5,333,3,358,5,374,11,372,16,357,10,333,8,310,10,296,15,291,21,293,28"/>
+</map>

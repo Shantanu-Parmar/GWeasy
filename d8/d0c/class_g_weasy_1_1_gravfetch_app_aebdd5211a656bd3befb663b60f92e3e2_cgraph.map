@@ -1,0 +1,11 @@
+<map id="GWeasy.GravfetchApp.toggle_execution" name="GWeasy.GravfetchApp.toggle_execution">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,120,199,163"/>
+<area shape="rect" id="Node000002" href="$d8/d0c/class_g_weasy_1_1_gravfetch_app.html#adf57acd65707f23f01b3ee1befc3135c" title=" " alt="" coords="250,29,450,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,117,246,82,264,75,266,80,248,86,157,122"/>
+<area shape="rect" id="Node000003" href="$d6/d74/class_g_weasy_1_1_omicron_app.html#a636cf0031aba5421ec9a6b61ed6a095c" title=" " alt="" coords="254,120,446,163"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="199,139,238,139,238,144,199,144"/>
+<area shape="rect" id="Node000004" href="$dd/db1/class_g_weasy_1_1_terminal_frame.html#a6c6f56116c93ef28c984f0541217a8be" title=" " alt="" coords="247,187,453,229"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="185,161,254,179,252,185,183,166"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="303,29,301,19,309,10,325,5,350,3,376,5,392,11,390,16,375,10,350,8,326,10,312,15,306,21,308,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="303,120,301,110,309,101,325,95,350,93,376,96,392,102,390,107,375,101,350,99,326,101,312,105,306,111,308,119"/>
+</map>
