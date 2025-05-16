@@ -1,0 +1,569 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_omicron_app" xml:lang="en-US">
+<title>GWeasy.OmicronApp Class Reference</title>
+<indexterm><primary>GWeasy.OmicronApp</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a12195b5607882b70cee355d3458a8bcd">__init__</link> (self, <link linkend="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8">create_widgets</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f">create_entry</link> (self, label, key, frame=None, row=0, col=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1aae3ceec7effb9245d1ebd3cc6a3df53b">create_double_entry</link> (self, label, key, frame=None, row=0, col=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b">create_file_selector</link> (self, label, key, is_directory=False, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748">create_folder_selector</link> (self, label, key, is_directory=False, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3">create_output_products_selection</link> (self, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42">create_dropdown</link> (self, label, key, options, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab">create_editable_dropdown</link> (self, label, key, options, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d">create_slider</link> (self, label, key, min_val, max_val, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e">create_channel_dropdown</link> (self, row=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1acd9fc2c2cd113522c4e336bd8225ca94">select_file</link> (self, var, is_directory=False)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef">load_config</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f">save_config</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd">run_omicron_script</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f">start_omicron_process</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c">append_output</link> (self, text)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181">open_custom_segs_dialog</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a05489b453fa5815ad0a62bc11fb14df4">generate_fin_ffl</link> (self, channel_dir, selected_segments)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4">root</link> = root</para>
+</listitem>
+            <listitem><para>str <link linkend="_class_g_weasy_1_1_omicron_app_1aa0302f689a9f20b74a22d71830c5b702">config_path</link> = &quot;config.txt&quot;</para>
+</listitem>
+            <listitem><para>dict <link linkend="_class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb">config_data</link> = {}</para>
+</listitem>
+            <listitem><para>dict <link linkend="_class_g_weasy_1_1_omicron_app_1a872dffa01de2eeb3f53abee58340039f">entries</link> = {}</para>
+</listitem>
+            <listitem><para>dict <link linkend="_class_g_weasy_1_1_omicron_app_1aaa66b47647ca1d949ca8bf48f7c400ad">output_products</link> = {}</para>
+</listitem>
+            <listitem><para>dict <link linkend="_class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa">ui_elements</link> = {}</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ac7d7079e14bdb8e56ca13cdddd8f2c7c">project_dir</link> = os.getcwd().replace(&quot;\\&quot;, &quot;/&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_class_g_weasy_1_1_omicron_app_1abbab46b706328fa4b2a4971f450c2a84">wsl_project_dir</link> = f&quot;/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_class_g_weasy_1_1_omicron_app_1ad1ef1213f5691fea6949a5887b2a4377">GWFOUT_DIRECTORY</link> = &quot;./gwfout&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a0054f3404083e75866d935cd64b369cf">canvas</link> = tk.Canvas(<link linkend="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a148f8bc6a6b3af1a8e25020bc2d7a443">scrollbar</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594">scrollable_frame</link> = ttk.Frame(self.canvas)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a7a910b884e18250d403f6e4def181f85">window_frame</link> = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor=&quot;nw&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a27d6854add6e02b6310bdbefb3157500">terminal</link> = <link linkend="_class_g_weasy_1_1_terminal_frame">TerminalFrame</link>(self.root, row=4, column=0, columnspan=2, height=10, width=80)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1ab6b8646dd4146a64fb0ec91f9e5f8a90">custom_segs_btn</link> = tk.Button(button_frame, text=&quot;Custom Segs&quot;, command=self.open_custom_segs_dialog)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1a920f757a15dec26acf07948c0b0ec59b">save_button</link> = tk.Button(button_frame, text=&quot;Save Config&quot;, command=self.save_config)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1aecd34779e2176359953a50f115860b93">start_button</link> = tk.Button(button_frame, text=&quot;Start OMICRON&quot;, command=self.run_omicron_script)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omicron_app_1aac5187a637d2aad45a9cbeb690cdc385">channel_dropdown</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00106">106</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a12195b5607882b70cee355d3458a8bcd"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00107">107</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c"/><section>
+    <title>append_output()</title>
+<indexterm><primary>append_output</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>append_output</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.append_output ( self,  text)</computeroutput></para>
+<para><literallayout><computeroutput>Append output to the shared terminal frame.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00513">513</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a636cf0031aba5421ec9a6b61ed6a095c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a636cf0031aba5421ec9a6b61ed6a095c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e"/><section>
+    <title>create_channel_dropdown()</title>
+<indexterm><primary>create_channel_dropdown</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_channel_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_channel_dropdown ( self,  row = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates an editable dropdown for selecting a channel, updating dynamically in the background.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00307">307</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a5a8aeaaafbb31662a0235e5c6f6ad67e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aae3ceec7effb9245d1ebd3cc6a3df53b"/><section>
+    <title>create_double_entry()</title>
+<indexterm><primary>create_double_entry</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_double_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_double_entry ( self,  label,  key,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  col = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00190">190</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42"/><section>
+    <title>create_dropdown()</title>
+<indexterm><primary>create_dropdown</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_dropdown ( self,  label,  key,  options,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates a dropdown menu inside a given frame.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00275">275</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab"/><section>
+    <title>create_editable_dropdown()</title>
+<indexterm><primary>create_editable_dropdown</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_editable_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_editable_dropdown ( self,  label,  key,  options,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates an editable dropdown menu inside a given frame.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00284">284</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_aac69064ecb2f45d9f1116cd1f2746cab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f"/><section>
+    <title>create_entry()</title>
+<indexterm><primary>create_entry</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_entry ( self,  label,  key,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  col = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00182">182</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b"/><section>
+    <title>create_file_selector()</title>
+<indexterm><primary>create_file_selector</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_file_selector</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_file_selector ( self,  label,  key,  is_directory = <computeroutput>False</computeroutput>
+,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates a file/directory selector inside the given frame (or default to scrollable_frame).</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00203">203</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_ad79ecd68c00f609dbed2b5983d7a505b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_ad79ecd68c00f609dbed2b5983d7a505b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748"/><section>
+    <title>create_folder_selector()</title>
+<indexterm><primary>create_folder_selector</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_folder_selector</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_folder_selector ( self,  label,  key,  is_directory = <computeroutput>False</computeroutput>
+,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates a file/directory selector inside the given frame (or default to scrollable_frame).
+Ensures paths are relative to the current working directory and creates the directory if missing.
+Returns the selected relative path.
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00214">214</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a608de44f4b3e008aede61fa0a60ef748_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3"/><section>
+    <title>create_output_products_selection()</title>
+<indexterm><primary>create_output_products_selection</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_output_products_selection</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_output_products_selection ( self,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates checkboxes for selecting output products inside a given frame.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00262">262</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d"/><section>
+    <title>create_slider()</title>
+<indexterm><primary>create_slider</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_slider</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_slider ( self,  label,  key,  min_val,  max_val,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Creates a slider for selecting a numerical value.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00298">298</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8"/><section>
+    <title>create_widgets()</title>
+<indexterm><primary>create_widgets</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>create_widgets</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.create_widgets ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00143">143</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a133ad86bd2a05c92d5bc8bc7d3feeab8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a05489b453fa5815ad0a62bc11fb14df4"/><section>
+    <title>generate_fin_ffl()</title>
+<indexterm><primary>generate_fin_ffl</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>generate_fin_ffl</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.generate_fin_ffl ( self,  channel_dir,  selected_segments)</computeroutput></para>
+<para><literallayout><computeroutput> Generates fin.ffl file with correctly formatted paths and timestamps, then preselects it in the UI. </computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00582">582</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a05489b453fa5815ad0a62bc11fb14df4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef"/><section>
+    <title>load_config()</title>
+<indexterm><primary>load_config</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>load_config</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.load_config ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00392">392</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_ac2f22a8cf066970416111ec3fa1106ef_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181"/><section>
+    <title>open_custom_segs_dialog()</title>
+<indexterm><primary>open_custom_segs_dialog</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>open_custom_segs_dialog</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.open_custom_segs_dialog ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Opens a GUI window to select a channel and time segments with scrolling and dynamic layout.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00517">517</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_ab2b3c69f76e7fb912821086703715181_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd"/><section>
+    <title>run_omicron_script()</title>
+<indexterm><primary>run_omicron_script</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>run_omicron_script</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.run_omicron_script ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Start the OMICRON script in a separate process and update the output in real-time.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00449">449</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_ad6012b814f749f97f159aa12c4f890fd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f"/><section>
+    <title>save_config()</title>
+<indexterm><primary>save_config</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>save_config</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.save_config ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00402">402</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_a24cfec42c637ae285edeb8ec620c8a5f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1acd9fc2c2cd113522c4e336bd8225ca94"/><section>
+    <title>select_file()</title>
+<indexterm><primary>select_file</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>select_file</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.select_file ( self,  var,  is_directory = <computeroutput>False</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00385">385</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_acd9fc2c2cd113522c4e336bd8225ca94_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f"/><section>
+    <title>start_omicron_process()</title>
+<indexterm><primary>start_omicron_process</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>start_omicron_process</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.start_omicron_process ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Run the OMICRON command dynamically in WSL.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00457">457</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_aa183952e874b5e197a29473d77871a3f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/d74/class_g_weasy_1_1_omicron_app_aa183952e874b5e197a29473d77871a3f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a0054f3404083e75866d935cd64b369cf"/><section>
+    <title>canvas</title>
+<indexterm><primary>canvas</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>canvas</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.canvas = tk.Canvas(<link linkend="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4">root</link>)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00121">121</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aac5187a637d2aad45a9cbeb690cdc385"/><section>
+    <title>channel_dropdown</title>
+<indexterm><primary>channel_dropdown</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>channel_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.channel_dropdown</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;ttk.Combobox(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.scrollable_frame,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;textvariable=self.ui_elements[<emphasis role="stringliteral">&quot;DATA&#32;CHANNELS&quot;</emphasis>],
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values=[],&#32;&#32;<emphasis role="comment">#&#32;Start&#32;empty,&#32;will&#32;be&#32;populated&#32;dynamically</emphasis>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;state=<emphasis role="stringliteral">&quot;normal&quot;</emphasis>&#32;&#32;<emphasis role="comment">#&#32;Allows&#32;manual&#32;input</emphasis>
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+</programlisting><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00317">317</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb"/><section>
+    <title>config_data</title>
+<indexterm><primary>config_data</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>config_data</secondary></indexterm>
+<para><computeroutput>dict GWeasy.OmicronApp.config_data = {}</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00110">110</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aa0302f689a9f20b74a22d71830c5b702"/><section>
+    <title>config_path</title>
+<indexterm><primary>config_path</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>config_path</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.config_path = &quot;config.txt&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00109">109</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ab6b8646dd4146a64fb0ec91f9e5f8a90"/><section>
+    <title>custom_segs_btn</title>
+<indexterm><primary>custom_segs_btn</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>custom_segs_btn</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.custom_segs_btn = tk.Button(button_frame, text=&quot;Custom Segs&quot;, command=self.open_custom_segs_dialog)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00156">156</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a872dffa01de2eeb3f53abee58340039f"/><section>
+    <title>entries</title>
+<indexterm><primary>entries</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>entries</secondary></indexterm>
+<para><computeroutput>dict GWeasy.OmicronApp.entries = {}</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00111">111</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ad1ef1213f5691fea6949a5887b2a4377"/><section>
+    <title>GWFOUT_DIRECTORY</title>
+<indexterm><primary>GWFOUT_DIRECTORY</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>GWFOUT_DIRECTORY</secondary></indexterm>
+<para><computeroutput>str GWeasy.OmicronApp.GWFOUT_DIRECTORY = &quot;./gwfout&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00118">118</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aaa66b47647ca1d949ca8bf48f7c400ad"/><section>
+    <title>output_products</title>
+<indexterm><primary>output_products</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>output_products</secondary></indexterm>
+<para><computeroutput>dict GWeasy.OmicronApp.output_products = {}</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00112">112</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ac7d7079e14bdb8e56ca13cdddd8f2c7c"/><section>
+    <title>project_dir</title>
+<indexterm><primary>project_dir</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>project_dir</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.project_dir = os.getcwd().replace(&quot;\\&quot;, &quot;/&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00115">115</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00108">108</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a920f757a15dec26acf07948c0b0ec59b"/><section>
+    <title>save_button</title>
+<indexterm><primary>save_button</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>save_button</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.save_button = tk.Button(button_frame, text=&quot;Save Config&quot;, command=self.save_config)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00158">158</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594"/><section>
+    <title>scrollable_frame</title>
+<indexterm><primary>scrollable_frame</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>scrollable_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.scrollable_frame = ttk.Frame(self.canvas)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00123">123</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a148f8bc6a6b3af1a8e25020bc2d7a443"/><section>
+    <title>scrollbar</title>
+<indexterm><primary>scrollbar</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>scrollbar</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.scrollbar = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00122">122</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1aecd34779e2176359953a50f115860b93"/><section>
+    <title>start_button</title>
+<indexterm><primary>start_button</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>start_button</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.start_button = tk.Button(button_frame, text=&quot;Start OMICRON&quot;, command=self.run_omicron_script)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00160">160</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a27d6854add6e02b6310bdbefb3157500"/><section>
+    <title>terminal</title>
+<indexterm><primary>terminal</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>terminal</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.terminal = <link linkend="_class_g_weasy_1_1_terminal_frame">TerminalFrame</link>(self.root, row=4, column=0, columnspan=2, height=10, width=80)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00139">139</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa"/><section>
+    <title>ui_elements</title>
+<indexterm><primary>ui_elements</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>ui_elements</secondary></indexterm>
+<para><computeroutput>dict GWeasy.OmicronApp.ui_elements = {}</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00113">113</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1a7a910b884e18250d403f6e4def181f85"/><section>
+    <title>window_frame</title>
+<indexterm><primary>window_frame</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>window_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.OmicronApp.window_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor=&quot;nw&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00130">130</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omicron_app_1abbab46b706328fa4b2a4971f450c2a84"/><section>
+    <title>wsl_project_dir</title>
+<indexterm><primary>wsl_project_dir</primary><secondary>GWeasy.OmicronApp</secondary></indexterm>
+<indexterm><primary>GWeasy.OmicronApp</primary><secondary>wsl_project_dir</secondary></indexterm>
+<para><computeroutput>str GWeasy.OmicronApp.wsl_project_dir = f&quot;/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00116">116</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

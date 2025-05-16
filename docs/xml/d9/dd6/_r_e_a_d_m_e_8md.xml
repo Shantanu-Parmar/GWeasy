@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d9/dd6/_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">0#<sp/>GWeasy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>GWeasy:<sp/>Multiplatform<sp/>GUI<sp/>Software<sp/>for<sp/>Gravitational<sp/>Wave<sp/>Data<sp/>Analysis</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>**Overview**</highlight></codeline>
+<codeline><highlight class="normal">[![YouTube](https://github.com/user-attachments/assets/d6054686-f59f-4ba9-a407-a137eaca1222)](https://www.youtube.com/watch?v=WbjKwl0-VA0)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**GWeasy**<sp/>is<sp/>a<sp/>user-friendly,<sp/>GUI-based<sp/>software<sp/>designed<sp/>to<sp/>streamline<sp/>the<sp/>process<sp/>of<sp/>**fetching,<sp/>analyzing,<sp/>and<sp/>visualizing<sp/>gravitational<sp/>wave<sp/>(GW)<sp/>data**.<sp/>This<sp/>software<sp/>aims<sp/>to<sp/>reduce<sp/>the<sp/>complexity<sp/>of<sp/>installing<sp/>and<sp/>running<sp/>GW<sp/>analysis<sp/>tools<sp/>by<sp/>integrating<sp/>all<sp/>necessary<sp/>software<sp/>requirements<sp/>into<sp/>a<sp/>single,<sp/>easy-to-use<sp/>platform.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>**Project<sp/>Details**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Project<sp/>Timeline:**<sp/>February<sp/>-<sp/>April<sp/>2025</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Lead<sp/>Developer:**<sp/>Shantanusinh<sp/>Parmar</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Supervisor:**<sp/>Prof.<sp/>Chandrasinh<sp/>Parmar</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Target<sp/>Platforms:**<sp/>Windows<sp/>,<sp/>Linux<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Primary<sp/>Software<sp/>Components:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>LIGO<sp/>data<sp/>fetching</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>OMICRON<sp/>analysis<sp/>pipeline</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>User-friendly<sp/>GUI</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Visualization<sp/>tools</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>One-click<sp/>installation<sp/>and<sp/>setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**1.<sp/>Introduction**</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>**Laser<sp/>Interferometer<sp/>Gravitational-Wave<sp/>Observatory<sp/>(LIGO)**<sp/>operates<sp/>**four<sp/>detectors**<sp/>and<sp/>collects<sp/>data<sp/>across<sp/>**six<sp/>runs**,<sp/>with<sp/>over<sp/>**300<sp/>channels**,<sp/>multiple<sp/>sampling<sp/>rates,<sp/>and<sp/>countless<sp/>time<sp/>segments.<sp/>This<sp/>raw<sp/>time-series<sp/>GW<sp/>data<sp/>is<sp/>then<sp/>analyzed<sp/>using<sp/>various<sp/>pipelines<sp/>such<sp/>as:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**OMICRON**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Coherent<sp/>WaveBurst<sp/>(cWB)**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Matched<sp/>filtering**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Fourier<sp/>transforms**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Currently,<sp/>setting<sp/>up<sp/>the<sp/>software<sp/>environment<sp/>for<sp/>such<sp/>analyses<sp/>is<sp/>a<sp/>major<sp/>challenge.<sp/>The<sp/>goal<sp/>of<sp/>this<sp/>project<sp/>is<sp/>to<sp/>simplify<sp/>this<sp/>process<sp/>by<sp/>creating<sp/>a<sp/>GUI-based<sp/>tool<sp/>that<sp/>can<sp/>handle<sp/>everything—from<sp/>**installation<sp/>to<sp/>execution**—without<sp/>requiring<sp/>extensive<sp/>technical<sp/>knowledge.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**2.<sp/>Background<sp/>&amp;<sp/>Motivation**</highlight></codeline>
+<codeline><highlight class="normal">While<sp/>working<sp/>with<sp/>GW<sp/>data,<sp/>I<sp/>encountered<sp/>numerous<sp/>challenges,<sp/>spending<sp/>over<sp/>**10<sp/>weeks**<sp/>resolving<sp/>library<sp/>conflicts,<sp/>configuring<sp/>environment<sp/>files,<sp/>and<sp/>understanding<sp/>poorly<sp/>documented<sp/>installation<sp/>processes.<sp/>Through<sp/>collaboration<sp/>with<sp/>scientists,<sp/>developers,<sp/>and<sp/>LIGO<sp/>repository<sp/>maintainers,<sp/>I<sp/>finally<sp/>managed<sp/>to<sp/>get<sp/>the<sp/>**correct<sp/>workflow**<sp/>established.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>experience<sp/>highlighted<sp/>the<sp/>need<sp/>for<sp/>a<sp/>**user-friendly,<sp/>platform-independent<sp/>tool**<sp/>that<sp/>can:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Automate<sp/>the<sp/>**installation**<sp/>of<sp/>required<sp/>dependencies.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Manage<sp/>**multiple<sp/>pipelines**<sp/>with<sp/>ease.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Provide<sp/>an<sp/>**intuitive<sp/>GUI**<sp/>for<sp/>data<sp/>selection,<sp/>analysis,<sp/>and<sp/>visualization.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Offer<sp/>a<sp/>**one-click**<sp/>install<sp/>and<sp/>execution<sp/>process.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Many<sp/>astrophysicists<sp/>spend<sp/>more<sp/>time<sp/>setting<sp/>up<sp/>the<sp/>software<sp/>than<sp/>analyzing<sp/>the<sp/>data.<sp/>**GWeasy**<sp/>aims<sp/>to<sp/>**eliminate<sp/>this<sp/>technical<sp/>barrier**,<sp/>allowing<sp/>researchers<sp/>to<sp/>focus<sp/>on<sp/>their<sp/>primary<sp/>goal:<sp/>**gravitational<sp/>wave<sp/>science**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**3.<sp/>Features<sp/>&amp;<sp/>Functionalities**</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>**✔<sp/>Multi-Platform<sp/>Support**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Windows**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Linux<sp/>(Beta<sp/>Version)**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**MacOS<sp/>(Planned)**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">###<sp/>**✔<sp/>Minimal<sp/>Setup<sp/>&amp;<sp/>Installation**</highlight></codeline>
+<codeline><highlight class="normal">--<sp/>Only<sp/>WSL<sp/>needs<sp/>to<sp/>be<sp/>set<sp/>up<sp/>for<sp/>Windows<sp/>version,<sp/>pre-loaded<sp/>WSL<sp/>Image<sp/>also<sp/>available</highlight></codeline>
+<codeline><highlight class="normal">--<sp/>No<sp/>installtion<sp/>or<sp/>setup<sp/>for<sp/>Linux<sp/>app<sp/>required</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>**✔<sp/>User-Friendly<sp/>GUI**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Data<sp/>fetching**<sp/>from<sp/>LIGO<sp/>databases.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Channel<sp/>selection<sp/>and<sp/>configuration**.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Pipeline<sp/>execution<sp/>for<sp/>OMICRON<sp/>and<sp/>other<sp/>analyses**.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Graphical<sp/>visualization**<sp/>of<sp/>results.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Format<sp/>conversion<sp/>tools**.</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**4.<sp/>Installation<sp/>&amp;<sp/>Dependencies**</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>For<sp/>Windows</highlight></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>If<sp/>you<sp/>want<sp/>to<sp/>use<sp/>Omicron<sp/>only,<sp/>go<sp/>to<sp/>Windows/<sp/>and<sp/>download<sp/>the<sp/>Omeasy.exe<sp/>app<sp/>and<sp/>install.bat.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>Next,<sp/>you<sp/>can<sp/>either<sp/>set<sp/>up<sp/>Omicron<sp/>library<sp/>in<sp/>wsl<sp/>by<sp/>yourself<sp/>or<sp/>if<sp/>you<sp/>don&apos;t<sp/>want<sp/>to<sp/>get<sp/>into<sp/>the<sp/>hassle<sp/>of<sp/>setup<sp/>follow<sp/>next<sp/>instructions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>Donwload<sp/>GWeasywsl.tar(https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link)<sp/>and<sp/>download<sp/>the<sp/>tar<sp/>file.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>Put<sp/>install.bat,<sp/>GWeasywsl.tar<sp/>in<sp/>same<sp/>directory,<sp/>double<sp/>click<sp/>on<sp/>install.bat.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>That&apos;s<sp/>it,<sp/>run<sp/>the<sp/>Omicron<sp/>on<sp/>Windows<sp/>using<sp/>the<sp/>Omeasy.exe<sp/>from<sp/>here<sp/>on.<sp/></highlight></codeline>
+<codeline><highlight class="normal">##For<sp/>Linux</highlight></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>Download<sp/>GWeasy<sp/>from<sp/>/Linux</highlight></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>On<sp/>terminal<sp/>write<sp/>chmod<sp/>+x<sp/>GWeasy</highlight></codeline>
+<codeline><highlight class="normal">--<sp/><sp/>Run<sp/>GWeasy<sp/>via<sp/>./GWeasy<sp/>command</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>1.<sp/>Running<sp/>a<sp/>Test<sp/>in<sp/>the<sp/>Gravfetch<sp/>Tab</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>perform<sp/>a<sp/>test<sp/>run:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Select<sp/>**`test.csv`**<sp/>as<sp/>the<sp/>time<sp/>segment<sp/>input.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Select<sp/>**`4KCHANS.csv`**<sp/>as<sp/>the<sp/>channels<sp/>input.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Optionally,<sp/>specify<sp/>an<sp/>output<sp/>directory.<sp/>By<sp/>default,<sp/>GWEasy<sp/>will<sp/>create<sp/>a<sp/>folder<sp/>named<sp/>`gwfout`<sp/>in<sp/>the<sp/>same<sp/>directory.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Gravfetch<sp/>Tab](https://github.com/user-attachments/assets/e1a0d90a-5e6e-4828-bec1-f00df2352ab0)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Once<sp/>execution<sp/>starts,<sp/>a<sp/>completion<sp/>message<sp/>will<sp/>appear<sp/>in<sp/>the<sp/>terminal,<sp/>indicating<sp/>a<sp/>successful<sp/>run.<sp/>Processing<sp/>time<sp/>varies<sp/>(~5-7<sp/>minutes)<sp/>depending<sp/>on<sp/>the<sp/>number<sp/>of<sp/>time<sp/>segments<sp/>and<sp/>channels<sp/>selected.<sp/>To<sp/>speed<sp/>up<sp/>testing,<sp/>start<sp/>with<sp/>a<sp/>single<sp/>time<sp/>segment<sp/>and<sp/>channel.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Execution<sp/>Completion](https://github.com/user-attachments/assets/ac8725ca-4924-466c-9bff-7bb7a3f5d4aa)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>2.<sp/>Running<sp/>Omicron<sp/>Analysis</highlight></codeline>
+<codeline><highlight class="normal">After<sp/>generating<sp/>`gwf`<sp/>files,<sp/>switch<sp/>to<sp/>the<sp/>**Omicron**<sp/>tab<sp/>to<sp/>proceed<sp/>with<sp/>analysis.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Omicron<sp/>Tab](https://github.com/user-attachments/assets/e1a0d90a-5e6e-4828-bec1-f00df2352ab0)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Configuring<sp/>Omicron<sp/>Settings</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>have<sp/>worked<sp/>with<sp/>**Omicron<sp/>configuration<sp/>files**,<sp/>this<sp/>setup<sp/>will<sp/>feel<sp/>familiar:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Omicron<sp/>Config](https://github.com/user-attachments/assets/9b928017-f844-4bf4-9810-da309442b438)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Steps:**</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>**Set<sp/>Channel<sp/>&amp;<sp/>Sampling<sp/>Rate<sp/>First**<sp/>(due<sp/>to<sp/>an<sp/>existing<sp/>UI<sp/>issue,<sp/>these<sp/>must<sp/>be<sp/>configured<sp/>before<sp/>modifying<sp/>other<sp/>fields).</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Channels<sp/>are<sp/>pre-populated<sp/>based<sp/>on<sp/>the<sp/>**Gravfetch**<sp/>output,<sp/>but<sp/>you<sp/>can<sp/>also<sp/>manually<sp/>enter<sp/>any<sp/>channel<sp/>name.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Channel<sp/>Selection](https://github.com/user-attachments/assets/f93af41a-59cf-4d1b-a9a5-afd9ff075a33)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>**Select<sp/>the<sp/>`.ffl`<sp/>files**<sp/>corresponding<sp/>to<sp/>each<sp/>channel.<sp/>These<sp/>are<sp/>located<sp/>in<sp/>the<sp/>**`gwfout`**<sp/>directory<sp/>or<sp/>your<sp/>chosen<sp/>output<sp/>path.<sp/>Each<sp/>channel<sp/>has<sp/>an<sp/>`.ffl`<sp/>file<sp/>listing<sp/>all<sp/>time<sp/>segments.</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Use<sp/>the<sp/>**Custom<sp/>Segments**<sp/>feature<sp/>to<sp/>manually<sp/>specify<sp/>time<sp/>segments<sp/>for<sp/>analysis<sp/>if<sp/>needed.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Custom<sp/>Segments](https://github.com/user-attachments/assets/50fcbae3-4685-4f20-80ba-98fd88dca8a8)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>Once<sp/>all<sp/>fields<sp/>are<sp/>filled,<sp/>specify<sp/>an<sp/>output<sp/>directory<sp/>(default:<sp/>`Omicronout`).</highlight></codeline>
+<codeline><highlight class="normal">6.<sp/>Click<sp/>**Save<sp/>Config**<sp/>to<sp/>generate<sp/>a<sp/>configuration<sp/>file<sp/>with<sp/>the<sp/>selected<sp/>inputs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Save<sp/>Config](https://github.com/user-attachments/assets/279a8508-e12e-4e64-93bc-679bc56aa4eb)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">7.<sp/>Press<sp/>**Start<sp/>Omicron**<sp/>to<sp/>begin<sp/>processing.<sp/>Upon<sp/>successful<sp/>execution,<sp/>a<sp/>completion<sp/>message<sp/>will<sp/>be<sp/>displayed<sp/>in<sp/>the<sp/>terminal.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Omicron<sp/>Execution](https://github.com/user-attachments/assets/7fb1b036-c71b-4e96-816a-b954491f0b47)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">Additonal<sp/>tabs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![image](https://github.com/user-attachments/assets/5255dcde-fcd2-4dcd-a59c-074b6588bd01)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![image](https://github.com/user-attachments/assets/9c5b8f3f-48d8-4114-9873-044423973a8d)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![image](https://github.com/user-attachments/assets/abb221ec-b5b9-4266-9e3e-4b35bffa1fb7)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>**5.<sp/>Development<sp/>Timeline**</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Task<sp/>|<sp/>Expected<sp/>Completion<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|-------|------------------|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**Project<sp/>Start**<sp/>|<sp/>February<sp/>2025<sp/>|<sp/>Done</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**Workflow<sp/>Documentation**<sp/>|<sp/>March<sp/>2025<sp/>|<sp/>Done</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**Prototype<sp/>Development**<sp/>|<sp/>Mid-March<sp/>2025<sp/>|<sp/>Done</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**Windows<sp/>Version<sp/>Testing**<sp/>|<sp/>April<sp/>2025<sp/>|<sp/>Done</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**Linux<sp/>Version<sp/>Development**<sp/>|<sp/>Future<sp/>Update<sp/>|<sp/>Done</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>**6.<sp/>Future<sp/>Enhancements**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Cross-platform<sp/>compatibility<sp/>(Linux<sp/>&amp;<sp/>MacOS)**<sp/>Partially<sp/>Done</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Expanded<sp/>support<sp/>for<sp/>additional<sp/>pipelines**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Real-time<sp/>visualization<sp/>improvements**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>**7.<sp/>Contributors**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Shantanusinh<sp/>Parmar**<sp/>(Lead<sp/>Developer)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Dr.<sp/>Kai<sp/>Staats**<sp/>(Mentor,<sp/>Software<sp/>Development)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Dr.<sp/>Marco<sp/>Cavaglia**<sp/>(Mentor,<sp/>Linux<sp/>Development)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Dr.<sp/>Florent<sp/>Robinet**<sp/>(Mentor,<sp/>Omicron)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Dr.<sp/>Jonah<sp/>Kanner**<sp/>(Mentor,<sp/>GWOSC<sp/>support)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**8.<sp/>License**</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>is<sp/>open-source<sp/>under<sp/>the<sp/>**MIT<sp/>License**.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**9.<sp/>Acknowledgments**</highlight></codeline>
+<codeline><highlight class="normal">Special<sp/>thanks<sp/>to<sp/>the<sp/>**Dr.<sp/>Marco<sp/>Cavaglia,<sp/>Dr.<sp/>Kai<sp/>Staats,<sp/>Dr.<sp/>Florent<sp/>Robinet,<sp/>Dr.<sp/>Jonah<sp/>Kranner**,<sp/>and<sp/>thanks<sp/>to<sp/>the<sp/>**LIGO<sp/>team**,<sp/>pipeline<sp/>developers,<sp/>and<sp/>all<sp/>researchers<sp/>contributing<sp/>to<sp/>the<sp/>field<sp/>of<sp/>**gravitational<sp/>wave<sp/>astrophysics**.<sp/>Your<sp/>work<sp/>makes<sp/>this<sp/>project<sp/>possible.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>**10.<sp/>How<sp/>to<sp/>Contribute**</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you’d<sp/>like<sp/>to<sp/>contribute:</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>**Fork<sp/>the<sp/>repository**</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**Clone<sp/>your<sp/>fork**:<sp/>`git<sp/>clone<sp/>https://github.com/yourusername/GWeasy.git`</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**Create<sp/>a<sp/>new<sp/>branch**:<sp/>`git<sp/>checkout<sp/>-b<sp/>feature-branch`</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>**Make<sp/>your<sp/>changes<sp/>and<sp/>commit**</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>**Push<sp/>to<sp/>your<sp/>fork<sp/>and<sp/>create<sp/>a<sp/>pull<sp/>request**</highlight></codeline>
+<codeline><highlight class="normal">For<sp/>any<sp/>issues,<sp/>feel<sp/>free<sp/>to<sp/>open<sp/>a<sp/>GitHub<sp/>**issue**!</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">###<sp/><sp/>**Join<sp/>the<sp/>GWeasy<sp/>Project<sp/>–<sp/>Making<sp/>Gravitational<sp/>Wave<sp/>Analysis<sp/>Accessible<sp/>to<sp/>All!**<sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/README.md"/>
+  </compounddef>
+</doxygen>

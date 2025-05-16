@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>GWeasy</title>
+    </info>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="dd/d9c/namespace_g_weasy.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="d4/d49/class_g_weasy_1_1_application.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="de/db4/class_g_weasy_1_1_f_f_t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/d0c/class_g_weasy_1_1_gravfetch_app.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="df/de5/class_g_weasy_1_1_g_w_o_s_c_app.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d6/d74/class_g_weasy_1_1_omicron_app.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="da/da4/class_g_weasy_1_1_omiviz.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dc/da1/class_g_weasy_1_1_p_s_ds.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d8/d2c/class_g_weasy_1_1_spectrogram.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="dd/db1/class_g_weasy_1_1_terminal_frame.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d5/d54/class_g_weasy_1_1_time_srswaveform.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="d6/d99/_g_weasy_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d6/d99/_g_weasy_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d9/dd6/_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="d4/d98/tests_2_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

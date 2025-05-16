@@ -1,0 +1,255 @@
+.TH "C:/Users/HP/Desktop/docs/GWeasy Directory Reference" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/HP/Desktop/docs/GWeasy Directory Reference
+.SH SYNOPSIS
+.br
+.PP
+.SS "Directories"
+
+.in +1c
+.ti -1c
+.RI "directory \fBtests\fP"
+.br
+.in -1c
+.SS "Files"
+
+.in +1c
+.ti -1c
+.RI "file \fBGWeasy\&.py\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+0# \fBGWeasy\fP
+.SS "GWeasy: Multiplatform GUI Software for Gravitational Wave Data Analysis"
+.SS "\fBOverview\fP"
+\fR\fP
+.PP
+\fB\fBGWeasy\fP\fP is a user-friendly, GUI-based software designed to streamline the process of \fBfetching, analyzing, and visualizing gravitational wave (GW) data\fP\&. This software aims to reduce the complexity of installing and running GW analysis tools by integrating all necessary software requirements into a single, easy-to-use platform\&.
+.SS "\fBProject Details\fP"
+.IP "\(bu" 2
+\fBProject Timeline:\fP February - April 2025
+.IP "\(bu" 2
+\fBLead Developer:\fP Shantanusinh Parmar
+.IP "\(bu" 2
+\fBSupervisor:\fP Prof\&. Chandrasinh Parmar
+.IP "\(bu" 2
+\fBTarget Platforms:\fP Windows , Linux
+.IP "\(bu" 2
+\fBPrimary Software Components:\fP
+.IP "  \(bu" 4
+LIGO data fetching
+.IP "  \(bu" 4
+OMICRON analysis pipeline
+.IP "  \(bu" 4
+User-friendly GUI
+.IP "  \(bu" 4
+Visualization tools
+.IP "  \(bu" 4
+One-click installation and setup
+.PP
+
+.PP
+
+.PP
+.PP
+ 
+.SS "\fB1\&. Introduction\fP"
+The \fBLaser Interferometer Gravitational-Wave Observatory (LIGO)\fP operates \fBfour detectors\fP and collects data across \fBsix runs\fP, with over \fB300 channels\fP, multiple sampling rates, and countless time segments\&. This raw time-series GW data is then analyzed using various pipelines such as:
+.IP "\(bu" 2
+\fBOMICRON\fP
+.IP "\(bu" 2
+\fBCoherent WaveBurst (cWB)\fP
+.IP "\(bu" 2
+\fBMatched filtering\fP
+.IP "\(bu" 2
+\fBFourier transforms\fP
+.PP
+
+.PP
+Currently, setting up the software environment for such analyses is a major challenge\&. The goal of this project is to simplify this process by creating a GUI-based tool that can handle everything—from **installation to execution**—without requiring extensive technical knowledge\&.
+
+.PP
+.PP
+ 
+.SS "\fB2\&. Background & Motivation\fP"
+While working with GW data, I encountered numerous challenges, spending over \fB10 weeks\fP resolving library conflicts, configuring environment files, and understanding poorly documented installation processes\&. Through collaboration with scientists, developers, and LIGO repository maintainers, I finally managed to get the \fBcorrect workflow\fP established\&.
+
+.PP
+This experience highlighted the need for a \fBuser-friendly, platform-independent tool\fP that can:
+.IP "\(bu" 2
+Automate the \fBinstallation\fP of required dependencies\&.
+.IP "\(bu" 2
+Manage \fBmultiple pipelines\fP with ease\&.
+.IP "\(bu" 2
+Provide an \fBintuitive GUI\fP for data selection, analysis, and visualization\&.
+.IP "\(bu" 2
+Offer a \fBone-click\fP install and execution process\&.
+.PP
+
+.PP
+Many astrophysicists spend more time setting up the software than analyzing the data\&. \fB\fBGWeasy\fP\fP aims to \fBeliminate this technical barrier\fP, allowing researchers to focus on their primary goal: \fBgravitational wave science\fP\&.
+
+.PP
+.PP
+ 
+.SS "\fB3\&. Features & Functionalities\fP"
+.SS "\fB✔ Multi-Platform Support\fP"
+.IP "\(bu" 2
+\fBWindows\fP
+.IP "\(bu" 2
+\fBLinux (Beta Version)\fP
+.IP "\(bu" 2
+\fBMacOS (Planned)\fP
+.PP
+.SS "\fB✔ Minimal Setup & Installation\fP"
+-- Only WSL needs to be set up for Windows version, pre-loaded WSL Image also available -- No installtion or setup for Linux app required
+.SS "\fB✔ User-Friendly GUI\fP"
+.IP "\(bu" 2
+\fBData fetching\fP from LIGO databases\&.
+.IP "\(bu" 2
+\fBChannel selection and configuration\fP\&.
+.IP "\(bu" 2
+\fBPipeline execution for OMICRON and other analyses\fP\&.
+.IP "\(bu" 2
+\fBGraphical visualization\fP of results\&. 
+.PP
+.SS "- \fBFormat conversion tools\fP\&."
+.SS "\fB4\&. Installation & Dependencies\fP"
+.SS "For Windows"
+-- If you want to use Omicron only, go to Windows/ and download the Omeasy\&.exe app and install\&.bat\&.
+
+.PP
+-- Next, you can either set up Omicron library in wsl by yourself or if you don't want to get into the hassle of setup follow next instructions
+
+.PP
+-- Donwload GWeasywsl\&.tar(https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link) and download the tar file\&.
+
+.PP
+-- Put install\&.bat, GWeasywsl\&.tar in same directory, double click on install\&.bat\&.
+
+.PP
+-- That's it, run the Omicron on Windows using the Omeasy\&.exe from here on\&. 
+.SS "For Linux"
+-- Download \fBGWeasy\fP from /Linux -- On terminal write chmod +x \fBGWeasy\fP -- Run \fBGWeasy\fP via \&./GWeasy command
+.SS "1\&. Running a Test in the Gravfetch Tab"
+To perform a test run:
+.IP "\(bu" 2
+Select \fB\fRtest\&.csv\fP\fP as the time segment input\&.
+.IP "\(bu" 2
+Select \fB\fR4KCHANS\&.csv\fP\fP as the channels input\&.
+.IP "\(bu" 2
+Optionally, specify an output directory\&. By default, GWEasy will create a folder named \fRgwfout\fP in the same directory\&.
+.PP
+
+.PP
+
+.PP
+Once execution starts, a completion message will appear in the terminal, indicating a successful run\&. Processing time varies (~5-7 minutes) depending on the number of time segments and channels selected\&. To speed up testing, start with a single time segment and channel\&.
+
+.PP
+.SS "2\&. Running Omicron Analysis"
+After generating \fRgwf\fP files, switch to the \fBOmicron\fP tab to proceed with analysis\&.
+
+.PP
+.SS "Configuring Omicron Settings"
+If you have worked with \fBOmicron configuration files\fP, this setup will feel familiar:
+
+.PP
+
+.PP
+\fBSteps:\fP
+.IP "1." 4
+\fBSet Channel & Sampling Rate First\fP (due to an existing UI issue, these must be configured before modifying other fields)\&.
+.IP "2." 4
+Channels are pre-populated based on the \fBGravfetch\fP output, but you can also manually enter any channel name\&.
+.PP
+
+.PP
+
+.PP
+.IP "3." 4
+\fBSelect the \fR\&.ffl\fP files\fP corresponding to each channel\&. These are located in the \fB\fRgwfout\fP\fP directory or your chosen output path\&. Each channel has an \fR\&.ffl\fP file listing all time segments\&.
+.IP "4." 4
+Use the \fBCustom Segments\fP feature to manually specify time segments for analysis if needed\&.
+.PP
+
+.PP
+
+.PP
+.IP "5." 4
+Once all fields are filled, specify an output directory (default: \fROmicronout\fP)\&.
+.IP "6." 4
+Click \fBSave Config\fP to generate a configuration file with the selected inputs\&.
+.PP
+
+.PP
+
+.PP
+.IP "7." 4
+Press \fBStart Omicron\fP to begin processing\&. Upon successful execution, a completion message will be displayed in the terminal\&.
+.PP
+
+.PP
+
+.PP
+.PP
+ Additonal tabs
+
+.PP
+
+.PP
+
+.PP
+.SS "\fB5\&. Development Timeline\fP"
+| Task | Expected Completion | |-------|------------------| | \fBProject Start\fP | February 2025 | Done | \fBWorkflow Documentation\fP | March 2025 | Done | \fBPrototype Development\fP | Mid-March 2025 | Done | \fBWindows Version Testing\fP | April 2025 | Done | \fBLinux Version Development\fP | Future Update | Done
+.SS "\fB6\&. Future Enhancements\fP"
+.IP "\(bu" 2
+\fBCross-platform compatibility (Linux & MacOS)\fP Partially Done
+.IP "\(bu" 2
+\fBExpanded support for additional pipelines\fP
+.IP "\(bu" 2
+\fBReal-time visualization improvements\fP
+.PP
+.SS "\fB7\&. Contributors\fP"
+.IP "\(bu" 2
+\fBShantanusinh Parmar\fP (Lead Developer)
+.IP "\(bu" 2
+\fBDr\&. Kai Staats\fP (Mentor, Software Development)
+.IP "\(bu" 2
+\fBDr\&. Marco Cavaglia\fP (Mentor, Linux Development)
+.IP "\(bu" 2
+\fBDr\&. Florent Robinet\fP (Mentor, Omicron)
+.IP "\(bu" 2
+\fBDr\&. Jonah Kanner\fP (Mentor, GWOSC support)
+.PP
+.SS "\fB8\&. License\fP"
+This project is open-source under the \fBMIT License\fP\&.
+
+.PP
+.PP
+ 
+.SS "\fB9\&. Acknowledgments\fP"
+Special thanks to the \fBDr\&. Marco Cavaglia, Dr\&. Kai Staats, Dr\&. Florent Robinet, Dr\&. Jonah Kranner\fP, and thanks to the \fBLIGO team\fP, pipeline developers, and all researchers contributing to the field of \fBgravitational wave astrophysics\fP\&. Your work makes this project possible\&.
+
+.PP
+.PP
+ 
+.SS "\fB10\&. How to Contribute\fP"
+If you’d like to contribute:
+.IP "1." 4
+\fBFork the repository\fP
+.IP "2." 4
+\fBClone your fork\fP: \fRgit clone https://github.com/yourusername/GWeasy.git\fP
+.IP "3." 4
+\fBCreate a new branch\fP: \fRgit checkout -b feature-branch\fP
+.IP "4." 4
+\fBMake your changes and commit\fP
+.IP "5." 4
+\fBPush to your fork and create a pull request\fP 
+.PP
+.SS "For any issues, feel free to open a GitHub \fBissue\fP!"
+.SS "\fBJoin the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!\fP"
+

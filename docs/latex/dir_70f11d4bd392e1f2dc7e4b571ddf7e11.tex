@@ -1,0 +1,189 @@
+\doxysection{C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy Directory Reference}
+\hypertarget{dir_70f11d4bd392e1f2dc7e4b571ddf7e11}{}\label{dir_70f11d4bd392e1f2dc7e4b571ddf7e11}\index{C:/Users/HP/Desktop/docs/GWeasy Directory Reference@{C:/Users/HP/Desktop/docs/GWeasy Directory Reference}}
+Directory dependency graph for GWeasy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{dir_70f11d4bd392e1f2dc7e4b571ddf7e11_dep}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Directories}
+\begin{DoxyCompactItemize}
+\item 
+directory \mbox{\hyperlink{dir_26b1ea55c1539736f8f9e6967ee86c64}{tests}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+0\# \doxylink{namespace_g_weasy}{GWeasy}\hypertarget{README.md_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{GWeasy\+: Multiplatform GUI Software for Gravitational Wave Data Analysis}{GWeasy\+: Multiplatform GUI Software for Gravitational Wave Data Analysis}}\label{README.md_autotoc_md0}
+\hypertarget{README.md_autotoc_md1}{}\doxysubsubsubsection{\texorpdfstring{{\bfseries{Overview}}}{{\bfseries{Overview}}}}\label{README.md_autotoc_md1}
+\href{https://www.youtube.com/watch?v=WbjKwl0-VA0}{\texttt{ }}
+
+{\bfseries{\doxylink{namespace_g_weasy}{GWeasy}}} is a user-\/friendly, GUI-\/based software designed to streamline the process of {\bfseries{fetching, analyzing, and visualizing gravitational wave (GW) data}}. This software aims to reduce the complexity of installing and running GW analysis tools by integrating all necessary software requirements into a single, easy-\/to-\/use platform.\hypertarget{README.md_autotoc_md2}{}\doxysubsubsubsection{\texorpdfstring{{\bfseries{Project Details}}}{{\bfseries{Project Details}}}}\label{README.md_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\bfseries{Project Timeline\+:}} February -\/ April 2025
+\item {\bfseries{Lead Developer\+:}} Shantanusinh Parmar
+\item {\bfseries{Supervisor\+:}} Prof. Chandrasinh Parmar
+\item {\bfseries{Target Platforms\+:}} Windows , Linux
+\item {\bfseries{Primary Software Components\+:}}
+\begin{DoxyItemize}
+\item LIGO data fetching
+\item OMICRON analysis pipeline
+\item User-\/friendly GUI
+\item Visualization tools
+\item One-\/click installation and setup
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+ \hypertarget{README.md_autotoc_md4}{}\doxysubsubsection{\texorpdfstring{{\bfseries{1. Introduction}}}{{\bfseries{1. Introduction}}}}\label{README.md_autotoc_md4}
+The {\bfseries{Laser Interferometer Gravitational-\/\+Wave Observatory (LIGO)}} operates {\bfseries{four detectors}} and collects data across {\bfseries{six runs}}, with over {\bfseries{300 channels}}, multiple sampling rates, and countless time segments. This raw time-\/series GW data is then analyzed using various pipelines such as\+:
+\begin{DoxyItemize}
+\item {\bfseries{OMICRON}}
+\item {\bfseries{Coherent Wave\+Burst (c\+WB)}}
+\item {\bfseries{Matched filtering}}
+\item {\bfseries{Fourier transforms}}
+\end{DoxyItemize}
+
+Currently, setting up the software environment for such analyses is a major challenge. The goal of this project is to simplify this process by creating a GUI-\/based tool that can handle everything—from \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}installation to execution\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}—without requiring extensive technical knowledge.
+
+\DoxyHorRuler{0}
+ \hypertarget{README.md_autotoc_md6}{}\doxysubsubsection{\texorpdfstring{{\bfseries{2. Background \& Motivation}}}{{\bfseries{2. Background \& Motivation}}}}\label{README.md_autotoc_md6}
+While working with GW data, I encountered numerous challenges, spending over {\bfseries{10 weeks}} resolving library conflicts, configuring environment files, and understanding poorly documented installation processes. Through collaboration with scientists, developers, and LIGO repository maintainers, I finally managed to get the {\bfseries{correct workflow}} established.
+
+This experience highlighted the need for a {\bfseries{user-\/friendly, platform-\/independent tool}} that can\+:
+\begin{DoxyItemize}
+\item Automate the {\bfseries{installation}} of required dependencies.
+\item Manage {\bfseries{multiple pipelines}} with ease.
+\item Provide an {\bfseries{intuitive GUI}} for data selection, analysis, and visualization.
+\item Offer a {\bfseries{one-\/click}} install and execution process.
+\end{DoxyItemize}
+
+Many astrophysicists spend more time setting up the software than analyzing the data. {\bfseries{\doxylink{namespace_g_weasy}{GWeasy}}} aims to {\bfseries{eliminate this technical barrier}}, allowing researchers to focus on their primary goal\+: {\bfseries{gravitational wave science}}.
+
+\DoxyHorRuler{0}
+ \hypertarget{README.md_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{{\bfseries{3. Features \& Functionalities}}}{{\bfseries{3. Features \& Functionalities}}}}\label{README.md_autotoc_md8}
+\hypertarget{README.md_autotoc_md9}{}\doxysubsubsubsection{\texorpdfstring{{\bfseries{✔ Multi-\/\+Platform Support}}}{{\bfseries{✔ Multi-\/\+Platform Support}}}}\label{README.md_autotoc_md9}
+
+\begin{DoxyItemize}
+\item {\bfseries{Windows}}
+\item {\bfseries{Linux (Beta Version)}}
+\item {\bfseries{Mac\+OS (Planned)}}
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md10}{}\doxysubsubsubsection{\texorpdfstring{{\bfseries{✔ Minimal Setup \& Installation}}}{{\bfseries{✔ Minimal Setup \& Installation}}}}\label{README.md_autotoc_md10}
+-- Only WSL needs to be set up for Windows version, pre-\/loaded WSL Image also available -- No installtion or setup for Linux app required\hypertarget{README.md_autotoc_md11}{}\doxysubsubsubsection{\texorpdfstring{{\bfseries{✔ User-\/\+Friendly GUI}}}{{\bfseries{✔ User-\/\+Friendly GUI}}}}\label{README.md_autotoc_md11}
+
+\begin{DoxyItemize}
+\item {\bfseries{Data fetching}} from LIGO databases.
+\item {\bfseries{Channel selection and configuration}}.
+\item {\bfseries{Pipeline execution for OMICRON and other analyses}}.
+\item {\bfseries{Graphical visualization}} of results. 
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{-\/ {\bfseries{Format conversion tools}}.}{-\/ {\bfseries{Format conversion tools}}.}}\label{README.md_autotoc_md12}
+\hypertarget{README.md_autotoc_md13}{}\doxysubsubsection{\texorpdfstring{{\bfseries{4. Installation \& Dependencies}}}{{\bfseries{4. Installation \& Dependencies}}}}\label{README.md_autotoc_md13}
+\hypertarget{README.md_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{For Windows}{For Windows}}\label{README.md_autotoc_md14}
+-- If you want to use Omicron only, go to Windows/ and download the Omeasy.\+exe app and install.\+bat.
+
+-- Next, you can either set up Omicron library in wsl by yourself or if you don\textquotesingle{}t want to get into the hassle of setup follow next instructions
+
+-- Donwload GWeasywsl.\+tar(\href{https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link}{\texttt{ https\+://drive.\+google.\+com/file/d/1\+TTU7\+Gew\+Mf\+HIUte\+Gl6\+ND3c\+LCCKAQ677kt/view?usp=drive\+\_\+link}}) and download the tar file.
+
+-- Put install.\+bat, GWeasywsl.\+tar in same directory, double click on install.\+bat.
+
+-- That\textquotesingle{}s it, run the Omicron on Windows using the Omeasy.\+exe from here on. \hypertarget{README.md_autotoc_md15}{}\doxysubsubsection{\texorpdfstring{For Linux}{For Linux}}\label{README.md_autotoc_md15}
+-- Download \doxylink{namespace_g_weasy}{GWeasy} from /\+Linux -- On terminal write chmod +x \doxylink{namespace_g_weasy}{GWeasy} -- Run \doxylink{namespace_g_weasy}{GWeasy} via ./\+GWeasy command\hypertarget{README.md_autotoc_md16}{}\doxysubsubsubsection{\texorpdfstring{1. Running a Test in the Gravfetch Tab}{1. Running a Test in the Gravfetch Tab}}\label{README.md_autotoc_md16}
+To perform a test run\+:
+\begin{DoxyItemize}
+\item Select {\bfseries{{\ttfamily test.\+csv}}} as the time segment input.
+\item Select {\bfseries{{\ttfamily 4\+KCHANS.\+csv}}} as the channels input.
+\item Optionally, specify an output directory. By default, GWEasy will create a folder named {\ttfamily gwfout} in the same directory.
+\end{DoxyItemize}
+
+
+
+Once execution starts, a completion message will appear in the terminal, indicating a successful run. Processing time varies (\texorpdfstring{$\sim$}{\string~}5-\/7 minutes) depending on the number of time segments and channels selected. To speed up testing, start with a single time segment and channel.
+
+\hypertarget{README.md_autotoc_md17}{}\doxysubsubsubsection{\texorpdfstring{2. Running Omicron Analysis}{2. Running Omicron Analysis}}\label{README.md_autotoc_md17}
+After generating {\ttfamily gwf} files, switch to the {\bfseries{Omicron}} tab to proceed with analysis.
+
+\hypertarget{README.md_autotoc_md18}{}\doxysubsubsubsubsection{\texorpdfstring{Configuring Omicron Settings}{Configuring Omicron Settings}}\label{README.md_autotoc_md18}
+If you have worked with {\bfseries{Omicron configuration files}}, this setup will feel familiar\+:
+
+
+
+{\bfseries{Steps\+:}}
+\begin{DoxyEnumerate}
+\item {\bfseries{Set Channel \& Sampling Rate First}} (due to an existing UI issue, these must be configured before modifying other fields).
+\item Channels are pre-\/populated based on the {\bfseries{Gravfetch}} output, but you can also manually enter any channel name.
+\end{DoxyEnumerate}
+
+
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Select the {\ttfamily .ffl} files}} corresponding to each channel. These are located in the {\bfseries{{\ttfamily gwfout}}} directory or your chosen output path. Each channel has an {\ttfamily .ffl} file listing all time segments.
+\item Use the {\bfseries{Custom Segments}} feature to manually specify time segments for analysis if needed.
+\end{DoxyEnumerate}
+
+
+
+
+\begin{DoxyEnumerate}
+\item Once all fields are filled, specify an output directory (default\+: {\ttfamily Omicronout}).
+\item Click {\bfseries{Save Config}} to generate a configuration file with the selected inputs.
+\end{DoxyEnumerate}
+
+
+
+
+\begin{DoxyEnumerate}
+\item Press {\bfseries{Start Omicron}} to begin processing. Upon successful execution, a completion message will be displayed in the terminal.
+\end{DoxyEnumerate}
+
+
+
+\DoxyHorRuler{0}
+ Additonal tabs
+
+
+
+
+
+\hypertarget{README.md_autotoc_md20}{}\doxysubsubsection{\texorpdfstring{{\bfseries{5. Development Timeline}}}{{\bfseries{5. Development Timeline}}}}\label{README.md_autotoc_md20}
+\texorpdfstring{$\vert$}{|} Task \texorpdfstring{$\vert$}{|} Expected Completion \texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|}-\/-\/-\/-\/---\texorpdfstring{$\vert$}{|}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---\texorpdfstring{$\vert$}{|} \texorpdfstring{$\vert$}{|} {\bfseries{Project Start}} \texorpdfstring{$\vert$}{|} February 2025 \texorpdfstring{$\vert$}{|} Done \texorpdfstring{$\vert$}{|} {\bfseries{Workflow Documentation}} \texorpdfstring{$\vert$}{|} March 2025 \texorpdfstring{$\vert$}{|} Done \texorpdfstring{$\vert$}{|} {\bfseries{Prototype Development}} \texorpdfstring{$\vert$}{|} Mid-\/\+March 2025 \texorpdfstring{$\vert$}{|} Done \texorpdfstring{$\vert$}{|} {\bfseries{Windows Version Testing}} \texorpdfstring{$\vert$}{|} April 2025 \texorpdfstring{$\vert$}{|} Done \texorpdfstring{$\vert$}{|} {\bfseries{Linux Version Development}} \texorpdfstring{$\vert$}{|} Future Update \texorpdfstring{$\vert$}{|} Done\hypertarget{README.md_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{{\bfseries{6. Future Enhancements}}}{{\bfseries{6. Future Enhancements}}}}\label{README.md_autotoc_md21}
+
+\begin{DoxyItemize}
+\item {\bfseries{Cross-\/platform compatibility (Linux \& Mac\+OS)}} Partially Done
+\item {\bfseries{Expanded support for additional pipelines}}
+\item {\bfseries{Real-\/time visualization improvements}}
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md22}{}\doxysubsubsection{\texorpdfstring{{\bfseries{7. Contributors}}}{{\bfseries{7. Contributors}}}}\label{README.md_autotoc_md22}
+
+\begin{DoxyItemize}
+\item {\bfseries{Shantanusinh Parmar}} (Lead Developer)
+\item {\bfseries{Dr. Kai Staats}} (Mentor, Software Development)
+\item {\bfseries{Dr. Marco Cavaglia}} (Mentor, Linux Development)
+\item {\bfseries{Dr. Florent Robinet}} (Mentor, Omicron)
+\item {\bfseries{Dr. Jonah Kanner}} (Mentor, GWOSC support)
+\end{DoxyItemize}\hypertarget{README.md_autotoc_md23}{}\doxysubsubsection{\texorpdfstring{{\bfseries{8. License}}}{{\bfseries{8. License}}}}\label{README.md_autotoc_md23}
+This project is open-\/source under the {\bfseries{MIT License}}.
+
+\DoxyHorRuler{0}
+ \hypertarget{README.md_autotoc_md25}{}\doxysubsubsection{\texorpdfstring{{\bfseries{9. Acknowledgments}}}{{\bfseries{9. Acknowledgments}}}}\label{README.md_autotoc_md25}
+Special thanks to the {\bfseries{Dr. Marco Cavaglia, Dr. Kai Staats, Dr. Florent Robinet, Dr. Jonah Kranner}}, and thanks to the {\bfseries{LIGO team}}, pipeline developers, and all researchers contributing to the field of {\bfseries{gravitational wave astrophysics}}. Your work makes this project possible.
+
+\DoxyHorRuler{0}
+ \hypertarget{README.md_autotoc_md27}{}\doxysubsubsection{\texorpdfstring{{\bfseries{10. How to Contribute}}}{{\bfseries{10. How to Contribute}}}}\label{README.md_autotoc_md27}
+If you’d like to contribute\+:
+\begin{DoxyEnumerate}
+\item {\bfseries{Fork the repository}}
+\item {\bfseries{Clone your fork}}\+: {\ttfamily git clone \href{https://github.com/yourusername/GWeasy.git}{\texttt{ https\+://github.\+com/yourusername/\+GWeasy.\+git}}}
+\item {\bfseries{Create a new branch}}\+: {\ttfamily git checkout -\/b feature-\/branch}
+\item {\bfseries{Make your changes and commit}}
+\item {\bfseries{Push to your fork and create a pull request}} 
+\end{DoxyEnumerate}\hypertarget{README.md_autotoc_md28}{}\doxysubsubsection{\texorpdfstring{For any issues, feel free to open a Git\+Hub {\bfseries{issue}}!}{For any issues, feel free to open a Git\+Hub {\bfseries{issue}}!}}\label{README.md_autotoc_md28}
+\hypertarget{README.md_autotoc_md29}{}\doxysubsubsubsection{\texorpdfstring{{\bfseries{Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!}}}{{\bfseries{Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!}}}}\label{README.md_autotoc_md29}

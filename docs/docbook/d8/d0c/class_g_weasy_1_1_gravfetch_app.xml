@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_gravfetch_app" xml:lang="en-US">
+<title>GWeasy.GravfetchApp Class Reference</title>
+<indexterm><primary>GWeasy.GravfetchApp</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1aa6e3963a8156e3d77fa318696160a43a">__init__</link> (self, <link linkend="_class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1aeb1ab8c75991804d27c6459e4bdca8cc">setup_execution_tab</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a7423cb47757060edbf7173b11582e742">select_time_csv</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a369d64ab02195e0d6f0c7cd6c57b5de0">select_channel_csv</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a06744ac0d6b04f5ec20fe0d07c5051c1">select_gwfout_dir</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2">toggle_execution</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da">run_gravfetch_script</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c">append_output</link> (self, text)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119">save_channel_history</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e">root</link> = root</para>
+</listitem>
+            <listitem><para>str <link linkend="_class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70">time_csv_file</link> = &quot;&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741">channel_csv_file</link> = &quot;&quot;</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_g_weasy_1_1_gravfetch_app_1a3120d217c578d3812a5a9315c1bb8315">execution_running</link> = False</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a2a00fa75822f180379f7392f653a5ef4">process</link> = None</para>
+</listitem>
+            <listitem><para>str <link linkend="_class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe">gwfout_path</link> = &quot;./gwfout/&quot;</para>
+</listitem>
+            <listitem><para>list <link linkend="_class_g_weasy_1_1_gravfetch_app_1a32dfc514dedd3889510b2e16e3b9fac3">loaded_channels</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1af8e74ed14da6b6afe60985c6c9897b9a">terminal</link> = <link linkend="_class_g_weasy_1_1_terminal_frame">TerminalFrame</link>(self.root, row=5, column=0, columnspan=2, height=20, width=80)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1aac31436453f6a57d2a539e3ca921c349">status_bar_frame</link> = tk.Frame(self.root, bg=&quot;lightgray&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04">status_label</link> = tk.Label(self.status_bar_frame, text=&quot;Idle&quot;, fg=&quot;black&quot;, bg=&quot;lightgray&quot;, anchor=&quot;w&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1a1b8fa0097c39abca6e1fde3499e53500">time_button</link> = tk.Button(self.root, text=&quot;Select Time CSV&quot;, command=self.select_time_csv)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1ac2ea4afcb72e03291a5c024f71a7a7cc">channel_button</link> = tk.Button(self.root, text=&quot;Select Channel CSV&quot;, command=self.select_channel_csv)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1aa443df4b594852778c59c353c03cb898">gwf_button</link> = tk.Button(self.root, text=&quot;Select Output (GWF) Dir&quot;, command=self.select_gwfout_dir)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1ab109a7617a6c0f88a2c70e6c80c8c232">start_stop_button</link> = tk.Button(self.root, text=&quot;Start Execution&quot;, command=self.toggle_execution)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_gravfetch_app_1ae541d98fd50aa61c3387c1ffa5818284">execution_thread</link> = threading.Thread(target=self.run_gravfetch_script, daemon=True)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00605">605</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1aa6e3963a8156e3d77fa318696160a43a"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00606">606</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c"/><section>
+    <title>append_output()</title>
+<indexterm><primary>append_output</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>append_output</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.append_output ( self,  text)</computeroutput></para>
+<para><literallayout><computeroutput>Send output to the terminal</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00797">797</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d0c/class_g_weasy_1_1_gravfetch_app_adf57acd65707f23f01b3ee1befc3135c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d0c/class_g_weasy_1_1_gravfetch_app_adf57acd65707f23f01b3ee1befc3135c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da"/><section>
+    <title>run_gravfetch_script()</title>
+<indexterm><primary>run_gravfetch_script</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>run_gravfetch_script</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.run_gravfetch_script ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Runs the Gravfetch script logic directly within the GUI.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00700">700</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d0c/class_g_weasy_1_1_gravfetch_app_a2cab8f0e263b51a261dfb2adbae351da_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119"/><section>
+    <title>save_channel_history()</title>
+<indexterm><primary>save_channel_history</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>save_channel_history</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.save_channel_history ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Save the selected channels to a JSON file for persistence.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00800">800</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d0c/class_g_weasy_1_1_gravfetch_app_acfa44583609e84bd3e99546a767fe119_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a369d64ab02195e0d6f0c7cd6c57b5de0"/><section>
+    <title>select_channel_csv()</title>
+<indexterm><primary>select_channel_csv</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>select_channel_csv</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.select_channel_csv ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Open file dialog for channel CSV file.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00660">660</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a06744ac0d6b04f5ec20fe0d07c5051c1"/><section>
+    <title>select_gwfout_dir()</title>
+<indexterm><primary>select_gwfout_dir</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>select_gwfout_dir</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.select_gwfout_dir ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Open file dialog for output dir (folder) selection.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00665">665</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a7423cb47757060edbf7173b11582e742"/><section>
+    <title>select_time_csv()</title>
+<indexterm><primary>select_time_csv</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>select_time_csv</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.select_time_csv ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Open file dialog for time CSV file.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00655">655</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1aeb1ab8c75991804d27c6459e4bdca8cc"/><section>
+    <title>setup_execution_tab()</title>
+<indexterm><primary>setup_execution_tab</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>setup_execution_tab</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.setup_execution_tab ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Sets up the Execution tab with buttons, output terminal, etc.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00630">630</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2"/><section>
+    <title>toggle_execution()</title>
+<indexterm><primary>toggle_execution</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>toggle_execution</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.toggle_execution ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Start or stop the execution of the Gravfetch script.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00675">675</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d0c/class_g_weasy_1_1_gravfetch_app_aebdd5211a656bd3befb663b60f92e3e2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1ac2ea4afcb72e03291a5c024f71a7a7cc"/><section>
+    <title>channel_button</title>
+<indexterm><primary>channel_button</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>channel_button</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.channel_button = tk.Button(self.root, text=&quot;Select Channel CSV&quot;, command=self.select_channel_csv)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00643">643</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741"/><section>
+    <title>channel_csv_file</title>
+<indexterm><primary>channel_csv_file</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>channel_csv_file</secondary></indexterm>
+<para><computeroutput>str GWeasy.GravfetchApp.channel_csv_file = &quot;&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00609">609</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a3120d217c578d3812a5a9315c1bb8315"/><section>
+    <title>execution_running</title>
+<indexterm><primary>execution_running</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>execution_running</secondary></indexterm>
+<para><computeroutput>bool GWeasy.GravfetchApp.execution_running = False</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00610">610</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1ae541d98fd50aa61c3387c1ffa5818284"/><section>
+    <title>execution_thread</title>
+<indexterm><primary>execution_thread</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>execution_thread</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.execution_thread = threading.Thread(target=self.run_gravfetch_script, daemon=True)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00697">697</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1aa443df4b594852778c59c353c03cb898"/><section>
+    <title>gwf_button</title>
+<indexterm><primary>gwf_button</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>gwf_button</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.gwf_button = tk.Button(self.root, text=&quot;Select Output (GWF) Dir&quot;, command=self.select_gwfout_dir)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00645">645</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe"/><section>
+    <title>gwfout_path</title>
+<indexterm><primary>gwfout_path</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>gwfout_path</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.gwfout_path = &quot;./gwfout/&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00612">612</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a32dfc514dedd3889510b2e16e3b9fac3"/><section>
+    <title>loaded_channels</title>
+<indexterm><primary>loaded_channels</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>loaded_channels</secondary></indexterm>
+<para><computeroutput>list GWeasy.GravfetchApp.loaded_channels = []</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00613">613</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a2a00fa75822f180379f7392f653a5ef4"/><section>
+    <title>process</title>
+<indexterm><primary>process</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>process</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.process = None</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00611">611</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00607">607</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1ab109a7617a6c0f88a2c70e6c80c8c232"/><section>
+    <title>start_stop_button</title>
+<indexterm><primary>start_stop_button</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>start_stop_button</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.start_stop_button = tk.Button(self.root, text=&quot;Start Execution&quot;, command=self.toggle_execution)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00649">649</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1aac31436453f6a57d2a539e3ca921c349"/><section>
+    <title>status_bar_frame</title>
+<indexterm><primary>status_bar_frame</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>status_bar_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.status_bar_frame = tk.Frame(self.root, bg=&quot;lightgray&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00633">633</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04"/><section>
+    <title>status_label</title>
+<indexterm><primary>status_label</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>status_label</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.status_label = tk.Label(self.status_bar_frame, text=&quot;Idle&quot;, fg=&quot;black&quot;, bg=&quot;lightgray&quot;, anchor=&quot;w&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00637">637</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1af8e74ed14da6b6afe60985c6c9897b9a"/><section>
+    <title>terminal</title>
+<indexterm><primary>terminal</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>terminal</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.terminal = <link linkend="_class_g_weasy_1_1_terminal_frame">TerminalFrame</link>(self.root, row=5, column=0, columnspan=2, height=20, width=80)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00628">628</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a1b8fa0097c39abca6e1fde3499e53500"/><section>
+    <title>time_button</title>
+<indexterm><primary>time_button</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>time_button</secondary></indexterm>
+<para><computeroutput>GWeasy.GravfetchApp.time_button = tk.Button(self.root, text=&quot;Select Time CSV&quot;, command=self.select_time_csv)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00641">641</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70"/><section>
+    <title>time_csv_file</title>
+<indexterm><primary>time_csv_file</primary><secondary>GWeasy.GravfetchApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GravfetchApp</primary><secondary>time_csv_file</secondary></indexterm>
+<para><computeroutput>str GWeasy.GravfetchApp.time_csv_file = &quot;&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00608">608</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

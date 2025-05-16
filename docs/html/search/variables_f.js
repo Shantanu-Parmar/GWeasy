@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['save_5fbutton_0',['save_button',['../d6/d74/class_g_weasy_1_1_omicron_app.html#a920f757a15dec26acf07948c0b0ec59b',1,'GWeasy.OmicronApp.save_button'],['../d5/d54/class_g_weasy_1_1_time_srswaveform.html#a3228d4a45f0cb15c1acfd1aca605ca5b',1,'GWeasy.TimeSrswaveform.save_button'],['../de/db4/class_g_weasy_1_1_f_f_t.html#ac093062a473639544f6fd399705107ff',1,'GWeasy.FFT.save_button'],['../dc/da1/class_g_weasy_1_1_p_s_ds.html#a469f3b6c742dc5b6bebb5c2760402836',1,'GWeasy.PSDs.save_button']]],
+  ['scroll_5fx_1',['scroll_x',['../d5/d54/class_g_weasy_1_1_time_srswaveform.html#a9c23cb242ac96640e968be6c63062d21',1,'GWeasy.TimeSrswaveform.scroll_x'],['../de/db4/class_g_weasy_1_1_f_f_t.html#aafe9faeda108426bb19fcc4688ce6bb8',1,'GWeasy.FFT.scroll_x'],['../dc/da1/class_g_weasy_1_1_p_s_ds.html#aa6f2e277db303822834a2386bb50b62e',1,'GWeasy.PSDs.scroll_x'],['../d8/d2c/class_g_weasy_1_1_spectrogram.html#a675ca33ba028bdddb3d4bc07800ffb9e',1,'GWeasy.Spectrogram.scroll_x']]],
+  ['scroll_5fy_2',['scroll_y',['../d5/d54/class_g_weasy_1_1_time_srswaveform.html#a0b51be9e8747a0d4f7b4a269d1069229',1,'GWeasy.TimeSrswaveform.scroll_y'],['../de/db4/class_g_weasy_1_1_f_f_t.html#a13cb631beaae9548ba3a85269a1537c2',1,'GWeasy.FFT.scroll_y'],['../dc/da1/class_g_weasy_1_1_p_s_ds.html#aeaa166575b36db93be39fcb8c44c7fc0',1,'GWeasy.PSDs.scroll_y'],['../d8/d2c/class_g_weasy_1_1_spectrogram.html#a266513f31bd3a9b75881c26a5379e03a',1,'GWeasy.Spectrogram.scroll_y']]],
+  ['scrollable_5fframe_3',['scrollable_frame',['../d6/d74/class_g_weasy_1_1_omicron_app.html#ab09c042894f9801cc2a86dd260312594',1,'GWeasy.OmicronApp.scrollable_frame'],['../da/da4/class_g_weasy_1_1_omiviz.html#aa6eef08d7f08860f607cc371be946324',1,'GWeasy.Omiviz.scrollable_frame']]],
+  ['scrollbar_4',['scrollbar',['../d6/d74/class_g_weasy_1_1_omicron_app.html#a148f8bc6a6b3af1a8e25020bc2d7a443',1,'GWeasy.OmicronApp.scrollbar'],['../da/da4/class_g_weasy_1_1_omiviz.html#a45d62f4c1a9b1a689ef1b2d8920ba593',1,'GWeasy.Omiviz.scrollbar']]],
+  ['spectrogram_5',['Spectrogram',['../d4/d49/class_g_weasy_1_1_application.html#afcde0fb66e24e27244fcdd4c511945da',1,'GWeasy::Application']]],
+  ['start_5fbutton_6',['start_button',['../d6/d74/class_g_weasy_1_1_omicron_app.html#aecd34779e2176359953a50f115860b93',1,'GWeasy::OmicronApp']]],
+  ['start_5fstop_5fbutton_7',['start_stop_button',['../d8/d0c/class_g_weasy_1_1_gravfetch_app.html#ab109a7617a6c0f88a2c70e6c80c8c232',1,'GWeasy::GravfetchApp']]],
+  ['status_5fbar_5fframe_8',['status_bar_frame',['../d8/d0c/class_g_weasy_1_1_gravfetch_app.html#aac31436453f6a57d2a539e3ca921c349',1,'GWeasy::GravfetchApp']]],
+  ['status_5flabel_9',['status_label',['../d8/d0c/class_g_weasy_1_1_gravfetch_app.html#a838a082f0e14a7e41dae392222119e04',1,'GWeasy::GravfetchApp']]]
+];

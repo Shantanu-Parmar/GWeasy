@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_70f11d4bd392e1f2dc7e4b571ddf7e11" xml:lang="en-US">
+<title>C:/Users/HP/Desktop/docs/GWeasy Directory Reference</title>
+<indexterm><primary>C:/Users/HP/Desktop/docs/GWeasy Directory Reference</primary></indexterm>
+Directory dependency graph for GWeasy:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_70f11d4bd392e1f2dc7e4b571ddf7e11_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_26b1ea55c1539736f8f9e6967ee86c64">tests</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__g_weasy_8py">GWeasy.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>0# <link linkend="_namespace_g_weasy">GWeasy</link></para>
+<section xml:id="_README.md_1autotoc_md0">
+<title>GWeasy: Multiplatform GUI Software for Gravitational Wave Data Analysis</title><section xml:id="_README.md_1autotoc_md1">
+<title><emphasis role="bold">Overview</emphasis></title>
+<para><link xlink:href="https://www.youtube.com/watch?v=WbjKwl0-VA0"></link></para>
+
+<para><emphasis role="bold"><link linkend="_namespace_g_weasy">GWeasy</link></emphasis> is a user-friendly, GUI-based software designed to streamline the process of <emphasis role="bold">fetching, analyzing, and visualizing gravitational wave (GW) data</emphasis>. This software aims to reduce the complexity of installing and running GW analysis tools by integrating all necessary software requirements into a single, easy-to-use platform.</para>
+</section>
+<section xml:id="_README.md_1autotoc_md2">
+<title><emphasis role="bold">Project Details</emphasis></title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Project Timeline:</emphasis> February - April 2025</para>
+</listitem><listitem>
+<para><emphasis role="bold">Lead Developer:</emphasis> Shantanusinh Parmar</para>
+</listitem><listitem>
+<para><emphasis role="bold">Supervisor:</emphasis> Prof. Chandrasinh Parmar</para>
+</listitem><listitem>
+<para><emphasis role="bold">Target Platforms:</emphasis> Windows , Linux</para>
+</listitem><listitem>
+<para><emphasis role="bold">Primary Software Components:</emphasis><itemizedlist>
+<listitem>
+<para>LIGO data fetching</para>
+</listitem><listitem>
+<para>OMICRON analysis pipeline</para>
+</listitem><listitem>
+<para>User-friendly GUI</para>
+</listitem><listitem>
+<para>Visualization tools</para>
+</listitem><listitem>
+<para>One-click installation and setup</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+</section>
+<section xml:id="_README.md_1autotoc_md4">
+<title><emphasis role="bold">1. Introduction</emphasis></title>
+<para>The <emphasis role="bold">Laser Interferometer Gravitational-Wave Observatory (LIGO)</emphasis> operates <emphasis role="bold">four detectors</emphasis> and collects data across <emphasis role="bold">six runs</emphasis>, with over <emphasis role="bold">300 channels</emphasis>, multiple sampling rates, and countless time segments. This raw time-series GW data is then analyzed using various pipelines such as:<itemizedlist>
+<listitem>
+<para><emphasis role="bold">OMICRON</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Coherent WaveBurst (cWB)</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Matched filtering</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Fourier transforms</emphasis></para>
+</listitem></itemizedlist>
+</para>
+
+<para>Currently, setting up the software environment for such analyses is a major challenge. The goal of this project is to simplify this process by creating a GUI-based tool that can handle everything—from **installation to execution**—without requiring extensive technical knowledge.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<section xml:id="_README.md_1autotoc_md6">
+<title><emphasis role="bold">2. Background &amp; Motivation</emphasis></title>
+<para>While working with GW data, I encountered numerous challenges, spending over <emphasis role="bold">10 weeks</emphasis> resolving library conflicts, configuring environment files, and understanding poorly documented installation processes. Through collaboration with scientists, developers, and LIGO repository maintainers, I finally managed to get the <emphasis role="bold">correct workflow</emphasis> established.</para>
+
+<para>This experience highlighted the need for a <emphasis role="bold">user-friendly, platform-independent tool</emphasis> that can:<itemizedlist>
+<listitem>
+<para>Automate the <emphasis role="bold">installation</emphasis> of required dependencies.</para>
+</listitem><listitem>
+<para>Manage <emphasis role="bold">multiple pipelines</emphasis> with ease.</para>
+</listitem><listitem>
+<para>Provide an <emphasis role="bold">intuitive GUI</emphasis> for data selection, analysis, and visualization.</para>
+</listitem><listitem>
+<para>Offer a <emphasis role="bold">one-click</emphasis> install and execution process.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Many astrophysicists spend more time setting up the software than analyzing the data. <emphasis role="bold"><link linkend="_namespace_g_weasy">GWeasy</link></emphasis> aims to <emphasis role="bold">eliminate this technical barrier</emphasis>, allowing researchers to focus on their primary goal: <emphasis role="bold">gravitational wave science</emphasis>.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<section xml:id="_README.md_1autotoc_md8">
+<title><emphasis role="bold">3. Features &amp; Functionalities</emphasis></title><section xml:id="_README.md_1autotoc_md9">
+<title><emphasis role="bold">✔ Multi-Platform Support</emphasis></title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Windows</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Linux (Beta Version)</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">MacOS (Planned)</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_README.md_1autotoc_md10">
+<title><emphasis role="bold">✔ Minimal Setup &amp; Installation</emphasis></title>
+<para>&#8211; Only WSL needs to be set up for Windows version, pre-loaded WSL Image also available &#8211; No installtion or setup for Linux app required</para>
+</section>
+<section xml:id="_README.md_1autotoc_md11">
+<title><emphasis role="bold">✔ User-Friendly GUI</emphasis></title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Data fetching</emphasis> from LIGO databases.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Channel selection and configuration</emphasis>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Pipeline execution for OMICRON and other analyses</emphasis>.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Graphical visualization</emphasis> of results. </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_README.md_1autotoc_md12">
+<title>- <emphasis role="bold">Format conversion tools</emphasis>.</title></section>
+<section xml:id="_README.md_1autotoc_md13">
+<title><emphasis role="bold">4. Installation &amp; Dependencies</emphasis></title></section>
+<section xml:id="_README.md_1autotoc_md14">
+<title>For Windows</title>
+<para>&#8211; If you want to use Omicron only, go to Windows/ and download the Omeasy.exe app and install.bat.</para>
+
+<para>&#8211; Next, you can either set up Omicron library in wsl by yourself or if you don&apos;t want to get into the hassle of setup follow next instructions</para>
+
+<para>&#8211; Donwload GWeasywsl.tar(<link xlink:href="https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link">https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link</link>) and download the tar file.</para>
+
+<para>&#8211; Put install.bat, GWeasywsl.tar in same directory, double click on install.bat.</para>
+
+<para>&#8211; That&apos;s it, run the Omicron on Windows using the Omeasy.exe from here on. </para>
+</section>
+<section xml:id="_README.md_1autotoc_md15">
+<title>For Linux</title>
+<para>&#8211; Download <link linkend="_namespace_g_weasy">GWeasy</link> from /Linux &#8211; On terminal write chmod +x <link linkend="_namespace_g_weasy">GWeasy</link> &#8211; Run <link linkend="_namespace_g_weasy">GWeasy</link> via ./GWeasy command</para>
+<section xml:id="_README.md_1autotoc_md16">
+<title>1. Running a Test in the Gravfetch Tab</title>
+<para>To perform a test run:<itemizedlist>
+<listitem>
+<para>Select <emphasis role="bold"><computeroutput>test.csv</computeroutput></emphasis> as the time segment input.</para>
+</listitem><listitem>
+<para>Select <emphasis role="bold"><computeroutput>4KCHANS.csv</computeroutput></emphasis> as the channels input.</para>
+</listitem><listitem>
+<para>Optionally, specify an output directory. By default, GWEasy will create a folder named <computeroutput>gwfout</computeroutput> in the same directory.</para>
+</listitem></itemizedlist>
+</para>
+
+<para></para>
+
+<para>Once execution starts, a completion message will appear in the terminal, indicating a successful run. Processing time varies (~5-7 minutes) depending on the number of time segments and channels selected. To speed up testing, start with a single time segment and channel.</para>
+
+<para></para>
+</section>
+<section xml:id="_README.md_1autotoc_md17">
+<title>2. Running Omicron Analysis</title>
+<para>After generating <computeroutput>gwf</computeroutput> files, switch to the <emphasis role="bold">Omicron</emphasis> tab to proceed with analysis.</para>
+
+<para></para>
+<section xml:id="_README.md_1autotoc_md18">
+<title>Configuring Omicron Settings</title>
+<para>If you have worked with <emphasis role="bold">Omicron configuration files</emphasis>, this setup will feel familiar:</para>
+
+<para></para>
+
+<para><emphasis role="bold">Steps:</emphasis><orderedlist>
+<listitem>
+<para><emphasis role="bold">Set Channel &amp; Sampling Rate First</emphasis> (due to an existing UI issue, these must be configured before modifying other fields).</para>
+</listitem><listitem>
+<para>Channels are pre-populated based on the <emphasis role="bold">Gravfetch</emphasis> output, but you can also manually enter any channel name.</para>
+</listitem></orderedlist>
+</para>
+
+<para></para>
+
+<para><orderedlist>
+<listitem>
+<para><emphasis role="bold">Select the <computeroutput>.ffl</computeroutput> files</emphasis> corresponding to each channel. These are located in the <emphasis role="bold"><computeroutput>gwfout</computeroutput></emphasis> directory or your chosen output path. Each channel has an <computeroutput>.ffl</computeroutput> file listing all time segments.</para>
+</listitem><listitem>
+<para>Use the <emphasis role="bold">Custom Segments</emphasis> feature to manually specify time segments for analysis if needed.</para>
+</listitem></orderedlist>
+</para>
+
+<para></para>
+
+<para><orderedlist>
+<listitem>
+<para>Once all fields are filled, specify an output directory (default: <computeroutput>Omicronout</computeroutput>).</para>
+</listitem><listitem>
+<para>Click <emphasis role="bold">Save Config</emphasis> to generate a configuration file with the selected inputs.</para>
+</listitem></orderedlist>
+</para>
+
+<para></para>
+
+<para><orderedlist>
+<listitem>
+<para>Press <emphasis role="bold">Start Omicron</emphasis> to begin processing. Upon successful execution, a completion message will be displayed in the terminal.</para>
+</listitem></orderedlist>
+</para>
+
+<para></para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ Additonal tabs</para>
+
+<para></para>
+
+<para></para>
+
+<para></para>
+</section>
+</section>
+</section>
+<section xml:id="_README.md_1autotoc_md20">
+<title><emphasis role="bold">5. Development Timeline</emphasis></title>
+<para>| Task | Expected Completion | |----&#8212;|---------------&#8212;| | <emphasis role="bold">Project Start</emphasis> | February 2025 | Done | <emphasis role="bold">Workflow Documentation</emphasis> | March 2025 | Done | <emphasis role="bold">Prototype Development</emphasis> | Mid-March 2025 | Done | <emphasis role="bold">Windows Version Testing</emphasis> | April 2025 | Done | <emphasis role="bold">Linux Version Development</emphasis> | Future Update | Done</para>
+</section>
+<section xml:id="_README.md_1autotoc_md21">
+<title><emphasis role="bold">6. Future Enhancements</emphasis></title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Cross-platform compatibility (Linux &amp; MacOS)</emphasis> Partially Done</para>
+</listitem><listitem>
+<para><emphasis role="bold">Expanded support for additional pipelines</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Real-time visualization improvements</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_README.md_1autotoc_md22">
+<title><emphasis role="bold">7. Contributors</emphasis></title>
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Shantanusinh Parmar</emphasis> (Lead Developer)</para>
+</listitem><listitem>
+<para><emphasis role="bold">Dr. Kai Staats</emphasis> (Mentor, Software Development)</para>
+</listitem><listitem>
+<para><emphasis role="bold">Dr. Marco Cavaglia</emphasis> (Mentor, Linux Development)</para>
+</listitem><listitem>
+<para><emphasis role="bold">Dr. Florent Robinet</emphasis> (Mentor, Omicron)</para>
+</listitem><listitem>
+<para><emphasis role="bold">Dr. Jonah Kanner</emphasis> (Mentor, GWOSC support)</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_README.md_1autotoc_md23">
+<title><emphasis role="bold">8. License</emphasis></title>
+<para>This project is open-source under the <emphasis role="bold">MIT License</emphasis>.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<section xml:id="_README.md_1autotoc_md25">
+<title><emphasis role="bold">9. Acknowledgments</emphasis></title>
+<para>Special thanks to the <emphasis role="bold">Dr. Marco Cavaglia, Dr. Kai Staats, Dr. Florent Robinet, Dr. Jonah Kranner</emphasis>, and thanks to the <emphasis role="bold">LIGO team</emphasis>, pipeline developers, and all researchers contributing to the field of <emphasis role="bold">gravitational wave astrophysics</emphasis>. Your work makes this project possible.</para>
+
+<para><informaltable frame='bottom'><tgroup cols='1'><colspec align='center'/><tbody><row><entry align='center'>
+</entry></row></tbody></tgroup></informaltable>
+ </para>
+</section>
+<section xml:id="_README.md_1autotoc_md27">
+<title><emphasis role="bold">10. How to Contribute</emphasis></title>
+<para>If you’d like to contribute:<orderedlist>
+<listitem>
+<para><emphasis role="bold">Fork the repository</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Clone your fork</emphasis>: <computeroutput>git clone <link xlink:href="https://github.com/yourusername/GWeasy.git">https://github.com/yourusername/GWeasy.git</link></computeroutput></para>
+</listitem><listitem>
+<para><emphasis role="bold">Create a new branch</emphasis>: <computeroutput>git checkout -b feature-branch</computeroutput></para>
+</listitem><listitem>
+<para><emphasis role="bold">Make your changes and commit</emphasis></para>
+</listitem><listitem>
+<para><emphasis role="bold">Push to your fork and create a pull request</emphasis> </para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_README.md_1autotoc_md28">
+<title>For any issues, feel free to open a GitHub <emphasis role="bold">issue</emphasis>!</title><section xml:id="_README.md_1autotoc_md29">
+<title><emphasis role="bold">Join the GWeasy Project – Making Gravitational Wave Analysis Accessible to All!</emphasis></title></section>
+</section>
+</section>
+</section>

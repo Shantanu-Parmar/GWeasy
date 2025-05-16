@@ -1,0 +1,345 @@
+.TH "GWeasy.Omiviz" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.Omiviz
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBstart_loading\fP (self)"
+.br
+.ti -1c
+.RI "\fBstop_loading\fP (self)"
+.br
+.ti -1c
+.RI "\fBupdate_progress\fP (self, text)"
+.br
+.ti -1c
+.RI "\fBshow_previous_plot\fP (self)"
+.br
+.ti -1c
+.RI "\fBshow_next_plot\fP (self)"
+.br
+.ti -1c
+.RI "\fBupdate_navigation_buttons\fP (self)"
+.br
+.ti -1c
+.RI "\fBcreate_widgets\fP (self)"
+.br
+.ti -1c
+.RI "\fBvalent\fP (self, label, key, frame=None, row=0, col=0, editable=True)"
+.br
+.ti -1c
+.RI "\fBcreate_output_path_selector\fP (self, label, key, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBselect_output_folder\fP (self, var)"
+.br
+.ti -1c
+.RI "\fBcreate_file_selector\fP (self, label, key, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBselect_file_or_folder\fP (self, var)"
+.br
+.ti -1c
+.RI "\fBrun_omicron_plot\fP (self)"
+.br
+.ti -1c
+.RI "\fBexecute_command\fP (self, command, gps_start, gps_end, output_folder)"
+.br
+.ti -1c
+.RI "\fBshow_plot\fP (self)"
+.br
+.ti -1c
+.RI "\fBload_plots\fP (self, folder)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "dict \fBconfig_data\fP = {}"
+.br
+.ti -1c
+.RI "dict \fBui_elements\fP = {}"
+.br
+.ti -1c
+.RI "list \fBplot_files\fP = []"
+.br
+.ti -1c
+.RI "int \fBcurrent_plot_index\fP = 0"
+.br
+.ti -1c
+.RI "\fBcanvas\fP = tk\&.Canvas(\fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBscrollbar\fP = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+.br
+.ti -1c
+.RI "\fBscrollable_frame\fP = ttk\&.Frame(self\&.canvas)"
+.br
+.ti -1c
+.RI "\fBwindow_frame\fP = self\&.canvas\&.create_window((0, 0), window=self\&.scrollable_frame, anchor='nw')"
+.br
+.ti -1c
+.RI "\fBrun_button\fP = tk\&.Button(button_frame, text='Run Omicron Plot', command=self\&.run_omicron_plot)"
+.br
+.ti -1c
+.RI "\fBimage_frame\fP = tk\&.Frame(self\&.scrollable_frame)"
+.br
+.ti -1c
+.RI "\fBimage_label\fP = tk\&.Label(self\&.image_frame, text='No Plot Available', width=50, height=25, bg='gray')"
+.br
+.ti -1c
+.RI "\fBprev_button\fP = tk\&.Button(nav_frame, text='⬅ Previous', command=self\&.show_previous_plot, state=tk\&.DISABLED)"
+.br
+.ti -1c
+.RI "\fBnext_button\fP = tk\&.Button(nav_frame, text='Next ➡', command=self\&.show_next_plot, state=tk\&.DISABLED)"
+.br
+.ti -1c
+.RI "\fBprogress\fP = ttk\&.Progressbar(self\&.scrollable_frame, orient='horizontal', length=300, mode='indeterminate')"
+.br
+.ti -1c
+.RI "\fBwsl_project_dir\fP = output_folder"
+.br
+.ti -1c
+.RI "\fBphoto\fP = ImageTk\&.PhotoImage(image)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB892\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.Omiviz\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB893\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.Omiviz\&.create_file_selector ( self,  label,  key,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Allows selecting either a single file or a folder containing `\&.root` files\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1017\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.create_output_path_selector ( self,  label,  key,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Allows selecting an output folder\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB998\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.create_widgets ( self)"
+
+.PP
+Definition at line \fB953\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.execute_command ( self,  command,  gps_start,  gps_end,  output_folder)"
+
+.PP
+.nf
+Runs the Omicron plot command inside a full WSL shell session with logging\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1130\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.load_plots ( self,  folder)"
+
+.PP
+.nf
+Loads the plots from WSL and updates the GUI\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1205\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.run_omicron_plot ( self)"
+
+.PP
+Definition at line \fB1068\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.select_file_or_folder ( self,  var)"
+
+.PP
+.nf
+Allows selecting a folder (grabs all `\&.root` files) or an individual file\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1030\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.select_output_folder ( self,  var)"
+
+.PP
+.nf
+Allows selecting an output folder\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1011\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.show_next_plot ( self)"
+
+.PP
+.nf
+Scrolls forward through the plots\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB940\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.show_plot ( self)"
+
+.PP
+.nf
+Displays the current plot in the GUI\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1166\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.show_previous_plot ( self)"
+
+.PP
+.nf
+Scrolls backward through the plots\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB933\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.start_loading ( self)"
+
+.PP
+.nf
+Start the loading animation\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB920\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.stop_loading ( self)"
+
+.PP
+.nf
+Stop the loading animation\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB924\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.update_navigation_buttons ( self)"
+
+.PP
+.nf
+Updates the state of navigation buttons\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB947\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.update_progress ( self,  text)"
+
+.PP
+.nf
+Update progress based on Omicron output\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB928\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.valent ( self,  label,  key,  frame = \fRNone\fP,  row = \fR0\fP,  col = \fR0\fP,  editable = \fRTrue\fP)"
+
+.PP
+Definition at line \fB990\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.Omiviz\&.canvas = tk\&.Canvas(\fBroot\fP)"
+
+.PP
+Definition at line \fB901\fP of file \fBGWeasy\&.py\fP\&.
+.SS "dict GWeasy\&.Omiviz\&.config_data = {}"
+
+.PP
+Definition at line \fB895\fP of file \fBGWeasy\&.py\fP\&.
+.SS "int GWeasy\&.Omiviz\&.current_plot_index = 0"
+
+.PP
+Definition at line \fB898\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.image_frame = tk\&.Frame(self\&.scrollable_frame)"
+
+.PP
+Definition at line \fB972\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.image_label = tk\&.Label(self\&.image_frame, text='No Plot Available', width=50, height=25, bg='gray')"
+
+.PP
+Definition at line \fB975\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.next_button = tk\&.Button(nav_frame, text='Next ➡', command=self\&.show_next_plot, state=tk\&.DISABLED)"
+
+.PP
+Definition at line \fB985\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.photo = ImageTk\&.PhotoImage(image)"
+
+.PP
+Definition at line \fB1191\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.plot_files = []"
+
+.PP
+Definition at line \fB897\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.prev_button = tk\&.Button(nav_frame, text='⬅ Previous', command=self\&.show_previous_plot, state=tk\&.DISABLED)"
+
+.PP
+Definition at line \fB982\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.progress = ttk\&.Progressbar(self\&.scrollable_frame, orient='horizontal', length=300, mode='indeterminate')"
+
+.PP
+Definition at line \fB987\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.root = root"
+
+.PP
+Definition at line \fB894\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.run_button = tk\&.Button(button_frame, text='Run Omicron Plot', command=self\&.run_omicron_plot)"
+
+.PP
+Definition at line \fB968\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.scrollable_frame = ttk\&.Frame(self\&.canvas)"
+
+.PP
+Definition at line \fB903\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.scrollbar = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+
+.PP
+Definition at line \fB902\fP of file \fBGWeasy\&.py\fP\&.
+.SS "dict GWeasy\&.Omiviz\&.ui_elements = {}"
+
+.PP
+Definition at line \fB896\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.window_frame = self\&.canvas\&.create_window((0, 0), window=self\&.scrollable_frame, anchor='nw')"
+
+.PP
+Definition at line \fB910\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Omiviz\&.wsl_project_dir = output_folder"
+
+.PP
+Definition at line \fB1117\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

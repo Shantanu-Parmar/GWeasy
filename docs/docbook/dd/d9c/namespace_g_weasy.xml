@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_g_weasy" xml:lang="en-US">
+<title>GWeasy Namespace Reference</title>
+<indexterm><primary>GWeasy</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_application">Application</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_f_f_t">FFT</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_gravfetch_app">GravfetchApp</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_g_w_o_s_c_app">GWOSCApp</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_omicron_app">OmicronApp</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_omiviz">Omiviz</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_p_s_ds">PSDs</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_spectrogram">Spectrogram</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_terminal_frame">TerminalFrame</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_time_srswaveform">TimeSrswaveform</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_g_weasy_1aadd942b7e384f53231f90808fd59daf6">filename</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1aa0d500f63f52ea5eb9b3f4d39782328f">level</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1ab3c2ebee4c4cb7c1b663be24a71b904c">format</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespace_g_weasy_1aef4518f6a9a83e5451e9aed5ebc7c1e8">HISTORY_FILE</link> = &quot;gravfetch_history.json&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade">root</link> = tk.Tk()</para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1a2125844c45bf2046cfb55dcd033ead6c">app</link> = <link linkend="_class_g_weasy_1_1_application">Application</link>(<link linkend="_namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade">root</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespace_g_weasy_1a2125844c45bf2046cfb55dcd033ead6c"/><section>
+    <title>app</title>
+<indexterm><primary>app</primary><secondary>GWeasy</secondary></indexterm>
+<indexterm><primary>GWeasy</primary><secondary>app</secondary></indexterm>
+<para><computeroutput>GWeasy.app = <link linkend="_class_g_weasy_1_1_application">Application</link>(<link linkend="_namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade">root</link>)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02316">2316</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_namespace_g_weasy_1aadd942b7e384f53231f90808fd59daf6"/><section>
+    <title>filename</title>
+<indexterm><primary>filename</primary><secondary>GWeasy</secondary></indexterm>
+<indexterm><primary>GWeasy</primary><secondary>filename</secondary></indexterm>
+<para><computeroutput>GWeasy.filename</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00027">27</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_namespace_g_weasy_1ab3c2ebee4c4cb7c1b663be24a71b904c"/><section>
+    <title>format</title>
+<indexterm><primary>format</primary><secondary>GWeasy</secondary></indexterm>
+<indexterm><primary>GWeasy</primary><secondary>format</secondary></indexterm>
+<para><computeroutput>GWeasy.format</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00029">29</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_namespace_g_weasy_1aef4518f6a9a83e5451e9aed5ebc7c1e8"/><section>
+    <title>HISTORY_FILE</title>
+<indexterm><primary>HISTORY_FILE</primary><secondary>GWeasy</secondary></indexterm>
+<indexterm><primary>GWeasy</primary><secondary>HISTORY_FILE</secondary></indexterm>
+<para><computeroutput>str GWeasy.HISTORY_FILE = &quot;gravfetch_history.json&quot;</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00031">31</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_namespace_g_weasy_1aa0d500f63f52ea5eb9b3f4d39782328f"/><section>
+    <title>level</title>
+<indexterm><primary>level</primary><secondary>GWeasy</secondary></indexterm>
+<indexterm><primary>GWeasy</primary><secondary>level</secondary></indexterm>
+<para><computeroutput>GWeasy.level</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00028">28</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy</secondary></indexterm>
+<indexterm><primary>GWeasy</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.root = tk.Tk()</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02315">2315</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+</section>

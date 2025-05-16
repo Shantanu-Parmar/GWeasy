@@ -1,0 +1,801 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dc/da1/class_g_weasy_1_1_p_s_ds" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::PSDs</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.PSDs.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1793" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1793" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" compoundref="d6/d99/_g_weasy_8py" startline="2030" endline="2103">GWeasy.PSDs.psds</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1ac7ac3609de336df89f1536555ce0dc36" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::canvas</definition>
+        <argsstring></argsstring>
+        <name>canvas</name>
+        <qualifiedname>GWeasy.PSDs.canvas</qualifiedname>
+        <initializer>=  tk.Canvas(<ref refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" kindref="member">root</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1798" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1aeaa166575b36db93be39fcb8c44c7fc0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::scroll_y</definition>
+        <argsstring></argsstring>
+        <name>scroll_y</name>
+        <qualifiedname>GWeasy.PSDs.scroll_y</qualifiedname>
+        <initializer>=  ttk.Scrollbar(<ref refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" kindref="member">root</ref>, orient=&quot;vertical&quot;, command=self.canvas.yview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1799" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1799" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1aa6f2e277db303822834a2386bb50b62e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::scroll_x</definition>
+        <argsstring></argsstring>
+        <name>scroll_x</name>
+        <qualifiedname>GWeasy.PSDs.scroll_x</qualifiedname>
+        <initializer>=  ttk.Scrollbar(<ref refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" kindref="member">root</ref>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1800" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1800" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a2ceca75161bdd1af9b515c9fcfe7213c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::frame</definition>
+        <argsstring></argsstring>
+        <name>frame</name>
+        <qualifiedname>GWeasy.PSDs.frame</qualifiedname>
+        <initializer>=  ttk.Frame(self.canvas)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1804" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1804" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::catalog_dropdown</definition>
+        <argsstring></argsstring>
+        <name>catalog_dropdown</name>
+        <qualifiedname>GWeasy.PSDs.catalog_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1818" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1818" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5962a176c28937782a464c5696324202" compoundref="d6/d99/_g_weasy_8py" startline="1923" endline="1937">GWeasy.PSDs.fetch_events</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" compoundref="d6/d99/_g_weasy_8py" startline="2209" endline="2222">GWeasy.Spectrogram.fetch_events</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1af565865c2e6621c9817f3c69d77719fa" compoundref="d6/d99/_g_weasy_8py" startline="1907" endline="1921">GWeasy.PSDs.prefetch_data</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a3d5dd69e5d05efe6623fa659d865b0d8" compoundref="d6/d99/_g_weasy_8py" startline="2198" endline="2207">GWeasy.Spectrogram.prefetch_data</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a8fc45c1bc0cbe47067d38806442aacf9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::fetch_events</definition>
+        <argsstring></argsstring>
+        <name>fetch_events</name>
+        <qualifiedname>GWeasy.PSDs.fetch_events</qualifiedname>
+        <initializer>= &quot;ew&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1820" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1820" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::event_dropdown</definition>
+        <argsstring></argsstring>
+        <name>event_dropdown</name>
+        <qualifiedname>GWeasy.PSDs.event_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1824" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1824" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a386ab13021d2275d825c5e64358ea6d2" compoundref="d6/d99/_g_weasy_8py" startline="1939" endline="1952">GWeasy.PSDs.fetch_event_details</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944" compoundref="d6/d99/_g_weasy_8py" startline="2224" endline="2237">GWeasy.Spectrogram.fetch_event_details</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5962a176c28937782a464c5696324202" compoundref="d6/d99/_g_weasy_8py" startline="1923" endline="1937">GWeasy.PSDs.fetch_events</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" compoundref="d6/d99/_g_weasy_8py" startline="2209" endline="2222">GWeasy.Spectrogram.fetch_events</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5c8ff819a48980b8e86f8d277eb38112" compoundref="d6/d99/_g_weasy_8py" startline="1954" endline="1969">GWeasy.PSDs.update_urls</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a2a6a125c1847b86939a37557e1fe35e3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::fetch_event_details</definition>
+        <argsstring></argsstring>
+        <name>fetch_event_details</name>
+        <qualifiedname>GWeasy.PSDs.fetch_event_details</qualifiedname>
+        <initializer>= &quot;ew&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1826" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1826" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5962a176c28937782a464c5696324202" compoundref="d6/d99/_g_weasy_8py" startline="1923" endline="1937">GWeasy.PSDs.fetch_events</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" compoundref="d6/d99/_g_weasy_8py" startline="2209" endline="2222">GWeasy.Spectrogram.fetch_events</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a83084a9ded1e9c0907785e7afc878644" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::run_dropdown</definition>
+        <argsstring></argsstring>
+        <name>run_dropdown</name>
+        <qualifiedname>GWeasy.PSDs.run_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1830" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1830" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1af565865c2e6621c9817f3c69d77719fa" compoundref="d6/d99/_g_weasy_8py" startline="1907" endline="1921">GWeasy.PSDs.prefetch_data</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a4fb642431ae53b4052a040025f6d2b7e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::detector_dropdown</definition>
+        <argsstring></argsstring>
+        <name>detector_dropdown</name>
+        <qualifiedname>GWeasy.PSDs.detector_dropdown</qualifiedname>
+        <initializer>=  tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, height=3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1835" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1835" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5c8ff819a48980b8e86f8d277eb38112" compoundref="d6/d99/_g_weasy_8py" startline="1954" endline="1969">GWeasy.PSDs.update_urls</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1ae36a9f80f4c53af05e6f75ec2e41846f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::update_urls</definition>
+        <argsstring></argsstring>
+        <name>update_urls</name>
+        <qualifiedname>GWeasy.PSDs.update_urls</qualifiedname>
+        <initializer>= &quot;ew&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1839" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1839" bodyend="-1"/>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1a60b35fb4ce2c845ae171b5581826db22" compoundref="d6/d99/_g_weasy_8py" startline="1654" endline="1667">GWeasy.FFT.fetch_event_details</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a386ab13021d2275d825c5e64358ea6d2" compoundref="d6/d99/_g_weasy_8py" startline="1939" endline="1952">GWeasy.PSDs.fetch_event_details</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a64dfcac5594a78a31565768a801f25" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::gps_start_entry</definition>
+        <argsstring></argsstring>
+        <name>gps_start_entry</name>
+        <qualifiedname>GWeasy.PSDs.gps_start_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1843" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1843" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a386ab13021d2275d825c5e64358ea6d2" compoundref="d6/d99/_g_weasy_8py" startline="1939" endline="1952">GWeasy.PSDs.fetch_event_details</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944" compoundref="d6/d99/_g_weasy_8py" startline="2224" endline="2237">GWeasy.Spectrogram.fetch_event_details</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1ad1a7899f815ba1c2a631b747d5b754a1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::gps_end_entry</definition>
+        <argsstring></argsstring>
+        <name>gps_end_entry</name>
+        <qualifiedname>GWeasy.PSDs.gps_end_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1847" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1847" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1aeeb80a8139a6cc5468529821b8b6c586" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::fft_length_entry</definition>
+        <argsstring></argsstring>
+        <name>fft_length_entry</name>
+        <qualifiedname>GWeasy.PSDs.fft_length_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1851" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1851" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1ae25142878198c3758490d74af4e681b7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::method_entry</definition>
+        <argsstring></argsstring>
+        <name>method_entry</name>
+        <qualifiedname>GWeasy.PSDs.method_entry</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, width=10, values=[&quot;median&quot;, &quot;welch&quot;], state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1855" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1855" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1ac4bf0e8c1bdb2bf9e6837069028360e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>GWeasy.PSDs.mode</qualifiedname>
+        <initializer>=  tk.StringVar(value=&quot;gps_to_utc&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1859" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1859" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a3d283f33af4ff24e40227daf09486ea9" compoundref="d6/d99/_g_weasy_8py" startline="1980" endline="1999">GWeasy.PSDs.convert_time</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" compoundref="d6/d99/_g_weasy_8py" startline="2248" endline="2266">GWeasy.Spectrogram.convert_time</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a06237a37f8db22252e2e56daa68d9a5c" compoundref="d6/d99/_g_weasy_8py" startline="1971" endline="1978">GWeasy.PSDs.toggle_mode</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065" compoundref="d6/d99/_g_weasy_8py" startline="2239" endline="2246">GWeasy.Spectrogram.toggle_mode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a399d393249c07260ae4fa76cf41ea3db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::convert_entry</definition>
+        <argsstring></argsstring>
+        <name>convert_entry</name>
+        <qualifiedname>GWeasy.PSDs.convert_entry</qualifiedname>
+        <initializer>=  ttk.Entry(conversion_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1863" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1863" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a3d283f33af4ff24e40227daf09486ea9" compoundref="d6/d99/_g_weasy_8py" startline="1980" endline="1999">GWeasy.PSDs.convert_time</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" compoundref="d6/d99/_g_weasy_8py" startline="2248" endline="2266">GWeasy.Spectrogram.convert_time</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1aa539b7a2275e2d41748ee0c84aed4550" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::convert_button</definition>
+        <argsstring></argsstring>
+        <name>convert_button</name>
+        <qualifiedname>GWeasy.PSDs.convert_button</qualifiedname>
+        <initializer>=  ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1866" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1aa92359e044c1cf02d90a3cafb91ceca4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::result_label</definition>
+        <argsstring></argsstring>
+        <name>result_label</name>
+        <qualifiedname>GWeasy.PSDs.result_label</qualifiedname>
+        <initializer>=  ttk.Label(conversion_frame, text=&quot;Result: &quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1869" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1869" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a3d283f33af4ff24e40227daf09486ea9" compoundref="d6/d99/_g_weasy_8py" startline="1980" endline="1999">GWeasy.PSDs.convert_time</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" compoundref="d6/d99/_g_weasy_8py" startline="2248" endline="2266">GWeasy.Spectrogram.convert_time</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1af8a91c6d008ccc248d1e32f896ca2007" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::toggle_button</definition>
+        <argsstring></argsstring>
+        <name>toggle_button</name>
+        <qualifiedname>GWeasy.PSDs.toggle_button</qualifiedname>
+        <initializer>=  ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1872" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1872" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a06237a37f8db22252e2e56daa68d9a5c" compoundref="d6/d99/_g_weasy_8py" startline="1971" endline="1978">GWeasy.PSDs.toggle_mode</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065" compoundref="d6/d99/_g_weasy_8py" startline="2239" endline="2246">GWeasy.Spectrogram.toggle_mode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a97f425051c96be99e64a949c07bbed24" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::url_dropdown</definition>
+        <argsstring></argsstring>
+        <name>url_dropdown</name>
+        <qualifiedname>GWeasy.PSDs.url_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(url_frame, state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1879" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1879" bodyend="-1"/>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" compoundref="d6/d99/_g_weasy_8py" startline="2000" endline="2029">GWeasy.PSDs.save_params</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5c8ff819a48980b8e86f8d277eb38112" compoundref="d6/d99/_g_weasy_8py" startline="1954" endline="1969">GWeasy.PSDs.update_urls</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a5dc083729387af8b458e5d3f25b453" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::copy_button</definition>
+        <argsstring></argsstring>
+        <name>copy_button</name>
+        <qualifiedname>GWeasy.PSDs.copy_button</qualifiedname>
+        <initializer>=  ttk.Button(url_frame, text=&quot;Copy URL&quot;, command=self.copy_url)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1882" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1882" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a469f3b6c742dc5b6bebb5c2760402836" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::save_button</definition>
+        <argsstring></argsstring>
+        <name>save_button</name>
+        <qualifiedname>GWeasy.PSDs.save_button</qualifiedname>
+        <initializer>=  ttk.Button(input_frame, text=&quot;Save Parameters&quot;, command=self.save_params)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1886" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1886" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a47b38908f200e50b506a132c94167574" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::plot_frame</definition>
+        <argsstring></argsstring>
+        <name>plot_frame</name>
+        <qualifiedname>GWeasy.PSDs.plot_frame</qualifiedname>
+        <initializer>=  ttk.Frame(self.frame)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1888" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1888" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/da1/class_g_weasy_1_1_p_s_ds_1aab592d23fe715ebd17fb8e4577e97676" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.PSDs::plot_button</definition>
+        <argsstring></argsstring>
+        <name>plot_button</name>
+        <qualifiedname>GWeasy.PSDs.plot_button</qualifiedname>
+        <initializer>=  tk.Button(<ref refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" kindref="member">root</ref>, text=&quot;Plot TimeSeries&quot;, command=lambda: self.psds(self.catalog_dropdown.get(),[self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get()),int(self.fft_length_entry.get()),self.method_entry.get()))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1892" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1892" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a930239e85ff3a14c6001f123e2f853ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.__init__</definition>
+        <argsstring>(self, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.PSDs.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1792" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1792" bodyend="1895"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.copy_url</definition>
+        <argsstring>(self)</argsstring>
+        <name>copy_url</name>
+        <qualifiedname>GWeasy.PSDs.copy_url</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1896" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1896" bodyend="1905"/>
+        <references refid="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" compoundref="d6/d99/_g_weasy_8py" startline="37">GWeasy.Application.root</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a" compoundref="d6/d99/_g_weasy_8py" startline="1517">GWeasy.FFT.root</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e" compoundref="d6/d99/_g_weasy_8py" startline="607">GWeasy.GravfetchApp.root</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6" compoundref="d6/d99/_g_weasy_8py" startline="813">GWeasy.GWOSCApp.root</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" compoundref="d6/d99/_g_weasy_8py" startline="108">GWeasy.OmicronApp.root</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" compoundref="d6/d99/_g_weasy_8py" startline="894">GWeasy.Omiviz.root</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" compoundref="d6/d99/_g_weasy_8py" startline="1793">GWeasy.PSDs.root</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb" compoundref="d6/d99/_g_weasy_8py" startline="1233">GWeasy.TimeSrswaveform.root</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ac74e497cf908f42e963a3fb3f349be14" compoundref="d6/d99/_g_weasy_8py" startline="1595">GWeasy.FFT.url_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a97f425051c96be99e64a949c07bbed24" compoundref="d6/d99/_g_weasy_8py" startline="1879">GWeasy.PSDs.url_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1acf59257089c8ea137de9fbf3e6502a4d" compoundref="d6/d99/_g_weasy_8py" startline="1311">GWeasy.TimeSrswaveform.url_dropdown</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1af565865c2e6621c9817f3c69d77719fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.prefetch_data</definition>
+        <argsstring>(self)</argsstring>
+        <name>prefetch_data</name>
+        <qualifiedname>GWeasy.PSDs.prefetch_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1907" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1907" bodyend="1921"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187" compoundref="d6/d99/_g_weasy_8py" startline="1542">GWeasy.FFT.catalog_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" compoundref="d6/d99/_g_weasy_8py" startline="1818">GWeasy.PSDs.catalog_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f" compoundref="d6/d99/_g_weasy_8py" startline="1258">GWeasy.TimeSrswaveform.catalog_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ad7e4f591a5e578a5f27676df48f78d62" compoundref="d6/d99/_g_weasy_8py" startline="1554">GWeasy.FFT.run_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a83084a9ded1e9c0907785e7afc878644" compoundref="d6/d99/_g_weasy_8py" startline="1830">GWeasy.PSDs.run_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a17a26519ef985c53ba6bf9a0923f1442" compoundref="d6/d99/_g_weasy_8py" startline="1270">GWeasy.TimeSrswaveform.run_dropdown</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a5962a176c28937782a464c5696324202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.fetch_events</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>fetch_events</name>
+        <qualifiedname>GWeasy.PSDs.fetch_events</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1923" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1923" bodyend="1937"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187" compoundref="d6/d99/_g_weasy_8py" startline="1542">GWeasy.FFT.catalog_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" compoundref="d6/d99/_g_weasy_8py" startline="1818">GWeasy.PSDs.catalog_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f" compoundref="d6/d99/_g_weasy_8py" startline="1258">GWeasy.TimeSrswaveform.catalog_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99" compoundref="d6/d99/_g_weasy_8py" startline="1548">GWeasy.FFT.event_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" compoundref="d6/d99/_g_weasy_8py" startline="1824">GWeasy.PSDs.event_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1" compoundref="d6/d99/_g_weasy_8py" startline="1264">GWeasy.TimeSrswaveform.event_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ac559673b3f1bb3bd50ce920959378e22" compoundref="d6/d99/_g_weasy_8py" startline="1550">GWeasy.FFT.fetch_event_details</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a2a6a125c1847b86939a37557e1fe35e3" compoundref="d6/d99/_g_weasy_8py" startline="1826">GWeasy.PSDs.fetch_event_details</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a404c891806be1fb5275ceb98c1d03728" compoundref="d6/d99/_g_weasy_8py" startline="1266">GWeasy.TimeSrswaveform.fetch_event_details</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a386ab13021d2275d825c5e64358ea6d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.fetch_event_details</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>fetch_event_details</name>
+        <qualifiedname>GWeasy.PSDs.fetch_event_details</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1939" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1939" bodyend="1952"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99" compoundref="d6/d99/_g_weasy_8py" startline="1548">GWeasy.FFT.event_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" compoundref="d6/d99/_g_weasy_8py" startline="1824">GWeasy.PSDs.event_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1" compoundref="d6/d99/_g_weasy_8py" startline="1264">GWeasy.TimeSrswaveform.event_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4c12533d9c9017635b8918adb83328be" compoundref="d6/d99/_g_weasy_8py" startline="1567">GWeasy.FFT.gps_start_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a64dfcac5594a78a31565768a801f25" compoundref="d6/d99/_g_weasy_8py" startline="1843">GWeasy.PSDs.gps_start_entry</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4b4c8b93c529465fa716d40fccc48ca3" compoundref="d6/d99/_g_weasy_8py" startline="1283">GWeasy.TimeSrswaveform.gps_start_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ae36a9f80f4c53af05e6f75ec2e41846f" compoundref="d6/d99/_g_weasy_8py" startline="1839">GWeasy.PSDs.update_urls</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aa97ddc1c8188bb581b9216079912f556" compoundref="d6/d99/_g_weasy_8py" startline="1279">GWeasy.TimeSrswaveform.update_urls</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a5c8ff819a48980b8e86f8d277eb38112" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.update_urls</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>update_urls</name>
+        <qualifiedname>GWeasy.PSDs.update_urls</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1954" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1954" bodyend="1969"/>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a4fb642431ae53b4052a040025f6d2b7e" compoundref="d6/d99/_g_weasy_8py" startline="1835">GWeasy.PSDs.detector_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a2089ad863a58871f54023e5d4caa0fe0" compoundref="d6/d99/_g_weasy_8py" startline="1275">GWeasy.TimeSrswaveform.detector_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99" compoundref="d6/d99/_g_weasy_8py" startline="1548">GWeasy.FFT.event_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" compoundref="d6/d99/_g_weasy_8py" startline="1824">GWeasy.PSDs.event_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1" compoundref="d6/d99/_g_weasy_8py" startline="1264">GWeasy.TimeSrswaveform.event_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ac74e497cf908f42e963a3fb3f349be14" compoundref="d6/d99/_g_weasy_8py" startline="1595">GWeasy.FFT.url_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a97f425051c96be99e64a949c07bbed24" compoundref="d6/d99/_g_weasy_8py" startline="1879">GWeasy.PSDs.url_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1acf59257089c8ea137de9fbf3e6502a4d" compoundref="d6/d99/_g_weasy_8py" startline="1311">GWeasy.TimeSrswaveform.url_dropdown</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a06237a37f8db22252e2e56daa68d9a5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.toggle_mode</definition>
+        <argsstring>(self)</argsstring>
+        <name>toggle_mode</name>
+        <qualifiedname>GWeasy.PSDs.toggle_mode</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1971" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1971" bodyend="1978"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4e88ad42f6c8a83afd2c2c29f537723b" compoundref="d6/d99/_g_weasy_8py" startline="1575">GWeasy.FFT.mode</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ac4bf0e8c1bdb2bf9e6837069028360e8" compoundref="d6/d99/_g_weasy_8py" startline="1859">GWeasy.PSDs.mode</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aaaad290cf087f263cfb0135a16d62370" compoundref="d6/d99/_g_weasy_8py" startline="1291">GWeasy.TimeSrswaveform.mode</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a9139c02e823538cd4aba564431844b97" compoundref="d6/d99/_g_weasy_8py" startline="1588">GWeasy.FFT.toggle_button</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1af8a91c6d008ccc248d1e32f896ca2007" compoundref="d6/d99/_g_weasy_8py" startline="1872">GWeasy.PSDs.toggle_button</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a57959bb83db8944c80a23feaeba266ed" compoundref="d6/d99/_g_weasy_8py" startline="1304">GWeasy.TimeSrswaveform.toggle_button</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a3d283f33af4ff24e40227daf09486ea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.convert_time</definition>
+        <argsstring>(self)</argsstring>
+        <name>convert_time</name>
+        <qualifiedname>GWeasy.PSDs.convert_time</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1980" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1980" bodyend="1999"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ae9800114548848228ad42921c09b5787" compoundref="d6/d99/_g_weasy_8py" startline="1579">GWeasy.FFT.convert_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a399d393249c07260ae4fa76cf41ea3db" compoundref="d6/d99/_g_weasy_8py" startline="1863">GWeasy.PSDs.convert_entry</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1ab320f8a48342a994a16c8ec6e5d518ed" compoundref="d6/d99/_g_weasy_8py" startline="1295">GWeasy.TimeSrswaveform.convert_entry</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4e88ad42f6c8a83afd2c2c29f537723b" compoundref="d6/d99/_g_weasy_8py" startline="1575">GWeasy.FFT.mode</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ac4bf0e8c1bdb2bf9e6837069028360e8" compoundref="d6/d99/_g_weasy_8py" startline="1859">GWeasy.PSDs.mode</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aaaad290cf087f263cfb0135a16d62370" compoundref="d6/d99/_g_weasy_8py" startline="1291">GWeasy.TimeSrswaveform.mode</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a2aaeadadbf663e013807e4fc4f5b2b52" compoundref="d6/d99/_g_weasy_8py" startline="1585">GWeasy.FFT.result_label</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aa92359e044c1cf02d90a3cafb91ceca4" compoundref="d6/d99/_g_weasy_8py" startline="1869">GWeasy.PSDs.result_label</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aab9b5f264c5f5bb74b37a100a129052d" compoundref="d6/d99/_g_weasy_8py" startline="1301">GWeasy.TimeSrswaveform.result_label</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.save_params</definition>
+        <argsstring>(self)</argsstring>
+        <name>save_params</name>
+        <qualifiedname>GWeasy.PSDs.save_params</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Overwrite &apos;gwfparams.csv&apos; with the latest input values, including headers.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2000" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2000" bodyend="2029"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187" compoundref="d6/d99/_g_weasy_8py" startline="1542">GWeasy.FFT.catalog_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" compoundref="d6/d99/_g_weasy_8py" startline="1818">GWeasy.PSDs.catalog_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f" compoundref="d6/d99/_g_weasy_8py" startline="1258">GWeasy.TimeSrswaveform.catalog_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a4fb642431ae53b4052a040025f6d2b7e" compoundref="d6/d99/_g_weasy_8py" startline="1835">GWeasy.PSDs.detector_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a2089ad863a58871f54023e5d4caa0fe0" compoundref="d6/d99/_g_weasy_8py" startline="1275">GWeasy.TimeSrswaveform.detector_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99" compoundref="d6/d99/_g_weasy_8py" startline="1548">GWeasy.FFT.event_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" compoundref="d6/d99/_g_weasy_8py" startline="1824">GWeasy.PSDs.event_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1" compoundref="d6/d99/_g_weasy_8py" startline="1264">GWeasy.TimeSrswaveform.event_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a03575ded71a8823723b98ceabb34e494" compoundref="d6/d99/_g_weasy_8py" startline="1571">GWeasy.FFT.gps_end_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad1a7899f815ba1c2a631b747d5b754a1" compoundref="d6/d99/_g_weasy_8py" startline="1847">GWeasy.PSDs.gps_end_entry</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aadeb9164d7654ea49068a003850c3cc5" compoundref="d6/d99/_g_weasy_8py" startline="1287">GWeasy.TimeSrswaveform.gps_end_entry</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4c12533d9c9017635b8918adb83328be" compoundref="d6/d99/_g_weasy_8py" startline="1567">GWeasy.FFT.gps_start_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a64dfcac5594a78a31565768a801f25" compoundref="d6/d99/_g_weasy_8py" startline="1843">GWeasy.PSDs.gps_start_entry</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4b4c8b93c529465fa716d40fccc48ca3" compoundref="d6/d99/_g_weasy_8py" startline="1283">GWeasy.TimeSrswaveform.gps_start_entry</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ad7e4f591a5e578a5f27676df48f78d62" compoundref="d6/d99/_g_weasy_8py" startline="1554">GWeasy.FFT.run_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a83084a9ded1e9c0907785e7afc878644" compoundref="d6/d99/_g_weasy_8py" startline="1830">GWeasy.PSDs.run_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a17a26519ef985c53ba6bf9a0923f1442" compoundref="d6/d99/_g_weasy_8py" startline="1270">GWeasy.TimeSrswaveform.run_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ac74e497cf908f42e963a3fb3f349be14" compoundref="d6/d99/_g_weasy_8py" startline="1595">GWeasy.FFT.url_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a97f425051c96be99e64a949c07bbed24" compoundref="d6/d99/_g_weasy_8py" startline="1879">GWeasy.PSDs.url_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1acf59257089c8ea137de9fbf3e6502a4d" compoundref="d6/d99/_g_weasy_8py" startline="1311">GWeasy.TimeSrswaveform.url_dropdown</references>
+      </memberdef>
+      <memberdef kind="function" id="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.PSDs.psds</definition>
+        <argsstring>(self, event_name, detectors, gps_start, gps_end, fftlengths, methods)</argsstring>
+        <name>psds</name>
+        <qualifiedname>GWeasy.PSDs.psds</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event_name</type>
+          <defname>event_name</defname>
+        </param>
+        <param>
+          <type>detectors</type>
+          <defname>detectors</defname>
+        </param>
+        <param>
+          <type>gps_start</type>
+          <defname>gps_start</defname>
+        </param>
+        <param>
+          <type>gps_end</type>
+          <defname>gps_end</defname>
+        </param>
+        <param>
+          <type>fftlengths</type>
+          <defname>fftlengths</defname>
+        </param>
+        <param>
+          <type>methods</type>
+          <defname>methods</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Plot Power Spectral Densities (PSDs) for multiple detectors in Tkinter.
+
+Parameters:
+- event_name: Name of the gravitational wave event
+- detectors: List of detector names (e.g., [&apos;H1&apos;, &apos;L1&apos;, &apos;V1&apos;])
+- gps_start: GPS start time
+- gps_end: GPS end time
+- fftlengths: List of FFT lengths (same length as detectors)
+- methods: List of ASD computation methods (same length as detectors)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2030" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2030" bodyend="2103"/>
+        <references refid="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" compoundref="d6/d99/_g_weasy_8py" startline="37">GWeasy.Application.root</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a" compoundref="d6/d99/_g_weasy_8py" startline="1517">GWeasy.FFT.root</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e" compoundref="d6/d99/_g_weasy_8py" startline="607">GWeasy.GravfetchApp.root</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6" compoundref="d6/d99/_g_weasy_8py" startline="813">GWeasy.GWOSCApp.root</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" compoundref="d6/d99/_g_weasy_8py" startline="108">GWeasy.OmicronApp.root</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" compoundref="d6/d99/_g_weasy_8py" startline="894">GWeasy.Omiviz.root</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" compoundref="d6/d99/_g_weasy_8py" startline="1793">GWeasy.PSDs.root</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb" compoundref="d6/d99/_g_weasy_8py" startline="1233">GWeasy.TimeSrswaveform.root</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1791" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1791" bodyend="2106"/>
+    <listofallmembers>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a930239e85ff3a14c6001f123e2f853ad" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>__init__</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ac7ac3609de336df89f1536555ce0dc36" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>canvas</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>catalog_dropdown</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aa539b7a2275e2d41748ee0c84aed4550" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>convert_button</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a399d393249c07260ae4fa76cf41ea3db" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>convert_entry</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a3d283f33af4ff24e40227daf09486ea9" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>convert_time</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a5dc083729387af8b458e5d3f25b453" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>copy_button</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>copy_url</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a4fb642431ae53b4052a040025f6d2b7e" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>detector_dropdown</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>event_dropdown</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a2a6a125c1847b86939a37557e1fe35e3" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>fetch_event_details</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a386ab13021d2275d825c5e64358ea6d2" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>fetch_event_details</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a8fc45c1bc0cbe47067d38806442aacf9" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>fetch_events</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5962a176c28937782a464c5696324202" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>fetch_events</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aeeb80a8139a6cc5468529821b8b6c586" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>fft_length_entry</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a2ceca75161bdd1af9b515c9fcfe7213c" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>frame</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad1a7899f815ba1c2a631b747d5b754a1" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>gps_end_entry</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a64dfcac5594a78a31565768a801f25" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>gps_start_entry</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ae25142878198c3758490d74af4e681b7" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>method_entry</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ac4bf0e8c1bdb2bf9e6837069028360e8" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>mode</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aab592d23fe715ebd17fb8e4577e97676" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>plot_button</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a47b38908f200e50b506a132c94167574" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>plot_frame</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1af565865c2e6621c9817f3c69d77719fa" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>prefetch_data</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>psds</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aa92359e044c1cf02d90a3cafb91ceca4" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>result_label</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>root</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a83084a9ded1e9c0907785e7afc878644" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>run_dropdown</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a469f3b6c742dc5b6bebb5c2760402836" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>save_button</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ad3feff68de399fb96d2bf5a742ced9f9" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>save_params</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aa6f2e277db303822834a2386bb50b62e" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>scroll_x</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aeaa166575b36db93be39fcb8c44c7fc0" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>scroll_y</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1af8a91c6d008ccc248d1e32f896ca2007" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>toggle_button</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a06237a37f8db22252e2e56daa68d9a5c" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>toggle_mode</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ae36a9f80f4c53af05e6f75ec2e41846f" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>update_urls</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a5c8ff819a48980b8e86f8d277eb38112" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>update_urls</name></member>
+      <member refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a97f425051c96be99e64a949c07bbed24" prot="public" virt="non-virtual"><scope>GWeasy::PSDs</scope><name>url_dropdown</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

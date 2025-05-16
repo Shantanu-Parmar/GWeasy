@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_g_w_o_s_c_app" xml:lang="en-US">
+<title>GWeasy.GWOSCApp Class Reference</title>
+<indexterm><primary>GWeasy.GWOSCApp</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a05db5e1c35d33b7461e56565c78fe585">__init__</link> (self, <link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30">master</link>, <link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a54082d6a5e7209dc995a25c44881dfc9">init_cef</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c">create_browser</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a9f832065a5c7e195b4d99d93a0a7199f">cef_loop</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a7298a36b9bd14857ec5abaf5ac4a9588">on_resize</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a350a13129ff86fea29441ae27849c98a">go_back</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ab3acba2cd3f173e833a52e8aaf142b13">go_forward</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a4ba56c85e771ea55e926633d1d511595">reload_page</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ab1baf3de1f243939e59b4fc61e2f7609">load_url</link> (self, event=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30">master</link> = master</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6">root</link> = root</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c">browser</link> = None</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ac08794c7d881fecc74b97651b37b151c">navbar</link> = tk.Frame(<link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30">master</link>, bg=&quot;gray&quot;, height=40)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a5fd28662abb166bab06d891af561bc67">back_btn</link> = Button(self.navbar, text=&quot;◀&quot;, command=self.go_back)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a242da9b9d0be1898f672a661ec969866">forward_btn</link> = Button(self.navbar, text=&quot;▶&quot;, command=self.go_forward)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ad99702f54284fa21b654818e9f53389f">reload_btn</link> = Button(self.navbar, text=&quot;🔄&quot;, command=self.reload_page)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a7526c888cbf751d4e298e903f1defbb5">url_entry</link> = Entry(self.navbar, width=50)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a2ec4551d2c3a78a30c47184895365b20">load_url</link> = True)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a83b2f1dd72ff15befa16af187663a765">browser_frame</link> = tk.Frame(<link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30">master</link>, bg=&quot;black&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1af5020c9f28f2b95ba4d1c6a5704c904e">init_cef</link> = True)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a7b9baa73ff160ae0d8a090932c334501">on_resize</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a69bf09479832f7fb11d77f6840b591ea">create_browser</link></para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1a25f1e3083573d6ef58e40a5ff0eebbb8">cef_loop</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00810">810</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a05db5e1c35d33b7461e56565c78fe585"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.__init__ ( self,  master,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00811">811</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a9f832065a5c7e195b4d99d93a0a7199f"/><section>
+    <title>cef_loop()</title>
+<indexterm><primary>cef_loop</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>cef_loop</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.cef_loop ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Runs CEF&apos;s message loop inside Tkinter&apos;s event loop.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00861">861</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c"/><section>
+    <title>create_browser()</title>
+<indexterm><primary>create_browser</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>create_browser</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.create_browser ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Embeds the browser inside the GWOSCRef tab.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00853">853</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a350a13129ff86fea29441ae27849c98a"/><section>
+    <title>go_back()</title>
+<indexterm><primary>go_back</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>go_back</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.go_back ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00874">874</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1ab3acba2cd3f173e833a52e8aaf142b13"/><section>
+    <title>go_forward()</title>
+<indexterm><primary>go_forward</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>go_forward</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.go_forward ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00878">878</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a54082d6a5e7209dc995a25c44881dfc9"/><section>
+    <title>init_cef()</title>
+<indexterm><primary>init_cef</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>init_cef</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.init_cef ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Initializes CEF and creates the browser.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00842">842</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1ab1baf3de1f243939e59b4fc61e2f7609"/><section>
+    <title>load_url()</title>
+<indexterm><primary>load_url</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>load_url</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.load_url ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00886">886</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a7298a36b9bd14857ec5abaf5ac4a9588"/><section>
+    <title>on_resize()</title>
+<indexterm><primary>on_resize</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>on_resize</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.on_resize ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Handles resizing the browser when the window changes.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00866">866</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a4ba56c85e771ea55e926633d1d511595"/><section>
+    <title>reload_page()</title>
+<indexterm><primary>reload_page</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>reload_page</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.reload_page ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00882">882</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a5fd28662abb166bab06d891af561bc67"/><section>
+    <title>back_btn</title>
+<indexterm><primary>back_btn</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>back_btn</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.back_btn = Button(self.navbar, text=&quot;◀&quot;, command=self.go_back)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00820">820</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c"/><section>
+    <title>browser</title>
+<indexterm><primary>browser</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>browser</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.browser = None</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00814">814</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a83b2f1dd72ff15befa16af187663a765"/><section>
+    <title>browser_frame</title>
+<indexterm><primary>browser_frame</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>browser_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.browser_frame = tk.Frame(<link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30">master</link>, bg=&quot;black&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00834">834</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a25f1e3083573d6ef58e40a5ff0eebbb8"/><section>
+    <title>cef_loop</title>
+<indexterm><primary>cef_loop</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>cef_loop</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.cef_loop</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00851">851</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a69bf09479832f7fb11d77f6840b591ea"/><section>
+    <title>create_browser</title>
+<indexterm><primary>create_browser</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>create_browser</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.create_browser</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00848">848</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a242da9b9d0be1898f672a661ec969866"/><section>
+    <title>forward_btn</title>
+<indexterm><primary>forward_btn</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>forward_btn</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.forward_btn = Button(self.navbar, text=&quot;▶&quot;, command=self.go_forward)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00823">823</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1af5020c9f28f2b95ba4d1c6a5704c904e"/><section>
+    <title>init_cef</title>
+<indexterm><primary>init_cef</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>init_cef</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.init_cef = True)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00838">838</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a2ec4551d2c3a78a30c47184895365b20"/><section>
+    <title>load_url</title>
+<indexterm><primary>load_url</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>load_url</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.load_url = True)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00831">831</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30"/><section>
+    <title>master</title>
+<indexterm><primary>master</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>master</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.master = master</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00812">812</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1ac08794c7d881fecc74b97651b37b151c"/><section>
+    <title>navbar</title>
+<indexterm><primary>navbar</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>navbar</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.navbar = tk.Frame(<link linkend="_class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30">master</link>, bg=&quot;gray&quot;, height=40)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00817">817</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a7b9baa73ff160ae0d8a090932c334501"/><section>
+    <title>on_resize</title>
+<indexterm><primary>on_resize</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>on_resize</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.on_resize</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00839">839</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1ad99702f54284fa21b654818e9f53389f"/><section>
+    <title>reload_btn</title>
+<indexterm><primary>reload_btn</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>reload_btn</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.reload_btn = Button(self.navbar, text=&quot;🔄&quot;, command=self.reload_page)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00826">826</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00813">813</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_g_w_o_s_c_app_1a7526c888cbf751d4e298e903f1defbb5"/><section>
+    <title>url_entry</title>
+<indexterm><primary>url_entry</primary><secondary>GWeasy.GWOSCApp</secondary></indexterm>
+<indexterm><primary>GWeasy.GWOSCApp</primary><secondary>url_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.GWOSCApp.url_entry = Entry(self.navbar, width=50)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00829">829</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

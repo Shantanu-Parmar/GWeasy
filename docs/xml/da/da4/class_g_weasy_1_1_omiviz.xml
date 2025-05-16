@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="da/da4/class_g_weasy_1_1_omiviz" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::Omiviz</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.Omiviz.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="894" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="894" bodyend="-1"/>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522" compoundref="d6/d99/_g_weasy_8py" startline="1611" endline="1620">GWeasy.FFT.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d" compoundref="d6/d99/_g_weasy_8py" startline="1328" endline="1337">GWeasy.TimeSrswaveform.copy_url</referencedby>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469" compoundref="d6/d99/_g_weasy_8py" startline="1743" endline="1787">GWeasy.FFT.fft</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f" compoundref="d6/d99/_g_weasy_8py" startline="1462" endline="1512">GWeasy.TimeSrswaveform.plot_gw_event</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" compoundref="d6/d99/_g_weasy_8py" startline="2030" endline="2103">GWeasy.PSDs.psds</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict GWeasy.Omiviz::config_data</definition>
+        <argsstring></argsstring>
+        <name>config_data</name>
+        <qualifiedname>GWeasy.Omiviz.config_data</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="895" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="895" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict GWeasy.Omiviz::ui_elements</definition>
+        <argsstring></argsstring>
+        <name>ui_elements</name>
+        <qualifiedname>GWeasy.Omiviz.ui_elements</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="896" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="896" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1aa7fea33189709387c6cfb10249f15d91" compoundref="d6/d99/_g_weasy_8py" startline="1068" endline="1129">GWeasy.Omiviz.run_omicron_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a" compoundref="d6/d99/_g_weasy_8py" startline="1030" endline="1067">GWeasy.Omiviz.select_file_or_folder</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>GWeasy.Omiviz::plot_files</definition>
+        <argsstring></argsstring>
+        <name>plot_files</name>
+        <qualifiedname>GWeasy.Omiviz.plot_files</qualifiedname>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="897" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="897" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" compoundref="d6/d99/_g_weasy_8py" startline="1205" endline="1227">GWeasy.Omiviz.load_plots</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc" compoundref="d6/d99/_g_weasy_8py" startline="940" endline="946">GWeasy.Omiviz.show_next_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" compoundref="d6/d99/_g_weasy_8py" startline="1166" endline="1204">GWeasy.Omiviz.show_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GWeasy.Omiviz::current_plot_index</definition>
+        <argsstring></argsstring>
+        <name>current_plot_index</name>
+        <qualifiedname>GWeasy.Omiviz.current_plot_index</qualifiedname>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="898" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="898" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" compoundref="d6/d99/_g_weasy_8py" startline="1205" endline="1227">GWeasy.Omiviz.load_plots</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc" compoundref="d6/d99/_g_weasy_8py" startline="940" endline="946">GWeasy.Omiviz.show_next_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" compoundref="d6/d99/_g_weasy_8py" startline="1166" endline="1204">GWeasy.Omiviz.show_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f" compoundref="d6/d99/_g_weasy_8py" startline="933" endline="939">GWeasy.Omiviz.show_previous_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1acd11d586944d13007833c5a3b54de21a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::canvas</definition>
+        <argsstring></argsstring>
+        <name>canvas</name>
+        <qualifiedname>GWeasy.Omiviz.canvas</qualifiedname>
+        <initializer>=  tk.Canvas(<ref refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" kindref="member">root</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="901" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="901" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a45d62f4c1a9b1a689ef1b2d8920ba593" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::scrollbar</definition>
+        <argsstring></argsstring>
+        <name>scrollbar</name>
+        <qualifiedname>GWeasy.Omiviz.scrollbar</qualifiedname>
+        <initializer>=  ttk.Scrollbar(<ref refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" kindref="member">root</ref>, orient=&quot;vertical&quot;, command=self.canvas.yview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="902" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="902" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::scrollable_frame</definition>
+        <argsstring></argsstring>
+        <name>scrollable_frame</name>
+        <qualifiedname>GWeasy.Omiviz.scrollable_frame</qualifiedname>
+        <initializer>=  ttk.Frame(self.canvas)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="903" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="903" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" compoundref="d6/d99/_g_weasy_8py" startline="953" endline="989">GWeasy.Omiviz.create_widgets</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a3618182f89f51a5438cc31dcb635e807" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::window_frame</definition>
+        <argsstring></argsstring>
+        <name>window_frame</name>
+        <qualifiedname>GWeasy.Omiviz.window_frame</qualifiedname>
+        <initializer>=  self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor=&quot;nw&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="910" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="910" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1aa1f14e87b54591311fda4c3e33ecce86" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::run_button</definition>
+        <argsstring></argsstring>
+        <name>run_button</name>
+        <qualifiedname>GWeasy.Omiviz.run_button</qualifiedname>
+        <initializer>=  tk.Button(button_frame, text=&quot;Run Omicron Plot&quot;, command=self.run_omicron_plot)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="968" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="968" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a2ce005202325aeb7de3cfe86162aa10d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::image_frame</definition>
+        <argsstring></argsstring>
+        <name>image_frame</name>
+        <qualifiedname>GWeasy.Omiviz.image_frame</qualifiedname>
+        <initializer>=  tk.Frame(self.scrollable_frame)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="972" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="972" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1ab6530003f7b04524c258a442f6e87d8d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::image_label</definition>
+        <argsstring></argsstring>
+        <name>image_label</name>
+        <qualifiedname>GWeasy.Omiviz.image_label</qualifiedname>
+        <initializer>=  tk.Label(self.image_frame, text=&quot;No Plot Available&quot;, width=50, height=25, bg=&quot;gray&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="975" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="975" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" compoundref="d6/d99/_g_weasy_8py" startline="1166" endline="1204">GWeasy.Omiviz.show_plot</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a3a5d7bfb5b5c3a473f482b17ba280124" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::prev_button</definition>
+        <argsstring></argsstring>
+        <name>prev_button</name>
+        <qualifiedname>GWeasy.Omiviz.prev_button</qualifiedname>
+        <initializer>=  tk.Button(nav_frame, text=&quot;⬅ Previous&quot;, command=self.show_previous_plot, state=tk.DISABLED)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="982" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="982" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1ab17c3478c3c3842c9ef750dcb223dc8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::next_button</definition>
+        <argsstring></argsstring>
+        <name>next_button</name>
+        <qualifiedname>GWeasy.Omiviz.next_button</qualifiedname>
+        <initializer>=  tk.Button(nav_frame, text=&quot;Next ➡&quot;, command=self.show_next_plot, state=tk.DISABLED)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="985" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="985" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::progress</definition>
+        <argsstring></argsstring>
+        <name>progress</name>
+        <qualifiedname>GWeasy.Omiviz.progress</qualifiedname>
+        <initializer>=  ttk.Progressbar(self.scrollable_frame, orient=&quot;horizontal&quot;, length=300, mode=&quot;indeterminate&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="987" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="987" bodyend="-1"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a5927086beaab150b73ee9fe248920864" compoundref="d6/d99/_g_weasy_8py" startline="920" endline="923">GWeasy.Omiviz.start_loading</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a940521e496d5867e69a6e9e835875eec" compoundref="d6/d99/_g_weasy_8py" startline="924" endline="927">GWeasy.Omiviz.stop_loading</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a0ca93a57b9356b0242c9c7b1ba79de98" compoundref="d6/d99/_g_weasy_8py" startline="928" endline="932">GWeasy.Omiviz.update_progress</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a12522060e133892fbded6e79dbf6c55a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::wsl_project_dir</definition>
+        <argsstring></argsstring>
+        <name>wsl_project_dir</name>
+        <qualifiedname>GWeasy.Omiviz.wsl_project_dir</qualifiedname>
+        <initializer>=  output_folder</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1117" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_g_weasy_1_1_omiviz_1a73317d4f4e1e4aebe3bfc13c76332b25" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Omiviz::photo</definition>
+        <argsstring></argsstring>
+        <name>photo</name>
+        <qualifiedname>GWeasy.Omiviz.photo</qualifiedname>
+        <initializer>=  ImageTk.PhotoImage(image)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1191" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1191" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a8a1abcaa0bdbf764f7620e3d4f9ede3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.__init__</definition>
+        <argsstring>(self, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.Omiviz.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="893" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="893" bodyend="919"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a5927086beaab150b73ee9fe248920864" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.start_loading</definition>
+        <argsstring>(self)</argsstring>
+        <name>start_loading</name>
+        <qualifiedname>GWeasy.Omiviz.start_loading</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Start the loading animation.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="920" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="920" bodyend="923"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af" compoundref="d6/d99/_g_weasy_8py" startline="987">GWeasy.Omiviz.progress</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0" compoundref="d6/d99/_g_weasy_8py" startline="1130" endline="1165">GWeasy.Omiviz.execute_command</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a940521e496d5867e69a6e9e835875eec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.stop_loading</definition>
+        <argsstring>(self)</argsstring>
+        <name>stop_loading</name>
+        <qualifiedname>GWeasy.Omiviz.stop_loading</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Stop the loading animation.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="924" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="924" bodyend="927"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af" compoundref="d6/d99/_g_weasy_8py" startline="987">GWeasy.Omiviz.progress</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0" compoundref="d6/d99/_g_weasy_8py" startline="1130" endline="1165">GWeasy.Omiviz.execute_command</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a0ca93a57b9356b0242c9c7b1ba79de98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.update_progress</definition>
+        <argsstring>(self, text)</argsstring>
+        <name>update_progress</name>
+        <qualifiedname>GWeasy.Omiviz.update_progress</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>text</type>
+          <defname>text</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Update progress based on Omicron output.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="928" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="928" bodyend="932"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af" compoundref="d6/d99/_g_weasy_8py" startline="987">GWeasy.Omiviz.progress</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0" compoundref="d6/d99/_g_weasy_8py" startline="1130" endline="1165">GWeasy.Omiviz.execute_command</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.show_previous_plot</definition>
+        <argsstring>(self)</argsstring>
+        <name>show_previous_plot</name>
+        <qualifiedname>GWeasy.Omiviz.show_previous_plot</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Scrolls backward through the plots.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="933" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="933" bodyend="939"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" compoundref="d6/d99/_g_weasy_8py" startline="898">GWeasy.Omiviz.current_plot_index</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" compoundref="d6/d99/_g_weasy_8py" startline="1166" endline="1204">GWeasy.Omiviz.show_plot</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</references>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.show_next_plot</definition>
+        <argsstring>(self)</argsstring>
+        <name>show_next_plot</name>
+        <qualifiedname>GWeasy.Omiviz.show_next_plot</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Scrolls forward through the plots.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="940" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="940" bodyend="946"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" compoundref="d6/d99/_g_weasy_8py" startline="898">GWeasy.Omiviz.current_plot_index</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0" compoundref="d6/d99/_g_weasy_8py" startline="897">GWeasy.Omiviz.plot_files</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" compoundref="d6/d99/_g_weasy_8py" startline="1166" endline="1204">GWeasy.Omiviz.show_plot</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</references>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.update_navigation_buttons</definition>
+        <argsstring>(self)</argsstring>
+        <name>update_navigation_buttons</name>
+        <qualifiedname>GWeasy.Omiviz.update_navigation_buttons</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Updates the state of navigation buttons.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="947" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="947" bodyend="952"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" compoundref="d6/d99/_g_weasy_8py" startline="898">GWeasy.Omiviz.current_plot_index</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ab17c3478c3c3842c9ef750dcb223dc8c" compoundref="d6/d99/_g_weasy_8py" startline="985">GWeasy.Omiviz.next_button</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0" compoundref="d6/d99/_g_weasy_8py" startline="897">GWeasy.Omiviz.plot_files</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a3a5d7bfb5b5c3a473f482b17ba280124" compoundref="d6/d99/_g_weasy_8py" startline="982">GWeasy.Omiviz.prev_button</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" compoundref="d6/d99/_g_weasy_8py" startline="1205" endline="1227">GWeasy.Omiviz.load_plots</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc" compoundref="d6/d99/_g_weasy_8py" startline="940" endline="946">GWeasy.Omiviz.show_next_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f" compoundref="d6/d99/_g_weasy_8py" startline="933" endline="939">GWeasy.Omiviz.show_previous_plot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.create_widgets</definition>
+        <argsstring>(self)</argsstring>
+        <name>create_widgets</name>
+        <qualifiedname>GWeasy.Omiviz.create_widgets</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="953" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="953" bodyend="989"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" compoundref="d6/d99/_g_weasy_8py" startline="203" endline="213">GWeasy.OmicronApp.create_file_selector</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324" compoundref="d6/d99/_g_weasy_8py" startline="903">GWeasy.Omiviz.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</references>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.valent</definition>
+        <argsstring>(self, label, key, frame=None, row=0, col=0, editable=True)</argsstring>
+        <name>valent</name>
+        <qualifiedname>GWeasy.Omiviz.valent</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>col</type>
+          <defname>col</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>editable</type>
+          <defname>editable</defname>
+          <defval>True</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="990" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="990" bodyend="997"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012" compoundref="d6/d99/_g_weasy_8py" startline="895">GWeasy.Omiviz.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324" compoundref="d6/d99/_g_weasy_8py" startline="903">GWeasy.Omiviz.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" compoundref="d6/d99/_g_weasy_8py" startline="896">GWeasy.Omiviz.ui_elements</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" compoundref="d6/d99/_g_weasy_8py" startline="953" endline="989">GWeasy.Omiviz.create_widgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.create_output_path_selector</definition>
+        <argsstring>(self, label, key, frame=None, row=0, column=0)</argsstring>
+        <name>create_output_path_selector</name>
+        <qualifiedname>GWeasy.Omiviz.create_output_path_selector</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Allows selecting an output folder.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="998" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="998" bodyend="1010"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012" compoundref="d6/d99/_g_weasy_8py" startline="895">GWeasy.Omiviz.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324" compoundref="d6/d99/_g_weasy_8py" startline="903">GWeasy.Omiviz.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ade2bd10cac8ce57726871553b88241e7" compoundref="d6/d99/_g_weasy_8py" startline="1011" endline="1016">GWeasy.Omiviz.select_output_folder</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" compoundref="d6/d99/_g_weasy_8py" startline="896">GWeasy.Omiviz.ui_elements</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" compoundref="d6/d99/_g_weasy_8py" startline="953" endline="989">GWeasy.Omiviz.create_widgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1ade2bd10cac8ce57726871553b88241e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.select_output_folder</definition>
+        <argsstring>(self, var)</argsstring>
+        <name>select_output_folder</name>
+        <qualifiedname>GWeasy.Omiviz.select_output_folder</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>var</type>
+          <defname>var</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Allows selecting an output folder.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1011" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1011" bodyend="1016"/>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.create_file_selector</definition>
+        <argsstring>(self, label, key, frame=None, row=0, column=0)</argsstring>
+        <name>create_file_selector</name>
+        <qualifiedname>GWeasy.Omiviz.create_file_selector</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Allows selecting either a single file or a folder containing `.root` files.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1017" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1017" bodyend="1029"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012" compoundref="d6/d99/_g_weasy_8py" startline="895">GWeasy.Omiviz.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324" compoundref="d6/d99/_g_weasy_8py" startline="903">GWeasy.Omiviz.scrollable_frame</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a" compoundref="d6/d99/_g_weasy_8py" startline="1030" endline="1067">GWeasy.Omiviz.select_file_or_folder</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" compoundref="d6/d99/_g_weasy_8py" startline="896">GWeasy.Omiviz.ui_elements</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" compoundref="d6/d99/_g_weasy_8py" startline="953" endline="989">GWeasy.Omiviz.create_widgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.select_file_or_folder</definition>
+        <argsstring>(self, var)</argsstring>
+        <name>select_file_or_folder</name>
+        <qualifiedname>GWeasy.Omiviz.select_file_or_folder</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>var</type>
+          <defname>var</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Allows selecting a folder (grabs all `.root` files) or an individual file.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1030" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1030" bodyend="1067"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" compoundref="d6/d99/_g_weasy_8py" startline="896">GWeasy.Omiviz.ui_elements</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1aa7fea33189709387c6cfb10249f15d91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.run_omicron_plot</definition>
+        <argsstring>(self)</argsstring>
+        <name>run_omicron_plot</name>
+        <qualifiedname>GWeasy.Omiviz.run_omicron_plot</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1068" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1068" bodyend="1129"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" compoundref="d6/d99/_g_weasy_8py" startline="896">GWeasy.Omiviz.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.execute_command</definition>
+        <argsstring>(self, command, gps_start, gps_end, output_folder)</argsstring>
+        <name>execute_command</name>
+        <qualifiedname>GWeasy.Omiviz.execute_command</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>command</type>
+          <defname>command</defname>
+        </param>
+        <param>
+          <type>gps_start</type>
+          <defname>gps_start</defname>
+        </param>
+        <param>
+          <type>gps_end</type>
+          <defname>gps_end</defname>
+        </param>
+        <param>
+          <type>output_folder</type>
+          <defname>output_folder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Runs the Omicron plot command inside a full WSL shell session with logging.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1130" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1130" bodyend="1165"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" compoundref="d6/d99/_g_weasy_8py" startline="1205" endline="1227">GWeasy.Omiviz.load_plots</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a5927086beaab150b73ee9fe248920864" compoundref="d6/d99/_g_weasy_8py" startline="920" endline="923">GWeasy.Omiviz.start_loading</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a940521e496d5867e69a6e9e835875eec" compoundref="d6/d99/_g_weasy_8py" startline="924" endline="927">GWeasy.Omiviz.stop_loading</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a0ca93a57b9356b0242c9c7b1ba79de98" compoundref="d6/d99/_g_weasy_8py" startline="928" endline="932">GWeasy.Omiviz.update_progress</references>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.show_plot</definition>
+        <argsstring>(self)</argsstring>
+        <name>show_plot</name>
+        <qualifiedname>GWeasy.Omiviz.show_plot</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Displays the current plot in the GUI.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1166" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1166" bodyend="1204"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" compoundref="d6/d99/_g_weasy_8py" startline="898">GWeasy.Omiviz.current_plot_index</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ab6530003f7b04524c258a442f6e87d8d" compoundref="d6/d99/_g_weasy_8py" startline="975">GWeasy.Omiviz.image_label</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0" compoundref="d6/d99/_g_weasy_8py" startline="897">GWeasy.Omiviz.plot_files</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" compoundref="d6/d99/_g_weasy_8py" startline="1205" endline="1227">GWeasy.Omiviz.load_plots</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc" compoundref="d6/d99/_g_weasy_8py" startline="940" endline="946">GWeasy.Omiviz.show_next_plot</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f" compoundref="d6/d99/_g_weasy_8py" startline="933" endline="939">GWeasy.Omiviz.show_previous_plot</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Omiviz.load_plots</definition>
+        <argsstring>(self, folder)</argsstring>
+        <name>load_plots</name>
+        <qualifiedname>GWeasy.Omiviz.load_plots</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>folder</type>
+          <defname>folder</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Loads the plots from WSL and updates the GUI.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1205" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="1205" bodyend="1227"/>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" compoundref="d6/d99/_g_weasy_8py" startline="898">GWeasy.Omiviz.current_plot_index</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0" compoundref="d6/d99/_g_weasy_8py" startline="897">GWeasy.Omiviz.plot_files</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" compoundref="d6/d99/_g_weasy_8py" startline="1166" endline="1204">GWeasy.Omiviz.show_plot</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" compoundref="d6/d99/_g_weasy_8py" startline="947" endline="952">GWeasy.Omiviz.update_navigation_buttons</references>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0" compoundref="d6/d99/_g_weasy_8py" startline="1130" endline="1165">GWeasy.Omiviz.execute_command</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="892" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="892" bodyend="1230"/>
+    <listofallmembers>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a8a1abcaa0bdbf764f7620e3d4f9ede3a" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>__init__</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1acd11d586944d13007833c5a3b54de21a" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>canvas</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>config_data</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>create_file_selector</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>create_output_path_selector</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>create_widgets</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>current_plot_index</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>execute_command</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a2ce005202325aeb7de3cfe86162aa10d" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>image_frame</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ab6530003f7b04524c258a442f6e87d8d" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>image_label</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>load_plots</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ab17c3478c3c3842c9ef750dcb223dc8c" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>next_button</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a73317d4f4e1e4aebe3bfc13c76332b25" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>photo</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>plot_files</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a3a5d7bfb5b5c3a473f482b17ba280124" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>prev_button</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>progress</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>root</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1aa1f14e87b54591311fda4c3e33ecce86" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>run_button</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1aa7fea33189709387c6cfb10249f15d91" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>run_omicron_plot</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>scrollable_frame</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a45d62f4c1a9b1a689ef1b2d8920ba593" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>scrollbar</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>select_file_or_folder</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ade2bd10cac8ce57726871553b88241e7" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>select_output_folder</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>show_next_plot</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>show_plot</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>show_previous_plot</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a5927086beaab150b73ee9fe248920864" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>start_loading</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a940521e496d5867e69a6e9e835875eec" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>stop_loading</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>ui_elements</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>update_navigation_buttons</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a0ca93a57b9356b0242c9c7b1ba79de98" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>update_progress</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>valent</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a3618182f89f51a5438cc31dcb635e807" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>window_frame</name></member>
+      <member refid="da/da4/class_g_weasy_1_1_omiviz_1a12522060e133892fbded6e79dbf6c55a" prot="public" virt="non-virtual"><scope>GWeasy::Omiviz</scope><name>wsl_project_dir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

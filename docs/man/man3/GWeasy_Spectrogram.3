@@ -1,0 +1,225 @@
+.TH "GWeasy.Spectrogram" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.Spectrogram
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBprefetch_data\fP (self)"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBtoggle_mode\fP (self)"
+.br
+.ti -1c
+.RI "\fBconvert_time\fP (self)"
+.br
+.ti -1c
+.RI "\fBspecgrams\fP (self, detectors, gps_start, gps_end, fftlengths, window, overlap)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "\fBcanvas\fP = tk\&.Canvas(\fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBscroll_y\fP = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+.br
+.ti -1c
+.RI "\fBscroll_x\fP = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+.br
+.ti -1c
+.RI "\fBframe\fP = ttk\&.Frame(self\&.canvas)"
+.br
+.ti -1c
+.RI "\fBcatalog_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBevent_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBdetector_dropdown\fP = tk\&.Listbox(input_frame, selectmode='multiple', height=3)"
+.br
+.ti -1c
+.RI "\fBgps_start_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBgps_end_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBfft_length_entry\fP = ttk\&.Entry(input_frame, width=10)"
+.br
+.ti -1c
+.RI "\fBwindow_entry\fP = ttk\&.Combobox(input_frame, width=10, values=['hann', 'option2'], state='readonly')"
+.br
+.ti -1c
+.RI "\fBoverlap_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBmode\fP = tk\&.StringVar(value='gps_to_utc')"
+.br
+.ti -1c
+.RI "\fBconvert_entry\fP = ttk\&.Entry(conversion_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBconvert_button\fP = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+.br
+.ti -1c
+.RI "\fBresult_label\fP = ttk\&.Label(conversion_frame, text='Result: ')"
+.br
+.ti -1c
+.RI "\fBtoggle_button\fP = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+.br
+.ti -1c
+.RI "\fBplot_button\fP = tk\&.Button(\fBroot\fP, text='Plot TimeSeries', command=lambda: self\&.specgrams([self\&.detector_dropdown\&.get(idx) for idx in self\&.detector_dropdown\&.curselection()],gps_start=float(self\&.gps_start_entry\&.get()),gps_end = float(self\&.gps_end_entry\&.get()),fftlengths=int(self\&.fft_length_entry\&.get()),window=self\&.window_entry\&.get(),overlap=self\&.overlap_entry\&.get()))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB2107\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.Spectrogram\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB2108\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.Spectrogram\&.convert_time ( self)"
+
+.PP
+Definition at line \fB2248\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.fetch_event_details ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB2224\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.fetch_events ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB2209\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.prefetch_data ( self)"
+
+.PP
+Definition at line \fB2198\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.specgrams ( self,  detectors,  gps_start,  gps_end,  fftlengths,  window,  overlap)"
+
+.PP
+Definition at line \fB2267\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.toggle_mode ( self)"
+
+.PP
+Definition at line \fB2239\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.Spectrogram\&.canvas = tk\&.Canvas(\fBroot\fP)"
+
+.PP
+Definition at line \fB2114\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.catalog_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB2134\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.convert_button = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+
+.PP
+Definition at line \fB2183\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.convert_entry = ttk\&.Entry(conversion_frame, width=20)"
+
+.PP
+Definition at line \fB2180\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.detector_dropdown = tk\&.Listbox(input_frame, selectmode='multiple', height=3)"
+
+.PP
+Definition at line \fB2146\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.event_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB2140\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.fetch_event_details = 'ew')"
+
+.PP
+Definition at line \fB2142\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.fetch_events = 'ew')"
+
+.PP
+Definition at line \fB2136\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.fft_length_entry = ttk\&.Entry(input_frame, width=10)"
+
+.PP
+Definition at line \fB2163\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.frame = ttk\&.Frame(self\&.canvas)"
+
+.PP
+Definition at line \fB2120\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.gps_end_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB2158\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.gps_start_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB2154\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.mode = tk\&.StringVar(value='gps_to_utc')"
+
+.PP
+Definition at line \fB2176\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.overlap_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB2172\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.plot_button = tk\&.Button(\fBroot\fP, text='Plot TimeSeries', command=lambda: self\&.specgrams([self\&.detector_dropdown\&.get(idx) for idx in self\&.detector_dropdown\&.curselection()],gps_start=float(self\&.gps_start_entry\&.get()),gps_end = float(self\&.gps_end_entry\&.get()),fftlengths=int(self\&.fft_length_entry\&.get()),window=self\&.window_entry\&.get(),overlap=self\&.overlap_entry\&.get()))"
+
+.PP
+Definition at line \fB2194\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.result_label = ttk\&.Label(conversion_frame, text='Result: ')"
+
+.PP
+Definition at line \fB2186\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.root = root"
+
+.PP
+Definition at line \fB2109\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.scroll_x = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+
+.PP
+Definition at line \fB2116\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.scroll_y = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+
+.PP
+Definition at line \fB2115\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.toggle_button = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+
+.PP
+Definition at line \fB2189\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.Spectrogram\&.window_entry = ttk\&.Combobox(input_frame, width=10, values=['hann', 'option2'], state='readonly')"
+
+.PP
+Definition at line \fB2167\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.
