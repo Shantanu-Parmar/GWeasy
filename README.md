@@ -130,11 +130,11 @@ Additonal tabs
 ## **5. Development Timeline**
 | Task | Expected Completion |
 |-------|------------------|
-| **Project Start** | February 2025 | Done
-| **Workflow Documentation** | March 2025 | Done
-| **Prototype Development** | Mid-March 2025 | Done
-| **Windows Version Testing** | April 2025 | Done
-| **Linux Version Development** | Future Update | Done
+| **Project Start** | February 2025 Done| 
+| **Workflow Documentation** | March 2025 Done|
+| **Prototype Development** | Mid-March 2025 Done|
+| **Windows Version Testing** | April 2025 Done|
+| **Linux Version Development** | Future Update Done|
 
 ## **6. Future Enhancements**
 - **Cross-platform compatibility (Linux & MacOS)** Partially Done
