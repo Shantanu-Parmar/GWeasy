@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_spectrogram" xml:lang="en-US">
+<title>GWeasy.Spectrogram Class Reference</title>
+<indexterm><primary>GWeasy.Spectrogram</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1ae05c1f016c9d273efa71a24b7713af4d">__init__</link> (self, <link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a3d5dd69e5d05efe6623fa659d865b0d8">prefetch_data</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5">fetch_events</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944">fetch_event_details</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065">toggle_mode</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64">convert_time</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc">specgrams</link> (self, detectors, gps_start, gps_end, fftlengths, window, overlap)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link> = root</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a7fa10389483b38284cd7f3d4d010384e">canvas</link> = tk.Canvas(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a266513f31bd3a9b75881c26a5379e03a">scroll_y</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a675ca33ba028bdddb3d4bc07800ffb9e">scroll_x</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a23f874ab153037c9d11a51d28c904722">frame</link> = ttk.Frame(self.canvas)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a63bd7841e8e4b11a4faef0bc4a09e56e">catalog_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1ad7033ce91e8366821b77c5931838ff61">fetch_events</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a389378ec31af92bac25c051735797c4f">event_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a055c98da576cf33171c46cb84d760944">fetch_event_details</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1ae847a669aa30379518d604d9ef90ba2d">detector_dropdown</link> = tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, height=3)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1accc042ffd94417f9d3ab1bf91a7cc214">gps_start_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1aa8da07073e285070da1b6f126f2dd90b">gps_end_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a579af3fa738faf53dbd57e3a36325386">fft_length_entry</link> = ttk.Entry(input_frame, width=10)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a29ab2b276277eb781dbd2bb1a4cf6bc6">window_entry</link> = ttk.Combobox(input_frame, width=10, values=[&quot;hann&quot;, &quot;option2&quot;], state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a9f4722fb6493eae02715740a4f0798b4">overlap_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a38db51ea2a11622dfd341601afa9b1f7">mode</link> = tk.StringVar(value=&quot;gps_to_utc&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a1f6b0297e201db1418f3f8d4a08220b2">convert_entry</link> = ttk.Entry(conversion_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1af543d8cedad185aeda38cfc44a53f2b5">convert_button</link> = ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a44f095854615a5ce528f6742a65d3639">result_label</link> = ttk.Label(conversion_frame, text=&quot;Result: &quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1af8842a6b6dfc4455ad17c2b4459462bf">toggle_button</link> = ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_spectrogram_1a0884ff97c5014c05ad45f7d7d2fc7ec6">plot_button</link> = tk.Button(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>, text=&quot;Plot TimeSeries&quot;, command=lambda: self.specgrams([self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],gps_start=float(self.gps_start_entry.get()),gps_end = float(self.gps_end_entry.get()),fftlengths=int(self.fft_length_entry.get()),window=self.window_entry.get(),overlap=self.overlap_entry.get()))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02107">2107</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1ae05c1f016c9d273efa71a24b7713af4d"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02108">2108</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64"/><section>
+    <title>convert_time()</title>
+<indexterm><primary>convert_time</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>convert_time</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.convert_time ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02248">2248</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944"/><section>
+    <title>fetch_event_details()</title>
+<indexterm><primary>fetch_event_details</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>fetch_event_details</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.fetch_event_details ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02224">2224</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5"/><section>
+    <title>fetch_events()</title>
+<indexterm><primary>fetch_events</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>fetch_events</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.fetch_events ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02209">2209</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a3d5dd69e5d05efe6623fa659d865b0d8"/><section>
+    <title>prefetch_data()</title>
+<indexterm><primary>prefetch_data</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>prefetch_data</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.prefetch_data ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02198">2198</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc"/><section>
+    <title>specgrams()</title>
+<indexterm><primary>specgrams</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>specgrams</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.specgrams ( self,  detectors,  gps_start,  gps_end,  fftlengths,  window,  overlap)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02267">2267</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065"/><section>
+    <title>toggle_mode()</title>
+<indexterm><primary>toggle_mode</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>toggle_mode</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.toggle_mode ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02239">2239</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a7fa10389483b38284cd7f3d4d010384e"/><section>
+    <title>canvas</title>
+<indexterm><primary>canvas</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>canvas</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.canvas = tk.Canvas(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02114">2114</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a63bd7841e8e4b11a4faef0bc4a09e56e"/><section>
+    <title>catalog_dropdown</title>
+<indexterm><primary>catalog_dropdown</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>catalog_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.catalog_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02134">2134</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1af543d8cedad185aeda38cfc44a53f2b5"/><section>
+    <title>convert_button</title>
+<indexterm><primary>convert_button</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>convert_button</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.convert_button = ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02183">2183</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a1f6b0297e201db1418f3f8d4a08220b2"/><section>
+    <title>convert_entry</title>
+<indexterm><primary>convert_entry</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>convert_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.convert_entry = ttk.Entry(conversion_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02180">2180</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1ae847a669aa30379518d604d9ef90ba2d"/><section>
+    <title>detector_dropdown</title>
+<indexterm><primary>detector_dropdown</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>detector_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.detector_dropdown = tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, height=3)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02146">2146</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a389378ec31af92bac25c051735797c4f"/><section>
+    <title>event_dropdown</title>
+<indexterm><primary>event_dropdown</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>event_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.event_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02140">2140</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a055c98da576cf33171c46cb84d760944"/><section>
+    <title>fetch_event_details</title>
+<indexterm><primary>fetch_event_details</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>fetch_event_details</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.fetch_event_details = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02142">2142</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1ad7033ce91e8366821b77c5931838ff61"/><section>
+    <title>fetch_events</title>
+<indexterm><primary>fetch_events</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>fetch_events</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.fetch_events = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02136">2136</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a579af3fa738faf53dbd57e3a36325386"/><section>
+    <title>fft_length_entry</title>
+<indexterm><primary>fft_length_entry</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>fft_length_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.fft_length_entry = ttk.Entry(input_frame, width=10)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02163">2163</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a23f874ab153037c9d11a51d28c904722"/><section>
+    <title>frame</title>
+<indexterm><primary>frame</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>frame</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.frame = ttk.Frame(self.canvas)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02120">2120</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1aa8da07073e285070da1b6f126f2dd90b"/><section>
+    <title>gps_end_entry</title>
+<indexterm><primary>gps_end_entry</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>gps_end_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.gps_end_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02158">2158</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1accc042ffd94417f9d3ab1bf91a7cc214"/><section>
+    <title>gps_start_entry</title>
+<indexterm><primary>gps_start_entry</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>gps_start_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.gps_start_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02154">2154</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a38db51ea2a11622dfd341601afa9b1f7"/><section>
+    <title>mode</title>
+<indexterm><primary>mode</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>mode</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.mode = tk.StringVar(value=&quot;gps_to_utc&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02176">2176</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a9f4722fb6493eae02715740a4f0798b4"/><section>
+    <title>overlap_entry</title>
+<indexterm><primary>overlap_entry</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>overlap_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.overlap_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02172">2172</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a0884ff97c5014c05ad45f7d7d2fc7ec6"/><section>
+    <title>plot_button</title>
+<indexterm><primary>plot_button</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>plot_button</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.plot_button = tk.Button(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>, text=&quot;Plot TimeSeries&quot;, command=lambda: self.specgrams([self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],gps_start=float(self.gps_start_entry.get()),gps_end = float(self.gps_end_entry.get()),fftlengths=int(self.fft_length_entry.get()),window=self.window_entry.get(),overlap=self.overlap_entry.get()))</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02194">2194</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a44f095854615a5ce528f6742a65d3639"/><section>
+    <title>result_label</title>
+<indexterm><primary>result_label</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>result_label</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.result_label = ttk.Label(conversion_frame, text=&quot;Result: &quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02186">2186</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02109">2109</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a675ca33ba028bdddb3d4bc07800ffb9e"/><section>
+    <title>scroll_x</title>
+<indexterm><primary>scroll_x</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>scroll_x</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.scroll_x = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02116">2116</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a266513f31bd3a9b75881c26a5379e03a"/><section>
+    <title>scroll_y</title>
+<indexterm><primary>scroll_y</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>scroll_y</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.scroll_y = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02115">2115</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1af8842a6b6dfc4455ad17c2b4459462bf"/><section>
+    <title>toggle_button</title>
+<indexterm><primary>toggle_button</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>toggle_button</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.toggle_button = ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02189">2189</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_spectrogram_1a29ab2b276277eb781dbd2bb1a4cf6bc6"/><section>
+    <title>window_entry</title>
+<indexterm><primary>window_entry</primary><secondary>GWeasy.Spectrogram</secondary></indexterm>
+<indexterm><primary>GWeasy.Spectrogram</primary><secondary>window_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.Spectrogram.window_entry = ttk.Combobox(input_frame, width=10, values=[&quot;hann&quot;, &quot;option2&quot;], state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l02167">2167</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

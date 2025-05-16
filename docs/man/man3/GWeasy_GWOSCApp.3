@@ -1,0 +1,214 @@
+.TH "GWeasy.GWOSCApp" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.GWOSCApp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBmaster\fP, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBinit_cef\fP (self)"
+.br
+.ti -1c
+.RI "\fBcreate_browser\fP (self)"
+.br
+.ti -1c
+.RI "\fBcef_loop\fP (self)"
+.br
+.ti -1c
+.RI "\fBon_resize\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBgo_back\fP (self)"
+.br
+.ti -1c
+.RI "\fBgo_forward\fP (self)"
+.br
+.ti -1c
+.RI "\fBreload_page\fP (self)"
+.br
+.ti -1c
+.RI "\fBload_url\fP (self, event=None)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBmaster\fP = master"
+.br
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "\fBbrowser\fP = None"
+.br
+.ti -1c
+.RI "\fBnavbar\fP = tk\&.Frame(\fBmaster\fP, bg='gray', height=40)"
+.br
+.ti -1c
+.RI "\fBback_btn\fP = Button(self\&.navbar, text='◀', command=self\&.go_back)"
+.br
+.ti -1c
+.RI "\fBforward_btn\fP = Button(self\&.navbar, text='▶', command=self\&.go_forward)"
+.br
+.ti -1c
+.RI "\fBreload_btn\fP = Button(self\&.navbar, text='🔄', command=self\&.reload_page)"
+.br
+.ti -1c
+.RI "\fBurl_entry\fP = Entry(self\&.navbar, width=50)"
+.br
+.ti -1c
+.RI "\fBload_url\fP = True)"
+.br
+.ti -1c
+.RI "\fBbrowser_frame\fP = tk\&.Frame(\fBmaster\fP, bg='black')"
+.br
+.ti -1c
+.RI "\fBinit_cef\fP = True)"
+.br
+.ti -1c
+.RI "\fBon_resize\fP"
+.br
+.ti -1c
+.RI "\fBcreate_browser\fP"
+.br
+.ti -1c
+.RI "\fBcef_loop\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB810\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.GWOSCApp\&.__init__ ( self,  master,  root)"
+
+.PP
+Definition at line \fB811\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.GWOSCApp\&.cef_loop ( self)"
+
+.PP
+.nf
+Runs CEF's message loop inside Tkinter's event loop\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB861\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.create_browser ( self)"
+
+.PP
+.nf
+Embeds the browser inside the GWOSCRef tab\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB853\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.go_back ( self)"
+
+.PP
+Definition at line \fB874\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.go_forward ( self)"
+
+.PP
+Definition at line \fB878\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.init_cef ( self)"
+
+.PP
+.nf
+Initializes CEF and creates the browser\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB842\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.load_url ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB886\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.on_resize ( self,  event = \fRNone\fP)"
+
+.PP
+.nf
+Handles resizing the browser when the window changes\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB866\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.reload_page ( self)"
+
+.PP
+Definition at line \fB882\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.GWOSCApp\&.back_btn = Button(self\&.navbar, text='◀', command=self\&.go_back)"
+
+.PP
+Definition at line \fB820\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.browser = None"
+
+.PP
+Definition at line \fB814\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.browser_frame = tk\&.Frame(\fBmaster\fP, bg='black')"
+
+.PP
+Definition at line \fB834\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.cef_loop"
+
+.PP
+Definition at line \fB851\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.create_browser"
+
+.PP
+Definition at line \fB848\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.forward_btn = Button(self\&.navbar, text='▶', command=self\&.go_forward)"
+
+.PP
+Definition at line \fB823\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.init_cef = True)"
+
+.PP
+Definition at line \fB838\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.load_url = True)"
+
+.PP
+Definition at line \fB831\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.master = master"
+
+.PP
+Definition at line \fB812\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.navbar = tk\&.Frame(\fBmaster\fP, bg='gray', height=40)"
+
+.PP
+Definition at line \fB817\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.on_resize"
+
+.PP
+Definition at line \fB839\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.reload_btn = Button(self\&.navbar, text='🔄', command=self\&.reload_page)"
+
+.PP
+Definition at line \fB826\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.root = root"
+
+.PP
+Definition at line \fB813\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GWOSCApp\&.url_entry = Entry(self\&.navbar, width=50)"
+
+.PP
+Definition at line \fB829\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

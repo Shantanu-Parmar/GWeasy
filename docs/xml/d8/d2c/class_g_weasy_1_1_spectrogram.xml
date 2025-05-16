@@ -1,0 +1,589 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d8/d2c/class_g_weasy_1_1_spectrogram" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::Spectrogram</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.Spectrogram.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2109" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2109" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a7fa10389483b38284cd7f3d4d010384e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::canvas</definition>
+        <argsstring></argsstring>
+        <name>canvas</name>
+        <qualifiedname>GWeasy.Spectrogram.canvas</qualifiedname>
+        <initializer>=  tk.Canvas(<ref refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" kindref="member">root</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2114" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a266513f31bd3a9b75881c26a5379e03a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::scroll_y</definition>
+        <argsstring></argsstring>
+        <name>scroll_y</name>
+        <qualifiedname>GWeasy.Spectrogram.scroll_y</qualifiedname>
+        <initializer>=  ttk.Scrollbar(<ref refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" kindref="member">root</ref>, orient=&quot;vertical&quot;, command=self.canvas.yview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2115" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a675ca33ba028bdddb3d4bc07800ffb9e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::scroll_x</definition>
+        <argsstring></argsstring>
+        <name>scroll_x</name>
+        <qualifiedname>GWeasy.Spectrogram.scroll_x</qualifiedname>
+        <initializer>=  ttk.Scrollbar(<ref refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" kindref="member">root</ref>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2116" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a23f874ab153037c9d11a51d28c904722" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::frame</definition>
+        <argsstring></argsstring>
+        <name>frame</name>
+        <qualifiedname>GWeasy.Spectrogram.frame</qualifiedname>
+        <initializer>=  ttk.Frame(self.canvas)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2120" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a63bd7841e8e4b11a4faef0bc4a09e56e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::catalog_dropdown</definition>
+        <argsstring></argsstring>
+        <name>catalog_dropdown</name>
+        <qualifiedname>GWeasy.Spectrogram.catalog_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2134" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2134" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" compoundref="d6/d99/_g_weasy_8py" startline="2209" endline="2222">GWeasy.Spectrogram.fetch_events</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a3d5dd69e5d05efe6623fa659d865b0d8" compoundref="d6/d99/_g_weasy_8py" startline="2198" endline="2207">GWeasy.Spectrogram.prefetch_data</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1ad7033ce91e8366821b77c5931838ff61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::fetch_events</definition>
+        <argsstring></argsstring>
+        <name>fetch_events</name>
+        <qualifiedname>GWeasy.Spectrogram.fetch_events</qualifiedname>
+        <initializer>= &quot;ew&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2136" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a389378ec31af92bac25c051735797c4f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::event_dropdown</definition>
+        <argsstring></argsstring>
+        <name>event_dropdown</name>
+        <qualifiedname>GWeasy.Spectrogram.event_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2140" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2140" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944" compoundref="d6/d99/_g_weasy_8py" startline="2224" endline="2237">GWeasy.Spectrogram.fetch_event_details</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" compoundref="d6/d99/_g_weasy_8py" startline="2209" endline="2222">GWeasy.Spectrogram.fetch_events</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a055c98da576cf33171c46cb84d760944" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::fetch_event_details</definition>
+        <argsstring></argsstring>
+        <name>fetch_event_details</name>
+        <qualifiedname>GWeasy.Spectrogram.fetch_event_details</qualifiedname>
+        <initializer>= &quot;ew&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2142" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2142" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" compoundref="d6/d99/_g_weasy_8py" startline="2209" endline="2222">GWeasy.Spectrogram.fetch_events</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1ae847a669aa30379518d604d9ef90ba2d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::detector_dropdown</definition>
+        <argsstring></argsstring>
+        <name>detector_dropdown</name>
+        <qualifiedname>GWeasy.Spectrogram.detector_dropdown</qualifiedname>
+        <initializer>=  tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, height=3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2146" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1accc042ffd94417f9d3ab1bf91a7cc214" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::gps_start_entry</definition>
+        <argsstring></argsstring>
+        <name>gps_start_entry</name>
+        <qualifiedname>GWeasy.Spectrogram.gps_start_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2154" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2154" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944" compoundref="d6/d99/_g_weasy_8py" startline="2224" endline="2237">GWeasy.Spectrogram.fetch_event_details</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1aa8da07073e285070da1b6f126f2dd90b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::gps_end_entry</definition>
+        <argsstring></argsstring>
+        <name>gps_end_entry</name>
+        <qualifiedname>GWeasy.Spectrogram.gps_end_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2158" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a579af3fa738faf53dbd57e3a36325386" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::fft_length_entry</definition>
+        <argsstring></argsstring>
+        <name>fft_length_entry</name>
+        <qualifiedname>GWeasy.Spectrogram.fft_length_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2163" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a29ab2b276277eb781dbd2bb1a4cf6bc6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::window_entry</definition>
+        <argsstring></argsstring>
+        <name>window_entry</name>
+        <qualifiedname>GWeasy.Spectrogram.window_entry</qualifiedname>
+        <initializer>=  ttk.Combobox(input_frame, width=10, values=[&quot;hann&quot;, &quot;option2&quot;], state=&quot;readonly&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2167" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a9f4722fb6493eae02715740a4f0798b4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::overlap_entry</definition>
+        <argsstring></argsstring>
+        <name>overlap_entry</name>
+        <qualifiedname>GWeasy.Spectrogram.overlap_entry</qualifiedname>
+        <initializer>=  ttk.Entry(input_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2172" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a38db51ea2a11622dfd341601afa9b1f7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <qualifiedname>GWeasy.Spectrogram.mode</qualifiedname>
+        <initializer>=  tk.StringVar(value=&quot;gps_to_utc&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2176" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2176" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" compoundref="d6/d99/_g_weasy_8py" startline="2248" endline="2266">GWeasy.Spectrogram.convert_time</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065" compoundref="d6/d99/_g_weasy_8py" startline="2239" endline="2246">GWeasy.Spectrogram.toggle_mode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a1f6b0297e201db1418f3f8d4a08220b2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::convert_entry</definition>
+        <argsstring></argsstring>
+        <name>convert_entry</name>
+        <qualifiedname>GWeasy.Spectrogram.convert_entry</qualifiedname>
+        <initializer>=  ttk.Entry(conversion_frame, width=20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2180" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2180" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" compoundref="d6/d99/_g_weasy_8py" startline="2248" endline="2266">GWeasy.Spectrogram.convert_time</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1af543d8cedad185aeda38cfc44a53f2b5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::convert_button</definition>
+        <argsstring></argsstring>
+        <name>convert_button</name>
+        <qualifiedname>GWeasy.Spectrogram.convert_button</qualifiedname>
+        <initializer>=  ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2183" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a44f095854615a5ce528f6742a65d3639" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::result_label</definition>
+        <argsstring></argsstring>
+        <name>result_label</name>
+        <qualifiedname>GWeasy.Spectrogram.result_label</qualifiedname>
+        <initializer>=  ttk.Label(conversion_frame, text=&quot;Result: &quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2186" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2186" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" compoundref="d6/d99/_g_weasy_8py" startline="2248" endline="2266">GWeasy.Spectrogram.convert_time</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1af8842a6b6dfc4455ad17c2b4459462bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::toggle_button</definition>
+        <argsstring></argsstring>
+        <name>toggle_button</name>
+        <qualifiedname>GWeasy.Spectrogram.toggle_button</qualifiedname>
+        <initializer>=  ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2189" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2189" bodyend="-1"/>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065" compoundref="d6/d99/_g_weasy_8py" startline="2239" endline="2246">GWeasy.Spectrogram.toggle_mode</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a0884ff97c5014c05ad45f7d7d2fc7ec6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Spectrogram::plot_button</definition>
+        <argsstring></argsstring>
+        <name>plot_button</name>
+        <qualifiedname>GWeasy.Spectrogram.plot_button</qualifiedname>
+        <initializer>=  tk.Button(<ref refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" kindref="member">root</ref>, text=&quot;Plot TimeSeries&quot;, command=lambda: self.specgrams([self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],gps_start=float(self.gps_start_entry.get()),gps_end = float(self.gps_end_entry.get()),fftlengths=int(self.fft_length_entry.get()),window=self.window_entry.get(),overlap=self.overlap_entry.get()))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2194" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2194" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1ae05c1f016c9d273efa71a24b7713af4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.__init__</definition>
+        <argsstring>(self, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.Spectrogram.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2108" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2108" bodyend="2196"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a3d5dd69e5d05efe6623fa659d865b0d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.prefetch_data</definition>
+        <argsstring>(self)</argsstring>
+        <name>prefetch_data</name>
+        <qualifiedname>GWeasy.Spectrogram.prefetch_data</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2198" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2198" bodyend="2207"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187" compoundref="d6/d99/_g_weasy_8py" startline="1542">GWeasy.FFT.catalog_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" compoundref="d6/d99/_g_weasy_8py" startline="1818">GWeasy.PSDs.catalog_dropdown</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a63bd7841e8e4b11a4faef0bc4a09e56e" compoundref="d6/d99/_g_weasy_8py" startline="2134">GWeasy.Spectrogram.catalog_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f" compoundref="d6/d99/_g_weasy_8py" startline="1258">GWeasy.TimeSrswaveform.catalog_dropdown</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.fetch_events</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>fetch_events</name>
+        <qualifiedname>GWeasy.Spectrogram.fetch_events</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2209" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2209" bodyend="2222"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187" compoundref="d6/d99/_g_weasy_8py" startline="1542">GWeasy.FFT.catalog_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a1a10954d210a74bbe8360dda35bd3041" compoundref="d6/d99/_g_weasy_8py" startline="1818">GWeasy.PSDs.catalog_dropdown</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a63bd7841e8e4b11a4faef0bc4a09e56e" compoundref="d6/d99/_g_weasy_8py" startline="2134">GWeasy.Spectrogram.catalog_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f" compoundref="d6/d99/_g_weasy_8py" startline="1258">GWeasy.TimeSrswaveform.catalog_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99" compoundref="d6/d99/_g_weasy_8py" startline="1548">GWeasy.FFT.event_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" compoundref="d6/d99/_g_weasy_8py" startline="1824">GWeasy.PSDs.event_dropdown</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a389378ec31af92bac25c051735797c4f" compoundref="d6/d99/_g_weasy_8py" startline="2140">GWeasy.Spectrogram.event_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1" compoundref="d6/d99/_g_weasy_8py" startline="1264">GWeasy.TimeSrswaveform.event_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ac559673b3f1bb3bd50ce920959378e22" compoundref="d6/d99/_g_weasy_8py" startline="1550">GWeasy.FFT.fetch_event_details</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a2a6a125c1847b86939a37557e1fe35e3" compoundref="d6/d99/_g_weasy_8py" startline="1826">GWeasy.PSDs.fetch_event_details</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a055c98da576cf33171c46cb84d760944" compoundref="d6/d99/_g_weasy_8py" startline="2142">GWeasy.Spectrogram.fetch_event_details</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a404c891806be1fb5275ceb98c1d03728" compoundref="d6/d99/_g_weasy_8py" startline="1266">GWeasy.TimeSrswaveform.fetch_event_details</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.fetch_event_details</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>fetch_event_details</name>
+        <qualifiedname>GWeasy.Spectrogram.fetch_event_details</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2224" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2224" bodyend="2237"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99" compoundref="d6/d99/_g_weasy_8py" startline="1548">GWeasy.FFT.event_dropdown</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a23f283b12c806fadb708b5fd815fb3dd" compoundref="d6/d99/_g_weasy_8py" startline="1824">GWeasy.PSDs.event_dropdown</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a389378ec31af92bac25c051735797c4f" compoundref="d6/d99/_g_weasy_8py" startline="2140">GWeasy.Spectrogram.event_dropdown</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1" compoundref="d6/d99/_g_weasy_8py" startline="1264">GWeasy.TimeSrswaveform.event_dropdown</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4c12533d9c9017635b8918adb83328be" compoundref="d6/d99/_g_weasy_8py" startline="1567">GWeasy.FFT.gps_start_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a0a64dfcac5594a78a31565768a801f25" compoundref="d6/d99/_g_weasy_8py" startline="1843">GWeasy.PSDs.gps_start_entry</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1accc042ffd94417f9d3ab1bf91a7cc214" compoundref="d6/d99/_g_weasy_8py" startline="2154">GWeasy.Spectrogram.gps_start_entry</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a4b4c8b93c529465fa716d40fccc48ca3" compoundref="d6/d99/_g_weasy_8py" startline="1283">GWeasy.TimeSrswaveform.gps_start_entry</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.toggle_mode</definition>
+        <argsstring>(self)</argsstring>
+        <name>toggle_mode</name>
+        <qualifiedname>GWeasy.Spectrogram.toggle_mode</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2239" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2239" bodyend="2246"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4e88ad42f6c8a83afd2c2c29f537723b" compoundref="d6/d99/_g_weasy_8py" startline="1575">GWeasy.FFT.mode</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ac4bf0e8c1bdb2bf9e6837069028360e8" compoundref="d6/d99/_g_weasy_8py" startline="1859">GWeasy.PSDs.mode</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a38db51ea2a11622dfd341601afa9b1f7" compoundref="d6/d99/_g_weasy_8py" startline="2176">GWeasy.Spectrogram.mode</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aaaad290cf087f263cfb0135a16d62370" compoundref="d6/d99/_g_weasy_8py" startline="1291">GWeasy.TimeSrswaveform.mode</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a9139c02e823538cd4aba564431844b97" compoundref="d6/d99/_g_weasy_8py" startline="1588">GWeasy.FFT.toggle_button</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1af8a91c6d008ccc248d1e32f896ca2007" compoundref="d6/d99/_g_weasy_8py" startline="1872">GWeasy.PSDs.toggle_button</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1af8842a6b6dfc4455ad17c2b4459462bf" compoundref="d6/d99/_g_weasy_8py" startline="2189">GWeasy.Spectrogram.toggle_button</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a57959bb83db8944c80a23feaeba266ed" compoundref="d6/d99/_g_weasy_8py" startline="1304">GWeasy.TimeSrswaveform.toggle_button</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.convert_time</definition>
+        <argsstring>(self)</argsstring>
+        <name>convert_time</name>
+        <qualifiedname>GWeasy.Spectrogram.convert_time</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2248" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2248" bodyend="2266"/>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1ae9800114548848228ad42921c09b5787" compoundref="d6/d99/_g_weasy_8py" startline="1579">GWeasy.FFT.convert_entry</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a399d393249c07260ae4fa76cf41ea3db" compoundref="d6/d99/_g_weasy_8py" startline="1863">GWeasy.PSDs.convert_entry</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a1f6b0297e201db1418f3f8d4a08220b2" compoundref="d6/d99/_g_weasy_8py" startline="2180">GWeasy.Spectrogram.convert_entry</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1ab320f8a48342a994a16c8ec6e5d518ed" compoundref="d6/d99/_g_weasy_8py" startline="1295">GWeasy.TimeSrswaveform.convert_entry</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a4e88ad42f6c8a83afd2c2c29f537723b" compoundref="d6/d99/_g_weasy_8py" startline="1575">GWeasy.FFT.mode</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1ac4bf0e8c1bdb2bf9e6837069028360e8" compoundref="d6/d99/_g_weasy_8py" startline="1859">GWeasy.PSDs.mode</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a38db51ea2a11622dfd341601afa9b1f7" compoundref="d6/d99/_g_weasy_8py" startline="2176">GWeasy.Spectrogram.mode</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aaaad290cf087f263cfb0135a16d62370" compoundref="d6/d99/_g_weasy_8py" startline="1291">GWeasy.TimeSrswaveform.mode</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1a2aaeadadbf663e013807e4fc4f5b2b52" compoundref="d6/d99/_g_weasy_8py" startline="1585">GWeasy.FFT.result_label</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1aa92359e044c1cf02d90a3cafb91ceca4" compoundref="d6/d99/_g_weasy_8py" startline="1869">GWeasy.PSDs.result_label</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a44f095854615a5ce528f6742a65d3639" compoundref="d6/d99/_g_weasy_8py" startline="2186">GWeasy.Spectrogram.result_label</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aab9b5f264c5f5bb74b37a100a129052d" compoundref="d6/d99/_g_weasy_8py" startline="1301">GWeasy.TimeSrswaveform.result_label</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Spectrogram.specgrams</definition>
+        <argsstring>(self, detectors, gps_start, gps_end, fftlengths, window, overlap)</argsstring>
+        <name>specgrams</name>
+        <qualifiedname>GWeasy.Spectrogram.specgrams</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>detectors</type>
+          <defname>detectors</defname>
+        </param>
+        <param>
+          <type>gps_start</type>
+          <defname>gps_start</defname>
+        </param>
+        <param>
+          <type>gps_end</type>
+          <defname>gps_end</defname>
+        </param>
+        <param>
+          <type>fftlengths</type>
+          <defname>fftlengths</defname>
+        </param>
+        <param>
+          <type>window</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type>overlap</type>
+          <defname>overlap</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2267" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2267" bodyend="2312"/>
+        <references refid="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" compoundref="d6/d99/_g_weasy_8py" startline="37">GWeasy.Application.root</references>
+        <references refid="de/db4/class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a" compoundref="d6/d99/_g_weasy_8py" startline="1517">GWeasy.FFT.root</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e" compoundref="d6/d99/_g_weasy_8py" startline="607">GWeasy.GravfetchApp.root</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6" compoundref="d6/d99/_g_weasy_8py" startline="813">GWeasy.GWOSCApp.root</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" compoundref="d6/d99/_g_weasy_8py" startline="108">GWeasy.OmicronApp.root</references>
+        <references refid="da/da4/class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e" compoundref="d6/d99/_g_weasy_8py" startline="894">GWeasy.Omiviz.root</references>
+        <references refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a412a0cca0d6f003116f3ce5125c2fd2a" compoundref="d6/d99/_g_weasy_8py" startline="1793">GWeasy.PSDs.root</references>
+        <references refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" compoundref="d6/d99/_g_weasy_8py" startline="2109">GWeasy.Spectrogram.root</references>
+        <references refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb" compoundref="d6/d99/_g_weasy_8py" startline="1233">GWeasy.TimeSrswaveform.root</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2107" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2107" bodyend="2313"/>
+    <listofallmembers>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1ae05c1f016c9d273efa71a24b7713af4d" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>__init__</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7fa10389483b38284cd7f3d4d010384e" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>canvas</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a63bd7841e8e4b11a4faef0bc4a09e56e" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>catalog_dropdown</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1af543d8cedad185aeda38cfc44a53f2b5" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>convert_button</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a1f6b0297e201db1418f3f8d4a08220b2" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>convert_entry</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a126f3ea58074849a1bd2883cf2bc3e64" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>convert_time</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1ae847a669aa30379518d604d9ef90ba2d" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>detector_dropdown</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a389378ec31af92bac25c051735797c4f" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>event_dropdown</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a055c98da576cf33171c46cb84d760944" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>fetch_event_details</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a989be89e023f24e09097ca00b4be9944" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>fetch_event_details</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1ad7033ce91e8366821b77c5931838ff61" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>fetch_events</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a7291c33d9e508156503957083fd112a5" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>fetch_events</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a579af3fa738faf53dbd57e3a36325386" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>fft_length_entry</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a23f874ab153037c9d11a51d28c904722" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>frame</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1aa8da07073e285070da1b6f126f2dd90b" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>gps_end_entry</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1accc042ffd94417f9d3ab1bf91a7cc214" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>gps_start_entry</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a38db51ea2a11622dfd341601afa9b1f7" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>mode</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a9f4722fb6493eae02715740a4f0798b4" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>overlap_entry</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a0884ff97c5014c05ad45f7d7d2fc7ec6" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>plot_button</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a3d5dd69e5d05efe6623fa659d865b0d8" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>prefetch_data</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a44f095854615a5ce528f6742a65d3639" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>result_label</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a2b9aab81a6e3e968845305188413bfde" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>root</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a675ca33ba028bdddb3d4bc07800ffb9e" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>scroll_x</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a266513f31bd3a9b75881c26a5379e03a" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>scroll_y</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>specgrams</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1af8842a6b6dfc4455ad17c2b4459462bf" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>toggle_button</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1afae14744aa7295002eae7215fa541065" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>toggle_mode</name></member>
+      <member refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a29ab2b276277eb781dbd2bb1a4cf6bc6" prot="public" virt="non-virtual"><scope>GWeasy::Spectrogram</scope><name>window_entry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

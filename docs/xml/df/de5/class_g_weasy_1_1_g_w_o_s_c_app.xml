@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::GWOSCApp</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::master</definition>
+        <argsstring></argsstring>
+        <name>master</name>
+        <qualifiedname>GWeasy.GWOSCApp.master</qualifiedname>
+        <initializer>=  master</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="812" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="812" bodyend="-1"/>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a9f832065a5c7e195b4d99d93a0a7199f" compoundref="d6/d99/_g_weasy_8py" startline="861" endline="865">GWeasy.GWOSCApp.cef_loop</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.GWOSCApp.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="813" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="813" bodyend="-1"/>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522" compoundref="d6/d99/_g_weasy_8py" startline="1611" endline="1620">GWeasy.FFT.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d" compoundref="d6/d99/_g_weasy_8py" startline="1328" endline="1337">GWeasy.TimeSrswaveform.copy_url</referencedby>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469" compoundref="d6/d99/_g_weasy_8py" startline="1743" endline="1787">GWeasy.FFT.fft</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f" compoundref="d6/d99/_g_weasy_8py" startline="1462" endline="1512">GWeasy.TimeSrswaveform.plot_gw_event</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" compoundref="d6/d99/_g_weasy_8py" startline="2030" endline="2103">GWeasy.PSDs.psds</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::browser</definition>
+        <argsstring></argsstring>
+        <name>browser</name>
+        <qualifiedname>GWeasy.GWOSCApp.browser</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="814" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="814" bodyend="-1"/>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c" compoundref="d6/d99/_g_weasy_8py" startline="853" endline="860">GWeasy.GWOSCApp.create_browser</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a350a13129ff86fea29441ae27849c98a" compoundref="d6/d99/_g_weasy_8py" startline="874" endline="877">GWeasy.GWOSCApp.go_back</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab3acba2cd3f173e833a52e8aaf142b13" compoundref="d6/d99/_g_weasy_8py" startline="878" endline="881">GWeasy.GWOSCApp.go_forward</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab1baf3de1f243939e59b4fc61e2f7609" compoundref="d6/d99/_g_weasy_8py" startline="886" endline="891">GWeasy.GWOSCApp.load_url</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7298a36b9bd14857ec5abaf5ac4a9588" compoundref="d6/d99/_g_weasy_8py" startline="866" endline="873">GWeasy.GWOSCApp.on_resize</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a4ba56c85e771ea55e926633d1d511595" compoundref="d6/d99/_g_weasy_8py" startline="882" endline="885">GWeasy.GWOSCApp.reload_page</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ac08794c7d881fecc74b97651b37b151c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::navbar</definition>
+        <argsstring></argsstring>
+        <name>navbar</name>
+        <qualifiedname>GWeasy.GWOSCApp.navbar</qualifiedname>
+        <initializer>=  tk.Frame(<ref refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30" kindref="member">master</ref>, bg=&quot;gray&quot;, height=40)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="817" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="817" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a5fd28662abb166bab06d891af561bc67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::back_btn</definition>
+        <argsstring></argsstring>
+        <name>back_btn</name>
+        <qualifiedname>GWeasy.GWOSCApp.back_btn</qualifiedname>
+        <initializer>=  Button(self.navbar, text=&quot;◀&quot;, command=self.go_back)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="820" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="820" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a242da9b9d0be1898f672a661ec969866" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::forward_btn</definition>
+        <argsstring></argsstring>
+        <name>forward_btn</name>
+        <qualifiedname>GWeasy.GWOSCApp.forward_btn</qualifiedname>
+        <initializer>=  Button(self.navbar, text=&quot;▶&quot;, command=self.go_forward)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="823" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="823" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ad99702f54284fa21b654818e9f53389f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::reload_btn</definition>
+        <argsstring></argsstring>
+        <name>reload_btn</name>
+        <qualifiedname>GWeasy.GWOSCApp.reload_btn</qualifiedname>
+        <initializer>=  Button(self.navbar, text=&quot;🔄&quot;, command=self.reload_page)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="826" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7526c888cbf751d4e298e903f1defbb5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::url_entry</definition>
+        <argsstring></argsstring>
+        <name>url_entry</name>
+        <qualifiedname>GWeasy.GWOSCApp.url_entry</qualifiedname>
+        <initializer>=  Entry(self.navbar, width=50)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="829" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="829" bodyend="-1"/>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c" compoundref="d6/d99/_g_weasy_8py" startline="853" endline="860">GWeasy.GWOSCApp.create_browser</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab1baf3de1f243939e59b4fc61e2f7609" compoundref="d6/d99/_g_weasy_8py" startline="886" endline="891">GWeasy.GWOSCApp.load_url</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a2ec4551d2c3a78a30c47184895365b20" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::load_url</definition>
+        <argsstring></argsstring>
+        <name>load_url</name>
+        <qualifiedname>GWeasy.GWOSCApp.load_url</qualifiedname>
+        <initializer>= True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="831" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="831" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a83b2f1dd72ff15befa16af187663a765" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::browser_frame</definition>
+        <argsstring></argsstring>
+        <name>browser_frame</name>
+        <qualifiedname>GWeasy.GWOSCApp.browser_frame</qualifiedname>
+        <initializer>=  tk.Frame(<ref refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30" kindref="member">master</ref>, bg=&quot;black&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="834" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="834" bodyend="-1"/>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c" compoundref="d6/d99/_g_weasy_8py" startline="853" endline="860">GWeasy.GWOSCApp.create_browser</referencedby>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7298a36b9bd14857ec5abaf5ac4a9588" compoundref="d6/d99/_g_weasy_8py" startline="866" endline="873">GWeasy.GWOSCApp.on_resize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1af5020c9f28f2b95ba4d1c6a5704c904e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::init_cef</definition>
+        <argsstring></argsstring>
+        <name>init_cef</name>
+        <qualifiedname>GWeasy.GWOSCApp.init_cef</qualifiedname>
+        <initializer>= True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="838" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="838" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7b9baa73ff160ae0d8a090932c334501" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::on_resize</definition>
+        <argsstring></argsstring>
+        <name>on_resize</name>
+        <qualifiedname>GWeasy.GWOSCApp.on_resize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="839" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="839" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a69bf09479832f7fb11d77f6840b591ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::create_browser</definition>
+        <argsstring></argsstring>
+        <name>create_browser</name>
+        <qualifiedname>GWeasy.GWOSCApp.create_browser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="848" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a25f1e3083573d6ef58e40a5ff0eebbb8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GWOSCApp::cef_loop</definition>
+        <argsstring></argsstring>
+        <name>cef_loop</name>
+        <qualifiedname>GWeasy.GWOSCApp.cef_loop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="851" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="851" bodyend="-1"/>
+        <referencedby refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a9f832065a5c7e195b4d99d93a0a7199f" compoundref="d6/d99/_g_weasy_8py" startline="861" endline="865">GWeasy.GWOSCApp.cef_loop</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a05db5e1c35d33b7461e56565c78fe585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.__init__</definition>
+        <argsstring>(self, master, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.GWOSCApp.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30" kindref="member">master</ref></type>
+          <defname>master</defname>
+        </param>
+        <param>
+          <type><ref refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="811" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="811" bodyend="841"/>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a54082d6a5e7209dc995a25c44881dfc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.init_cef</definition>
+        <argsstring>(self)</argsstring>
+        <name>init_cef</name>
+        <qualifiedname>GWeasy.GWOSCApp.init_cef</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes CEF and creates the browser.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="842" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="842" bodyend="852"/>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.create_browser</definition>
+        <argsstring>(self)</argsstring>
+        <name>create_browser</name>
+        <qualifiedname>GWeasy.GWOSCApp.create_browser</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Embeds the browser inside the GWOSCRef tab.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="853" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="853" bodyend="860"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" compoundref="d6/d99/_g_weasy_8py" startline="814">GWeasy.GWOSCApp.browser</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a83b2f1dd72ff15befa16af187663a765" compoundref="d6/d99/_g_weasy_8py" startline="834">GWeasy.GWOSCApp.browser_frame</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7526c888cbf751d4e298e903f1defbb5" compoundref="d6/d99/_g_weasy_8py" startline="829">GWeasy.GWOSCApp.url_entry</references>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a9f832065a5c7e195b4d99d93a0a7199f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.cef_loop</definition>
+        <argsstring>(self)</argsstring>
+        <name>cef_loop</name>
+        <qualifiedname>GWeasy.GWOSCApp.cef_loop</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Runs CEF&apos;s message loop inside Tkinter&apos;s event loop.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="861" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="861" bodyend="865"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a25f1e3083573d6ef58e40a5ff0eebbb8" compoundref="d6/d99/_g_weasy_8py" startline="851">GWeasy.GWOSCApp.cef_loop</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30" compoundref="d6/d99/_g_weasy_8py" startline="812">GWeasy.GWOSCApp.master</references>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7298a36b9bd14857ec5abaf5ac4a9588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.on_resize</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>on_resize</name>
+        <qualifiedname>GWeasy.GWOSCApp.on_resize</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Handles resizing the browser when the window changes.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="866" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="866" bodyend="873"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" compoundref="d6/d99/_g_weasy_8py" startline="814">GWeasy.GWOSCApp.browser</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a83b2f1dd72ff15befa16af187663a765" compoundref="d6/d99/_g_weasy_8py" startline="834">GWeasy.GWOSCApp.browser_frame</references>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a350a13129ff86fea29441ae27849c98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.go_back</definition>
+        <argsstring>(self)</argsstring>
+        <name>go_back</name>
+        <qualifiedname>GWeasy.GWOSCApp.go_back</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="874" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="874" bodyend="877"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" compoundref="d6/d99/_g_weasy_8py" startline="814">GWeasy.GWOSCApp.browser</references>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab3acba2cd3f173e833a52e8aaf142b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.go_forward</definition>
+        <argsstring>(self)</argsstring>
+        <name>go_forward</name>
+        <qualifiedname>GWeasy.GWOSCApp.go_forward</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="878" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="878" bodyend="881"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" compoundref="d6/d99/_g_weasy_8py" startline="814">GWeasy.GWOSCApp.browser</references>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a4ba56c85e771ea55e926633d1d511595" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.reload_page</definition>
+        <argsstring>(self)</argsstring>
+        <name>reload_page</name>
+        <qualifiedname>GWeasy.GWOSCApp.reload_page</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="882" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="882" bodyend="885"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" compoundref="d6/d99/_g_weasy_8py" startline="814">GWeasy.GWOSCApp.browser</references>
+      </memberdef>
+      <memberdef kind="function" id="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab1baf3de1f243939e59b4fc61e2f7609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GWOSCApp.load_url</definition>
+        <argsstring>(self, event=None)</argsstring>
+        <name>load_url</name>
+        <qualifiedname>GWeasy.GWOSCApp.load_url</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>event</type>
+          <defname>event</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="886" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="886" bodyend="891"/>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" compoundref="d6/d99/_g_weasy_8py" startline="814">GWeasy.GWOSCApp.browser</references>
+        <references refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7526c888cbf751d4e298e903f1defbb5" compoundref="d6/d99/_g_weasy_8py" startline="829">GWeasy.GWOSCApp.url_entry</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="810" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="810" bodyend="891"/>
+    <listofallmembers>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a05db5e1c35d33b7461e56565c78fe585" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>__init__</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a5fd28662abb166bab06d891af561bc67" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>back_btn</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab17be2c8990aa9fdb34038db9e61926c" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>browser</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a83b2f1dd72ff15befa16af187663a765" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>browser_frame</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a25f1e3083573d6ef58e40a5ff0eebbb8" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>cef_loop</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a9f832065a5c7e195b4d99d93a0a7199f" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>cef_loop</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a69bf09479832f7fb11d77f6840b591ea" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>create_browser</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a1bb741bff392d751cc98da2ea1b36d0c" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>create_browser</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a242da9b9d0be1898f672a661ec969866" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>forward_btn</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a350a13129ff86fea29441ae27849c98a" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>go_back</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab3acba2cd3f173e833a52e8aaf142b13" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>go_forward</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1af5020c9f28f2b95ba4d1c6a5704c904e" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>init_cef</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a54082d6a5e7209dc995a25c44881dfc9" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>init_cef</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a2ec4551d2c3a78a30c47184895365b20" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>load_url</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ab1baf3de1f243939e59b4fc61e2f7609" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>load_url</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ace644dfe251fbcb2425d035c21e8ea30" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>master</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ac08794c7d881fecc74b97651b37b151c" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>navbar</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7b9baa73ff160ae0d8a090932c334501" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>on_resize</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7298a36b9bd14857ec5abaf5ac4a9588" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>on_resize</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1ad99702f54284fa21b654818e9f53389f" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>reload_btn</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a4ba56c85e771ea55e926633d1d511595" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>reload_page</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a977d01be0fa607ad542f8f63ed4581e6" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>root</name></member>
+      <member refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app_1a7526c888cbf751d4e298e903f1defbb5" prot="public" virt="non-virtual"><scope>GWeasy::GWOSCApp</scope><name>url_entry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

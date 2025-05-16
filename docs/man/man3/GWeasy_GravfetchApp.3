@@ -1,0 +1,245 @@
+.TH "GWeasy.GravfetchApp" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.GravfetchApp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBsetup_execution_tab\fP (self)"
+.br
+.ti -1c
+.RI "\fBselect_time_csv\fP (self)"
+.br
+.ti -1c
+.RI "\fBselect_channel_csv\fP (self)"
+.br
+.ti -1c
+.RI "\fBselect_gwfout_dir\fP (self)"
+.br
+.ti -1c
+.RI "\fBtoggle_execution\fP (self)"
+.br
+.ti -1c
+.RI "\fBrun_gravfetch_script\fP (self)"
+.br
+.ti -1c
+.RI "\fBappend_output\fP (self, text)"
+.br
+.ti -1c
+.RI "\fBsave_channel_history\fP (self)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "str \fBtime_csv_file\fP = ''"
+.br
+.ti -1c
+.RI "str \fBchannel_csv_file\fP = ''"
+.br
+.ti -1c
+.RI "bool \fBexecution_running\fP = False"
+.br
+.ti -1c
+.RI "\fBprocess\fP = None"
+.br
+.ti -1c
+.RI "str \fBgwfout_path\fP = '\&./gwfout/'"
+.br
+.ti -1c
+.RI "list \fBloaded_channels\fP = []"
+.br
+.ti -1c
+.RI "\fBterminal\fP = \fBTerminalFrame\fP(self\&.root, row=5, column=0, columnspan=2, height=20, width=80)"
+.br
+.ti -1c
+.RI "\fBstatus_bar_frame\fP = tk\&.Frame(self\&.root, bg='lightgray')"
+.br
+.ti -1c
+.RI "\fBstatus_label\fP = tk\&.Label(self\&.status_bar_frame, text='Idle', fg='black', bg='lightgray', anchor='w')"
+.br
+.ti -1c
+.RI "\fBtime_button\fP = tk\&.Button(self\&.root, text='Select Time CSV', command=self\&.select_time_csv)"
+.br
+.ti -1c
+.RI "\fBchannel_button\fP = tk\&.Button(self\&.root, text='Select Channel CSV', command=self\&.select_channel_csv)"
+.br
+.ti -1c
+.RI "\fBgwf_button\fP = tk\&.Button(self\&.root, text='Select Output (GWF) Dir', command=self\&.select_gwfout_dir)"
+.br
+.ti -1c
+.RI "\fBstart_stop_button\fP = tk\&.Button(self\&.root, text='Start Execution', command=self\&.toggle_execution)"
+.br
+.ti -1c
+.RI "\fBexecution_thread\fP = threading\&.Thread(target=self\&.run_gravfetch_script, daemon=True)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB605\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.GravfetchApp\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB606\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.GravfetchApp\&.append_output ( self,  text)"
+
+.PP
+.nf
+Send output to the terminal
+.fi
+.PP
+ 
+.PP
+Definition at line \fB797\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.run_gravfetch_script ( self)"
+
+.PP
+.nf
+Runs the Gravfetch script logic directly within the GUI\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB700\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.save_channel_history ( self)"
+
+.PP
+.nf
+Save the selected channels to a JSON file for persistence\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB800\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.select_channel_csv ( self)"
+
+.PP
+.nf
+Open file dialog for channel CSV file\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB660\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.select_gwfout_dir ( self)"
+
+.PP
+.nf
+Open file dialog for output dir (folder) selection\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB665\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.select_time_csv ( self)"
+
+.PP
+.nf
+Open file dialog for time CSV file\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB655\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.setup_execution_tab ( self)"
+
+.PP
+.nf
+Sets up the Execution tab with buttons, output terminal, etc\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB630\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.toggle_execution ( self)"
+
+.PP
+.nf
+Start or stop the execution of the Gravfetch script\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB675\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.GravfetchApp\&.channel_button = tk\&.Button(self\&.root, text='Select Channel CSV', command=self\&.select_channel_csv)"
+
+.PP
+Definition at line \fB643\fP of file \fBGWeasy\&.py\fP\&.
+.SS "str GWeasy\&.GravfetchApp\&.channel_csv_file = ''"
+
+.PP
+Definition at line \fB609\fP of file \fBGWeasy\&.py\fP\&.
+.SS "bool GWeasy\&.GravfetchApp\&.execution_running = False"
+
+.PP
+Definition at line \fB610\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.execution_thread = threading\&.Thread(target=self\&.run_gravfetch_script, daemon=True)"
+
+.PP
+Definition at line \fB697\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.gwf_button = tk\&.Button(self\&.root, text='Select Output (GWF) Dir', command=self\&.select_gwfout_dir)"
+
+.PP
+Definition at line \fB645\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.gwfout_path = '\&./gwfout/'"
+
+.PP
+Definition at line \fB612\fP of file \fBGWeasy\&.py\fP\&.
+.SS "list GWeasy\&.GravfetchApp\&.loaded_channels = []"
+
+.PP
+Definition at line \fB613\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.process = None"
+
+.PP
+Definition at line \fB611\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.root = root"
+
+.PP
+Definition at line \fB607\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.start_stop_button = tk\&.Button(self\&.root, text='Start Execution', command=self\&.toggle_execution)"
+
+.PP
+Definition at line \fB649\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.status_bar_frame = tk\&.Frame(self\&.root, bg='lightgray')"
+
+.PP
+Definition at line \fB633\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.status_label = tk\&.Label(self\&.status_bar_frame, text='Idle', fg='black', bg='lightgray', anchor='w')"
+
+.PP
+Definition at line \fB637\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.terminal = \fBTerminalFrame\fP(self\&.root, row=5, column=0, columnspan=2, height=20, width=80)"
+
+.PP
+Definition at line \fB628\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.GravfetchApp\&.time_button = tk\&.Button(self\&.root, text='Select Time CSV', command=self\&.select_time_csv)"
+
+.PP
+Definition at line \fB641\fP of file \fBGWeasy\&.py\fP\&.
+.SS "str GWeasy\&.GravfetchApp\&.time_csv_file = ''"
+
+.PP
+Definition at line \fB608\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

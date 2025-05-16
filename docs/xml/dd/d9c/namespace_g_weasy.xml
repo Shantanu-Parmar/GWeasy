@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dd/d9c/namespace_g_weasy" kind="namespace" language="Python">
+    <compoundname>GWeasy</compoundname>
+    <innerclass refid="d4/d49/class_g_weasy_1_1_application" prot="public">GWeasy::Application</innerclass>
+    <innerclass refid="de/db4/class_g_weasy_1_1_f_f_t" prot="public">GWeasy::FFT</innerclass>
+    <innerclass refid="d8/d0c/class_g_weasy_1_1_gravfetch_app" prot="public">GWeasy::GravfetchApp</innerclass>
+    <innerclass refid="df/de5/class_g_weasy_1_1_g_w_o_s_c_app" prot="public">GWeasy::GWOSCApp</innerclass>
+    <innerclass refid="d6/d74/class_g_weasy_1_1_omicron_app" prot="public">GWeasy::OmicronApp</innerclass>
+    <innerclass refid="da/da4/class_g_weasy_1_1_omiviz" prot="public">GWeasy::Omiviz</innerclass>
+    <innerclass refid="dc/da1/class_g_weasy_1_1_p_s_ds" prot="public">GWeasy::PSDs</innerclass>
+    <innerclass refid="d8/d2c/class_g_weasy_1_1_spectrogram" prot="public">GWeasy::Spectrogram</innerclass>
+    <innerclass refid="dd/db1/class_g_weasy_1_1_terminal_frame" prot="public">GWeasy::TerminalFrame</innerclass>
+    <innerclass refid="d5/d54/class_g_weasy_1_1_time_srswaveform" prot="public">GWeasy::TimeSrswaveform</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="dd/d9c/namespace_g_weasy_1aadd942b7e384f53231f90808fd59daf6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <qualifiedname>GWeasy.filename</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="27" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d9c/namespace_g_weasy_1aa0d500f63f52ea5eb9b3f4d39782328f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <qualifiedname>GWeasy.level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="28" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d9c/namespace_g_weasy_1ab3c2ebee4c4cb7c1b663be24a71b904c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.format</definition>
+        <argsstring></argsstring>
+        <name>format</name>
+        <qualifiedname>GWeasy.format</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="29" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d9c/namespace_g_weasy_1aef4518f6a9a83e5451e9aed5ebc7c1e8" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str GWeasy.HISTORY_FILE</definition>
+        <argsstring></argsstring>
+        <name>HISTORY_FILE</name>
+        <qualifiedname>GWeasy.HISTORY_FILE</qualifiedname>
+        <initializer>=  &quot;gravfetch_history.json&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="31" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d9c/namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.root</qualifiedname>
+        <initializer>=  tk.Tk()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2315" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d9c/namespace_g_weasy_1a2125844c45bf2046cfb55dcd033ead6c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.app</definition>
+        <argsstring></argsstring>
+        <name>app</name>
+        <qualifiedname>GWeasy.app</qualifiedname>
+        <initializer>=  <ref refid="d4/d49/class_g_weasy_1_1_application" kindref="compound">Application</ref>(<ref refid="dd/d9c/namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade" kindref="member">root</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="2316" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="2316" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_application" xml:lang="en-US">
+<title>GWeasy.Application Class Reference</title>
+<indexterm><primary>GWeasy.Application</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a6a82475449f5f569d6c70edffb38e053">__init__</link> (self, <link linkend="_class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509">root</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509">root</link> = root</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a8cee61c03f2fd253874edc49a950f995">notebook</link> = ttk.Notebook(self.root)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a76a7c0e4dde8ef63f78c02a265986eb5">gwosc_tab</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a241f6a3220ed2ef836595a1e6ebbd764">gravfetch_tab</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a45fc9a76c5105fe9cc8807f504e6566b">omicron_tab</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a7bc6ab7c3130c8de427616eb7c4ea3f9">omiviz_tab</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1ae0f2627098c0d7f97c3ae23ce788d48a">TimeSeriesWav</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a7bf75c5cd17d3a8ee6dc65ac544dfabb">FFT</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1ae2f975d1b87b7ef8a6748fd27af74a73">PSDs</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1afcde0fb66e24e27244fcdd4c511945da">Spectrogram</link> = ttk.Frame(self.notebook)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a3225ec3d521f18af44236da7fae45879">gravfetch_app</link> = <link linkend="_class_g_weasy_1_1_gravfetch_app">GravfetchApp</link>(self.gravfetch_tab)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1ad0eb78803237bf932019e67ddee546e2">omicron_app</link> = <link linkend="_class_g_weasy_1_1_omicron_app">OmicronApp</link>(self.omicron_tab)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1a62ad26c38e1c1f15d75c11000b57cb9f">omiviz_app</link> = <link linkend="_class_g_weasy_1_1_omiviz">Omiviz</link>(self.omiviz_tab)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_application_1adfc418e37a5a0609e7894e442378e569">TimeSeriesWav_app</link> = <link linkend="_class_g_weasy_1_1_time_srswaveform">TimeSrswaveform</link>(self.TimeSeriesWav)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00034">34</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_application_1a6a82475449f5f569d6c70edffb38e053"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00036">36</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_application_1a7bf75c5cd17d3a8ee6dc65ac544dfabb"/><section>
+    <title>FFT</title>
+<indexterm><primary>FFT</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>FFT</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.FFT = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00065">65</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a3225ec3d521f18af44236da7fae45879"/><section>
+    <title>gravfetch_app</title>
+<indexterm><primary>gravfetch_app</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>gravfetch_app</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.gravfetch_app = <link linkend="_class_g_weasy_1_1_gravfetch_app">GravfetchApp</link>(self.gravfetch_tab)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00075">75</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a241f6a3220ed2ef836595a1e6ebbd764"/><section>
+    <title>gravfetch_tab</title>
+<indexterm><primary>gravfetch_tab</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>gravfetch_tab</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.gravfetch_tab = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00051">51</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a76a7c0e4dde8ef63f78c02a265986eb5"/><section>
+    <title>gwosc_tab</title>
+<indexterm><primary>gwosc_tab</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>gwosc_tab</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.gwosc_tab = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00047">47</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a8cee61c03f2fd253874edc49a950f995"/><section>
+    <title>notebook</title>
+<indexterm><primary>notebook</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>notebook</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.notebook = ttk.Notebook(self.root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00041">41</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1ad0eb78803237bf932019e67ddee546e2"/><section>
+    <title>omicron_app</title>
+<indexterm><primary>omicron_app</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>omicron_app</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.omicron_app = <link linkend="_class_g_weasy_1_1_omicron_app">OmicronApp</link>(self.omicron_tab)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00076">76</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a45fc9a76c5105fe9cc8807f504e6566b"/><section>
+    <title>omicron_tab</title>
+<indexterm><primary>omicron_tab</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>omicron_tab</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.omicron_tab = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00055">55</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a62ad26c38e1c1f15d75c11000b57cb9f"/><section>
+    <title>omiviz_app</title>
+<indexterm><primary>omiviz_app</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>omiviz_app</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.omiviz_app = <link linkend="_class_g_weasy_1_1_omiviz">Omiviz</link>(self.omiviz_tab)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00077">77</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a7bc6ab7c3130c8de427616eb7c4ea3f9"/><section>
+    <title>omiviz_tab</title>
+<indexterm><primary>omiviz_tab</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>omiviz_tab</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.omiviz_tab = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00059">59</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1ae2f975d1b87b7ef8a6748fd27af74a73"/><section>
+    <title>PSDs</title>
+<indexterm><primary>PSDs</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>PSDs</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.PSDs = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00068">68</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00037">37</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1afcde0fb66e24e27244fcdd4c511945da"/><section>
+    <title>Spectrogram</title>
+<indexterm><primary>Spectrogram</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>Spectrogram</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.Spectrogram = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00071">71</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1ae0f2627098c0d7f97c3ae23ce788d48a"/><section>
+    <title>TimeSeriesWav</title>
+<indexterm><primary>TimeSeriesWav</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>TimeSeriesWav</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.TimeSeriesWav = ttk.Frame(self.notebook)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00062">62</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_application_1adfc418e37a5a0609e7894e442378e569"/><section>
+    <title>TimeSeriesWav_app</title>
+<indexterm><primary>TimeSeriesWav_app</primary><secondary>GWeasy.Application</secondary></indexterm>
+<indexterm><primary>GWeasy.Application</primary><secondary>TimeSeriesWav_app</secondary></indexterm>
+<para><computeroutput>GWeasy.Application.TimeSeriesWav_app = <link linkend="_class_g_weasy_1_1_time_srswaveform">TimeSrswaveform</link>(self.TimeSeriesWav)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00078">78</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

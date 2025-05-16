@@ -1,0 +1,365 @@
+\doxysection{GWeasy.\+Spectrogram Class Reference}
+\hypertarget{class_g_weasy_1_1_spectrogram}{}\label{class_g_weasy_1_1_spectrogram}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_ae05c1f016c9d273efa71a24b7713af4d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a3d5dd69e5d05efe6623fa659d865b0d8}{prefetch\+\_\+data}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a7291c33d9e508156503957083fd112a5}{fetch\+\_\+events}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a989be89e023f24e09097ca00b4be9944}{fetch\+\_\+event\+\_\+details}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_afae14744aa7295002eae7215fa541065}{toggle\+\_\+mode}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a126f3ea58074849a1bd2883cf2bc3e64}{convert\+\_\+time}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a6f77b2386b99cb766cbdebb22ddf97cc}{specgrams}} (self, detectors, gps\+\_\+start, gps\+\_\+end, fftlengths, window, overlap)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}} = root
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a7fa10389483b38284cd7f3d4d010384e}{canvas}} = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a266513f31bd3a9b75881c26a5379e03a}{scroll\+\_\+y}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a675ca33ba028bdddb3d4bc07800ffb9e}{scroll\+\_\+x}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a23f874ab153037c9d11a51d28c904722}{frame}} = ttk.\+Frame(self.\+canvas)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a63bd7841e8e4b11a4faef0bc4a09e56e}{catalog\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_ad7033ce91e8366821b77c5931838ff61}{fetch\+\_\+events}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a389378ec31af92bac25c051735797c4f}{event\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a055c98da576cf33171c46cb84d760944}{fetch\+\_\+event\+\_\+details}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_ae847a669aa30379518d604d9ef90ba2d}{detector\+\_\+dropdown}} = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, height=3)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_accc042ffd94417f9d3ab1bf91a7cc214}{gps\+\_\+start\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_aa8da07073e285070da1b6f126f2dd90b}{gps\+\_\+end\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a579af3fa738faf53dbd57e3a36325386}{fft\+\_\+length\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=10)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a29ab2b276277eb781dbd2bb1a4cf6bc6}{window\+\_\+entry}} = ttk.\+Combobox(input\+\_\+frame, width=10, values=\mbox{[}"{}hann"{}, "{}option2"{}\mbox{]}, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a9f4722fb6493eae02715740a4f0798b4}{overlap\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a38db51ea2a11622dfd341601afa9b1f7}{mode}} = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a1f6b0297e201db1418f3f8d4a08220b2}{convert\+\_\+entry}} = ttk.\+Entry(conversion\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_af543d8cedad185aeda38cfc44a53f2b5}{convert\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a44f095854615a5ce528f6742a65d3639}{result\+\_\+label}} = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_af8842a6b6dfc4455ad17c2b4459462bf}{toggle\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a0884ff97c5014c05ad45f7d7d2fc7ec6}{plot\+\_\+button}} = tk.\+Button(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}}, text="{}Plot Time\+Series"{}, command=lambda\+: self.\+specgrams(\mbox{[}self.\+detector\+\_\+dropdown.\+get(idx) for idx in self.\+detector\+\_\+dropdown.\+curselection()\mbox{]},gps\+\_\+start=float(self.\+gps\+\_\+start\+\_\+entry.\+get()),gps\+\_\+end = float(self.\+gps\+\_\+end\+\_\+entry.\+get()),fftlengths=int(self.\+fft\+\_\+length\+\_\+entry.\+get()),window=self.\+window\+\_\+entry.\+get(),overlap=self.\+overlap\+\_\+entry.\+get()))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02107}{2107}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_weasy_1_1_spectrogram_ae05c1f016c9d273efa71a24b7713af4d}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_ae05c1f016c9d273efa71a24b7713af4d} 
+GWeasy.\+Spectrogram.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02108}{2108}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_weasy_1_1_spectrogram_a126f3ea58074849a1bd2883cf2bc3e64}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!convert\_time@{convert\_time}}
+\index{convert\_time@{convert\_time}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{convert\_time()}{convert\_time()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a126f3ea58074849a1bd2883cf2bc3e64} 
+GWeasy.\+Spectrogram.\+convert\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02248}{2248}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a989be89e023f24e09097ca00b4be9944}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details()}{fetch\_event\_details()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a989be89e023f24e09097ca00b4be9944} 
+GWeasy.\+Spectrogram.\+fetch\+\_\+event\+\_\+details (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02224}{2224}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a7291c33d9e508156503957083fd112a5}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{fetch\_events()}{fetch\_events()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a7291c33d9e508156503957083fd112a5} 
+GWeasy.\+Spectrogram.\+fetch\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02209}{2209}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a3d5dd69e5d05efe6623fa659d865b0d8}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!prefetch\_data@{prefetch\_data}}
+\index{prefetch\_data@{prefetch\_data}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{prefetch\_data()}{prefetch\_data()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a3d5dd69e5d05efe6623fa659d865b0d8} 
+GWeasy.\+Spectrogram.\+prefetch\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02198}{2198}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a6f77b2386b99cb766cbdebb22ddf97cc}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!specgrams@{specgrams}}
+\index{specgrams@{specgrams}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{specgrams()}{specgrams()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a6f77b2386b99cb766cbdebb22ddf97cc} 
+GWeasy.\+Spectrogram.\+specgrams (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{detectors}{, }\item[{}]{gps\+\_\+start}{, }\item[{}]{gps\+\_\+end}{, }\item[{}]{fftlengths}{, }\item[{}]{window}{, }\item[{}]{overlap}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02267}{2267}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_afae14744aa7295002eae7215fa541065}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!toggle\_mode@{toggle\_mode}}
+\index{toggle\_mode@{toggle\_mode}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{toggle\_mode()}{toggle\_mode()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_afae14744aa7295002eae7215fa541065} 
+GWeasy.\+Spectrogram.\+toggle\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02239}{2239}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_weasy_1_1_spectrogram_a7fa10389483b38284cd7f3d4d010384e}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!canvas@{canvas}}
+\index{canvas@{canvas}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a7fa10389483b38284cd7f3d4d010384e} 
+GWeasy.\+Spectrogram.\+canvas = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02114}{2114}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a63bd7841e8e4b11a4faef0bc4a09e56e}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!catalog\_dropdown@{catalog\_dropdown}}
+\index{catalog\_dropdown@{catalog\_dropdown}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{catalog\_dropdown}{catalog\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a63bd7841e8e4b11a4faef0bc4a09e56e} 
+GWeasy.\+Spectrogram.\+catalog\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02134}{2134}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_af543d8cedad185aeda38cfc44a53f2b5}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!convert\_button@{convert\_button}}
+\index{convert\_button@{convert\_button}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{convert\_button}{convert\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_af543d8cedad185aeda38cfc44a53f2b5} 
+GWeasy.\+Spectrogram.\+convert\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02183}{2183}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a1f6b0297e201db1418f3f8d4a08220b2}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!convert\_entry@{convert\_entry}}
+\index{convert\_entry@{convert\_entry}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{convert\_entry}{convert\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a1f6b0297e201db1418f3f8d4a08220b2} 
+GWeasy.\+Spectrogram.\+convert\+\_\+entry = ttk.\+Entry(conversion\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02180}{2180}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_ae847a669aa30379518d604d9ef90ba2d}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!detector\_dropdown@{detector\_dropdown}}
+\index{detector\_dropdown@{detector\_dropdown}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{detector\_dropdown}{detector\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_ae847a669aa30379518d604d9ef90ba2d} 
+GWeasy.\+Spectrogram.\+detector\+\_\+dropdown = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, height=3)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02146}{2146}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a389378ec31af92bac25c051735797c4f}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!event\_dropdown@{event\_dropdown}}
+\index{event\_dropdown@{event\_dropdown}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{event\_dropdown}{event\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a389378ec31af92bac25c051735797c4f} 
+GWeasy.\+Spectrogram.\+event\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02140}{2140}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a055c98da576cf33171c46cb84d760944}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details}{fetch\_event\_details}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a055c98da576cf33171c46cb84d760944} 
+GWeasy.\+Spectrogram.\+fetch\+\_\+event\+\_\+details = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02142}{2142}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_ad7033ce91e8366821b77c5931838ff61}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{fetch\_events}{fetch\_events}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_ad7033ce91e8366821b77c5931838ff61} 
+GWeasy.\+Spectrogram.\+fetch\+\_\+events = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02136}{2136}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a579af3fa738faf53dbd57e3a36325386}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!fft\_length\_entry@{fft\_length\_entry}}
+\index{fft\_length\_entry@{fft\_length\_entry}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{fft\_length\_entry}{fft\_length\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a579af3fa738faf53dbd57e3a36325386} 
+GWeasy.\+Spectrogram.\+fft\+\_\+length\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=10)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02163}{2163}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a23f874ab153037c9d11a51d28c904722}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!frame@{frame}}
+\index{frame@{frame}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a23f874ab153037c9d11a51d28c904722} 
+GWeasy.\+Spectrogram.\+frame = ttk.\+Frame(self.\+canvas)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02120}{2120}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_aa8da07073e285070da1b6f126f2dd90b}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!gps\_end\_entry@{gps\_end\_entry}}
+\index{gps\_end\_entry@{gps\_end\_entry}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{gps\_end\_entry}{gps\_end\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_aa8da07073e285070da1b6f126f2dd90b} 
+GWeasy.\+Spectrogram.\+gps\+\_\+end\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02158}{2158}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_accc042ffd94417f9d3ab1bf91a7cc214}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!gps\_start\_entry@{gps\_start\_entry}}
+\index{gps\_start\_entry@{gps\_start\_entry}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{gps\_start\_entry}{gps\_start\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_accc042ffd94417f9d3ab1bf91a7cc214} 
+GWeasy.\+Spectrogram.\+gps\+\_\+start\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02154}{2154}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a38db51ea2a11622dfd341601afa9b1f7}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!mode@{mode}}
+\index{mode@{mode}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a38db51ea2a11622dfd341601afa9b1f7} 
+GWeasy.\+Spectrogram.\+mode = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02176}{2176}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a9f4722fb6493eae02715740a4f0798b4}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!overlap\_entry@{overlap\_entry}}
+\index{overlap\_entry@{overlap\_entry}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{overlap\_entry}{overlap\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a9f4722fb6493eae02715740a4f0798b4} 
+GWeasy.\+Spectrogram.\+overlap\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02172}{2172}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a0884ff97c5014c05ad45f7d7d2fc7ec6}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!plot\_button@{plot\_button}}
+\index{plot\_button@{plot\_button}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{plot\_button}{plot\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a0884ff97c5014c05ad45f7d7d2fc7ec6} 
+GWeasy.\+Spectrogram.\+plot\+\_\+button = tk.\+Button(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}}, text="{}Plot Time\+Series"{}, command=lambda\+: self.\+specgrams(\mbox{[}self.\+detector\+\_\+dropdown.\+get(idx) for idx in self.\+detector\+\_\+dropdown.\+curselection()\mbox{]},gps\+\_\+start=float(self.\+gps\+\_\+start\+\_\+entry.\+get()),gps\+\_\+end = float(self.\+gps\+\_\+end\+\_\+entry.\+get()),fftlengths=int(self.\+fft\+\_\+length\+\_\+entry.\+get()),window=self.\+window\+\_\+entry.\+get(),overlap=self.\+overlap\+\_\+entry.\+get()))}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02194}{2194}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a44f095854615a5ce528f6742a65d3639}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!result\_label@{result\_label}}
+\index{result\_label@{result\_label}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{result\_label}{result\_label}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a44f095854615a5ce528f6742a65d3639} 
+GWeasy.\+Spectrogram.\+result\+\_\+label = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02186}{2186}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!root@{root}}
+\index{root@{root}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde} 
+GWeasy.\+Spectrogram.\+root = root}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02109}{2109}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a675ca33ba028bdddb3d4bc07800ffb9e}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!scroll\_x@{scroll\_x}}
+\index{scroll\_x@{scroll\_x}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{scroll\_x}{scroll\_x}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a675ca33ba028bdddb3d4bc07800ffb9e} 
+GWeasy.\+Spectrogram.\+scroll\+\_\+x = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02116}{2116}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a266513f31bd3a9b75881c26a5379e03a}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!scroll\_y@{scroll\_y}}
+\index{scroll\_y@{scroll\_y}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{scroll\_y}{scroll\_y}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a266513f31bd3a9b75881c26a5379e03a} 
+GWeasy.\+Spectrogram.\+scroll\+\_\+y = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_spectrogram_a2b9aab81a6e3e968845305188413bfde}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02115}{2115}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_af8842a6b6dfc4455ad17c2b4459462bf}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!toggle\_button@{toggle\_button}}
+\index{toggle\_button@{toggle\_button}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{toggle\_button}{toggle\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_af8842a6b6dfc4455ad17c2b4459462bf} 
+GWeasy.\+Spectrogram.\+toggle\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02189}{2189}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_spectrogram_a29ab2b276277eb781dbd2bb1a4cf6bc6}\index{GWeasy.Spectrogram@{GWeasy.Spectrogram}!window\_entry@{window\_entry}}
+\index{window\_entry@{window\_entry}!GWeasy.Spectrogram@{GWeasy.Spectrogram}}
+\doxysubsubsection{\texorpdfstring{window\_entry}{window\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_spectrogram_a29ab2b276277eb781dbd2bb1a4cf6bc6} 
+GWeasy.\+Spectrogram.\+window\+\_\+entry = ttk.\+Combobox(input\+\_\+frame, width=10, values=\mbox{[}"{}hann"{}, "{}option2"{}\mbox{]}, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02167}{2167}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy/\mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}\end{DoxyCompactItemize}

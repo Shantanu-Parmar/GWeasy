@@ -1,0 +1,1041 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d6/d74/class_g_weasy_1_1_omicron_app" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::OmicronApp</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.OmicronApp.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="108" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="108" bodyend="-1"/>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522" compoundref="d6/d99/_g_weasy_8py" startline="1611" endline="1620">GWeasy.FFT.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d" compoundref="d6/d99/_g_weasy_8py" startline="1328" endline="1337">GWeasy.TimeSrswaveform.copy_url</referencedby>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469" compoundref="d6/d99/_g_weasy_8py" startline="1743" endline="1787">GWeasy.FFT.fft</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181" compoundref="d6/d99/_g_weasy_8py" startline="517" endline="581">GWeasy.OmicronApp.open_custom_segs_dialog</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f" compoundref="d6/d99/_g_weasy_8py" startline="1462" endline="1512">GWeasy.TimeSrswaveform.plot_gw_event</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" compoundref="d6/d99/_g_weasy_8py" startline="2030" endline="2103">GWeasy.PSDs.psds</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1aa0302f689a9f20b74a22d71830c5b702" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>GWeasy.OmicronApp::config_path</definition>
+        <argsstring></argsstring>
+        <name>config_path</name>
+        <qualifiedname>GWeasy.OmicronApp.config_path</qualifiedname>
+        <initializer>=  &quot;config.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="109" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="109" bodyend="-1"/>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef" compoundref="d6/d99/_g_weasy_8py" startline="392" endline="401">GWeasy.OmicronApp.load_config</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f" compoundref="d6/d99/_g_weasy_8py" startline="402" endline="448">GWeasy.OmicronApp.save_config</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict GWeasy.OmicronApp::config_data</definition>
+        <argsstring></argsstring>
+        <name>config_data</name>
+        <qualifiedname>GWeasy.OmicronApp.config_data</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="110" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="110" bodyend="-1"/>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42" compoundref="d6/d99/_g_weasy_8py" startline="275" endline="283">GWeasy.OmicronApp.create_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab" compoundref="d6/d99/_g_weasy_8py" startline="284" endline="297">GWeasy.OmicronApp.create_editable_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f" compoundref="d6/d99/_g_weasy_8py" startline="182" endline="189">GWeasy.OmicronApp.create_entry</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" compoundref="d6/d99/_g_weasy_8py" startline="203" endline="213">GWeasy.OmicronApp.create_file_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" compoundref="d6/d99/_g_weasy_8py" startline="214" endline="261">GWeasy.OmicronApp.create_folder_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3" compoundref="d6/d99/_g_weasy_8py" startline="262" endline="274">GWeasy.OmicronApp.create_output_products_selection</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d" compoundref="d6/d99/_g_weasy_8py" startline="298" endline="306">GWeasy.OmicronApp.create_slider</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef" compoundref="d6/d99/_g_weasy_8py" startline="392" endline="401">GWeasy.OmicronApp.load_config</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a872dffa01de2eeb3f53abee58340039f" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict GWeasy.OmicronApp::entries</definition>
+        <argsstring></argsstring>
+        <name>entries</name>
+        <qualifiedname>GWeasy.OmicronApp.entries</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="111" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1aaa66b47647ca1d949ca8bf48f7c400ad" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict GWeasy.OmicronApp::output_products</definition>
+        <argsstring></argsstring>
+        <name>output_products</name>
+        <qualifiedname>GWeasy.OmicronApp.output_products</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="112" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" prot="public" static="no" mutable="no">
+        <type>dict</type>
+        <definition>dict GWeasy.OmicronApp::ui_elements</definition>
+        <argsstring></argsstring>
+        <name>ui_elements</name>
+        <qualifiedname>GWeasy.OmicronApp.ui_elements</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="113" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="113" bodyend="-1"/>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e" compoundref="d6/d99/_g_weasy_8py" startline="307" endline="384">GWeasy.OmicronApp.create_channel_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aae3ceec7effb9245d1ebd3cc6a3df53b" compoundref="d6/d99/_g_weasy_8py" startline="190" endline="201">GWeasy.OmicronApp.create_double_entry</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42" compoundref="d6/d99/_g_weasy_8py" startline="275" endline="283">GWeasy.OmicronApp.create_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab" compoundref="d6/d99/_g_weasy_8py" startline="284" endline="297">GWeasy.OmicronApp.create_editable_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f" compoundref="d6/d99/_g_weasy_8py" startline="182" endline="189">GWeasy.OmicronApp.create_entry</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" compoundref="d6/d99/_g_weasy_8py" startline="203" endline="213">GWeasy.OmicronApp.create_file_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" compoundref="d6/d99/_g_weasy_8py" startline="214" endline="261">GWeasy.OmicronApp.create_folder_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3" compoundref="d6/d99/_g_weasy_8py" startline="262" endline="274">GWeasy.OmicronApp.create_output_products_selection</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d" compoundref="d6/d99/_g_weasy_8py" startline="298" endline="306">GWeasy.OmicronApp.create_slider</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a05489b453fa5815ad0a62bc11fb14df4" compoundref="d6/d99/_g_weasy_8py" startline="582" endline="604">GWeasy.OmicronApp.generate_fin_ffl</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1aa7fea33189709387c6cfb10249f15d91" compoundref="d6/d99/_g_weasy_8py" startline="1068" endline="1129">GWeasy.Omiviz.run_omicron_plot</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f" compoundref="d6/d99/_g_weasy_8py" startline="402" endline="448">GWeasy.OmicronApp.save_config</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a" compoundref="d6/d99/_g_weasy_8py" startline="1030" endline="1067">GWeasy.Omiviz.select_file_or_folder</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f" compoundref="d6/d99/_g_weasy_8py" startline="457" endline="512">GWeasy.OmicronApp.start_omicron_process</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1ac7d7079e14bdb8e56ca13cdddd8f2c7c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::project_dir</definition>
+        <argsstring></argsstring>
+        <name>project_dir</name>
+        <qualifiedname>GWeasy.OmicronApp.project_dir</qualifiedname>
+        <initializer>=  os.getcwd().replace(&quot;\\&quot;, &quot;/&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="115" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1abbab46b706328fa4b2a4971f450c2a84" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str GWeasy.OmicronApp::wsl_project_dir</definition>
+        <argsstring></argsstring>
+        <name>wsl_project_dir</name>
+        <qualifiedname>GWeasy.OmicronApp.wsl_project_dir</qualifiedname>
+        <initializer>=  f&quot;/mnt/{self.project_dir[0].lower()}/{self.project_dir[2:]}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="116" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1ad1ef1213f5691fea6949a5887b2a4377" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str GWeasy.OmicronApp::GWFOUT_DIRECTORY</definition>
+        <argsstring></argsstring>
+        <name>GWFOUT_DIRECTORY</name>
+        <qualifiedname>GWeasy.OmicronApp.GWFOUT_DIRECTORY</qualifiedname>
+        <initializer>=  &quot;./gwfout&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="118" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a0054f3404083e75866d935cd64b369cf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::canvas</definition>
+        <argsstring></argsstring>
+        <name>canvas</name>
+        <qualifiedname>GWeasy.OmicronApp.canvas</qualifiedname>
+        <initializer>=  tk.Canvas(<ref refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" kindref="member">root</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="121" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a148f8bc6a6b3af1a8e25020bc2d7a443" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::scrollbar</definition>
+        <argsstring></argsstring>
+        <name>scrollbar</name>
+        <qualifiedname>GWeasy.OmicronApp.scrollbar</qualifiedname>
+        <initializer>=  ttk.Scrollbar(<ref refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" kindref="member">root</ref>, orient=&quot;vertical&quot;, command=self.canvas.yview)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="122" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::scrollable_frame</definition>
+        <argsstring></argsstring>
+        <name>scrollable_frame</name>
+        <qualifiedname>GWeasy.OmicronApp.scrollable_frame</qualifiedname>
+        <initializer>=  ttk.Frame(self.canvas)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="123" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="123" bodyend="-1"/>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e" compoundref="d6/d99/_g_weasy_8py" startline="307" endline="384">GWeasy.OmicronApp.create_channel_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aae3ceec7effb9245d1ebd3cc6a3df53b" compoundref="d6/d99/_g_weasy_8py" startline="190" endline="201">GWeasy.OmicronApp.create_double_entry</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42" compoundref="d6/d99/_g_weasy_8py" startline="275" endline="283">GWeasy.OmicronApp.create_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab" compoundref="d6/d99/_g_weasy_8py" startline="284" endline="297">GWeasy.OmicronApp.create_editable_dropdown</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f" compoundref="d6/d99/_g_weasy_8py" startline="182" endline="189">GWeasy.OmicronApp.create_entry</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" compoundref="d6/d99/_g_weasy_8py" startline="203" endline="213">GWeasy.OmicronApp.create_file_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9" compoundref="d6/d99/_g_weasy_8py" startline="1017" endline="1029">GWeasy.Omiviz.create_file_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" compoundref="d6/d99/_g_weasy_8py" startline="214" endline="261">GWeasy.OmicronApp.create_folder_selector</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc" compoundref="d6/d99/_g_weasy_8py" startline="998" endline="1010">GWeasy.Omiviz.create_output_path_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3" compoundref="d6/d99/_g_weasy_8py" startline="262" endline="274">GWeasy.OmicronApp.create_output_products_selection</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d" compoundref="d6/d99/_g_weasy_8py" startline="298" endline="306">GWeasy.OmicronApp.create_slider</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8" compoundref="d6/d99/_g_weasy_8py" startline="143" endline="180">GWeasy.OmicronApp.create_widgets</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" compoundref="d6/d99/_g_weasy_8py" startline="953" endline="989">GWeasy.Omiviz.create_widgets</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc" compoundref="d6/d99/_g_weasy_8py" startline="990" endline="997">GWeasy.Omiviz.valent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a7a910b884e18250d403f6e4def181f85" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::window_frame</definition>
+        <argsstring></argsstring>
+        <name>window_frame</name>
+        <qualifiedname>GWeasy.OmicronApp.window_frame</qualifiedname>
+        <initializer>=  self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor=&quot;nw&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="130" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a27d6854add6e02b6310bdbefb3157500" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::terminal</definition>
+        <argsstring></argsstring>
+        <name>terminal</name>
+        <qualifiedname>GWeasy.OmicronApp.terminal</qualifiedname>
+        <initializer>=  <ref refid="dd/db1/class_g_weasy_1_1_terminal_frame" kindref="compound">TerminalFrame</ref>(self.root, row=4, column=0, columnspan=2, height=10, width=80)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="139" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="139" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" compoundref="d6/d99/_g_weasy_8py" startline="797" endline="799">GWeasy.GravfetchApp.append_output</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1ab6b8646dd4146a64fb0ec91f9e5f8a90" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::custom_segs_btn</definition>
+        <argsstring></argsstring>
+        <name>custom_segs_btn</name>
+        <qualifiedname>GWeasy.OmicronApp.custom_segs_btn</qualifiedname>
+        <initializer>=  tk.Button(button_frame, text=&quot;Custom Segs&quot;, command=self.open_custom_segs_dialog)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="156" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1a920f757a15dec26acf07948c0b0ec59b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::save_button</definition>
+        <argsstring></argsstring>
+        <name>save_button</name>
+        <qualifiedname>GWeasy.OmicronApp.save_button</qualifiedname>
+        <initializer>=  tk.Button(button_frame, text=&quot;Save Config&quot;, command=self.save_config)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="158" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1aecd34779e2176359953a50f115860b93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::start_button</definition>
+        <argsstring></argsstring>
+        <name>start_button</name>
+        <qualifiedname>GWeasy.OmicronApp.start_button</qualifiedname>
+        <initializer>=  tk.Button(button_frame, text=&quot;Start OMICRON&quot;, command=self.run_omicron_script)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="160" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d6/d74/class_g_weasy_1_1_omicron_app_1aac5187a637d2aad45a9cbeb690cdc385" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.OmicronApp::channel_dropdown</definition>
+        <argsstring></argsstring>
+        <name>channel_dropdown</name>
+        <qualifiedname>GWeasy.OmicronApp.channel_dropdown</qualifiedname>
+        <initializer>=  ttk.Combobox(
+            self.scrollable_frame,
+            textvariable=self.ui_elements[&quot;DATA CHANNELS&quot;],
+            values=[],  # Start empty, will be populated dynamically
+            state=&quot;normal&quot;  # Allows manual input
+        )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="317" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="317" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a12195b5607882b70cee355d3458a8bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.__init__</definition>
+        <argsstring>(self, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.OmicronApp.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="107" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="107" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_widgets</definition>
+        <argsstring>(self)</argsstring>
+        <name>create_widgets</name>
+        <qualifiedname>GWeasy.OmicronApp.create_widgets</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="143" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="143" bodyend="180"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e" compoundref="d6/d99/_g_weasy_8py" startline="307" endline="384">GWeasy.OmicronApp.create_channel_dropdown</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab" compoundref="d6/d99/_g_weasy_8py" startline="284" endline="297">GWeasy.OmicronApp.create_editable_dropdown</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" compoundref="d6/d99/_g_weasy_8py" startline="203" endline="213">GWeasy.OmicronApp.create_file_selector</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_entry</definition>
+        <argsstring>(self, label, key, frame=None, row=0, col=0)</argsstring>
+        <name>create_entry</name>
+        <qualifiedname>GWeasy.OmicronApp.create_entry</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>col</type>
+          <defname>col</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="182" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="182" bodyend="189"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1aae3ceec7effb9245d1ebd3cc6a3df53b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_double_entry</definition>
+        <argsstring>(self, label, key, frame=None, row=0, col=0)</argsstring>
+        <name>create_double_entry</name>
+        <qualifiedname>GWeasy.OmicronApp.create_double_entry</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>col</type>
+          <defname>col</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="190" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="190" bodyend="201"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_file_selector</definition>
+        <argsstring>(self, label, key, is_directory=False, frame=None, row=0, column=0)</argsstring>
+        <name>create_file_selector</name>
+        <qualifiedname>GWeasy.OmicronApp.create_file_selector</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>is_directory</type>
+          <defname>is_directory</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a file/directory selector inside the given frame (or default to scrollable_frame).</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="203" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="203" bodyend="213"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1acd9fc2c2cd113522c4e336bd8225ca94" compoundref="d6/d99/_g_weasy_8py" startline="385" endline="391">GWeasy.OmicronApp.select_file</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8" compoundref="d6/d99/_g_weasy_8py" startline="143" endline="180">GWeasy.OmicronApp.create_widgets</referencedby>
+        <referencedby refid="da/da4/class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0" compoundref="d6/d99/_g_weasy_8py" startline="953" endline="989">GWeasy.Omiviz.create_widgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_folder_selector</definition>
+        <argsstring>(self, label, key, is_directory=False, frame=None, row=0, column=0)</argsstring>
+        <name>create_folder_selector</name>
+        <qualifiedname>GWeasy.OmicronApp.create_folder_selector</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>is_directory</type>
+          <defname>is_directory</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a file/directory selector inside the given frame (or default to scrollable_frame).
+Ensures paths are relative to the current working directory and creates the directory if missing.
+Returns the selected relative path.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="214" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="214" bodyend="261"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1acd9fc2c2cd113522c4e336bd8225ca94" compoundref="d6/d99/_g_weasy_8py" startline="385" endline="391">GWeasy.OmicronApp.select_file</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_output_products_selection</definition>
+        <argsstring>(self, frame=None, row=0, column=0)</argsstring>
+        <name>create_output_products_selection</name>
+        <qualifiedname>GWeasy.OmicronApp.create_output_products_selection</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates checkboxes for selecting output products inside a given frame.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="262" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="262" bodyend="274"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_dropdown</definition>
+        <argsstring>(self, label, key, options, frame=None, row=0, column=0)</argsstring>
+        <name>create_dropdown</name>
+        <qualifiedname>GWeasy.OmicronApp.create_dropdown</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>options</type>
+          <defname>options</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a dropdown menu inside a given frame.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="275" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="275" bodyend="283"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_editable_dropdown</definition>
+        <argsstring>(self, label, key, options, frame=None, row=0, column=0)</argsstring>
+        <name>create_editable_dropdown</name>
+        <qualifiedname>GWeasy.OmicronApp.create_editable_dropdown</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>options</type>
+          <defname>options</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates an editable dropdown menu inside a given frame.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="284" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="284" bodyend="297"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8" compoundref="d6/d99/_g_weasy_8py" startline="143" endline="180">GWeasy.OmicronApp.create_widgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_slider</definition>
+        <argsstring>(self, label, key, min_val, max_val, frame=None, row=0, column=0)</argsstring>
+        <name>create_slider</name>
+        <qualifiedname>GWeasy.OmicronApp.create_slider</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>label</type>
+          <defname>label</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>min_val</type>
+          <defname>min_val</defname>
+        </param>
+        <param>
+          <type>max_val</type>
+          <defname>max_val</defname>
+        </param>
+        <param>
+          <type>frame</type>
+          <defname>frame</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a slider for selecting a numerical value.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="298" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="298" bodyend="306"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.create_channel_dropdown</definition>
+        <argsstring>(self, row=0)</argsstring>
+        <name>create_channel_dropdown</name>
+        <qualifiedname>GWeasy.OmicronApp.create_channel_dropdown</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates an editable dropdown for selecting a channel, updating dynamically in the background.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="307" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="307" bodyend="384"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" compoundref="d6/d99/_g_weasy_8py" startline="123">GWeasy.OmicronApp.scrollable_frame</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8" compoundref="d6/d99/_g_weasy_8py" startline="143" endline="180">GWeasy.OmicronApp.create_widgets</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1acd9fc2c2cd113522c4e336bd8225ca94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.select_file</definition>
+        <argsstring>(self, var, is_directory=False)</argsstring>
+        <name>select_file</name>
+        <qualifiedname>GWeasy.OmicronApp.select_file</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>var</type>
+          <defname>var</defname>
+        </param>
+        <param>
+          <type>is_directory</type>
+          <defname>is_directory</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="385" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="385" bodyend="391"/>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" compoundref="d6/d99/_g_weasy_8py" startline="203" endline="213">GWeasy.OmicronApp.create_file_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" compoundref="d6/d99/_g_weasy_8py" startline="214" endline="261">GWeasy.OmicronApp.create_folder_selector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.load_config</definition>
+        <argsstring>(self)</argsstring>
+        <name>load_config</name>
+        <qualifiedname>GWeasy.OmicronApp.load_config</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="392" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="392" bodyend="401"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" compoundref="d6/d99/_g_weasy_8py" startline="110">GWeasy.OmicronApp.config_data</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa0302f689a9f20b74a22d71830c5b702" compoundref="d6/d99/_g_weasy_8py" startline="109">GWeasy.OmicronApp.config_path</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.save_config</definition>
+        <argsstring>(self)</argsstring>
+        <name>save_config</name>
+        <qualifiedname>GWeasy.OmicronApp.save_config</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="402" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="402" bodyend="448"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa0302f689a9f20b74a22d71830c5b702" compoundref="d6/d99/_g_weasy_8py" startline="109">GWeasy.OmicronApp.config_path</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.run_omicron_script</definition>
+        <argsstring>(self)</argsstring>
+        <name>run_omicron_script</name>
+        <qualifiedname>GWeasy.OmicronApp.run_omicron_script</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Start the OMICRON script in a separate process and update the output in real-time.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="449" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="449" bodyend="456"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f" compoundref="d6/d99/_g_weasy_8py" startline="457" endline="512">GWeasy.OmicronApp.start_omicron_process</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.start_omicron_process</definition>
+        <argsstring>(self)</argsstring>
+        <name>start_omicron_process</name>
+        <qualifiedname>GWeasy.OmicronApp.start_omicron_process</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Run the OMICRON command dynamically in WSL.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="457" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="457" bodyend="512"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd" compoundref="d6/d99/_g_weasy_8py" startline="449" endline="456">GWeasy.OmicronApp.run_omicron_script</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.append_output</definition>
+        <argsstring>(self, text)</argsstring>
+        <name>append_output</name>
+        <qualifiedname>GWeasy.OmicronApp.append_output</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>text</type>
+          <defname>text</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Append output to the shared terminal frame.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="513" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="513" bodyend="516"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a27d6854add6e02b6310bdbefb3157500" compoundref="d6/d99/_g_weasy_8py" startline="139">GWeasy.OmicronApp.terminal</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" compoundref="d6/d99/_g_weasy_8py" startline="214" endline="261">GWeasy.OmicronApp.create_folder_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef" compoundref="d6/d99/_g_weasy_8py" startline="392" endline="401">GWeasy.OmicronApp.load_config</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd" compoundref="d6/d99/_g_weasy_8py" startline="449" endline="456">GWeasy.OmicronApp.run_omicron_script</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f" compoundref="d6/d99/_g_weasy_8py" startline="402" endline="448">GWeasy.OmicronApp.save_config</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f" compoundref="d6/d99/_g_weasy_8py" startline="457" endline="512">GWeasy.OmicronApp.start_omicron_process</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.open_custom_segs_dialog</definition>
+        <argsstring>(self)</argsstring>
+        <name>open_custom_segs_dialog</name>
+        <qualifiedname>GWeasy.OmicronApp.open_custom_segs_dialog</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Opens a GUI window to select a channel and time segments with scrolling and dynamic layout.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="517" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="517" bodyend="581"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a05489b453fa5815ad0a62bc11fb14df4" compoundref="d6/d99/_g_weasy_8py" startline="582" endline="604">GWeasy.OmicronApp.generate_fin_ffl</references>
+        <references refid="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" compoundref="d6/d99/_g_weasy_8py" startline="37">GWeasy.Application.root</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" compoundref="d6/d99/_g_weasy_8py" startline="108">GWeasy.OmicronApp.root</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d74/class_g_weasy_1_1_omicron_app_1a05489b453fa5815ad0a62bc11fb14df4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.OmicronApp.generate_fin_ffl</definition>
+        <argsstring>(self, channel_dir, selected_segments)</argsstring>
+        <name>generate_fin_ffl</name>
+        <qualifiedname>GWeasy.OmicronApp.generate_fin_ffl</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>channel_dir</type>
+          <defname>channel_dir</defname>
+        </param>
+        <param>
+          <type>selected_segments</type>
+          <defname>selected_segments</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim> Generates fin.ffl file with correctly formatted paths and timestamps, then preselects it in the UI. </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="582" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="582" bodyend="604"/>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" compoundref="d6/d99/_g_weasy_8py" startline="113">GWeasy.OmicronApp.ui_elements</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181" compoundref="d6/d99/_g_weasy_8py" startline="517" endline="581">GWeasy.OmicronApp.open_custom_segs_dialog</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="106" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="106" bodyend="604"/>
+    <listofallmembers>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a12195b5607882b70cee355d3458a8bcd" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>__init__</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>append_output</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a0054f3404083e75866d935cd64b369cf" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>canvas</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aac5187a637d2aad45a9cbeb690cdc385" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>channel_dropdown</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a2aae69f36727ac3d2d67a742aa6ca1bb" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>config_data</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa0302f689a9f20b74a22d71830c5b702" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>config_path</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a5a8aeaaafbb31662a0235e5c6f6ad67e" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_channel_dropdown</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aae3ceec7effb9245d1ebd3cc6a3df53b" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_double_entry</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1af29961ca941c00ca9137c208a06ccc42" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_dropdown</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aac69064ecb2f45d9f1116cd1f2746cab" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_editable_dropdown</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a23931b1e82bbfe2b729b3170917b2d2f" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_entry</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad79ecd68c00f609dbed2b5983d7a505b" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_file_selector</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_folder_selector</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a174a526ecc7b7fecd198dced077866d3" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_output_products_selection</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a0b1b3e1667c0cf6d03de09a8320acc0d" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_slider</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a133ad86bd2a05c92d5bc8bc7d3feeab8" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>create_widgets</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab6b8646dd4146a64fb0ec91f9e5f8a90" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>custom_segs_btn</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a872dffa01de2eeb3f53abee58340039f" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>entries</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a05489b453fa5815ad0a62bc11fb14df4" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>generate_fin_ffl</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad1ef1213f5691fea6949a5887b2a4377" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>GWFOUT_DIRECTORY</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>load_config</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>open_custom_segs_dialog</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aaa66b47647ca1d949ca8bf48f7c400ad" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>output_products</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ac7d7079e14bdb8e56ca13cdddd8f2c7c" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>project_dir</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aeac7ff59655158a8e63a7e9c927ca9f4" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>root</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>run_omicron_script</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a920f757a15dec26acf07948c0b0ec59b" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>save_button</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>save_config</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab09c042894f9801cc2a86dd260312594" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>scrollable_frame</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a148f8bc6a6b3af1a8e25020bc2d7a443" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>scrollbar</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1acd9fc2c2cd113522c4e336bd8225ca94" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>select_file</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aecd34779e2176359953a50f115860b93" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>start_button</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>start_omicron_process</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a27d6854add6e02b6310bdbefb3157500" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>terminal</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a36c35e8ff67cb3359653cc88f4b173aa" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>ui_elements</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1a7a910b884e18250d403f6e4def181f85" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>window_frame</name></member>
+      <member refid="d6/d74/class_g_weasy_1_1_omicron_app_1abbab46b706328fa4b2a4971f450c2a84" prot="public" virt="non-virtual"><scope>GWeasy::OmicronApp</scope><name>wsl_project_dir</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

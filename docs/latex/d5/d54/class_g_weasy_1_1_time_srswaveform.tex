@@ -1,0 +1,447 @@
+\doxysection{GWeasy.\+Time\+Srswaveform Class Reference}
+\hypertarget{class_g_weasy_1_1_time_srswaveform}{}\label{class_g_weasy_1_1_time_srswaveform}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a7857704402181aed95f6bed58c8ca6f2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_aa1891be13ba82b9e223104fe517ae82d}{copy\+\_\+url}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a40e48137af481b4b6e83d57a0e33ab23}{prefetch\+\_\+data}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a4bed151bfec44571fd827583277ed767}{fetch\+\_\+events}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_aecaaabb545deeb185676475b6aff1974}{fetch\+\_\+event\+\_\+details}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a10ce0b68c09f43a0d9fbad1e3ae75d6b}{update\+\_\+urls}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a18576d202ab03d8664f8a1cf66d9a4b9}{toggle\+\_\+mode}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a8b0fd00c1ad02f69453260734466e20b}{convert\+\_\+time}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a9f973d97c56cc0fb8d43bb0e9c274f87}{save\+\_\+params}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a5b8dd264aa566ccc79ea8b991995227f}{plot\+\_\+gw\+\_\+event}} (self, event\+\_\+name, detectors, gps\+\_\+start, gps\+\_\+end)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}} = root
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a0c36bdef301f193fcc6772af597772f7}{canvas}} = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a0b51be9e8747a0d4f7b4a269d1069229}{scroll\+\_\+y}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a9c23cb242ac96640e968be6c63062d21}{scroll\+\_\+x}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a532c4292a85798b7aa5ac54390ece6d0}{frame}} = ttk.\+Frame(self.\+canvas)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a7bd6a802d81d43a64c84e9d12d50787f}{catalog\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ab4813922780af63e2a980a3a88ff9b61}{fetch\+\_\+events}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a4755fe9b4ba51ddc24476056f2643be1}{event\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a404c891806be1fb5275ceb98c1d03728}{fetch\+\_\+event\+\_\+details}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a17a26519ef985c53ba6bf9a0923f1442}{run\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a2089ad863a58871f54023e5d4caa0fe0}{detector\+\_\+dropdown}} = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, height=3)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_aa97ddc1c8188bb581b9216079912f556}{update\+\_\+urls}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a4b4c8b93c529465fa716d40fccc48ca3}{gps\+\_\+start\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_aadeb9164d7654ea49068a003850c3cc5}{gps\+\_\+end\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_aaaad290cf087f263cfb0135a16d62370}{mode}} = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ab320f8a48342a994a16c8ec6e5d518ed}{convert\+\_\+entry}} = ttk.\+Entry(conversion\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a487002084c53cc53586afda6db8d507f}{convert\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_aab9b5f264c5f5bb74b37a100a129052d}{result\+\_\+label}} = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a57959bb83db8944c80a23feaeba266ed}{toggle\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_acf59257089c8ea137de9fbf3e6502a4d}{url\+\_\+dropdown}} = ttk.\+Combobox(url\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ae3de71ad6e28fa046548694c0b24a95e}{copy\+\_\+button}} = ttk.\+Button(url\+\_\+frame, text="{}Copy URL"{}, command=self.\+copy\+\_\+url)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a3228d4a45f0cb15c1acfd1aca605ca5b}{save\+\_\+button}} = ttk.\+Button(input\+\_\+frame, text="{}Save Parameters"{}, command=self.\+save\+\_\+params)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_acae016ef8862705d52cb119e569522db}{plot\+\_\+frame}} = ttk.\+Frame(self.\+frame)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_a30dfd6df75eb5213502a3cc7f4ebf184}{plot\+\_\+button}} = tk.\+Button(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}}, text="{}Plot Time\+Series"{}, command=lambda\+: self.\+plot\+\_\+gw\+\_\+event(self.\+catalog\+\_\+dropdown.\+get(),\mbox{[}self.\+detector\+\_\+dropdown.\+get(idx) for idx in self.\+detector\+\_\+dropdown.\+curselection()\mbox{]},float(self.\+gps\+\_\+start\+\_\+entry.\+get()),float(self.\+gps\+\_\+end\+\_\+entry.\+get())))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01231}{1231}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a7857704402181aed95f6bed58c8ca6f2}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a7857704402181aed95f6bed58c8ca6f2} 
+GWeasy.\+Time\+Srswaveform.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01232}{1232}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a8b0fd00c1ad02f69453260734466e20b}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!convert\_time@{convert\_time}}
+\index{convert\_time@{convert\_time}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{convert\_time()}{convert\_time()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a8b0fd00c1ad02f69453260734466e20b} 
+GWeasy.\+Time\+Srswaveform.\+convert\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01412}{1412}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_aa1891be13ba82b9e223104fe517ae82d}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!copy\_url@{copy\_url}}
+\index{copy\_url@{copy\_url}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{copy\_url()}{copy\_url()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_aa1891be13ba82b9e223104fe517ae82d} 
+GWeasy.\+Time\+Srswaveform.\+copy\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01328}{1328}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_aecaaabb545deeb185676475b6aff1974}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details()}{fetch\_event\_details()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_aecaaabb545deeb185676475b6aff1974} 
+GWeasy.\+Time\+Srswaveform.\+fetch\+\_\+event\+\_\+details (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01371}{1371}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a4bed151bfec44571fd827583277ed767}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{fetch\_events()}{fetch\_events()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a4bed151bfec44571fd827583277ed767} 
+GWeasy.\+Time\+Srswaveform.\+fetch\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01355}{1355}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a5b8dd264aa566ccc79ea8b991995227f}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!plot\_gw\_event@{plot\_gw\_event}}
+\index{plot\_gw\_event@{plot\_gw\_event}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{plot\_gw\_event()}{plot\_gw\_event()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a5b8dd264aa566ccc79ea8b991995227f} 
+GWeasy.\+Time\+Srswaveform.\+plot\+\_\+gw\+\_\+event (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event\+\_\+name}{, }\item[{}]{detectors}{, }\item[{}]{gps\+\_\+start}{, }\item[{}]{gps\+\_\+end}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot gravitational wave event data for multiple detectors.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01462}{1462}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a40e48137af481b4b6e83d57a0e33ab23}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!prefetch\_data@{prefetch\_data}}
+\index{prefetch\_data@{prefetch\_data}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{prefetch\_data()}{prefetch\_data()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a40e48137af481b4b6e83d57a0e33ab23} 
+GWeasy.\+Time\+Srswaveform.\+prefetch\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01339}{1339}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a9f973d97c56cc0fb8d43bb0e9c274f87}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!save\_params@{save\_params}}
+\index{save\_params@{save\_params}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{save\_params()}{save\_params()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a9f973d97c56cc0fb8d43bb0e9c274f87} 
+GWeasy.\+Time\+Srswaveform.\+save\+\_\+params (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Overwrite 'gwfparams.csv' with the latest input values, including headers.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01432}{1432}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a18576d202ab03d8664f8a1cf66d9a4b9}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!toggle\_mode@{toggle\_mode}}
+\index{toggle\_mode@{toggle\_mode}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{toggle\_mode()}{toggle\_mode()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a18576d202ab03d8664f8a1cf66d9a4b9} 
+GWeasy.\+Time\+Srswaveform.\+toggle\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01403}{1403}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a10ce0b68c09f43a0d9fbad1e3ae75d6b}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!update\_urls@{update\_urls}}
+\index{update\_urls@{update\_urls}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{update\_urls()}{update\_urls()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a10ce0b68c09f43a0d9fbad1e3ae75d6b} 
+GWeasy.\+Time\+Srswaveform.\+update\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01386}{1386}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d54/class_g_weasy_1_1_time_srswaveform_a10ce0b68c09f43a0d9fbad1e3ae75d6b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a0c36bdef301f193fcc6772af597772f7}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!canvas@{canvas}}
+\index{canvas@{canvas}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a0c36bdef301f193fcc6772af597772f7} 
+GWeasy.\+Time\+Srswaveform.\+canvas = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01238}{1238}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a7bd6a802d81d43a64c84e9d12d50787f}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!catalog\_dropdown@{catalog\_dropdown}}
+\index{catalog\_dropdown@{catalog\_dropdown}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{catalog\_dropdown}{catalog\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a7bd6a802d81d43a64c84e9d12d50787f} 
+GWeasy.\+Time\+Srswaveform.\+catalog\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01258}{1258}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a487002084c53cc53586afda6db8d507f}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!convert\_button@{convert\_button}}
+\index{convert\_button@{convert\_button}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{convert\_button}{convert\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a487002084c53cc53586afda6db8d507f} 
+GWeasy.\+Time\+Srswaveform.\+convert\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01298}{1298}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_ab320f8a48342a994a16c8ec6e5d518ed}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!convert\_entry@{convert\_entry}}
+\index{convert\_entry@{convert\_entry}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{convert\_entry}{convert\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_ab320f8a48342a994a16c8ec6e5d518ed} 
+GWeasy.\+Time\+Srswaveform.\+convert\+\_\+entry = ttk.\+Entry(conversion\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01295}{1295}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_ae3de71ad6e28fa046548694c0b24a95e}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!copy\_button@{copy\_button}}
+\index{copy\_button@{copy\_button}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{copy\_button}{copy\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_ae3de71ad6e28fa046548694c0b24a95e} 
+GWeasy.\+Time\+Srswaveform.\+copy\+\_\+button = ttk.\+Button(url\+\_\+frame, text="{}Copy URL"{}, command=self.\+copy\+\_\+url)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01314}{1314}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a2089ad863a58871f54023e5d4caa0fe0}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!detector\_dropdown@{detector\_dropdown}}
+\index{detector\_dropdown@{detector\_dropdown}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{detector\_dropdown}{detector\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a2089ad863a58871f54023e5d4caa0fe0} 
+GWeasy.\+Time\+Srswaveform.\+detector\+\_\+dropdown = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, height=3)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01275}{1275}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a4755fe9b4ba51ddc24476056f2643be1}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!event\_dropdown@{event\_dropdown}}
+\index{event\_dropdown@{event\_dropdown}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{event\_dropdown}{event\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a4755fe9b4ba51ddc24476056f2643be1} 
+GWeasy.\+Time\+Srswaveform.\+event\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01264}{1264}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a404c891806be1fb5275ceb98c1d03728}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details}{fetch\_event\_details}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a404c891806be1fb5275ceb98c1d03728} 
+GWeasy.\+Time\+Srswaveform.\+fetch\+\_\+event\+\_\+details = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01266}{1266}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_ab4813922780af63e2a980a3a88ff9b61}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{fetch\_events}{fetch\_events}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_ab4813922780af63e2a980a3a88ff9b61} 
+GWeasy.\+Time\+Srswaveform.\+fetch\+\_\+events = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01260}{1260}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a532c4292a85798b7aa5ac54390ece6d0}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!frame@{frame}}
+\index{frame@{frame}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a532c4292a85798b7aa5ac54390ece6d0} 
+GWeasy.\+Time\+Srswaveform.\+frame = ttk.\+Frame(self.\+canvas)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01244}{1244}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_aadeb9164d7654ea49068a003850c3cc5}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!gps\_end\_entry@{gps\_end\_entry}}
+\index{gps\_end\_entry@{gps\_end\_entry}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{gps\_end\_entry}{gps\_end\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_aadeb9164d7654ea49068a003850c3cc5} 
+GWeasy.\+Time\+Srswaveform.\+gps\+\_\+end\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01287}{1287}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a4b4c8b93c529465fa716d40fccc48ca3}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!gps\_start\_entry@{gps\_start\_entry}}
+\index{gps\_start\_entry@{gps\_start\_entry}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{gps\_start\_entry}{gps\_start\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a4b4c8b93c529465fa716d40fccc48ca3} 
+GWeasy.\+Time\+Srswaveform.\+gps\+\_\+start\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01283}{1283}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_aaaad290cf087f263cfb0135a16d62370}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!mode@{mode}}
+\index{mode@{mode}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_aaaad290cf087f263cfb0135a16d62370} 
+GWeasy.\+Time\+Srswaveform.\+mode = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01291}{1291}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a30dfd6df75eb5213502a3cc7f4ebf184}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!plot\_button@{plot\_button}}
+\index{plot\_button@{plot\_button}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{plot\_button}{plot\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a30dfd6df75eb5213502a3cc7f4ebf184} 
+GWeasy.\+Time\+Srswaveform.\+plot\+\_\+button = tk.\+Button(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}}, text="{}Plot Time\+Series"{}, command=lambda\+: self.\+plot\+\_\+gw\+\_\+event(self.\+catalog\+\_\+dropdown.\+get(),\mbox{[}self.\+detector\+\_\+dropdown.\+get(idx) for idx in self.\+detector\+\_\+dropdown.\+curselection()\mbox{]},float(self.\+gps\+\_\+start\+\_\+entry.\+get()),float(self.\+gps\+\_\+end\+\_\+entry.\+get())))}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01324}{1324}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_acae016ef8862705d52cb119e569522db}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!plot\_frame@{plot\_frame}}
+\index{plot\_frame@{plot\_frame}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{plot\_frame}{plot\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_acae016ef8862705d52cb119e569522db} 
+GWeasy.\+Time\+Srswaveform.\+plot\+\_\+frame = ttk.\+Frame(self.\+frame)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01320}{1320}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_aab9b5f264c5f5bb74b37a100a129052d}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!result\_label@{result\_label}}
+\index{result\_label@{result\_label}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{result\_label}{result\_label}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_aab9b5f264c5f5bb74b37a100a129052d} 
+GWeasy.\+Time\+Srswaveform.\+result\+\_\+label = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01301}{1301}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!root@{root}}
+\index{root@{root}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb} 
+GWeasy.\+Time\+Srswaveform.\+root = root}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01233}{1233}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a17a26519ef985c53ba6bf9a0923f1442}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!run\_dropdown@{run\_dropdown}}
+\index{run\_dropdown@{run\_dropdown}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{run\_dropdown}{run\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a17a26519ef985c53ba6bf9a0923f1442} 
+GWeasy.\+Time\+Srswaveform.\+run\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01270}{1270}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a3228d4a45f0cb15c1acfd1aca605ca5b}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!save\_button@{save\_button}}
+\index{save\_button@{save\_button}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{save\_button}{save\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a3228d4a45f0cb15c1acfd1aca605ca5b} 
+GWeasy.\+Time\+Srswaveform.\+save\+\_\+button = ttk.\+Button(input\+\_\+frame, text="{}Save Parameters"{}, command=self.\+save\+\_\+params)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01318}{1318}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a9c23cb242ac96640e968be6c63062d21}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!scroll\_x@{scroll\_x}}
+\index{scroll\_x@{scroll\_x}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{scroll\_x}{scroll\_x}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a9c23cb242ac96640e968be6c63062d21} 
+GWeasy.\+Time\+Srswaveform.\+scroll\+\_\+x = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01240}{1240}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a0b51be9e8747a0d4f7b4a269d1069229}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!scroll\_y@{scroll\_y}}
+\index{scroll\_y@{scroll\_y}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{scroll\_y}{scroll\_y}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a0b51be9e8747a0d4f7b4a269d1069229} 
+GWeasy.\+Time\+Srswaveform.\+scroll\+\_\+y = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_time_srswaveform_ad88b46bd02cdc0f272e7ea7372688dfb}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01239}{1239}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_a57959bb83db8944c80a23feaeba266ed}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!toggle\_button@{toggle\_button}}
+\index{toggle\_button@{toggle\_button}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{toggle\_button}{toggle\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_a57959bb83db8944c80a23feaeba266ed} 
+GWeasy.\+Time\+Srswaveform.\+toggle\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01304}{1304}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_aa97ddc1c8188bb581b9216079912f556}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!update\_urls@{update\_urls}}
+\index{update\_urls@{update\_urls}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{update\_urls}{update\_urls}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_aa97ddc1c8188bb581b9216079912f556} 
+GWeasy.\+Time\+Srswaveform.\+update\+\_\+urls = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01279}{1279}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_time_srswaveform_acf59257089c8ea137de9fbf3e6502a4d}\index{GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}!url\_dropdown@{url\_dropdown}}
+\index{url\_dropdown@{url\_dropdown}!GWeasy.TimeSrswaveform@{GWeasy.TimeSrswaveform}}
+\doxysubsubsection{\texorpdfstring{url\_dropdown}{url\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_time_srswaveform_acf59257089c8ea137de9fbf3e6502a4d} 
+GWeasy.\+Time\+Srswaveform.\+url\+\_\+dropdown = ttk.\+Combobox(url\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01311}{1311}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy/\mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}\end{DoxyCompactItemize}

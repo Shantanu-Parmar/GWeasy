@@ -1,0 +1,272 @@
+.TH "GWeasy.FFT" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.FFT
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBcopy_url\fP (self)"
+.br
+.ti -1c
+.RI "\fBprefetch_data\fP (self)"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBupdate_urls\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBtoggle_mode\fP (self)"
+.br
+.ti -1c
+.RI "\fBconvert_time\fP (self)"
+.br
+.ti -1c
+.RI "\fBsave_params\fP (self)"
+.br
+.ti -1c
+.RI "\fBfft\fP (self, event_name, detectors, gps_start, gps_end)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "\fBcanvas\fP = tk\&.Canvas(\fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBscroll_y\fP = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+.br
+.ti -1c
+.RI "\fBscroll_x\fP = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+.br
+.ti -1c
+.RI "\fBframe\fP = ttk\&.Frame(self\&.canvas)"
+.br
+.ti -1c
+.RI "\fBcatalog_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBevent_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBrun_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBdetector_listbox\fP = tk\&.Listbox(input_frame, selectmode='multiple', exportselection=False, height=3)"
+.br
+.ti -1c
+.RI "\fBgps_start_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBgps_end_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBmode\fP = tk\&.StringVar(value='gps_to_utc')"
+.br
+.ti -1c
+.RI "\fBconvert_entry\fP = ttk\&.Entry(conversion_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBconvert_button\fP = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+.br
+.ti -1c
+.RI "\fBresult_label\fP = ttk\&.Label(conversion_frame, text='Result: ')"
+.br
+.ti -1c
+.RI "\fBtoggle_button\fP = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+.br
+.ti -1c
+.RI "\fBurl_dropdown\fP = ttk\&.Combobox(url_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBcopy_button\fP = ttk\&.Button(url_frame, text='Copy URL', command=self\&.copy_url)"
+.br
+.ti -1c
+.RI "\fBsave_button\fP = ttk\&.Button(input_frame, text='Save Parameters', command=self\&.save_params)"
+.br
+.ti -1c
+.RI "\fBplot_frame\fP = ttk\&.Frame(self\&.frame)"
+.br
+.ti -1c
+.RI "\fBfft_button\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB1515\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.FFT\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB1516\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.FFT\&.convert_time ( self)"
+
+.PP
+Definition at line \fB1693\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.copy_url ( self)"
+
+.PP
+Definition at line \fB1611\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.fetch_event_details ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1654\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.fetch_events ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1638\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.fft ( self,  event_name,  detectors,  gps_start,  gps_end)"
+
+.PP
+Definition at line \fB1743\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.prefetch_data ( self)"
+
+.PP
+Definition at line \fB1622\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.save_params ( self)"
+
+.PP
+.nf
+Overwrite 'gwfparams\&.csv' with the latest input values, including headers\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1713\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.toggle_mode ( self)"
+
+.PP
+Definition at line \fB1684\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.update_urls ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1669\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.FFT\&.canvas = tk\&.Canvas(\fBroot\fP)"
+
+.PP
+Definition at line \fB1522\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.catalog_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1542\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.convert_button = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+
+.PP
+Definition at line \fB1582\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.convert_entry = ttk\&.Entry(conversion_frame, width=20)"
+
+.PP
+Definition at line \fB1579\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.copy_button = ttk\&.Button(url_frame, text='Copy URL', command=self\&.copy_url)"
+
+.PP
+Definition at line \fB1598\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.detector_listbox = tk\&.Listbox(input_frame, selectmode='multiple', exportselection=False, height=3)"
+
+.PP
+Definition at line \fB1559\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.event_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1548\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.fetch_event_details = 'ew')"
+
+.PP
+Definition at line \fB1550\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.fetch_events = 'ew')"
+
+.PP
+Definition at line \fB1544\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.fft_button"
+\fBInitial value:\fP
+.nf
+=  tk\&.Button(root, text="Run FFT", command=lambda: self\&.fft(
+        self\&.catalog_dropdown\&.get(),[self\&.detector_listbox\&.get(i) for i in self\&.detector_listbox\&.curselection()],float(self\&.gps_start_entry\&.get()),float(self\&.gps_end_entry\&.get())))
+.PP
+.fi
+
+.PP
+Definition at line \fB1607\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.frame = ttk\&.Frame(self\&.canvas)"
+
+.PP
+Definition at line \fB1528\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.gps_end_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB1571\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.gps_start_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB1567\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.mode = tk\&.StringVar(value='gps_to_utc')"
+
+.PP
+Definition at line \fB1575\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.plot_frame = ttk\&.Frame(self\&.frame)"
+
+.PP
+Definition at line \fB1604\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.result_label = ttk\&.Label(conversion_frame, text='Result: ')"
+
+.PP
+Definition at line \fB1585\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.root = root"
+
+.PP
+Definition at line \fB1517\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.run_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1554\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.save_button = ttk\&.Button(input_frame, text='Save Parameters', command=self\&.save_params)"
+
+.PP
+Definition at line \fB1602\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.scroll_x = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+
+.PP
+Definition at line \fB1524\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.scroll_y = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+
+.PP
+Definition at line \fB1523\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.toggle_button = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+
+.PP
+Definition at line \fB1588\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.FFT\&.url_dropdown = ttk\&.Combobox(url_frame, state='readonly')"
+
+.PP
+Definition at line \fB1595\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

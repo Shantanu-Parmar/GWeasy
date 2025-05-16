@@ -1,0 +1,66 @@
+.TH "GWeasy.TerminalFrame" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.TerminalFrame
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits tk\&.Frame\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, parent, row, column, rowspan=1, columnspan=1, height=15, width=100)"
+.br
+.ti -1c
+.RI "\fBappend_output\fP (self, text, color='white')"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBoutput_text\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB84\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.TerminalFrame\&.__init__ ( self,  parent,  row,  column,  rowspan = \fR1\fP,  columnspan = \fR1\fP,  height = \fR15\fP,  width = \fR100\fP)"
+
+.PP
+Definition at line \fB85\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.TerminalFrame\&.append_output ( self,  text,  color = \fR'white'\fP)"
+
+.PP
+.nf
+Append text to the terminal and auto-scroll\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB98\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.TerminalFrame\&.output_text"
+\fBInitial value:\fP
+.nf
+=  scrolledtext\&.ScrolledText(self, wrap=tk\&.WORD, 
+                                                     bg="black", fg="white",
+                                                     font=("Courier", 10),
+                                                     height=height, width=width)
+.PP
+.fi
+
+.PP
+Definition at line \fB89\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

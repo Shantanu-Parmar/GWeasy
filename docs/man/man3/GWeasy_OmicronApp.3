@@ -1,0 +1,373 @@
+.TH "GWeasy.OmicronApp" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.OmicronApp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBcreate_widgets\fP (self)"
+.br
+.ti -1c
+.RI "\fBcreate_entry\fP (self, label, key, frame=None, row=0, col=0)"
+.br
+.ti -1c
+.RI "\fBcreate_double_entry\fP (self, label, key, frame=None, row=0, col=0)"
+.br
+.ti -1c
+.RI "\fBcreate_file_selector\fP (self, label, key, is_directory=False, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBcreate_folder_selector\fP (self, label, key, is_directory=False, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBcreate_output_products_selection\fP (self, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBcreate_dropdown\fP (self, label, key, options, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBcreate_editable_dropdown\fP (self, label, key, options, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBcreate_slider\fP (self, label, key, min_val, max_val, frame=None, row=0, column=0)"
+.br
+.ti -1c
+.RI "\fBcreate_channel_dropdown\fP (self, row=0)"
+.br
+.ti -1c
+.RI "\fBselect_file\fP (self, var, is_directory=False)"
+.br
+.ti -1c
+.RI "\fBload_config\fP (self)"
+.br
+.ti -1c
+.RI "\fBsave_config\fP (self)"
+.br
+.ti -1c
+.RI "\fBrun_omicron_script\fP (self)"
+.br
+.ti -1c
+.RI "\fBstart_omicron_process\fP (self)"
+.br
+.ti -1c
+.RI "\fBappend_output\fP (self, text)"
+.br
+.ti -1c
+.RI "\fBopen_custom_segs_dialog\fP (self)"
+.br
+.ti -1c
+.RI "\fBgenerate_fin_ffl\fP (self, channel_dir, selected_segments)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "str \fBconfig_path\fP = 'config\&.txt'"
+.br
+.ti -1c
+.RI "dict \fBconfig_data\fP = {}"
+.br
+.ti -1c
+.RI "dict \fBentries\fP = {}"
+.br
+.ti -1c
+.RI "dict \fBoutput_products\fP = {}"
+.br
+.ti -1c
+.RI "dict \fBui_elements\fP = {}"
+.br
+.ti -1c
+.RI "\fBproject_dir\fP = os\&.getcwd()\&.replace('\\\\', '/')"
+.br
+.ti -1c
+.RI "str \fBwsl_project_dir\fP = f'/mnt/{self\&.project_dir[0]\&.lower()}/{self\&.project_dir[2:]}'"
+.br
+.ti -1c
+.RI "str \fBGWFOUT_DIRECTORY\fP = '\&./gwfout'"
+.br
+.ti -1c
+.RI "\fBcanvas\fP = tk\&.Canvas(\fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBscrollbar\fP = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+.br
+.ti -1c
+.RI "\fBscrollable_frame\fP = ttk\&.Frame(self\&.canvas)"
+.br
+.ti -1c
+.RI "\fBwindow_frame\fP = self\&.canvas\&.create_window((0, 0), window=self\&.scrollable_frame, anchor='nw')"
+.br
+.ti -1c
+.RI "\fBterminal\fP = \fBTerminalFrame\fP(self\&.root, row=4, column=0, columnspan=2, height=10, width=80)"
+.br
+.ti -1c
+.RI "\fBcustom_segs_btn\fP = tk\&.Button(button_frame, text='Custom Segs', command=self\&.open_custom_segs_dialog)"
+.br
+.ti -1c
+.RI "\fBsave_button\fP = tk\&.Button(button_frame, text='Save Config', command=self\&.save_config)"
+.br
+.ti -1c
+.RI "\fBstart_button\fP = tk\&.Button(button_frame, text='Start OMICRON', command=self\&.run_omicron_script)"
+.br
+.ti -1c
+.RI "\fBchannel_dropdown\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB106\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.OmicronApp\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB107\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.OmicronApp\&.append_output ( self,  text)"
+
+.PP
+.nf
+Append output to the shared terminal frame\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB513\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_channel_dropdown ( self,  row = \fR0\fP)"
+
+.PP
+.nf
+Creates an editable dropdown for selecting a channel, updating dynamically in the background\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB307\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_double_entry ( self,  label,  key,  frame = \fRNone\fP,  row = \fR0\fP,  col = \fR0\fP)"
+
+.PP
+Definition at line \fB190\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_dropdown ( self,  label,  key,  options,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Creates a dropdown menu inside a given frame\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB275\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_editable_dropdown ( self,  label,  key,  options,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Creates an editable dropdown menu inside a given frame\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB284\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_entry ( self,  label,  key,  frame = \fRNone\fP,  row = \fR0\fP,  col = \fR0\fP)"
+
+.PP
+Definition at line \fB182\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_file_selector ( self,  label,  key,  is_directory = \fRFalse\fP,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Creates a file/directory selector inside the given frame (or default to scrollable_frame)\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB203\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_folder_selector ( self,  label,  key,  is_directory = \fRFalse\fP,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Creates a file/directory selector inside the given frame (or default to scrollable_frame)\&.
+Ensures paths are relative to the current working directory and creates the directory if missing\&.
+Returns the selected relative path\&.
+
+.fi
+.PP
+ 
+.PP
+Definition at line \fB214\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_output_products_selection ( self,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Creates checkboxes for selecting output products inside a given frame\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB262\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_slider ( self,  label,  key,  min_val,  max_val,  frame = \fRNone\fP,  row = \fR0\fP,  column = \fR0\fP)"
+
+.PP
+.nf
+Creates a slider for selecting a numerical value\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB298\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.create_widgets ( self)"
+
+.PP
+Definition at line \fB143\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.generate_fin_ffl ( self,  channel_dir,  selected_segments)"
+
+.PP
+.nf
+ Generates fin\&.ffl file with correctly formatted paths and timestamps, then preselects it in the UI\&. 
+.fi
+.PP
+ 
+.PP
+Definition at line \fB582\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.load_config ( self)"
+
+.PP
+Definition at line \fB392\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.open_custom_segs_dialog ( self)"
+
+.PP
+.nf
+Opens a GUI window to select a channel and time segments with scrolling and dynamic layout\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB517\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.run_omicron_script ( self)"
+
+.PP
+.nf
+Start the OMICRON script in a separate process and update the output in real-time\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB449\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.save_config ( self)"
+
+.PP
+Definition at line \fB402\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.select_file ( self,  var,  is_directory = \fRFalse\fP)"
+
+.PP
+Definition at line \fB385\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.start_omicron_process ( self)"
+
+.PP
+.nf
+Run the OMICRON command dynamically in WSL\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB457\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.OmicronApp\&.canvas = tk\&.Canvas(\fBroot\fP)"
+
+.PP
+Definition at line \fB121\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.channel_dropdown"
+\fBInitial value:\fP
+.nf
+=  ttk\&.Combobox(
+            self\&.scrollable_frame,
+            textvariable=self\&.ui_elements["DATA CHANNELS"],
+            values=[],  # Start empty, will be populated dynamically
+            state="normal"  # Allows manual input
+        )
+.PP
+.fi
+
+.PP
+Definition at line \fB317\fP of file \fBGWeasy\&.py\fP\&.
+.SS "dict GWeasy\&.OmicronApp\&.config_data = {}"
+
+.PP
+Definition at line \fB110\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.config_path = 'config\&.txt'"
+
+.PP
+Definition at line \fB109\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.custom_segs_btn = tk\&.Button(button_frame, text='Custom Segs', command=self\&.open_custom_segs_dialog)"
+
+.PP
+Definition at line \fB156\fP of file \fBGWeasy\&.py\fP\&.
+.SS "dict GWeasy\&.OmicronApp\&.entries = {}"
+
+.PP
+Definition at line \fB111\fP of file \fBGWeasy\&.py\fP\&.
+.SS "str GWeasy\&.OmicronApp\&.GWFOUT_DIRECTORY = '\&./gwfout'"
+
+.PP
+Definition at line \fB118\fP of file \fBGWeasy\&.py\fP\&.
+.SS "dict GWeasy\&.OmicronApp\&.output_products = {}"
+
+.PP
+Definition at line \fB112\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.project_dir = os\&.getcwd()\&.replace('\\\\', '/')"
+
+.PP
+Definition at line \fB115\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.root = root"
+
+.PP
+Definition at line \fB108\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.save_button = tk\&.Button(button_frame, text='Save Config', command=self\&.save_config)"
+
+.PP
+Definition at line \fB158\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.scrollable_frame = ttk\&.Frame(self\&.canvas)"
+
+.PP
+Definition at line \fB123\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.scrollbar = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+
+.PP
+Definition at line \fB122\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.start_button = tk\&.Button(button_frame, text='Start OMICRON', command=self\&.run_omicron_script)"
+
+.PP
+Definition at line \fB160\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.terminal = \fBTerminalFrame\fP(self\&.root, row=4, column=0, columnspan=2, height=10, width=80)"
+
+.PP
+Definition at line \fB139\fP of file \fBGWeasy\&.py\fP\&.
+.SS "dict GWeasy\&.OmicronApp\&.ui_elements = {}"
+
+.PP
+Definition at line \fB113\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.OmicronApp\&.window_frame = self\&.canvas\&.create_window((0, 0), window=self\&.scrollable_frame, anchor='nw')"
+
+.PP
+Definition at line \fB130\fP of file \fBGWeasy\&.py\fP\&.
+.SS "str GWeasy\&.OmicronApp\&.wsl_project_dir = f'/mnt/{self\&.project_dir[0]\&.lower()}/{self\&.project_dir[2:]}'"
+
+.PP
+Definition at line \fB116\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

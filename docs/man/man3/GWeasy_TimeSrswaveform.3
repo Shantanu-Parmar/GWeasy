@@ -1,0 +1,279 @@
+.TH "GWeasy.TimeSrswaveform" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.TimeSrswaveform
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBcopy_url\fP (self)"
+.br
+.ti -1c
+.RI "\fBprefetch_data\fP (self)"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBupdate_urls\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBtoggle_mode\fP (self)"
+.br
+.ti -1c
+.RI "\fBconvert_time\fP (self)"
+.br
+.ti -1c
+.RI "\fBsave_params\fP (self)"
+.br
+.ti -1c
+.RI "\fBplot_gw_event\fP (self, event_name, detectors, gps_start, gps_end)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "\fBcanvas\fP = tk\&.Canvas(\fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBscroll_y\fP = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+.br
+.ti -1c
+.RI "\fBscroll_x\fP = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+.br
+.ti -1c
+.RI "\fBframe\fP = ttk\&.Frame(self\&.canvas)"
+.br
+.ti -1c
+.RI "\fBcatalog_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBevent_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBrun_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBdetector_dropdown\fP = tk\&.Listbox(input_frame, selectmode='multiple', height=3)"
+.br
+.ti -1c
+.RI "\fBupdate_urls\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBgps_start_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBgps_end_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBmode\fP = tk\&.StringVar(value='gps_to_utc')"
+.br
+.ti -1c
+.RI "\fBconvert_entry\fP = ttk\&.Entry(conversion_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBconvert_button\fP = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+.br
+.ti -1c
+.RI "\fBresult_label\fP = ttk\&.Label(conversion_frame, text='Result: ')"
+.br
+.ti -1c
+.RI "\fBtoggle_button\fP = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+.br
+.ti -1c
+.RI "\fBurl_dropdown\fP = ttk\&.Combobox(url_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBcopy_button\fP = ttk\&.Button(url_frame, text='Copy URL', command=self\&.copy_url)"
+.br
+.ti -1c
+.RI "\fBsave_button\fP = ttk\&.Button(input_frame, text='Save Parameters', command=self\&.save_params)"
+.br
+.ti -1c
+.RI "\fBplot_frame\fP = ttk\&.Frame(self\&.frame)"
+.br
+.ti -1c
+.RI "\fBplot_button\fP = tk\&.Button(\fBroot\fP, text='Plot TimeSeries', command=lambda: self\&.plot_gw_event(self\&.catalog_dropdown\&.get(),[self\&.detector_dropdown\&.get(idx) for idx in self\&.detector_dropdown\&.curselection()],float(self\&.gps_start_entry\&.get()),float(self\&.gps_end_entry\&.get())))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB1231\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.TimeSrswaveform\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB1232\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.TimeSrswaveform\&.convert_time ( self)"
+
+.PP
+Definition at line \fB1412\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.copy_url ( self)"
+
+.PP
+Definition at line \fB1328\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.fetch_event_details ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1371\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.fetch_events ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1355\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.plot_gw_event ( self,  event_name,  detectors,  gps_start,  gps_end)"
+
+.PP
+.nf
+Plot gravitational wave event data for multiple detectors\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1462\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.prefetch_data ( self)"
+
+.PP
+Definition at line \fB1339\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.save_params ( self)"
+
+.PP
+.nf
+Overwrite 'gwfparams\&.csv' with the latest input values, including headers\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB1432\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.toggle_mode ( self)"
+
+.PP
+Definition at line \fB1403\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.update_urls ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1386\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.TimeSrswaveform\&.canvas = tk\&.Canvas(\fBroot\fP)"
+
+.PP
+Definition at line \fB1238\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.catalog_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1258\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.convert_button = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+
+.PP
+Definition at line \fB1298\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.convert_entry = ttk\&.Entry(conversion_frame, width=20)"
+
+.PP
+Definition at line \fB1295\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.copy_button = ttk\&.Button(url_frame, text='Copy URL', command=self\&.copy_url)"
+
+.PP
+Definition at line \fB1314\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.detector_dropdown = tk\&.Listbox(input_frame, selectmode='multiple', height=3)"
+
+.PP
+Definition at line \fB1275\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.event_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1264\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.fetch_event_details = 'ew')"
+
+.PP
+Definition at line \fB1266\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.fetch_events = 'ew')"
+
+.PP
+Definition at line \fB1260\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.frame = ttk\&.Frame(self\&.canvas)"
+
+.PP
+Definition at line \fB1244\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.gps_end_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB1287\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.gps_start_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB1283\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.mode = tk\&.StringVar(value='gps_to_utc')"
+
+.PP
+Definition at line \fB1291\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.plot_button = tk\&.Button(\fBroot\fP, text='Plot TimeSeries', command=lambda: self\&.plot_gw_event(self\&.catalog_dropdown\&.get(),[self\&.detector_dropdown\&.get(idx) for idx in self\&.detector_dropdown\&.curselection()],float(self\&.gps_start_entry\&.get()),float(self\&.gps_end_entry\&.get())))"
+
+.PP
+Definition at line \fB1324\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.plot_frame = ttk\&.Frame(self\&.frame)"
+
+.PP
+Definition at line \fB1320\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.result_label = ttk\&.Label(conversion_frame, text='Result: ')"
+
+.PP
+Definition at line \fB1301\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.root = root"
+
+.PP
+Definition at line \fB1233\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.run_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1270\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.save_button = ttk\&.Button(input_frame, text='Save Parameters', command=self\&.save_params)"
+
+.PP
+Definition at line \fB1318\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.scroll_x = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+
+.PP
+Definition at line \fB1240\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.scroll_y = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+
+.PP
+Definition at line \fB1239\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.toggle_button = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+
+.PP
+Definition at line \fB1304\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.update_urls = 'ew')"
+
+.PP
+Definition at line \fB1279\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.TimeSrswaveform\&.url_dropdown = ttk\&.Combobox(url_frame, state='readonly')"
+
+.PP
+Definition at line \fB1311\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

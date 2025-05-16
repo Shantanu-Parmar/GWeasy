@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_f_f_t" xml:lang="en-US">
+<title>GWeasy.FFT Class Reference</title>
+<indexterm><primary>GWeasy.FFT</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1abdc46d3cd5debe6483b1c32223bf7132">__init__</link> (self, <link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522">copy_url</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1acf1e19a61082bce687189bd91258ac7d">prefetch_data</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a1fa930fcb1ac3250767083b63983ca68">fetch_events</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a60b35fb4ce2c845ae171b5581826db22">fetch_event_details</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ad0cea468e600b484c31d52688bbdae6b">update_urls</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a26b73ea39daefefa280fb76a1e5bb6c7">toggle_mode</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ab19b4161d82086879ff736afaf9bc434">convert_time</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a1c92208b2c6ec70957f302c5550cf59d">save_params</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469">fft</link> (self, event_name, detectors, gps_start, gps_end)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link> = root</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a20dae5e12b9eb1274ddf7ff4f73e37ed">canvas</link> = tk.Canvas(<link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a13cb631beaae9548ba3a85269a1537c2">scroll_y</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1aafe9faeda108426bb19fcc4688ce6bb8">scroll_x</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1af2b7ec2c2a22083c04825621670eb8af">frame</link> = ttk.Frame(self.canvas)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187">catalog_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a375bec96284d757e494dd42b1ac7f123">fetch_events</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99">event_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ac559673b3f1bb3bd50ce920959378e22">fetch_event_details</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ad7e4f591a5e578a5f27676df48f78d62">run_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a6d30d2003df8cd8feba32c4691f0fe99">detector_listbox</link> = tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, exportselection=False, height=3)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a4c12533d9c9017635b8918adb83328be">gps_start_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a03575ded71a8823723b98ceabb34e494">gps_end_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a4e88ad42f6c8a83afd2c2c29f537723b">mode</link> = tk.StringVar(value=&quot;gps_to_utc&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ae9800114548848228ad42921c09b5787">convert_entry</link> = ttk.Entry(conversion_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a15c7bfb366ec1a4ef5e2deb6651dcfed">convert_button</link> = ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a2aaeadadbf663e013807e4fc4f5b2b52">result_label</link> = ttk.Label(conversion_frame, text=&quot;Result: &quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a9139c02e823538cd4aba564431844b97">toggle_button</link> = ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ac74e497cf908f42e963a3fb3f349be14">url_dropdown</link> = ttk.Combobox(url_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ae05203e214a3bfcb551aa29ad359d132">copy_button</link> = ttk.Button(url_frame, text=&quot;Copy URL&quot;, command=self.copy_url)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1ac093062a473639544f6fd399705107ff">save_button</link> = ttk.Button(input_frame, text=&quot;Save Parameters&quot;, command=self.save_params)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1a409cd1801104c50b32e00ba968824261">plot_frame</link> = ttk.Frame(self.frame)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_f_f_t_1aa921fda75545a10c6d6b905dea97d726">fft_button</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01515">1515</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1abdc46d3cd5debe6483b1c32223bf7132"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01516">1516</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ab19b4161d82086879ff736afaf9bc434"/><section>
+    <title>convert_time()</title>
+<indexterm><primary>convert_time</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>convert_time</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.convert_time ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01693">1693</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522"/><section>
+    <title>copy_url()</title>
+<indexterm><primary>copy_url</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>copy_url</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.copy_url ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01611">1611</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a60b35fb4ce2c845ae171b5581826db22"/><section>
+    <title>fetch_event_details()</title>
+<indexterm><primary>fetch_event_details</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>fetch_event_details</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.fetch_event_details ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01654">1654</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/db4/class_g_weasy_1_1_f_f_t_a60b35fb4ce2c845ae171b5581826db22_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a1fa930fcb1ac3250767083b63983ca68"/><section>
+    <title>fetch_events()</title>
+<indexterm><primary>fetch_events</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>fetch_events</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.fetch_events ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01638">1638</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469"/><section>
+    <title>fft()</title>
+<indexterm><primary>fft</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>fft</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.fft ( self,  event_name,  detectors,  gps_start,  gps_end)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01743">1743</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1acf1e19a61082bce687189bd91258ac7d"/><section>
+    <title>prefetch_data()</title>
+<indexterm><primary>prefetch_data</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>prefetch_data</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.prefetch_data ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01622">1622</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a1c92208b2c6ec70957f302c5550cf59d"/><section>
+    <title>save_params()</title>
+<indexterm><primary>save_params</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>save_params</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.save_params ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Overwrite &apos;gwfparams.csv&apos; with the latest input values, including headers.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01713">1713</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a26b73ea39daefefa280fb76a1e5bb6c7"/><section>
+    <title>toggle_mode()</title>
+<indexterm><primary>toggle_mode</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>toggle_mode</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.toggle_mode ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01684">1684</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ad0cea468e600b484c31d52688bbdae6b"/><section>
+    <title>update_urls()</title>
+<indexterm><primary>update_urls</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>update_urls</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.update_urls ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01669">1669</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/db4/class_g_weasy_1_1_f_f_t_ad0cea468e600b484c31d52688bbdae6b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a20dae5e12b9eb1274ddf7ff4f73e37ed"/><section>
+    <title>canvas</title>
+<indexterm><primary>canvas</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>canvas</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.canvas = tk.Canvas(<link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01522">1522</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1aa129358d670a3bc4aa9451224c4f5187"/><section>
+    <title>catalog_dropdown</title>
+<indexterm><primary>catalog_dropdown</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>catalog_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.catalog_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01542">1542</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a15c7bfb366ec1a4ef5e2deb6651dcfed"/><section>
+    <title>convert_button</title>
+<indexterm><primary>convert_button</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>convert_button</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.convert_button = ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01582">1582</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ae9800114548848228ad42921c09b5787"/><section>
+    <title>convert_entry</title>
+<indexterm><primary>convert_entry</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>convert_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.convert_entry = ttk.Entry(conversion_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01579">1579</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ae05203e214a3bfcb551aa29ad359d132"/><section>
+    <title>copy_button</title>
+<indexterm><primary>copy_button</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>copy_button</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.copy_button = ttk.Button(url_frame, text=&quot;Copy URL&quot;, command=self.copy_url)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01598">1598</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a6d30d2003df8cd8feba32c4691f0fe99"/><section>
+    <title>detector_listbox</title>
+<indexterm><primary>detector_listbox</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>detector_listbox</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.detector_listbox = tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, exportselection=False, height=3)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01559">1559</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a32ccc0918db6b610d534b98fd2fbea99"/><section>
+    <title>event_dropdown</title>
+<indexterm><primary>event_dropdown</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>event_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.event_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01548">1548</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ac559673b3f1bb3bd50ce920959378e22"/><section>
+    <title>fetch_event_details</title>
+<indexterm><primary>fetch_event_details</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>fetch_event_details</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.fetch_event_details = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01550">1550</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a375bec96284d757e494dd42b1ac7f123"/><section>
+    <title>fetch_events</title>
+<indexterm><primary>fetch_events</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>fetch_events</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.fetch_events = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01544">1544</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1aa921fda75545a10c6d6b905dea97d726"/><section>
+    <title>fft_button</title>
+<indexterm><primary>fft_button</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>fft_button</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.fft_button</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;tk.Button(root,&#32;text=<emphasis role="stringliteral">&quot;Run&#32;FFT&quot;</emphasis>,&#32;command=<emphasis role="keyword">lambda</emphasis>:&#32;self.fft(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self.catalog_dropdown.get(),[self.detector_listbox.get(i)&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;self.detector_listbox.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get())))
+</programlisting><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01607">1607</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1af2b7ec2c2a22083c04825621670eb8af"/><section>
+    <title>frame</title>
+<indexterm><primary>frame</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>frame</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.frame = ttk.Frame(self.canvas)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01528">1528</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a03575ded71a8823723b98ceabb34e494"/><section>
+    <title>gps_end_entry</title>
+<indexterm><primary>gps_end_entry</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>gps_end_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.gps_end_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01571">1571</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a4c12533d9c9017635b8918adb83328be"/><section>
+    <title>gps_start_entry</title>
+<indexterm><primary>gps_start_entry</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>gps_start_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.gps_start_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01567">1567</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a4e88ad42f6c8a83afd2c2c29f537723b"/><section>
+    <title>mode</title>
+<indexterm><primary>mode</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>mode</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.mode = tk.StringVar(value=&quot;gps_to_utc&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01575">1575</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a409cd1801104c50b32e00ba968824261"/><section>
+    <title>plot_frame</title>
+<indexterm><primary>plot_frame</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>plot_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.plot_frame = ttk.Frame(self.frame)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01604">1604</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a2aaeadadbf663e013807e4fc4f5b2b52"/><section>
+    <title>result_label</title>
+<indexterm><primary>result_label</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>result_label</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.result_label = ttk.Label(conversion_frame, text=&quot;Result: &quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01585">1585</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01517">1517</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ad7e4f591a5e578a5f27676df48f78d62"/><section>
+    <title>run_dropdown</title>
+<indexterm><primary>run_dropdown</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>run_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.run_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01554">1554</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ac093062a473639544f6fd399705107ff"/><section>
+    <title>save_button</title>
+<indexterm><primary>save_button</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>save_button</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.save_button = ttk.Button(input_frame, text=&quot;Save Parameters&quot;, command=self.save_params)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01602">1602</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1aafe9faeda108426bb19fcc4688ce6bb8"/><section>
+    <title>scroll_x</title>
+<indexterm><primary>scroll_x</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>scroll_x</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.scroll_x = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01524">1524</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a13cb631beaae9548ba3a85269a1537c2"/><section>
+    <title>scroll_y</title>
+<indexterm><primary>scroll_y</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>scroll_y</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.scroll_y = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_f_f_t_1aad9a73c5f7f3e575abff777e485f537a">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01523">1523</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1a9139c02e823538cd4aba564431844b97"/><section>
+    <title>toggle_button</title>
+<indexterm><primary>toggle_button</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>toggle_button</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.toggle_button = ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01588">1588</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_f_f_t_1ac74e497cf908f42e963a3fb3f349be14"/><section>
+    <title>url_dropdown</title>
+<indexterm><primary>url_dropdown</primary><secondary>GWeasy.FFT</secondary></indexterm>
+<indexterm><primary>GWeasy.FFT</primary><secondary>url_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.FFT.url_dropdown = ttk.Combobox(url_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01595">1595</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

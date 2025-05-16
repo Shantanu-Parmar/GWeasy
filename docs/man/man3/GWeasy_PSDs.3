@@ -1,0 +1,302 @@
+.TH "GWeasy.PSDs" 3 "Version v3.0.1" "GWeasy" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GWeasy.PSDs
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBcopy_url\fP (self)"
+.br
+.ti -1c
+.RI "\fBprefetch_data\fP (self)"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBupdate_urls\fP (self, event=None)"
+.br
+.ti -1c
+.RI "\fBtoggle_mode\fP (self)"
+.br
+.ti -1c
+.RI "\fBconvert_time\fP (self)"
+.br
+.ti -1c
+.RI "\fBsave_params\fP (self)"
+.br
+.ti -1c
+.RI "\fBpsds\fP (self, event_name, detectors, gps_start, gps_end, fftlengths, methods)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBroot\fP = root"
+.br
+.ti -1c
+.RI "\fBcanvas\fP = tk\&.Canvas(\fBroot\fP)"
+.br
+.ti -1c
+.RI "\fBscroll_y\fP = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+.br
+.ti -1c
+.RI "\fBscroll_x\fP = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+.br
+.ti -1c
+.RI "\fBframe\fP = ttk\&.Frame(self\&.canvas)"
+.br
+.ti -1c
+.RI "\fBcatalog_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_events\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBevent_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBfetch_event_details\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBrun_dropdown\fP = ttk\&.Combobox(input_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBdetector_dropdown\fP = tk\&.Listbox(input_frame, selectmode='multiple', height=3)"
+.br
+.ti -1c
+.RI "\fBupdate_urls\fP = 'ew')"
+.br
+.ti -1c
+.RI "\fBgps_start_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBgps_end_entry\fP = ttk\&.Entry(input_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBfft_length_entry\fP = ttk\&.Entry(input_frame, width=10)"
+.br
+.ti -1c
+.RI "\fBmethod_entry\fP = ttk\&.Combobox(input_frame, width=10, values=['median', 'welch'], state='readonly')"
+.br
+.ti -1c
+.RI "\fBmode\fP = tk\&.StringVar(value='gps_to_utc')"
+.br
+.ti -1c
+.RI "\fBconvert_entry\fP = ttk\&.Entry(conversion_frame, width=20)"
+.br
+.ti -1c
+.RI "\fBconvert_button\fP = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+.br
+.ti -1c
+.RI "\fBresult_label\fP = ttk\&.Label(conversion_frame, text='Result: ')"
+.br
+.ti -1c
+.RI "\fBtoggle_button\fP = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+.br
+.ti -1c
+.RI "\fBurl_dropdown\fP = ttk\&.Combobox(url_frame, state='readonly')"
+.br
+.ti -1c
+.RI "\fBcopy_button\fP = ttk\&.Button(url_frame, text='Copy URL', command=self\&.copy_url)"
+.br
+.ti -1c
+.RI "\fBsave_button\fP = ttk\&.Button(input_frame, text='Save Parameters', command=self\&.save_params)"
+.br
+.ti -1c
+.RI "\fBplot_frame\fP = ttk\&.Frame(self\&.frame)"
+.br
+.ti -1c
+.RI "\fBplot_button\fP = tk\&.Button(\fBroot\fP, text='Plot TimeSeries', command=lambda: self\&.psds(self\&.catalog_dropdown\&.get(),[self\&.detector_dropdown\&.get(idx) for idx in self\&.detector_dropdown\&.curselection()],float(self\&.gps_start_entry\&.get()),float(self\&.gps_end_entry\&.get()),int(self\&.fft_length_entry\&.get()),self\&.method_entry\&.get()))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB1791\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GWeasy\&.PSDs\&.__init__ ( self,  root)"
+
+.PP
+Definition at line \fB1792\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "GWeasy\&.PSDs\&.convert_time ( self)"
+
+.PP
+Definition at line \fB1980\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.copy_url ( self)"
+
+.PP
+Definition at line \fB1896\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.fetch_event_details ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1939\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.fetch_events ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1923\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.prefetch_data ( self)"
+
+.PP
+Definition at line \fB1907\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.psds ( self,  event_name,  detectors,  gps_start,  gps_end,  fftlengths,  methods)"
+
+.PP
+.nf
+Plot Power Spectral Densities (PSDs) for multiple detectors in Tkinter\&.
+
+Parameters:
+- event_name: Name of the gravitational wave event
+- detectors: List of detector names (e\&.g\&., ['H1', 'L1', 'V1'])
+- gps_start: GPS start time
+- gps_end: GPS end time
+- fftlengths: List of FFT lengths (same length as detectors)
+- methods: List of ASD computation methods (same length as detectors)
+
+.fi
+.PP
+ 
+.PP
+Definition at line \fB2030\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.save_params ( self)"
+
+.PP
+.nf
+Overwrite 'gwfparams\&.csv' with the latest input values, including headers\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB2000\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.toggle_mode ( self)"
+
+.PP
+Definition at line \fB1971\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.update_urls ( self,  event = \fRNone\fP)"
+
+.PP
+Definition at line \fB1954\fP of file \fBGWeasy\&.py\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "GWeasy\&.PSDs\&.canvas = tk\&.Canvas(\fBroot\fP)"
+
+.PP
+Definition at line \fB1798\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.catalog_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1818\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.convert_button = ttk\&.Button(conversion_frame, text='Convert', command=self\&.convert_time)"
+
+.PP
+Definition at line \fB1866\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.convert_entry = ttk\&.Entry(conversion_frame, width=20)"
+
+.PP
+Definition at line \fB1863\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.copy_button = ttk\&.Button(url_frame, text='Copy URL', command=self\&.copy_url)"
+
+.PP
+Definition at line \fB1882\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.detector_dropdown = tk\&.Listbox(input_frame, selectmode='multiple', height=3)"
+
+.PP
+Definition at line \fB1835\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.event_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1824\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.fetch_event_details = 'ew')"
+
+.PP
+Definition at line \fB1826\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.fetch_events = 'ew')"
+
+.PP
+Definition at line \fB1820\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.fft_length_entry = ttk\&.Entry(input_frame, width=10)"
+
+.PP
+Definition at line \fB1851\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.frame = ttk\&.Frame(self\&.canvas)"
+
+.PP
+Definition at line \fB1804\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.gps_end_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB1847\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.gps_start_entry = ttk\&.Entry(input_frame, width=20)"
+
+.PP
+Definition at line \fB1843\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.method_entry = ttk\&.Combobox(input_frame, width=10, values=['median', 'welch'], state='readonly')"
+
+.PP
+Definition at line \fB1855\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.mode = tk\&.StringVar(value='gps_to_utc')"
+
+.PP
+Definition at line \fB1859\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.plot_button = tk\&.Button(\fBroot\fP, text='Plot TimeSeries', command=lambda: self\&.psds(self\&.catalog_dropdown\&.get(),[self\&.detector_dropdown\&.get(idx) for idx in self\&.detector_dropdown\&.curselection()],float(self\&.gps_start_entry\&.get()),float(self\&.gps_end_entry\&.get()),int(self\&.fft_length_entry\&.get()),self\&.method_entry\&.get()))"
+
+.PP
+Definition at line \fB1892\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.plot_frame = ttk\&.Frame(self\&.frame)"
+
+.PP
+Definition at line \fB1888\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.result_label = ttk\&.Label(conversion_frame, text='Result: ')"
+
+.PP
+Definition at line \fB1869\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.root = root"
+
+.PP
+Definition at line \fB1793\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.run_dropdown = ttk\&.Combobox(input_frame, state='readonly')"
+
+.PP
+Definition at line \fB1830\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.save_button = ttk\&.Button(input_frame, text='Save Parameters', command=self\&.save_params)"
+
+.PP
+Definition at line \fB1886\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.scroll_x = ttk\&.Scrollbar(\fBroot\fP, orient='horizontal', command=self\&.canvas\&.xview)"
+
+.PP
+Definition at line \fB1800\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.scroll_y = ttk\&.Scrollbar(\fBroot\fP, orient='vertical', command=self\&.canvas\&.yview)"
+
+.PP
+Definition at line \fB1799\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.toggle_button = ttk\&.Button(conversion_frame, text='Switch to UTC → GPS', command=self\&.toggle_mode)"
+
+.PP
+Definition at line \fB1872\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.update_urls = 'ew')"
+
+.PP
+Definition at line \fB1839\fP of file \fBGWeasy\&.py\fP\&.
+.SS "GWeasy\&.PSDs\&.url_dropdown = ttk\&.Combobox(url_frame, state='readonly')"
+
+.PP
+Definition at line \fB1879\fP of file \fBGWeasy\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GWeasy from the source code\&.

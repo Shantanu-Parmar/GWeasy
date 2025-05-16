@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_time_srswaveform" xml:lang="en-US">
+<title>GWeasy.TimeSrswaveform Class Reference</title>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a7857704402181aed95f6bed58c8ca6f2">__init__</link> (self, <link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d">copy_url</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a40e48137af481b4b6e83d57a0e33ab23">prefetch_data</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a4bed151bfec44571fd827583277ed767">fetch_events</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1aecaaabb545deeb185676475b6aff1974">fetch_event_details</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a10ce0b68c09f43a0d9fbad1e3ae75d6b">update_urls</link> (self, event=None)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a18576d202ab03d8664f8a1cf66d9a4b9">toggle_mode</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a8b0fd00c1ad02f69453260734466e20b">convert_time</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a9f973d97c56cc0fb8d43bb0e9c274f87">save_params</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f">plot_gw_event</link> (self, event_name, detectors, gps_start, gps_end)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link> = root</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a0c36bdef301f193fcc6772af597772f7">canvas</link> = tk.Canvas(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a0b51be9e8747a0d4f7b4a269d1069229">scroll_y</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a9c23cb242ac96640e968be6c63062d21">scroll_x</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a532c4292a85798b7aa5ac54390ece6d0">frame</link> = ttk.Frame(self.canvas)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f">catalog_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1ab4813922780af63e2a980a3a88ff9b61">fetch_events</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1">event_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a404c891806be1fb5275ceb98c1d03728">fetch_event_details</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a17a26519ef985c53ba6bf9a0923f1442">run_dropdown</link> = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a2089ad863a58871f54023e5d4caa0fe0">detector_dropdown</link> = tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, height=3)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1aa97ddc1c8188bb581b9216079912f556">update_urls</link> = &quot;ew&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a4b4c8b93c529465fa716d40fccc48ca3">gps_start_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1aadeb9164d7654ea49068a003850c3cc5">gps_end_entry</link> = ttk.Entry(input_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1aaaad290cf087f263cfb0135a16d62370">mode</link> = tk.StringVar(value=&quot;gps_to_utc&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1ab320f8a48342a994a16c8ec6e5d518ed">convert_entry</link> = ttk.Entry(conversion_frame, width=20)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a487002084c53cc53586afda6db8d507f">convert_button</link> = ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1aab9b5f264c5f5bb74b37a100a129052d">result_label</link> = ttk.Label(conversion_frame, text=&quot;Result: &quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a57959bb83db8944c80a23feaeba266ed">toggle_button</link> = ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1acf59257089c8ea137de9fbf3e6502a4d">url_dropdown</link> = ttk.Combobox(url_frame, state=&quot;readonly&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1ae3de71ad6e28fa046548694c0b24a95e">copy_button</link> = ttk.Button(url_frame, text=&quot;Copy URL&quot;, command=self.copy_url)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a3228d4a45f0cb15c1acfd1aca605ca5b">save_button</link> = ttk.Button(input_frame, text=&quot;Save Parameters&quot;, command=self.save_params)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1acae016ef8862705d52cb119e569522db">plot_frame</link> = ttk.Frame(self.frame)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_time_srswaveform_1a30dfd6df75eb5213502a3cc7f4ebf184">plot_button</link> = tk.Button(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>, text=&quot;Plot TimeSeries&quot;, command=lambda: self.plot_gw_event(self.catalog_dropdown.get(),[self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get())))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01231">1231</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a7857704402181aed95f6bed58c8ca6f2"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01232">1232</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a8b0fd00c1ad02f69453260734466e20b"/><section>
+    <title>convert_time()</title>
+<indexterm><primary>convert_time</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>convert_time</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.convert_time ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01412">1412</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d"/><section>
+    <title>copy_url()</title>
+<indexterm><primary>copy_url</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>copy_url</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.copy_url ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01328">1328</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1aecaaabb545deeb185676475b6aff1974"/><section>
+    <title>fetch_event_details()</title>
+<indexterm><primary>fetch_event_details</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>fetch_event_details</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.fetch_event_details ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01371">1371</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a4bed151bfec44571fd827583277ed767"/><section>
+    <title>fetch_events()</title>
+<indexterm><primary>fetch_events</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>fetch_events</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.fetch_events ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01355">1355</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f"/><section>
+    <title>plot_gw_event()</title>
+<indexterm><primary>plot_gw_event</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>plot_gw_event</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.plot_gw_event ( self,  event_name,  detectors,  gps_start,  gps_end)</computeroutput></para>
+<para><literallayout><computeroutput>Plot gravitational wave event data for multiple detectors.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01462">1462</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a40e48137af481b4b6e83d57a0e33ab23"/><section>
+    <title>prefetch_data()</title>
+<indexterm><primary>prefetch_data</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>prefetch_data</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.prefetch_data ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01339">1339</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a9f973d97c56cc0fb8d43bb0e9c274f87"/><section>
+    <title>save_params()</title>
+<indexterm><primary>save_params</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>save_params</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.save_params ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Overwrite &apos;gwfparams.csv&apos; with the latest input values, including headers.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01432">1432</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a18576d202ab03d8664f8a1cf66d9a4b9"/><section>
+    <title>toggle_mode()</title>
+<indexterm><primary>toggle_mode</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>toggle_mode</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.toggle_mode ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01403">1403</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a10ce0b68c09f43a0d9fbad1e3ae75d6b"/><section>
+    <title>update_urls()</title>
+<indexterm><primary>update_urls</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>update_urls</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.update_urls ( self,  event = <computeroutput>None</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01386">1386</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/d54/class_g_weasy_1_1_time_srswaveform_a10ce0b68c09f43a0d9fbad1e3ae75d6b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a0c36bdef301f193fcc6772af597772f7"/><section>
+    <title>canvas</title>
+<indexterm><primary>canvas</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>canvas</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.canvas = tk.Canvas(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01238">1238</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a7bd6a802d81d43a64c84e9d12d50787f"/><section>
+    <title>catalog_dropdown</title>
+<indexterm><primary>catalog_dropdown</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>catalog_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.catalog_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01258">1258</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a487002084c53cc53586afda6db8d507f"/><section>
+    <title>convert_button</title>
+<indexterm><primary>convert_button</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>convert_button</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.convert_button = ttk.Button(conversion_frame, text=&quot;Convert&quot;, command=self.convert_time)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01298">1298</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1ab320f8a48342a994a16c8ec6e5d518ed"/><section>
+    <title>convert_entry</title>
+<indexterm><primary>convert_entry</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>convert_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.convert_entry = ttk.Entry(conversion_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01295">1295</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1ae3de71ad6e28fa046548694c0b24a95e"/><section>
+    <title>copy_button</title>
+<indexterm><primary>copy_button</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>copy_button</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.copy_button = ttk.Button(url_frame, text=&quot;Copy URL&quot;, command=self.copy_url)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01314">1314</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a2089ad863a58871f54023e5d4caa0fe0"/><section>
+    <title>detector_dropdown</title>
+<indexterm><primary>detector_dropdown</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>detector_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.detector_dropdown = tk.Listbox(input_frame, selectmode=&quot;multiple&quot;, height=3)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01275">1275</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a4755fe9b4ba51ddc24476056f2643be1"/><section>
+    <title>event_dropdown</title>
+<indexterm><primary>event_dropdown</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>event_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.event_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01264">1264</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a404c891806be1fb5275ceb98c1d03728"/><section>
+    <title>fetch_event_details</title>
+<indexterm><primary>fetch_event_details</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>fetch_event_details</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.fetch_event_details = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01266">1266</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1ab4813922780af63e2a980a3a88ff9b61"/><section>
+    <title>fetch_events</title>
+<indexterm><primary>fetch_events</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>fetch_events</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.fetch_events = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01260">1260</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a532c4292a85798b7aa5ac54390ece6d0"/><section>
+    <title>frame</title>
+<indexterm><primary>frame</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>frame</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.frame = ttk.Frame(self.canvas)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01244">1244</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1aadeb9164d7654ea49068a003850c3cc5"/><section>
+    <title>gps_end_entry</title>
+<indexterm><primary>gps_end_entry</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>gps_end_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.gps_end_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01287">1287</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a4b4c8b93c529465fa716d40fccc48ca3"/><section>
+    <title>gps_start_entry</title>
+<indexterm><primary>gps_start_entry</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>gps_start_entry</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.gps_start_entry = ttk.Entry(input_frame, width=20)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01283">1283</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1aaaad290cf087f263cfb0135a16d62370"/><section>
+    <title>mode</title>
+<indexterm><primary>mode</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>mode</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.mode = tk.StringVar(value=&quot;gps_to_utc&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01291">1291</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a30dfd6df75eb5213502a3cc7f4ebf184"/><section>
+    <title>plot_button</title>
+<indexterm><primary>plot_button</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>plot_button</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.plot_button = tk.Button(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>, text=&quot;Plot TimeSeries&quot;, command=lambda: self.plot_gw_event(self.catalog_dropdown.get(),[self.detector_dropdown.get(idx) for idx in self.detector_dropdown.curselection()],float(self.gps_start_entry.get()),float(self.gps_end_entry.get())))</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01324">1324</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1acae016ef8862705d52cb119e569522db"/><section>
+    <title>plot_frame</title>
+<indexterm><primary>plot_frame</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>plot_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.plot_frame = ttk.Frame(self.frame)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01320">1320</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1aab9b5f264c5f5bb74b37a100a129052d"/><section>
+    <title>result_label</title>
+<indexterm><primary>result_label</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>result_label</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.result_label = ttk.Label(conversion_frame, text=&quot;Result: &quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01301">1301</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01233">1233</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a17a26519ef985c53ba6bf9a0923f1442"/><section>
+    <title>run_dropdown</title>
+<indexterm><primary>run_dropdown</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>run_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.run_dropdown = ttk.Combobox(input_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01270">1270</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a3228d4a45f0cb15c1acfd1aca605ca5b"/><section>
+    <title>save_button</title>
+<indexterm><primary>save_button</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>save_button</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.save_button = ttk.Button(input_frame, text=&quot;Save Parameters&quot;, command=self.save_params)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01318">1318</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a9c23cb242ac96640e968be6c63062d21"/><section>
+    <title>scroll_x</title>
+<indexterm><primary>scroll_x</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>scroll_x</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.scroll_x = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>, orient=&quot;horizontal&quot;, command=self.canvas.xview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01240">1240</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a0b51be9e8747a0d4f7b4a269d1069229"/><section>
+    <title>scroll_y</title>
+<indexterm><primary>scroll_y</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>scroll_y</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.scroll_y = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_time_srswaveform_1ad88b46bd02cdc0f272e7ea7372688dfb">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01239">1239</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1a57959bb83db8944c80a23feaeba266ed"/><section>
+    <title>toggle_button</title>
+<indexterm><primary>toggle_button</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>toggle_button</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.toggle_button = ttk.Button(conversion_frame, text=&quot;Switch to UTC → GPS&quot;, command=self.toggle_mode)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01304">1304</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1aa97ddc1c8188bb581b9216079912f556"/><section>
+    <title>update_urls</title>
+<indexterm><primary>update_urls</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>update_urls</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.update_urls = &quot;ew&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01279">1279</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_time_srswaveform_1acf59257089c8ea137de9fbf3e6502a4d"/><section>
+    <title>url_dropdown</title>
+<indexterm><primary>url_dropdown</primary><secondary>GWeasy.TimeSrswaveform</secondary></indexterm>
+<indexterm><primary>GWeasy.TimeSrswaveform</primary><secondary>url_dropdown</secondary></indexterm>
+<para><computeroutput>GWeasy.TimeSrswaveform.url_dropdown = ttk.Combobox(url_frame, state=&quot;readonly&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01311">1311</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>

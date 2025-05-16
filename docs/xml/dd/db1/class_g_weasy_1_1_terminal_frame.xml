@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dd/db1/class_g_weasy_1_1_terminal_frame" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::TerminalFrame</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">tk.Frame</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/db1/class_g_weasy_1_1_terminal_frame_1a6cfa9444ecf1fb3f387f93892cd009ae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.TerminalFrame::output_text</definition>
+        <argsstring></argsstring>
+        <name>output_text</name>
+        <qualifiedname>GWeasy.TerminalFrame.output_text</qualifiedname>
+        <initializer>=  scrolledtext.ScrolledText(self, wrap=tk.WORD, 
+                                                     bg=&quot;black&quot;, fg=&quot;white&quot;,
+                                                     font=(&quot;Courier&quot;, 10),
+                                                     height=height, width=width)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="89" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="89" bodyend="-1"/>
+        <referencedby refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/db1/class_g_weasy_1_1_terminal_frame_1a95fe51eb7c7b6076404a16dd59f6ef7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.TerminalFrame.__init__</definition>
+        <argsstring>(self, parent, row, column, rowspan=1, columnspan=1, height=15, width=100)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.TerminalFrame.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>parent</type>
+          <defname>parent</defname>
+        </param>
+        <param>
+          <type>row</type>
+          <defname>row</defname>
+        </param>
+        <param>
+          <type>column</type>
+          <defname>column</defname>
+        </param>
+        <param>
+          <type>rowspan</type>
+          <defname>rowspan</defname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>columnspan</type>
+          <defname>columnspan</defname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>height</type>
+          <defname>height</defname>
+          <defval>15</defval>
+        </param>
+        <param>
+          <type>width</type>
+          <defname>width</defname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="85" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="85" bodyend="97"/>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a95fe51eb7c7b6076404a16dd59f6ef7b" compoundref="d6/d99/_g_weasy_8py" startline="85" endline="97">GWeasy.TerminalFrame.__init__</references>
+        <referencedby refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a95fe51eb7c7b6076404a16dd59f6ef7b" compoundref="d6/d99/_g_weasy_8py" startline="85" endline="97">GWeasy.TerminalFrame.__init__</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.TerminalFrame.append_output</definition>
+        <argsstring>(self, text, color=&quot;white&quot;)</argsstring>
+        <name>append_output</name>
+        <qualifiedname>GWeasy.TerminalFrame.append_output</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>text</type>
+          <defname>text</defname>
+        </param>
+        <param>
+          <type>color</type>
+          <defname>color</defname>
+          <defval>&quot;white&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Append text to the terminal and auto-scroll.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="98" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="98" bodyend="105"/>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6cfa9444ecf1fb3f387f93892cd009ae" compoundref="d6/d99/_g_weasy_8py" startline="89">GWeasy.TerminalFrame.output_text</references>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a608de44f4b3e008aede61fa0a60ef748" compoundref="d6/d99/_g_weasy_8py" startline="214" endline="261">GWeasy.OmicronApp.create_folder_selector</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ac2f22a8cf066970416111ec3fa1106ef" compoundref="d6/d99/_g_weasy_8py" startline="392" endline="401">GWeasy.OmicronApp.load_config</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ad6012b814f749f97f159aa12c4f890fd" compoundref="d6/d99/_g_weasy_8py" startline="449" endline="456">GWeasy.OmicronApp.run_omicron_script</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1a24cfec42c637ae285edeb8ec620c8a5f" compoundref="d6/d99/_g_weasy_8py" startline="402" endline="448">GWeasy.OmicronApp.save_config</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1aa183952e874b5e197a29473d77871a3f" compoundref="d6/d99/_g_weasy_8py" startline="457" endline="512">GWeasy.OmicronApp.start_omicron_process</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GWeasy.TerminalFrame</label>
+        <link refid="dd/db1/class_g_weasy_1_1_terminal_frame"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tk::Frame</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>GWeasy.TerminalFrame</label>
+        <link refid="dd/db1/class_g_weasy_1_1_terminal_frame"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tk::Frame</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="84" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="84" bodyend="105"/>
+    <listofallmembers>
+      <member refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a95fe51eb7c7b6076404a16dd59f6ef7b" prot="public" virt="non-virtual"><scope>GWeasy::TerminalFrame</scope><name>__init__</name></member>
+      <member refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" prot="public" virt="non-virtual"><scope>GWeasy::TerminalFrame</scope><name>append_output</name></member>
+      <member refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6cfa9444ecf1fb3f387f93892cd009ae" prot="public" virt="non-virtual"><scope>GWeasy::TerminalFrame</scope><name>output_text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

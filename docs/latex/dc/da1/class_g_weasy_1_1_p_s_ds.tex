@@ -1,0 +1,472 @@
+\doxysection{GWeasy.\+PSDs Class Reference}
+\hypertarget{class_g_weasy_1_1_p_s_ds}{}\label{class_g_weasy_1_1_p_s_ds}\index{GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a930239e85ff3a14c6001f123e2f853ad}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a402df04c08cec6d25843172097faa039}{copy\+\_\+url}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_af565865c2e6621c9817f3c69d77719fa}{prefetch\+\_\+data}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a5962a176c28937782a464c5696324202}{fetch\+\_\+events}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a386ab13021d2275d825c5e64358ea6d2}{fetch\+\_\+event\+\_\+details}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a5c8ff819a48980b8e86f8d277eb38112}{update\+\_\+urls}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a06237a37f8db22252e2e56daa68d9a5c}{toggle\+\_\+mode}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a3d283f33af4ff24e40227daf09486ea9}{convert\+\_\+time}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_ad3feff68de399fb96d2bf5a742ced9f9}{save\+\_\+params}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a6354f71fd3340e414796be6c75824f24}{psds}} (self, event\+\_\+name, detectors, gps\+\_\+start, gps\+\_\+end, fftlengths, methods)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}} = root
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_ac7ac3609de336df89f1536555ce0dc36}{canvas}} = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_aeaa166575b36db93be39fcb8c44c7fc0}{scroll\+\_\+y}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_aa6f2e277db303822834a2386bb50b62e}{scroll\+\_\+x}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a2ceca75161bdd1af9b515c9fcfe7213c}{frame}} = ttk.\+Frame(self.\+canvas)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a1a10954d210a74bbe8360dda35bd3041}{catalog\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a8fc45c1bc0cbe47067d38806442aacf9}{fetch\+\_\+events}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a23f283b12c806fadb708b5fd815fb3dd}{event\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a2a6a125c1847b86939a37557e1fe35e3}{fetch\+\_\+event\+\_\+details}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a83084a9ded1e9c0907785e7afc878644}{run\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a4fb642431ae53b4052a040025f6d2b7e}{detector\+\_\+dropdown}} = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, height=3)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_ae36a9f80f4c53af05e6f75ec2e41846f}{update\+\_\+urls}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a0a64dfcac5594a78a31565768a801f25}{gps\+\_\+start\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_ad1a7899f815ba1c2a631b747d5b754a1}{gps\+\_\+end\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_aeeb80a8139a6cc5468529821b8b6c586}{fft\+\_\+length\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=10)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_ae25142878198c3758490d74af4e681b7}{method\+\_\+entry}} = ttk.\+Combobox(input\+\_\+frame, width=10, values=\mbox{[}"{}median"{}, "{}welch"{}\mbox{]}, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_ac4bf0e8c1bdb2bf9e6837069028360e8}{mode}} = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a399d393249c07260ae4fa76cf41ea3db}{convert\+\_\+entry}} = ttk.\+Entry(conversion\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_aa539b7a2275e2d41748ee0c84aed4550}{convert\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_aa92359e044c1cf02d90a3cafb91ceca4}{result\+\_\+label}} = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_af8a91c6d008ccc248d1e32f896ca2007}{toggle\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a97f425051c96be99e64a949c07bbed24}{url\+\_\+dropdown}} = ttk.\+Combobox(url\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a0a5dc083729387af8b458e5d3f25b453}{copy\+\_\+button}} = ttk.\+Button(url\+\_\+frame, text="{}Copy URL"{}, command=self.\+copy\+\_\+url)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a469f3b6c742dc5b6bebb5c2760402836}{save\+\_\+button}} = ttk.\+Button(input\+\_\+frame, text="{}Save Parameters"{}, command=self.\+save\+\_\+params)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a47b38908f200e50b506a132c94167574}{plot\+\_\+frame}} = ttk.\+Frame(self.\+frame)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_aab592d23fe715ebd17fb8e4577e97676}{plot\+\_\+button}} = tk.\+Button(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}}, text="{}Plot Time\+Series"{}, command=lambda\+: self.\+psds(self.\+catalog\+\_\+dropdown.\+get(),\mbox{[}self.\+detector\+\_\+dropdown.\+get(idx) for idx in self.\+detector\+\_\+dropdown.\+curselection()\mbox{]},float(self.\+gps\+\_\+start\+\_\+entry.\+get()),float(self.\+gps\+\_\+end\+\_\+entry.\+get()),int(self.\+fft\+\_\+length\+\_\+entry.\+get()),self.\+method\+\_\+entry.\+get()))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01791}{1791}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a930239e85ff3a14c6001f123e2f853ad}\index{GWeasy.PSDs@{GWeasy.PSDs}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a930239e85ff3a14c6001f123e2f853ad} 
+GWeasy.\+PSDs.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01792}{1792}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a3d283f33af4ff24e40227daf09486ea9}\index{GWeasy.PSDs@{GWeasy.PSDs}!convert\_time@{convert\_time}}
+\index{convert\_time@{convert\_time}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{convert\_time()}{convert\_time()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a3d283f33af4ff24e40227daf09486ea9} 
+GWeasy.\+PSDs.\+convert\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01980}{1980}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a402df04c08cec6d25843172097faa039}\index{GWeasy.PSDs@{GWeasy.PSDs}!copy\_url@{copy\_url}}
+\index{copy\_url@{copy\_url}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{copy\_url()}{copy\_url()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a402df04c08cec6d25843172097faa039} 
+GWeasy.\+PSDs.\+copy\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01896}{1896}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a386ab13021d2275d825c5e64358ea6d2}\index{GWeasy.PSDs@{GWeasy.PSDs}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details()}{fetch\_event\_details()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a386ab13021d2275d825c5e64358ea6d2} 
+GWeasy.\+PSDs.\+fetch\+\_\+event\+\_\+details (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01939}{1939}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a5962a176c28937782a464c5696324202}\index{GWeasy.PSDs@{GWeasy.PSDs}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{fetch\_events()}{fetch\_events()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a5962a176c28937782a464c5696324202} 
+GWeasy.\+PSDs.\+fetch\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01923}{1923}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_af565865c2e6621c9817f3c69d77719fa}\index{GWeasy.PSDs@{GWeasy.PSDs}!prefetch\_data@{prefetch\_data}}
+\index{prefetch\_data@{prefetch\_data}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{prefetch\_data()}{prefetch\_data()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_af565865c2e6621c9817f3c69d77719fa} 
+GWeasy.\+PSDs.\+prefetch\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01907}{1907}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a6354f71fd3340e414796be6c75824f24}\index{GWeasy.PSDs@{GWeasy.PSDs}!psds@{psds}}
+\index{psds@{psds}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{psds()}{psds()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a6354f71fd3340e414796be6c75824f24} 
+GWeasy.\+PSDs.\+psds (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event\+\_\+name}{, }\item[{}]{detectors}{, }\item[{}]{gps\+\_\+start}{, }\item[{}]{gps\+\_\+end}{, }\item[{}]{fftlengths}{, }\item[{}]{methods}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Plot Power Spectral Densities (PSDs) for multiple detectors in Tkinter.
+
+Parameters:
+- event_name: Name of the gravitational wave event
+- detectors: List of detector names (e.g., ['H1', 'L1', 'V1'])
+- gps_start: GPS start time
+- gps_end: GPS end time
+- fftlengths: List of FFT lengths (same length as detectors)
+- methods: List of ASD computation methods (same length as detectors)
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02030}{2030}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_ad3feff68de399fb96d2bf5a742ced9f9}\index{GWeasy.PSDs@{GWeasy.PSDs}!save\_params@{save\_params}}
+\index{save\_params@{save\_params}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{save\_params()}{save\_params()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_ad3feff68de399fb96d2bf5a742ced9f9} 
+GWeasy.\+PSDs.\+save\+\_\+params (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Overwrite 'gwfparams.csv' with the latest input values, including headers.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l02000}{2000}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a06237a37f8db22252e2e56daa68d9a5c}\index{GWeasy.PSDs@{GWeasy.PSDs}!toggle\_mode@{toggle\_mode}}
+\index{toggle\_mode@{toggle\_mode}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{toggle\_mode()}{toggle\_mode()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a06237a37f8db22252e2e56daa68d9a5c} 
+GWeasy.\+PSDs.\+toggle\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01971}{1971}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a5c8ff819a48980b8e86f8d277eb38112}\index{GWeasy.PSDs@{GWeasy.PSDs}!update\_urls@{update\_urls}}
+\index{update\_urls@{update\_urls}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{update\_urls()}{update\_urls()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a5c8ff819a48980b8e86f8d277eb38112} 
+GWeasy.\+PSDs.\+update\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01954}{1954}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_weasy_1_1_p_s_ds_ac7ac3609de336df89f1536555ce0dc36}\index{GWeasy.PSDs@{GWeasy.PSDs}!canvas@{canvas}}
+\index{canvas@{canvas}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_ac7ac3609de336df89f1536555ce0dc36} 
+GWeasy.\+PSDs.\+canvas = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01798}{1798}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a1a10954d210a74bbe8360dda35bd3041}\index{GWeasy.PSDs@{GWeasy.PSDs}!catalog\_dropdown@{catalog\_dropdown}}
+\index{catalog\_dropdown@{catalog\_dropdown}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{catalog\_dropdown}{catalog\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a1a10954d210a74bbe8360dda35bd3041} 
+GWeasy.\+PSDs.\+catalog\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01818}{1818}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_aa539b7a2275e2d41748ee0c84aed4550}\index{GWeasy.PSDs@{GWeasy.PSDs}!convert\_button@{convert\_button}}
+\index{convert\_button@{convert\_button}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{convert\_button}{convert\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_aa539b7a2275e2d41748ee0c84aed4550} 
+GWeasy.\+PSDs.\+convert\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01866}{1866}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a399d393249c07260ae4fa76cf41ea3db}\index{GWeasy.PSDs@{GWeasy.PSDs}!convert\_entry@{convert\_entry}}
+\index{convert\_entry@{convert\_entry}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{convert\_entry}{convert\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a399d393249c07260ae4fa76cf41ea3db} 
+GWeasy.\+PSDs.\+convert\+\_\+entry = ttk.\+Entry(conversion\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01863}{1863}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a0a5dc083729387af8b458e5d3f25b453}\index{GWeasy.PSDs@{GWeasy.PSDs}!copy\_button@{copy\_button}}
+\index{copy\_button@{copy\_button}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{copy\_button}{copy\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a0a5dc083729387af8b458e5d3f25b453} 
+GWeasy.\+PSDs.\+copy\+\_\+button = ttk.\+Button(url\+\_\+frame, text="{}Copy URL"{}, command=self.\+copy\+\_\+url)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01882}{1882}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a4fb642431ae53b4052a040025f6d2b7e}\index{GWeasy.PSDs@{GWeasy.PSDs}!detector\_dropdown@{detector\_dropdown}}
+\index{detector\_dropdown@{detector\_dropdown}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{detector\_dropdown}{detector\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a4fb642431ae53b4052a040025f6d2b7e} 
+GWeasy.\+PSDs.\+detector\+\_\+dropdown = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, height=3)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01835}{1835}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a23f283b12c806fadb708b5fd815fb3dd}\index{GWeasy.PSDs@{GWeasy.PSDs}!event\_dropdown@{event\_dropdown}}
+\index{event\_dropdown@{event\_dropdown}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{event\_dropdown}{event\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a23f283b12c806fadb708b5fd815fb3dd} 
+GWeasy.\+PSDs.\+event\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01824}{1824}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a2a6a125c1847b86939a37557e1fe35e3}\index{GWeasy.PSDs@{GWeasy.PSDs}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details}{fetch\_event\_details}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a2a6a125c1847b86939a37557e1fe35e3} 
+GWeasy.\+PSDs.\+fetch\+\_\+event\+\_\+details = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01826}{1826}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a8fc45c1bc0cbe47067d38806442aacf9}\index{GWeasy.PSDs@{GWeasy.PSDs}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{fetch\_events}{fetch\_events}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a8fc45c1bc0cbe47067d38806442aacf9} 
+GWeasy.\+PSDs.\+fetch\+\_\+events = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01820}{1820}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_aeeb80a8139a6cc5468529821b8b6c586}\index{GWeasy.PSDs@{GWeasy.PSDs}!fft\_length\_entry@{fft\_length\_entry}}
+\index{fft\_length\_entry@{fft\_length\_entry}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{fft\_length\_entry}{fft\_length\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_aeeb80a8139a6cc5468529821b8b6c586} 
+GWeasy.\+PSDs.\+fft\+\_\+length\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=10)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01851}{1851}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a2ceca75161bdd1af9b515c9fcfe7213c}\index{GWeasy.PSDs@{GWeasy.PSDs}!frame@{frame}}
+\index{frame@{frame}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a2ceca75161bdd1af9b515c9fcfe7213c} 
+GWeasy.\+PSDs.\+frame = ttk.\+Frame(self.\+canvas)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01804}{1804}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_ad1a7899f815ba1c2a631b747d5b754a1}\index{GWeasy.PSDs@{GWeasy.PSDs}!gps\_end\_entry@{gps\_end\_entry}}
+\index{gps\_end\_entry@{gps\_end\_entry}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{gps\_end\_entry}{gps\_end\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_ad1a7899f815ba1c2a631b747d5b754a1} 
+GWeasy.\+PSDs.\+gps\+\_\+end\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01847}{1847}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a0a64dfcac5594a78a31565768a801f25}\index{GWeasy.PSDs@{GWeasy.PSDs}!gps\_start\_entry@{gps\_start\_entry}}
+\index{gps\_start\_entry@{gps\_start\_entry}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{gps\_start\_entry}{gps\_start\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a0a64dfcac5594a78a31565768a801f25} 
+GWeasy.\+PSDs.\+gps\+\_\+start\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01843}{1843}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_ae25142878198c3758490d74af4e681b7}\index{GWeasy.PSDs@{GWeasy.PSDs}!method\_entry@{method\_entry}}
+\index{method\_entry@{method\_entry}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{method\_entry}{method\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_ae25142878198c3758490d74af4e681b7} 
+GWeasy.\+PSDs.\+method\+\_\+entry = ttk.\+Combobox(input\+\_\+frame, width=10, values=\mbox{[}"{}median"{}, "{}welch"{}\mbox{]}, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01855}{1855}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_ac4bf0e8c1bdb2bf9e6837069028360e8}\index{GWeasy.PSDs@{GWeasy.PSDs}!mode@{mode}}
+\index{mode@{mode}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_ac4bf0e8c1bdb2bf9e6837069028360e8} 
+GWeasy.\+PSDs.\+mode = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01859}{1859}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_aab592d23fe715ebd17fb8e4577e97676}\index{GWeasy.PSDs@{GWeasy.PSDs}!plot\_button@{plot\_button}}
+\index{plot\_button@{plot\_button}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{plot\_button}{plot\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_aab592d23fe715ebd17fb8e4577e97676} 
+GWeasy.\+PSDs.\+plot\+\_\+button = tk.\+Button(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}}, text="{}Plot Time\+Series"{}, command=lambda\+: self.\+psds(self.\+catalog\+\_\+dropdown.\+get(),\mbox{[}self.\+detector\+\_\+dropdown.\+get(idx) for idx in self.\+detector\+\_\+dropdown.\+curselection()\mbox{]},float(self.\+gps\+\_\+start\+\_\+entry.\+get()),float(self.\+gps\+\_\+end\+\_\+entry.\+get()),int(self.\+fft\+\_\+length\+\_\+entry.\+get()),self.\+method\+\_\+entry.\+get()))}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01892}{1892}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a47b38908f200e50b506a132c94167574}\index{GWeasy.PSDs@{GWeasy.PSDs}!plot\_frame@{plot\_frame}}
+\index{plot\_frame@{plot\_frame}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{plot\_frame}{plot\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a47b38908f200e50b506a132c94167574} 
+GWeasy.\+PSDs.\+plot\+\_\+frame = ttk.\+Frame(self.\+frame)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01888}{1888}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_aa92359e044c1cf02d90a3cafb91ceca4}\index{GWeasy.PSDs@{GWeasy.PSDs}!result\_label@{result\_label}}
+\index{result\_label@{result\_label}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{result\_label}{result\_label}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_aa92359e044c1cf02d90a3cafb91ceca4} 
+GWeasy.\+PSDs.\+result\+\_\+label = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01869}{1869}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}\index{GWeasy.PSDs@{GWeasy.PSDs}!root@{root}}
+\index{root@{root}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a} 
+GWeasy.\+PSDs.\+root = root}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01793}{1793}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a83084a9ded1e9c0907785e7afc878644}\index{GWeasy.PSDs@{GWeasy.PSDs}!run\_dropdown@{run\_dropdown}}
+\index{run\_dropdown@{run\_dropdown}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{run\_dropdown}{run\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a83084a9ded1e9c0907785e7afc878644} 
+GWeasy.\+PSDs.\+run\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01830}{1830}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a469f3b6c742dc5b6bebb5c2760402836}\index{GWeasy.PSDs@{GWeasy.PSDs}!save\_button@{save\_button}}
+\index{save\_button@{save\_button}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{save\_button}{save\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a469f3b6c742dc5b6bebb5c2760402836} 
+GWeasy.\+PSDs.\+save\+\_\+button = ttk.\+Button(input\+\_\+frame, text="{}Save Parameters"{}, command=self.\+save\+\_\+params)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01886}{1886}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_aa6f2e277db303822834a2386bb50b62e}\index{GWeasy.PSDs@{GWeasy.PSDs}!scroll\_x@{scroll\_x}}
+\index{scroll\_x@{scroll\_x}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{scroll\_x}{scroll\_x}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_aa6f2e277db303822834a2386bb50b62e} 
+GWeasy.\+PSDs.\+scroll\+\_\+x = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01800}{1800}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_aeaa166575b36db93be39fcb8c44c7fc0}\index{GWeasy.PSDs@{GWeasy.PSDs}!scroll\_y@{scroll\_y}}
+\index{scroll\_y@{scroll\_y}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{scroll\_y}{scroll\_y}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_aeaa166575b36db93be39fcb8c44c7fc0} 
+GWeasy.\+PSDs.\+scroll\+\_\+y = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_p_s_ds_a412a0cca0d6f003116f3ce5125c2fd2a}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01799}{1799}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_af8a91c6d008ccc248d1e32f896ca2007}\index{GWeasy.PSDs@{GWeasy.PSDs}!toggle\_button@{toggle\_button}}
+\index{toggle\_button@{toggle\_button}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{toggle\_button}{toggle\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_af8a91c6d008ccc248d1e32f896ca2007} 
+GWeasy.\+PSDs.\+toggle\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01872}{1872}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_ae36a9f80f4c53af05e6f75ec2e41846f}\index{GWeasy.PSDs@{GWeasy.PSDs}!update\_urls@{update\_urls}}
+\index{update\_urls@{update\_urls}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{update\_urls}{update\_urls}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_ae36a9f80f4c53af05e6f75ec2e41846f} 
+GWeasy.\+PSDs.\+update\+\_\+urls = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01839}{1839}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_p_s_ds_a97f425051c96be99e64a949c07bbed24}\index{GWeasy.PSDs@{GWeasy.PSDs}!url\_dropdown@{url\_dropdown}}
+\index{url\_dropdown@{url\_dropdown}!GWeasy.PSDs@{GWeasy.PSDs}}
+\doxysubsubsection{\texorpdfstring{url\_dropdown}{url\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_p_s_ds_a97f425051c96be99e64a949c07bbed24} 
+GWeasy.\+PSDs.\+url\+\_\+dropdown = ttk.\+Combobox(url\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01879}{1879}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy/\mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}\end{DoxyCompactItemize}

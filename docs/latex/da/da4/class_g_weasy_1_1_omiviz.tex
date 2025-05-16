@@ -1,0 +1,594 @@
+\doxysection{GWeasy.\+Omiviz Class Reference}
+\hypertarget{class_g_weasy_1_1_omiviz}{}\label{class_g_weasy_1_1_omiviz}\index{GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a8a1abcaa0bdbf764f7620e3d4f9ede3a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a5927086beaab150b73ee9fe248920864}{start\+\_\+loading}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a940521e496d5867e69a6e9e835875eec}{stop\+\_\+loading}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a0ca93a57b9356b0242c9c7b1ba79de98}{update\+\_\+progress}} (self, text)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a00290848b4f49fa8fed9dca6bb47ec2f}{show\+\_\+previous\+\_\+plot}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ae7a0ad2a1b444d30fe6769555a7113bc}{show\+\_\+next\+\_\+plot}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a28528940b4c8998eca58e6ca71d2d24a}{update\+\_\+navigation\+\_\+buttons}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ac25ba894e63d6addfb816a28fb9615d0}{create\+\_\+widgets}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a957f6e8833cee2c4f431ac4f1ee8b1cc}{valent}} (self, label, key, frame=None, row=0, col=0, editable=True)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc}{create\+\_\+output\+\_\+path\+\_\+selector}} (self, label, key, frame=None, row=0, column=0)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ade2bd10cac8ce57726871553b88241e7}{select\+\_\+output\+\_\+folder}} (self, var)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9}{create\+\_\+file\+\_\+selector}} (self, label, key, frame=None, row=0, column=0)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_afa0801404d631921e5d212ee675ad32a}{select\+\_\+file\+\_\+or\+\_\+folder}} (self, var)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_aa7fea33189709387c6cfb10249f15d91}{run\+\_\+omicron\+\_\+plot}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_aac58d816df8df0bff000113f500c38f0}{execute\+\_\+command}} (self, command, gps\+\_\+start, gps\+\_\+end, output\+\_\+folder)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ae394ef0c843904de3cb2195e777d1629}{show\+\_\+plot}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969}{load\+\_\+plots}} (self, folder)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}{root}} = root
+\item 
+dict \mbox{\hyperlink{class_g_weasy_1_1_omiviz_a31057d5270b45172b1df404b98ace012}{config\+\_\+data}} = \{\}
+\item 
+dict \mbox{\hyperlink{class_g_weasy_1_1_omiviz_a7a444b147f3dfcf4fd6ee19ccb7d96d4}{ui\+\_\+elements}} = \{\}
+\item 
+list \mbox{\hyperlink{class_g_weasy_1_1_omiviz_a93f21da01ec8f6261ad5f5a10dd36de0}{plot\+\_\+files}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{class_g_weasy_1_1_omiviz_a30fad9c2937c4c8534e144a376fff08c}{current\+\_\+plot\+\_\+index}} = 0
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_acd11d586944d13007833c5a3b54de21a}{canvas}} = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a45d62f4c1a9b1a689ef1b2d8920ba593}{scrollbar}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_aa6eef08d7f08860f607cc371be946324}{scrollable\+\_\+frame}} = ttk.\+Frame(self.\+canvas)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a3618182f89f51a5438cc31dcb635e807}{window\+\_\+frame}} = self.\+canvas.\+create\+\_\+window((0, 0), window=self.\+scrollable\+\_\+frame, anchor="{}nw"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_aa1f14e87b54591311fda4c3e33ecce86}{run\+\_\+button}} = tk.\+Button(button\+\_\+frame, text="{}Run Omicron Plot"{}, command=self.\+run\+\_\+omicron\+\_\+plot)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a2ce005202325aeb7de3cfe86162aa10d}{image\+\_\+frame}} = tk.\+Frame(self.\+scrollable\+\_\+frame)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ab6530003f7b04524c258a442f6e87d8d}{image\+\_\+label}} = tk.\+Label(self.\+image\+\_\+frame, text="{}No Plot Available"{}, width=50, height=25, bg="{}gray"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a3a5d7bfb5b5c3a473f482b17ba280124}{prev\+\_\+button}} = tk.\+Button(nav\+\_\+frame, text="{}⬅ Previous"{}, command=self.\+show\+\_\+previous\+\_\+plot, state=tk.\+DISABLED)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_ab17c3478c3c3842c9ef750dcb223dc8c}{next\+\_\+button}} = tk.\+Button(nav\+\_\+frame, text="{}Next ➡"{}, command=self.\+show\+\_\+next\+\_\+plot, state=tk.\+DISABLED)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_aeaf7da465545e6f1ad2d9f1350e0e8af}{progress}} = ttk.\+Progressbar(self.\+scrollable\+\_\+frame, orient="{}horizontal"{}, length=300, mode="{}indeterminate"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a12522060e133892fbded6e79dbf6c55a}{wsl\+\_\+project\+\_\+dir}} = output\+\_\+folder
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a73317d4f4e1e4aebe3bfc13c76332b25}{photo}} = Image\+Tk.\+Photo\+Image(image)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00892}{892}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_weasy_1_1_omiviz_a8a1abcaa0bdbf764f7620e3d4f9ede3a}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a8a1abcaa0bdbf764f7620e3d4f9ede3a} 
+GWeasy.\+Omiviz.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00893}{893}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!create\_file\_selector@{create\_file\_selector}}
+\index{create\_file\_selector@{create\_file\_selector}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{create\_file\_selector()}{create\_file\_selector()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9} 
+GWeasy.\+Omiviz.\+create\+\_\+file\+\_\+selector (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{label}{, }\item[{}]{key}{, }\item[{}]{frame}{ = {\ttfamily None}, }\item[{}]{row}{ = {\ttfamily 0}, }\item[{}]{column}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Allows selecting either a single file or a folder containing `.root` files.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01017}{1017}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{da/da4/class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{da/da4/class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!create\_output\_path\_selector@{create\_output\_path\_selector}}
+\index{create\_output\_path\_selector@{create\_output\_path\_selector}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{create\_output\_path\_selector()}{create\_output\_path\_selector()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc} 
+GWeasy.\+Omiviz.\+create\+\_\+output\+\_\+path\+\_\+selector (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{label}{, }\item[{}]{key}{, }\item[{}]{frame}{ = {\ttfamily None}, }\item[{}]{row}{ = {\ttfamily 0}, }\item[{}]{column}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Allows selecting an output folder.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00998}{998}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{da/da4/class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{da/da4/class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_ac25ba894e63d6addfb816a28fb9615d0}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!create\_widgets@{create\_widgets}}
+\index{create\_widgets@{create\_widgets}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{create\_widgets()}{create\_widgets()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ac25ba894e63d6addfb816a28fb9615d0} 
+GWeasy.\+Omiviz.\+create\+\_\+widgets (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00953}{953}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_ac25ba894e63d6addfb816a28fb9615d0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_aac58d816df8df0bff000113f500c38f0}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!execute\_command@{execute\_command}}
+\index{execute\_command@{execute\_command}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{execute\_command()}{execute\_command()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_aac58d816df8df0bff000113f500c38f0} 
+GWeasy.\+Omiviz.\+execute\+\_\+command (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{command}{, }\item[{}]{gps\+\_\+start}{, }\item[{}]{gps\+\_\+end}{, }\item[{}]{output\+\_\+folder}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs the Omicron plot command inside a full WSL shell session with logging.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01130}{1130}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_aac58d816df8df0bff000113f500c38f0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!load\_plots@{load\_plots}}
+\index{load\_plots@{load\_plots}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{load\_plots()}{load\_plots()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969} 
+GWeasy.\+Omiviz.\+load\+\_\+plots (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{folder}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads the plots from WSL and updates the GUI.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01205}{1205}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{da/da4/class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_aa7fea33189709387c6cfb10249f15d91}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!run\_omicron\_plot@{run\_omicron\_plot}}
+\index{run\_omicron\_plot@{run\_omicron\_plot}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{run\_omicron\_plot()}{run\_omicron\_plot()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_aa7fea33189709387c6cfb10249f15d91} 
+GWeasy.\+Omiviz.\+run\+\_\+omicron\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01068}{1068}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_afa0801404d631921e5d212ee675ad32a}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!select\_file\_or\_folder@{select\_file\_or\_folder}}
+\index{select\_file\_or\_folder@{select\_file\_or\_folder}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{select\_file\_or\_folder()}{select\_file\_or\_folder()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_afa0801404d631921e5d212ee675ad32a} 
+GWeasy.\+Omiviz.\+select\+\_\+file\+\_\+or\+\_\+folder (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{var}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Allows selecting a folder (grabs all `.root` files) or an individual file.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01030}{1030}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_afa0801404d631921e5d212ee675ad32a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_ade2bd10cac8ce57726871553b88241e7}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!select\_output\_folder@{select\_output\_folder}}
+\index{select\_output\_folder@{select\_output\_folder}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{select\_output\_folder()}{select\_output\_folder()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ade2bd10cac8ce57726871553b88241e7} 
+GWeasy.\+Omiviz.\+select\+\_\+output\+\_\+folder (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{var}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Allows selecting an output folder.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01011}{1011}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_ade2bd10cac8ce57726871553b88241e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_ae7a0ad2a1b444d30fe6769555a7113bc}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!show\_next\_plot@{show\_next\_plot}}
+\index{show\_next\_plot@{show\_next\_plot}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{show\_next\_plot()}{show\_next\_plot()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ae7a0ad2a1b444d30fe6769555a7113bc} 
+GWeasy.\+Omiviz.\+show\+\_\+next\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Scrolls forward through the plots.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00940}{940}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_ae7a0ad2a1b444d30fe6769555a7113bc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_ae394ef0c843904de3cb2195e777d1629}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!show\_plot@{show\_plot}}
+\index{show\_plot@{show\_plot}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{show\_plot()}{show\_plot()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ae394ef0c843904de3cb2195e777d1629} 
+GWeasy.\+Omiviz.\+show\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Displays the current plot in the GUI.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01166}{1166}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_ae394ef0c843904de3cb2195e777d1629_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a00290848b4f49fa8fed9dca6bb47ec2f}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!show\_previous\_plot@{show\_previous\_plot}}
+\index{show\_previous\_plot@{show\_previous\_plot}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{show\_previous\_plot()}{show\_previous\_plot()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a00290848b4f49fa8fed9dca6bb47ec2f} 
+GWeasy.\+Omiviz.\+show\+\_\+previous\+\_\+plot (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Scrolls backward through the plots.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00933}{933}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_a00290848b4f49fa8fed9dca6bb47ec2f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a5927086beaab150b73ee9fe248920864}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!start\_loading@{start\_loading}}
+\index{start\_loading@{start\_loading}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{start\_loading()}{start\_loading()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a5927086beaab150b73ee9fe248920864} 
+GWeasy.\+Omiviz.\+start\+\_\+loading (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Start the loading animation.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00920}{920}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{da/da4/class_g_weasy_1_1_omiviz_a5927086beaab150b73ee9fe248920864_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a940521e496d5867e69a6e9e835875eec}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!stop\_loading@{stop\_loading}}
+\index{stop\_loading@{stop\_loading}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{stop\_loading()}{stop\_loading()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a940521e496d5867e69a6e9e835875eec} 
+GWeasy.\+Omiviz.\+stop\+\_\+loading (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Stop the loading animation.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00924}{924}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{da/da4/class_g_weasy_1_1_omiviz_a940521e496d5867e69a6e9e835875eec_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a28528940b4c8998eca58e6ca71d2d24a}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!update\_navigation\_buttons@{update\_navigation\_buttons}}
+\index{update\_navigation\_buttons@{update\_navigation\_buttons}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{update\_navigation\_buttons()}{update\_navigation\_buttons()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a28528940b4c8998eca58e6ca71d2d24a} 
+GWeasy.\+Omiviz.\+update\+\_\+navigation\+\_\+buttons (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates the state of navigation buttons.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00947}{947}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_a28528940b4c8998eca58e6ca71d2d24a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a0ca93a57b9356b0242c9c7b1ba79de98}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!update\_progress@{update\_progress}}
+\index{update\_progress@{update\_progress}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{update\_progress()}{update\_progress()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a0ca93a57b9356b0242c9c7b1ba79de98} 
+GWeasy.\+Omiviz.\+update\+\_\+progress (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{text}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Update progress based on Omicron output.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00928}{928}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/da4/class_g_weasy_1_1_omiviz_a0ca93a57b9356b0242c9c7b1ba79de98_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_omiviz_a957f6e8833cee2c4f431ac4f1ee8b1cc}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!valent@{valent}}
+\index{valent@{valent}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{valent()}{valent()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a957f6e8833cee2c4f431ac4f1ee8b1cc} 
+GWeasy.\+Omiviz.\+valent (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{label}{, }\item[{}]{key}{, }\item[{}]{frame}{ = {\ttfamily None}, }\item[{}]{row}{ = {\ttfamily 0}, }\item[{}]{col}{ = {\ttfamily 0}, }\item[{}]{editable}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00990}{990}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{da/da4/class_g_weasy_1_1_omiviz_a957f6e8833cee2c4f431ac4f1ee8b1cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_weasy_1_1_omiviz_acd11d586944d13007833c5a3b54de21a}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!canvas@{canvas}}
+\index{canvas@{canvas}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_acd11d586944d13007833c5a3b54de21a} 
+GWeasy.\+Omiviz.\+canvas = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}{root}})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00901}{901}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a31057d5270b45172b1df404b98ace012}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!config\_data@{config\_data}}
+\index{config\_data@{config\_data}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{config\_data}{config\_data}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a31057d5270b45172b1df404b98ace012} 
+dict GWeasy.\+Omiviz.\+config\+\_\+data = \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00895}{895}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a30fad9c2937c4c8534e144a376fff08c}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!current\_plot\_index@{current\_plot\_index}}
+\index{current\_plot\_index@{current\_plot\_index}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{current\_plot\_index}{current\_plot\_index}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a30fad9c2937c4c8534e144a376fff08c} 
+int GWeasy.\+Omiviz.\+current\+\_\+plot\+\_\+index = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00898}{898}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a2ce005202325aeb7de3cfe86162aa10d}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!image\_frame@{image\_frame}}
+\index{image\_frame@{image\_frame}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{image\_frame}{image\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a2ce005202325aeb7de3cfe86162aa10d} 
+GWeasy.\+Omiviz.\+image\+\_\+frame = tk.\+Frame(self.\+scrollable\+\_\+frame)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00972}{972}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_ab6530003f7b04524c258a442f6e87d8d}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!image\_label@{image\_label}}
+\index{image\_label@{image\_label}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{image\_label}{image\_label}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ab6530003f7b04524c258a442f6e87d8d} 
+GWeasy.\+Omiviz.\+image\+\_\+label = tk.\+Label(self.\+image\+\_\+frame, text="{}No Plot Available"{}, width=50, height=25, bg="{}gray"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00975}{975}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_ab17c3478c3c3842c9ef750dcb223dc8c}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!next\_button@{next\_button}}
+\index{next\_button@{next\_button}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{next\_button}{next\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_ab17c3478c3c3842c9ef750dcb223dc8c} 
+GWeasy.\+Omiviz.\+next\+\_\+button = tk.\+Button(nav\+\_\+frame, text="{}Next ➡"{}, command=self.\+show\+\_\+next\+\_\+plot, state=tk.\+DISABLED)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00985}{985}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a73317d4f4e1e4aebe3bfc13c76332b25}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!photo@{photo}}
+\index{photo@{photo}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{photo}{photo}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a73317d4f4e1e4aebe3bfc13c76332b25} 
+GWeasy.\+Omiviz.\+photo = Image\+Tk.\+Photo\+Image(image)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01191}{1191}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a93f21da01ec8f6261ad5f5a10dd36de0}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!plot\_files@{plot\_files}}
+\index{plot\_files@{plot\_files}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{plot\_files}{plot\_files}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a93f21da01ec8f6261ad5f5a10dd36de0} 
+GWeasy.\+Omiviz.\+plot\+\_\+files = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00897}{897}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a3a5d7bfb5b5c3a473f482b17ba280124}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!prev\_button@{prev\_button}}
+\index{prev\_button@{prev\_button}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{prev\_button}{prev\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a3a5d7bfb5b5c3a473f482b17ba280124} 
+GWeasy.\+Omiviz.\+prev\+\_\+button = tk.\+Button(nav\+\_\+frame, text="{}⬅ Previous"{}, command=self.\+show\+\_\+previous\+\_\+plot, state=tk.\+DISABLED)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00982}{982}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_aeaf7da465545e6f1ad2d9f1350e0e8af}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!progress@{progress}}
+\index{progress@{progress}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{progress}{progress}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_aeaf7da465545e6f1ad2d9f1350e0e8af} 
+GWeasy.\+Omiviz.\+progress = ttk.\+Progressbar(self.\+scrollable\+\_\+frame, orient="{}horizontal"{}, length=300, mode="{}indeterminate"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00987}{987}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!root@{root}}
+\index{root@{root}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e} 
+GWeasy.\+Omiviz.\+root = root}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00894}{894}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_aa1f14e87b54591311fda4c3e33ecce86}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!run\_button@{run\_button}}
+\index{run\_button@{run\_button}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{run\_button}{run\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_aa1f14e87b54591311fda4c3e33ecce86} 
+GWeasy.\+Omiviz.\+run\+\_\+button = tk.\+Button(button\+\_\+frame, text="{}Run Omicron Plot"{}, command=self.\+run\+\_\+omicron\+\_\+plot)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00968}{968}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_aa6eef08d7f08860f607cc371be946324}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!scrollable\_frame@{scrollable\_frame}}
+\index{scrollable\_frame@{scrollable\_frame}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{scrollable\_frame}{scrollable\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_aa6eef08d7f08860f607cc371be946324} 
+GWeasy.\+Omiviz.\+scrollable\+\_\+frame = ttk.\+Frame(self.\+canvas)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00903}{903}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a45d62f4c1a9b1a689ef1b2d8920ba593}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!scrollbar@{scrollbar}}
+\index{scrollbar@{scrollbar}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{scrollbar}{scrollbar}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a45d62f4c1a9b1a689ef1b2d8920ba593} 
+GWeasy.\+Omiviz.\+scrollbar = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_omiviz_a02810f20efec6e648f99c46bb90ae85e}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00902}{902}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a7a444b147f3dfcf4fd6ee19ccb7d96d4}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!ui\_elements@{ui\_elements}}
+\index{ui\_elements@{ui\_elements}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{ui\_elements}{ui\_elements}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a7a444b147f3dfcf4fd6ee19ccb7d96d4} 
+dict GWeasy.\+Omiviz.\+ui\+\_\+elements = \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00896}{896}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a3618182f89f51a5438cc31dcb635e807}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!window\_frame@{window\_frame}}
+\index{window\_frame@{window\_frame}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{window\_frame}{window\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a3618182f89f51a5438cc31dcb635e807} 
+GWeasy.\+Omiviz.\+window\+\_\+frame = self.\+canvas.\+create\+\_\+window((0, 0), window=self.\+scrollable\+\_\+frame, anchor="{}nw"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00910}{910}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_omiviz_a12522060e133892fbded6e79dbf6c55a}\index{GWeasy.Omiviz@{GWeasy.Omiviz}!wsl\_project\_dir@{wsl\_project\_dir}}
+\index{wsl\_project\_dir@{wsl\_project\_dir}!GWeasy.Omiviz@{GWeasy.Omiviz}}
+\doxysubsubsection{\texorpdfstring{wsl\_project\_dir}{wsl\_project\_dir}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_omiviz_a12522060e133892fbded6e79dbf6c55a} 
+GWeasy.\+Omiviz.\+wsl\+\_\+project\+\_\+dir = output\+\_\+folder}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01117}{1117}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy/\mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}\end{DoxyCompactItemize}

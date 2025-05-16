@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d8/d0c/class_g_weasy_1_1_gravfetch_app" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::GravfetchApp</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.GravfetchApp.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="607" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="607" bodyend="-1"/>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522" compoundref="d6/d99/_g_weasy_8py" startline="1611" endline="1620">GWeasy.FFT.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d" compoundref="d6/d99/_g_weasy_8py" startline="1328" endline="1337">GWeasy.TimeSrswaveform.copy_url</referencedby>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469" compoundref="d6/d99/_g_weasy_8py" startline="1743" endline="1787">GWeasy.FFT.fft</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f" compoundref="d6/d99/_g_weasy_8py" startline="1462" endline="1512">GWeasy.TimeSrswaveform.plot_gw_event</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" compoundref="d6/d99/_g_weasy_8py" startline="2030" endline="2103">GWeasy.PSDs.psds</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str GWeasy.GravfetchApp::time_csv_file</definition>
+        <argsstring></argsstring>
+        <name>time_csv_file</name>
+        <qualifiedname>GWeasy.GravfetchApp.time_csv_file</qualifiedname>
+        <initializer>=  &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="608" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="608" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a7423cb47757060edbf7173b11582e742" compoundref="d6/d99/_g_weasy_8py" startline="655" endline="659">GWeasy.GravfetchApp.select_time_csv</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str GWeasy.GravfetchApp::channel_csv_file</definition>
+        <argsstring></argsstring>
+        <name>channel_csv_file</name>
+        <qualifiedname>GWeasy.GravfetchApp.channel_csv_file</qualifiedname>
+        <initializer>=  &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="609" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="609" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a369d64ab02195e0d6f0c7cd6c57b5de0" compoundref="d6/d99/_g_weasy_8py" startline="660" endline="664">GWeasy.GravfetchApp.select_channel_csv</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a3120d217c578d3812a5a9315c1bb8315" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GWeasy.GravfetchApp::execution_running</definition>
+        <argsstring></argsstring>
+        <name>execution_running</name>
+        <qualifiedname>GWeasy.GravfetchApp.execution_running</qualifiedname>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="610" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="610" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2a00fa75822f180379f7392f653a5ef4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::process</definition>
+        <argsstring></argsstring>
+        <name>process</name>
+        <qualifiedname>GWeasy.GravfetchApp.process</qualifiedname>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="611" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="611" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>GWeasy.GravfetchApp::gwfout_path</definition>
+        <argsstring></argsstring>
+        <name>gwfout_path</name>
+        <qualifiedname>GWeasy.GravfetchApp.gwfout_path</qualifiedname>
+        <initializer>=  &quot;./gwfout/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="612" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="612" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119" compoundref="d6/d99/_g_weasy_8py" startline="800" endline="809">GWeasy.GravfetchApp.save_channel_history</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a06744ac0d6b04f5ec20fe0d07c5051c1" compoundref="d6/d99/_g_weasy_8py" startline="665" endline="674">GWeasy.GravfetchApp.select_gwfout_dir</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a32dfc514dedd3889510b2e16e3b9fac3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list GWeasy.GravfetchApp::loaded_channels</definition>
+        <argsstring></argsstring>
+        <name>loaded_channels</name>
+        <qualifiedname>GWeasy.GravfetchApp.loaded_channels</qualifiedname>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="613" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="613" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119" compoundref="d6/d99/_g_weasy_8py" startline="800" endline="809">GWeasy.GravfetchApp.save_channel_history</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af8e74ed14da6b6afe60985c6c9897b9a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::terminal</definition>
+        <argsstring></argsstring>
+        <name>terminal</name>
+        <qualifiedname>GWeasy.GravfetchApp.terminal</qualifiedname>
+        <initializer>=  <ref refid="dd/db1/class_g_weasy_1_1_terminal_frame" kindref="compound">TerminalFrame</ref>(self.root, row=5, column=0, columnspan=2, height=20, width=80)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="628" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="628" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" compoundref="d6/d99/_g_weasy_8py" startline="797" endline="799">GWeasy.GravfetchApp.append_output</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aac31436453f6a57d2a539e3ca921c349" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::status_bar_frame</definition>
+        <argsstring></argsstring>
+        <name>status_bar_frame</name>
+        <qualifiedname>GWeasy.GravfetchApp.status_bar_frame</qualifiedname>
+        <initializer>=  tk.Frame(self.root, bg=&quot;lightgray&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="633" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::status_label</definition>
+        <argsstring></argsstring>
+        <name>status_label</name>
+        <qualifiedname>GWeasy.GravfetchApp.status_label</qualifiedname>
+        <initializer>=  tk.Label(self.status_bar_frame, text=&quot;Idle&quot;, fg=&quot;black&quot;, bg=&quot;lightgray&quot;, anchor=&quot;w&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="637" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="637" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a369d64ab02195e0d6f0c7cd6c57b5de0" compoundref="d6/d99/_g_weasy_8py" startline="660" endline="664">GWeasy.GravfetchApp.select_channel_csv</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a06744ac0d6b04f5ec20fe0d07c5051c1" compoundref="d6/d99/_g_weasy_8py" startline="665" endline="674">GWeasy.GravfetchApp.select_gwfout_dir</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a7423cb47757060edbf7173b11582e742" compoundref="d6/d99/_g_weasy_8py" startline="655" endline="659">GWeasy.GravfetchApp.select_time_csv</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a1b8fa0097c39abca6e1fde3499e53500" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::time_button</definition>
+        <argsstring></argsstring>
+        <name>time_button</name>
+        <qualifiedname>GWeasy.GravfetchApp.time_button</qualifiedname>
+        <initializer>=  tk.Button(self.root, text=&quot;Select Time CSV&quot;, command=self.select_time_csv)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="641" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ac2ea4afcb72e03291a5c024f71a7a7cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::channel_button</definition>
+        <argsstring></argsstring>
+        <name>channel_button</name>
+        <qualifiedname>GWeasy.GravfetchApp.channel_button</qualifiedname>
+        <initializer>=  tk.Button(self.root, text=&quot;Select Channel CSV&quot;, command=self.select_channel_csv)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="643" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aa443df4b594852778c59c353c03cb898" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::gwf_button</definition>
+        <argsstring></argsstring>
+        <name>gwf_button</name>
+        <qualifiedname>GWeasy.GravfetchApp.gwf_button</qualifiedname>
+        <initializer>=  tk.Button(self.root, text=&quot;Select Output (GWF) Dir&quot;, command=self.select_gwfout_dir)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="645" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ab109a7617a6c0f88a2c70e6c80c8c232" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::start_stop_button</definition>
+        <argsstring></argsstring>
+        <name>start_stop_button</name>
+        <qualifiedname>GWeasy.GravfetchApp.start_stop_button</qualifiedname>
+        <initializer>=  tk.Button(self.root, text=&quot;Start Execution&quot;, command=self.toggle_execution)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="649" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="649" bodyend="-1"/>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ae541d98fd50aa61c3387c1ffa5818284" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.GravfetchApp::execution_thread</definition>
+        <argsstring></argsstring>
+        <name>execution_thread</name>
+        <qualifiedname>GWeasy.GravfetchApp.execution_thread</qualifiedname>
+        <initializer>=  threading.Thread(target=self.run_gravfetch_script, daemon=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="697" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="697" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aa6e3963a8156e3d77fa318696160a43a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.__init__</definition>
+        <argsstring>(self, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.GravfetchApp.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="606" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="606" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aeb1ab8c75991804d27c6459e4bdca8cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.setup_execution_tab</definition>
+        <argsstring>(self)</argsstring>
+        <name>setup_execution_tab</name>
+        <qualifiedname>GWeasy.GravfetchApp.setup_execution_tab</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sets up the Execution tab with buttons, output terminal, etc.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="630" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="630" bodyend="654"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a7423cb47757060edbf7173b11582e742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.select_time_csv</definition>
+        <argsstring>(self)</argsstring>
+        <name>select_time_csv</name>
+        <qualifiedname>GWeasy.GravfetchApp.select_time_csv</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Open file dialog for time CSV file.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="655" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="655" bodyend="659"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" compoundref="d6/d99/_g_weasy_8py" startline="637">GWeasy.GravfetchApp.status_label</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70" compoundref="d6/d99/_g_weasy_8py" startline="608">GWeasy.GravfetchApp.time_csv_file</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a369d64ab02195e0d6f0c7cd6c57b5de0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.select_channel_csv</definition>
+        <argsstring>(self)</argsstring>
+        <name>select_channel_csv</name>
+        <qualifiedname>GWeasy.GravfetchApp.select_channel_csv</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Open file dialog for channel CSV file.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="660" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="660" bodyend="664"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741" compoundref="d6/d99/_g_weasy_8py" startline="609">GWeasy.GravfetchApp.channel_csv_file</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" compoundref="d6/d99/_g_weasy_8py" startline="637">GWeasy.GravfetchApp.status_label</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a06744ac0d6b04f5ec20fe0d07c5051c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.select_gwfout_dir</definition>
+        <argsstring>(self)</argsstring>
+        <name>select_gwfout_dir</name>
+        <qualifiedname>GWeasy.GravfetchApp.select_gwfout_dir</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Open file dialog for output dir (folder) selection.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="665" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="665" bodyend="674"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe" compoundref="d6/d99/_g_weasy_8py" startline="612">GWeasy.GravfetchApp.gwfout_path</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" compoundref="d6/d99/_g_weasy_8py" startline="637">GWeasy.GravfetchApp.status_label</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.toggle_execution</definition>
+        <argsstring>(self)</argsstring>
+        <name>toggle_execution</name>
+        <qualifiedname>GWeasy.GravfetchApp.toggle_execution</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Start or stop the execution of the Gravfetch script.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="675" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="675" bodyend="699"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" compoundref="d6/d99/_g_weasy_8py" startline="797" endline="799">GWeasy.GravfetchApp.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741" compoundref="d6/d99/_g_weasy_8py" startline="609">GWeasy.GravfetchApp.channel_csv_file</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a3120d217c578d3812a5a9315c1bb8315" compoundref="d6/d99/_g_weasy_8py" startline="610">GWeasy.GravfetchApp.execution_running</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2a00fa75822f180379f7392f653a5ef4" compoundref="d6/d99/_g_weasy_8py" startline="611">GWeasy.GravfetchApp.process</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ab109a7617a6c0f88a2c70e6c80c8c232" compoundref="d6/d99/_g_weasy_8py" startline="649">GWeasy.GravfetchApp.start_stop_button</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" compoundref="d6/d99/_g_weasy_8py" startline="637">GWeasy.GravfetchApp.status_label</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70" compoundref="d6/d99/_g_weasy_8py" startline="608">GWeasy.GravfetchApp.time_csv_file</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.run_gravfetch_script</definition>
+        <argsstring>(self)</argsstring>
+        <name>run_gravfetch_script</name>
+        <qualifiedname>GWeasy.GravfetchApp.run_gravfetch_script</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Runs the Gravfetch script logic directly within the GUI.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="700" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="700" bodyend="796"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" compoundref="d6/d99/_g_weasy_8py" startline="797" endline="799">GWeasy.GravfetchApp.append_output</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a636cf0031aba5421ec9a6b61ed6a095c" compoundref="d6/d99/_g_weasy_8py" startline="513" endline="516">GWeasy.OmicronApp.append_output</references>
+        <references refid="dd/db1/class_g_weasy_1_1_terminal_frame_1a6c6f56116c93ef28c984f0541217a8be" compoundref="d6/d99/_g_weasy_8py" startline="98" endline="105">GWeasy.TerminalFrame.append_output</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741" compoundref="d6/d99/_g_weasy_8py" startline="609">GWeasy.GravfetchApp.channel_csv_file</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a3120d217c578d3812a5a9315c1bb8315" compoundref="d6/d99/_g_weasy_8py" startline="610">GWeasy.GravfetchApp.execution_running</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe" compoundref="d6/d99/_g_weasy_8py" startline="612">GWeasy.GravfetchApp.gwfout_path</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a32dfc514dedd3889510b2e16e3b9fac3" compoundref="d6/d99/_g_weasy_8py" startline="613">GWeasy.GravfetchApp.loaded_channels</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119" compoundref="d6/d99/_g_weasy_8py" startline="800" endline="809">GWeasy.GravfetchApp.save_channel_history</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ab109a7617a6c0f88a2c70e6c80c8c232" compoundref="d6/d99/_g_weasy_8py" startline="649">GWeasy.GravfetchApp.start_stop_button</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" compoundref="d6/d99/_g_weasy_8py" startline="637">GWeasy.GravfetchApp.status_label</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70" compoundref="d6/d99/_g_weasy_8py" startline="608">GWeasy.GravfetchApp.time_csv_file</references>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.append_output</definition>
+        <argsstring>(self, text)</argsstring>
+        <name>append_output</name>
+        <qualifiedname>GWeasy.GravfetchApp.append_output</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>text</type>
+          <defname>text</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Send output to the terminal</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="797" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="797" bodyend="799"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" compoundref="d6/d99/_g_weasy_8py" startline="797" endline="799">GWeasy.GravfetchApp.append_output</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af8e74ed14da6b6afe60985c6c9897b9a" compoundref="d6/d99/_g_weasy_8py" startline="628">GWeasy.GravfetchApp.terminal</references>
+        <references refid="d6/d74/class_g_weasy_1_1_omicron_app_1a27d6854add6e02b6310bdbefb3157500" compoundref="d6/d99/_g_weasy_8py" startline="139">GWeasy.OmicronApp.terminal</references>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" compoundref="d6/d99/_g_weasy_8py" startline="797" endline="799">GWeasy.GravfetchApp.append_output</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" compoundref="d6/d99/_g_weasy_8py" startline="675" endline="699">GWeasy.GravfetchApp.toggle_execution</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d8/d0c/class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.GravfetchApp.save_channel_history</definition>
+        <argsstring>(self)</argsstring>
+        <name>save_channel_history</name>
+        <qualifiedname>GWeasy.GravfetchApp.save_channel_history</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Save the selected channels to a JSON file for persistence.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="800" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="800" bodyend="809"/>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe" compoundref="d6/d99/_g_weasy_8py" startline="612">GWeasy.GravfetchApp.gwfout_path</references>
+        <references refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a32dfc514dedd3889510b2e16e3b9fac3" compoundref="d6/d99/_g_weasy_8py" startline="613">GWeasy.GravfetchApp.loaded_channels</references>
+        <referencedby refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" compoundref="d6/d99/_g_weasy_8py" startline="700" endline="796">GWeasy.GravfetchApp.run_gravfetch_script</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="605" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="605" bodyend="809"/>
+    <listofallmembers>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aa6e3963a8156e3d77fa318696160a43a" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>__init__</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1adf57acd65707f23f01b3ee1befc3135c" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>append_output</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ac2ea4afcb72e03291a5c024f71a7a7cc" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>channel_button</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af084c2c9d7c52d4023d87ec16fa82741" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>channel_csv_file</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a3120d217c578d3812a5a9315c1bb8315" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>execution_running</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ae541d98fd50aa61c3387c1ffa5818284" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>execution_thread</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aa443df4b594852778c59c353c03cb898" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>gwf_button</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a613d78ec7b41fd75edb57b77413a30fe" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>gwfout_path</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a32dfc514dedd3889510b2e16e3b9fac3" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>loaded_channels</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2a00fa75822f180379f7392f653a5ef4" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>process</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a808c95863b63e223eb461decc6520e8e" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>root</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a2cab8f0e263b51a261dfb2adbae351da" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>run_gravfetch_script</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1acfa44583609e84bd3e99546a767fe119" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>save_channel_history</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a369d64ab02195e0d6f0c7cd6c57b5de0" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>select_channel_csv</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a06744ac0d6b04f5ec20fe0d07c5051c1" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>select_gwfout_dir</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a7423cb47757060edbf7173b11582e742" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>select_time_csv</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aeb1ab8c75991804d27c6459e4bdca8cc" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>setup_execution_tab</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1ab109a7617a6c0f88a2c70e6c80c8c232" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>start_stop_button</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aac31436453f6a57d2a539e3ca921c349" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>status_bar_frame</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a838a082f0e14a7e41dae392222119e04" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>status_label</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1af8e74ed14da6b6afe60985c6c9897b9a" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>terminal</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a1b8fa0097c39abca6e1fde3499e53500" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>time_button</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1a8a56155becad8ec805c3f8205549ed70" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>time_csv_file</name></member>
+      <member refid="d8/d0c/class_g_weasy_1_1_gravfetch_app_1aebdd5211a656bd3befb663b60f92e3e2" prot="public" virt="non-virtual"><scope>GWeasy::GravfetchApp</scope><name>toggle_execution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

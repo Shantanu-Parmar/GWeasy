@@ -1,0 +1,309 @@
+\doxysection{GWeasy.\+GWOSCApp Class Reference}
+\hypertarget{class_g_weasy_1_1_g_w_o_s_c_app}{}\label{class_g_weasy_1_1_g_w_o_s_c_app}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a05db5e1c35d33b7461e56565c78fe585}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}{master}}, \mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a977d01be0fa607ad542f8f63ed4581e6}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a54082d6a5e7209dc995a25c44881dfc9}{init\+\_\+cef}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a1bb741bff392d751cc98da2ea1b36d0c}{create\+\_\+browser}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a9f832065a5c7e195b4d99d93a0a7199f}{cef\+\_\+loop}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a7298a36b9bd14857ec5abaf5ac4a9588}{on\+\_\+resize}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a350a13129ff86fea29441ae27849c98a}{go\+\_\+back}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ab3acba2cd3f173e833a52e8aaf142b13}{go\+\_\+forward}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a4ba56c85e771ea55e926633d1d511595}{reload\+\_\+page}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ab1baf3de1f243939e59b4fc61e2f7609}{load\+\_\+url}} (self, event=None)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}{master}} = master
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a977d01be0fa607ad542f8f63ed4581e6}{root}} = root
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ab17be2c8990aa9fdb34038db9e61926c}{browser}} = None
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ac08794c7d881fecc74b97651b37b151c}{navbar}} = tk.\+Frame(\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}{master}}, bg="{}gray"{}, height=40)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a5fd28662abb166bab06d891af561bc67}{back\+\_\+btn}} = Button(self.\+navbar, text="{}◀"{}, command=self.\+go\+\_\+back)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a242da9b9d0be1898f672a661ec969866}{forward\+\_\+btn}} = Button(self.\+navbar, text="{}▶"{}, command=self.\+go\+\_\+forward)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ad99702f54284fa21b654818e9f53389f}{reload\+\_\+btn}} = Button(self.\+navbar, text="{}🔄"{}, command=self.\+reload\+\_\+page)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a7526c888cbf751d4e298e903f1defbb5}{url\+\_\+entry}} = Entry(self.\+navbar, width=50)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a2ec4551d2c3a78a30c47184895365b20}{load\+\_\+url}} = True)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a83b2f1dd72ff15befa16af187663a765}{browser\+\_\+frame}} = tk.\+Frame(\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}{master}}, bg="{}black"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_af5020c9f28f2b95ba4d1c6a5704c904e}{init\+\_\+cef}} = True)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a7b9baa73ff160ae0d8a090932c334501}{on\+\_\+resize}}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a69bf09479832f7fb11d77f6840b591ea}{create\+\_\+browser}}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_a25f1e3083573d6ef58e40a5ff0eebbb8}{cef\+\_\+loop}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00810}{810}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a05db5e1c35d33b7461e56565c78fe585}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a05db5e1c35d33b7461e56565c78fe585} 
+GWeasy.\+GWOSCApp.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{master}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00811}{811}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a9f832065a5c7e195b4d99d93a0a7199f}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!cef\_loop@{cef\_loop}}
+\index{cef\_loop@{cef\_loop}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{cef\_loop()}{cef\_loop()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a9f832065a5c7e195b4d99d93a0a7199f} 
+GWeasy.\+GWOSCApp.\+cef\+\_\+loop (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs CEF's message loop inside Tkinter's event loop.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00861}{861}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a1bb741bff392d751cc98da2ea1b36d0c}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!create\_browser@{create\_browser}}
+\index{create\_browser@{create\_browser}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{create\_browser()}{create\_browser()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a1bb741bff392d751cc98da2ea1b36d0c} 
+GWeasy.\+GWOSCApp.\+create\+\_\+browser (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Embeds the browser inside the GWOSCRef tab.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00853}{853}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a350a13129ff86fea29441ae27849c98a}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!go\_back@{go\_back}}
+\index{go\_back@{go\_back}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{go\_back()}{go\_back()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a350a13129ff86fea29441ae27849c98a} 
+GWeasy.\+GWOSCApp.\+go\+\_\+back (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00874}{874}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_ab3acba2cd3f173e833a52e8aaf142b13}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!go\_forward@{go\_forward}}
+\index{go\_forward@{go\_forward}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{go\_forward()}{go\_forward()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_ab3acba2cd3f173e833a52e8aaf142b13} 
+GWeasy.\+GWOSCApp.\+go\+\_\+forward (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00878}{878}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a54082d6a5e7209dc995a25c44881dfc9}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!init\_cef@{init\_cef}}
+\index{init\_cef@{init\_cef}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{init\_cef()}{init\_cef()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a54082d6a5e7209dc995a25c44881dfc9} 
+GWeasy.\+GWOSCApp.\+init\+\_\+cef (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes CEF and creates the browser.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00842}{842}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_ab1baf3de1f243939e59b4fc61e2f7609}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!load\_url@{load\_url}}
+\index{load\_url@{load\_url}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{load\_url()}{load\_url()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_ab1baf3de1f243939e59b4fc61e2f7609} 
+GWeasy.\+GWOSCApp.\+load\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00886}{886}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a7298a36b9bd14857ec5abaf5ac4a9588}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!on\_resize@{on\_resize}}
+\index{on\_resize@{on\_resize}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{on\_resize()}{on\_resize()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a7298a36b9bd14857ec5abaf5ac4a9588} 
+GWeasy.\+GWOSCApp.\+on\+\_\+resize (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles resizing the browser when the window changes.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00866}{866}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a4ba56c85e771ea55e926633d1d511595}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!reload\_page@{reload\_page}}
+\index{reload\_page@{reload\_page}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{reload\_page()}{reload\_page()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a4ba56c85e771ea55e926633d1d511595} 
+GWeasy.\+GWOSCApp.\+reload\+\_\+page (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00882}{882}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a5fd28662abb166bab06d891af561bc67}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!back\_btn@{back\_btn}}
+\index{back\_btn@{back\_btn}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{back\_btn}{back\_btn}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a5fd28662abb166bab06d891af561bc67} 
+GWeasy.\+GWOSCApp.\+back\+\_\+btn = Button(self.\+navbar, text="{}◀"{}, command=self.\+go\+\_\+back)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00820}{820}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_ab17be2c8990aa9fdb34038db9e61926c}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!browser@{browser}}
+\index{browser@{browser}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{browser}{browser}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_ab17be2c8990aa9fdb34038db9e61926c} 
+GWeasy.\+GWOSCApp.\+browser = None}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00814}{814}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a83b2f1dd72ff15befa16af187663a765}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!browser\_frame@{browser\_frame}}
+\index{browser\_frame@{browser\_frame}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{browser\_frame}{browser\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a83b2f1dd72ff15befa16af187663a765} 
+GWeasy.\+GWOSCApp.\+browser\+\_\+frame = tk.\+Frame(\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}{master}}, bg="{}black"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00834}{834}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a25f1e3083573d6ef58e40a5ff0eebbb8}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!cef\_loop@{cef\_loop}}
+\index{cef\_loop@{cef\_loop}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{cef\_loop}{cef\_loop}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a25f1e3083573d6ef58e40a5ff0eebbb8} 
+GWeasy.\+GWOSCApp.\+cef\+\_\+loop}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00851}{851}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a69bf09479832f7fb11d77f6840b591ea}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!create\_browser@{create\_browser}}
+\index{create\_browser@{create\_browser}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{create\_browser}{create\_browser}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a69bf09479832f7fb11d77f6840b591ea} 
+GWeasy.\+GWOSCApp.\+create\+\_\+browser}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00848}{848}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a242da9b9d0be1898f672a661ec969866}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!forward\_btn@{forward\_btn}}
+\index{forward\_btn@{forward\_btn}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{forward\_btn}{forward\_btn}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a242da9b9d0be1898f672a661ec969866} 
+GWeasy.\+GWOSCApp.\+forward\+\_\+btn = Button(self.\+navbar, text="{}▶"{}, command=self.\+go\+\_\+forward)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00823}{823}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_af5020c9f28f2b95ba4d1c6a5704c904e}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!init\_cef@{init\_cef}}
+\index{init\_cef@{init\_cef}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{init\_cef}{init\_cef}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_af5020c9f28f2b95ba4d1c6a5704c904e} 
+GWeasy.\+GWOSCApp.\+init\+\_\+cef = True)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00838}{838}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a2ec4551d2c3a78a30c47184895365b20}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!load\_url@{load\_url}}
+\index{load\_url@{load\_url}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{load\_url}{load\_url}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a2ec4551d2c3a78a30c47184895365b20} 
+GWeasy.\+GWOSCApp.\+load\+\_\+url = True)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00831}{831}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!master@{master}}
+\index{master@{master}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{master}{master}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30} 
+GWeasy.\+GWOSCApp.\+master = master}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00812}{812}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_ac08794c7d881fecc74b97651b37b151c}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!navbar@{navbar}}
+\index{navbar@{navbar}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{navbar}{navbar}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_ac08794c7d881fecc74b97651b37b151c} 
+GWeasy.\+GWOSCApp.\+navbar = tk.\+Frame(\mbox{\hyperlink{class_g_weasy_1_1_g_w_o_s_c_app_ace644dfe251fbcb2425d035c21e8ea30}{master}}, bg="{}gray"{}, height=40)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00817}{817}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a7b9baa73ff160ae0d8a090932c334501}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!on\_resize@{on\_resize}}
+\index{on\_resize@{on\_resize}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{on\_resize}{on\_resize}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a7b9baa73ff160ae0d8a090932c334501} 
+GWeasy.\+GWOSCApp.\+on\+\_\+resize}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00839}{839}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_ad99702f54284fa21b654818e9f53389f}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!reload\_btn@{reload\_btn}}
+\index{reload\_btn@{reload\_btn}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{reload\_btn}{reload\_btn}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_ad99702f54284fa21b654818e9f53389f} 
+GWeasy.\+GWOSCApp.\+reload\+\_\+btn = Button(self.\+navbar, text="{}🔄"{}, command=self.\+reload\+\_\+page)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00826}{826}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a977d01be0fa607ad542f8f63ed4581e6}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!root@{root}}
+\index{root@{root}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a977d01be0fa607ad542f8f63ed4581e6} 
+GWeasy.\+GWOSCApp.\+root = root}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00813}{813}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_g_w_o_s_c_app_a7526c888cbf751d4e298e903f1defbb5}\index{GWeasy.GWOSCApp@{GWeasy.GWOSCApp}!url\_entry@{url\_entry}}
+\index{url\_entry@{url\_entry}!GWeasy.GWOSCApp@{GWeasy.GWOSCApp}}
+\doxysubsubsection{\texorpdfstring{url\_entry}{url\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_g_w_o_s_c_app_a7526c888cbf751d4e298e903f1defbb5} 
+GWeasy.\+GWOSCApp.\+url\+\_\+entry = Entry(self.\+navbar, width=50)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l00829}{829}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy/\mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,448 @@
+\doxysection{GWeasy.\+FFT Class Reference}
+\hypertarget{class_g_weasy_1_1_f_f_t}{}\label{class_g_weasy_1_1_f_f_t}\index{GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_abdc46d3cd5debe6483b1c32223bf7132}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aab12d78dfddb4aba7659676598e91522}{copy\+\_\+url}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_acf1e19a61082bce687189bd91258ac7d}{prefetch\+\_\+data}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a1fa930fcb1ac3250767083b63983ca68}{fetch\+\_\+events}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a60b35fb4ce2c845ae171b5581826db22}{fetch\+\_\+event\+\_\+details}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ad0cea468e600b484c31d52688bbdae6b}{update\+\_\+urls}} (self, event=None)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a26b73ea39daefefa280fb76a1e5bb6c7}{toggle\+\_\+mode}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ab19b4161d82086879ff736afaf9bc434}{convert\+\_\+time}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a1c92208b2c6ec70957f302c5550cf59d}{save\+\_\+params}} (self)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a038a4dd70a65ea610af4bfbc9dcfb469}{fft}} (self, event\+\_\+name, detectors, gps\+\_\+start, gps\+\_\+end)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}} = root
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a20dae5e12b9eb1274ddf7ff4f73e37ed}{canvas}} = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a13cb631beaae9548ba3a85269a1537c2}{scroll\+\_\+y}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aafe9faeda108426bb19fcc4688ce6bb8}{scroll\+\_\+x}} = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_af2b7ec2c2a22083c04825621670eb8af}{frame}} = ttk.\+Frame(self.\+canvas)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aa129358d670a3bc4aa9451224c4f5187}{catalog\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a375bec96284d757e494dd42b1ac7f123}{fetch\+\_\+events}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a32ccc0918db6b610d534b98fd2fbea99}{event\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ac559673b3f1bb3bd50ce920959378e22}{fetch\+\_\+event\+\_\+details}} = "{}ew"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ad7e4f591a5e578a5f27676df48f78d62}{run\+\_\+dropdown}} = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a6d30d2003df8cd8feba32c4691f0fe99}{detector\+\_\+listbox}} = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, exportselection=False, height=3)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a4c12533d9c9017635b8918adb83328be}{gps\+\_\+start\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a03575ded71a8823723b98ceabb34e494}{gps\+\_\+end\+\_\+entry}} = ttk.\+Entry(input\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a4e88ad42f6c8a83afd2c2c29f537723b}{mode}} = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ae9800114548848228ad42921c09b5787}{convert\+\_\+entry}} = ttk.\+Entry(conversion\+\_\+frame, width=20)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a15c7bfb366ec1a4ef5e2deb6651dcfed}{convert\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a2aaeadadbf663e013807e4fc4f5b2b52}{result\+\_\+label}} = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a9139c02e823538cd4aba564431844b97}{toggle\+\_\+button}} = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ac74e497cf908f42e963a3fb3f349be14}{url\+\_\+dropdown}} = ttk.\+Combobox(url\+\_\+frame, state="{}readonly"{})
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ae05203e214a3bfcb551aa29ad359d132}{copy\+\_\+button}} = ttk.\+Button(url\+\_\+frame, text="{}Copy URL"{}, command=self.\+copy\+\_\+url)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_ac093062a473639544f6fd399705107ff}{save\+\_\+button}} = ttk.\+Button(input\+\_\+frame, text="{}Save Parameters"{}, command=self.\+save\+\_\+params)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_a409cd1801104c50b32e00ba968824261}{plot\+\_\+frame}} = ttk.\+Frame(self.\+frame)
+\item 
+\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aa921fda75545a10c6d6b905dea97d726}{fft\+\_\+button}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01515}{1515}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_g_weasy_1_1_f_f_t_abdc46d3cd5debe6483b1c32223bf7132}\index{GWeasy.FFT@{GWeasy.FFT}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_abdc46d3cd5debe6483b1c32223bf7132} 
+GWeasy.\+FFT.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01516}{1516}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_g_weasy_1_1_f_f_t_ab19b4161d82086879ff736afaf9bc434}\index{GWeasy.FFT@{GWeasy.FFT}!convert\_time@{convert\_time}}
+\index{convert\_time@{convert\_time}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{convert\_time()}{convert\_time()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ab19b4161d82086879ff736afaf9bc434} 
+GWeasy.\+FFT.\+convert\+\_\+time (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01693}{1693}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_aab12d78dfddb4aba7659676598e91522}\index{GWeasy.FFT@{GWeasy.FFT}!copy\_url@{copy\_url}}
+\index{copy\_url@{copy\_url}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{copy\_url()}{copy\_url()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_aab12d78dfddb4aba7659676598e91522} 
+GWeasy.\+FFT.\+copy\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01611}{1611}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a60b35fb4ce2c845ae171b5581826db22}\index{GWeasy.FFT@{GWeasy.FFT}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details()}{fetch\_event\_details()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a60b35fb4ce2c845ae171b5581826db22} 
+GWeasy.\+FFT.\+fetch\+\_\+event\+\_\+details (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01654}{1654}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db4/class_g_weasy_1_1_f_f_t_a60b35fb4ce2c845ae171b5581826db22_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_g_weasy_1_1_f_f_t_a1fa930fcb1ac3250767083b63983ca68}\index{GWeasy.FFT@{GWeasy.FFT}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{fetch\_events()}{fetch\_events()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a1fa930fcb1ac3250767083b63983ca68} 
+GWeasy.\+FFT.\+fetch\+\_\+events (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01638}{1638}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a038a4dd70a65ea610af4bfbc9dcfb469}\index{GWeasy.FFT@{GWeasy.FFT}!fft@{fft}}
+\index{fft@{fft}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{fft()}{fft()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a038a4dd70a65ea610af4bfbc9dcfb469} 
+GWeasy.\+FFT.\+fft (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event\+\_\+name}{, }\item[{}]{detectors}{, }\item[{}]{gps\+\_\+start}{, }\item[{}]{gps\+\_\+end}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01743}{1743}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_acf1e19a61082bce687189bd91258ac7d}\index{GWeasy.FFT@{GWeasy.FFT}!prefetch\_data@{prefetch\_data}}
+\index{prefetch\_data@{prefetch\_data}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{prefetch\_data()}{prefetch\_data()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_acf1e19a61082bce687189bd91258ac7d} 
+GWeasy.\+FFT.\+prefetch\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01622}{1622}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a1c92208b2c6ec70957f302c5550cf59d}\index{GWeasy.FFT@{GWeasy.FFT}!save\_params@{save\_params}}
+\index{save\_params@{save\_params}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{save\_params()}{save\_params()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a1c92208b2c6ec70957f302c5550cf59d} 
+GWeasy.\+FFT.\+save\+\_\+params (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Overwrite 'gwfparams.csv' with the latest input values, including headers.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01713}{1713}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a26b73ea39daefefa280fb76a1e5bb6c7}\index{GWeasy.FFT@{GWeasy.FFT}!toggle\_mode@{toggle\_mode}}
+\index{toggle\_mode@{toggle\_mode}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{toggle\_mode()}{toggle\_mode()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a26b73ea39daefefa280fb76a1e5bb6c7} 
+GWeasy.\+FFT.\+toggle\+\_\+mode (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01684}{1684}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ad0cea468e600b484c31d52688bbdae6b}\index{GWeasy.FFT@{GWeasy.FFT}!update\_urls@{update\_urls}}
+\index{update\_urls@{update\_urls}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{update\_urls()}{update\_urls()}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ad0cea468e600b484c31d52688bbdae6b} 
+GWeasy.\+FFT.\+update\+\_\+urls (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{event}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01669}{1669}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/db4/class_g_weasy_1_1_f_f_t_ad0cea468e600b484c31d52688bbdae6b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_g_weasy_1_1_f_f_t_a20dae5e12b9eb1274ddf7ff4f73e37ed}\index{GWeasy.FFT@{GWeasy.FFT}!canvas@{canvas}}
+\index{canvas@{canvas}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{canvas}{canvas}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a20dae5e12b9eb1274ddf7ff4f73e37ed} 
+GWeasy.\+FFT.\+canvas = tk.\+Canvas(\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01522}{1522}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_aa129358d670a3bc4aa9451224c4f5187}\index{GWeasy.FFT@{GWeasy.FFT}!catalog\_dropdown@{catalog\_dropdown}}
+\index{catalog\_dropdown@{catalog\_dropdown}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{catalog\_dropdown}{catalog\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_aa129358d670a3bc4aa9451224c4f5187} 
+GWeasy.\+FFT.\+catalog\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01542}{1542}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a15c7bfb366ec1a4ef5e2deb6651dcfed}\index{GWeasy.FFT@{GWeasy.FFT}!convert\_button@{convert\_button}}
+\index{convert\_button@{convert\_button}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{convert\_button}{convert\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a15c7bfb366ec1a4ef5e2deb6651dcfed} 
+GWeasy.\+FFT.\+convert\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Convert"{}, command=self.\+convert\+\_\+time)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01582}{1582}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ae9800114548848228ad42921c09b5787}\index{GWeasy.FFT@{GWeasy.FFT}!convert\_entry@{convert\_entry}}
+\index{convert\_entry@{convert\_entry}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{convert\_entry}{convert\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ae9800114548848228ad42921c09b5787} 
+GWeasy.\+FFT.\+convert\+\_\+entry = ttk.\+Entry(conversion\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01579}{1579}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ae05203e214a3bfcb551aa29ad359d132}\index{GWeasy.FFT@{GWeasy.FFT}!copy\_button@{copy\_button}}
+\index{copy\_button@{copy\_button}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{copy\_button}{copy\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ae05203e214a3bfcb551aa29ad359d132} 
+GWeasy.\+FFT.\+copy\+\_\+button = ttk.\+Button(url\+\_\+frame, text="{}Copy URL"{}, command=self.\+copy\+\_\+url)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01598}{1598}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a6d30d2003df8cd8feba32c4691f0fe99}\index{GWeasy.FFT@{GWeasy.FFT}!detector\_listbox@{detector\_listbox}}
+\index{detector\_listbox@{detector\_listbox}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{detector\_listbox}{detector\_listbox}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a6d30d2003df8cd8feba32c4691f0fe99} 
+GWeasy.\+FFT.\+detector\+\_\+listbox = tk.\+Listbox(input\+\_\+frame, selectmode="{}multiple"{}, exportselection=False, height=3)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01559}{1559}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a32ccc0918db6b610d534b98fd2fbea99}\index{GWeasy.FFT@{GWeasy.FFT}!event\_dropdown@{event\_dropdown}}
+\index{event\_dropdown@{event\_dropdown}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{event\_dropdown}{event\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a32ccc0918db6b610d534b98fd2fbea99} 
+GWeasy.\+FFT.\+event\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01548}{1548}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ac559673b3f1bb3bd50ce920959378e22}\index{GWeasy.FFT@{GWeasy.FFT}!fetch\_event\_details@{fetch\_event\_details}}
+\index{fetch\_event\_details@{fetch\_event\_details}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{fetch\_event\_details}{fetch\_event\_details}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ac559673b3f1bb3bd50ce920959378e22} 
+GWeasy.\+FFT.\+fetch\+\_\+event\+\_\+details = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01550}{1550}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a375bec96284d757e494dd42b1ac7f123}\index{GWeasy.FFT@{GWeasy.FFT}!fetch\_events@{fetch\_events}}
+\index{fetch\_events@{fetch\_events}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{fetch\_events}{fetch\_events}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a375bec96284d757e494dd42b1ac7f123} 
+GWeasy.\+FFT.\+fetch\+\_\+events = "{}ew"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01544}{1544}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_aa921fda75545a10c6d6b905dea97d726}\index{GWeasy.FFT@{GWeasy.FFT}!fft\_button@{fft\_button}}
+\index{fft\_button@{fft\_button}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{fft\_button}{fft\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_aa921fda75545a10c6d6b905dea97d726} 
+GWeasy.\+FFT.\+fft\+\_\+button}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ tk.Button(root,\ text=\textcolor{stringliteral}{"{}Run\ FFT"{}},\ command=\textcolor{keyword}{lambda}:\ self.fft(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ self.catalog\_dropdown.get(),[self.detector\_listbox.get(i)\ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ self.detector\_listbox.curselection()],float(self.gps\_start\_entry.get()),float(self.gps\_end\_entry.get())))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01607}{1607}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_af2b7ec2c2a22083c04825621670eb8af}\index{GWeasy.FFT@{GWeasy.FFT}!frame@{frame}}
+\index{frame@{frame}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_af2b7ec2c2a22083c04825621670eb8af} 
+GWeasy.\+FFT.\+frame = ttk.\+Frame(self.\+canvas)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01528}{1528}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a03575ded71a8823723b98ceabb34e494}\index{GWeasy.FFT@{GWeasy.FFT}!gps\_end\_entry@{gps\_end\_entry}}
+\index{gps\_end\_entry@{gps\_end\_entry}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{gps\_end\_entry}{gps\_end\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a03575ded71a8823723b98ceabb34e494} 
+GWeasy.\+FFT.\+gps\+\_\+end\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01571}{1571}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a4c12533d9c9017635b8918adb83328be}\index{GWeasy.FFT@{GWeasy.FFT}!gps\_start\_entry@{gps\_start\_entry}}
+\index{gps\_start\_entry@{gps\_start\_entry}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{gps\_start\_entry}{gps\_start\_entry}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a4c12533d9c9017635b8918adb83328be} 
+GWeasy.\+FFT.\+gps\+\_\+start\+\_\+entry = ttk.\+Entry(input\+\_\+frame, width=20)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01567}{1567}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a4e88ad42f6c8a83afd2c2c29f537723b}\index{GWeasy.FFT@{GWeasy.FFT}!mode@{mode}}
+\index{mode@{mode}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a4e88ad42f6c8a83afd2c2c29f537723b} 
+GWeasy.\+FFT.\+mode = tk.\+String\+Var(value="{}gps\+\_\+to\+\_\+utc"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01575}{1575}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a409cd1801104c50b32e00ba968824261}\index{GWeasy.FFT@{GWeasy.FFT}!plot\_frame@{plot\_frame}}
+\index{plot\_frame@{plot\_frame}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{plot\_frame}{plot\_frame}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a409cd1801104c50b32e00ba968824261} 
+GWeasy.\+FFT.\+plot\+\_\+frame = ttk.\+Frame(self.\+frame)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01604}{1604}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a2aaeadadbf663e013807e4fc4f5b2b52}\index{GWeasy.FFT@{GWeasy.FFT}!result\_label@{result\_label}}
+\index{result\_label@{result\_label}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{result\_label}{result\_label}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a2aaeadadbf663e013807e4fc4f5b2b52} 
+GWeasy.\+FFT.\+result\+\_\+label = ttk.\+Label(conversion\+\_\+frame, text="{}Result\+: "{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01585}{1585}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}\index{GWeasy.FFT@{GWeasy.FFT}!root@{root}}
+\index{root@{root}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a} 
+GWeasy.\+FFT.\+root = root}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01517}{1517}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ad7e4f591a5e578a5f27676df48f78d62}\index{GWeasy.FFT@{GWeasy.FFT}!run\_dropdown@{run\_dropdown}}
+\index{run\_dropdown@{run\_dropdown}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{run\_dropdown}{run\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ad7e4f591a5e578a5f27676df48f78d62} 
+GWeasy.\+FFT.\+run\+\_\+dropdown = ttk.\+Combobox(input\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01554}{1554}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ac093062a473639544f6fd399705107ff}\index{GWeasy.FFT@{GWeasy.FFT}!save\_button@{save\_button}}
+\index{save\_button@{save\_button}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{save\_button}{save\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ac093062a473639544f6fd399705107ff} 
+GWeasy.\+FFT.\+save\+\_\+button = ttk.\+Button(input\+\_\+frame, text="{}Save Parameters"{}, command=self.\+save\+\_\+params)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01602}{1602}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_aafe9faeda108426bb19fcc4688ce6bb8}\index{GWeasy.FFT@{GWeasy.FFT}!scroll\_x@{scroll\_x}}
+\index{scroll\_x@{scroll\_x}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{scroll\_x}{scroll\_x}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_aafe9faeda108426bb19fcc4688ce6bb8} 
+GWeasy.\+FFT.\+scroll\+\_\+x = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}}, orient="{}horizontal"{}, command=self.\+canvas.\+xview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01524}{1524}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a13cb631beaae9548ba3a85269a1537c2}\index{GWeasy.FFT@{GWeasy.FFT}!scroll\_y@{scroll\_y}}
+\index{scroll\_y@{scroll\_y}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{scroll\_y}{scroll\_y}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a13cb631beaae9548ba3a85269a1537c2} 
+GWeasy.\+FFT.\+scroll\+\_\+y = ttk.\+Scrollbar(\mbox{\hyperlink{class_g_weasy_1_1_f_f_t_aad9a73c5f7f3e575abff777e485f537a}{root}}, orient="{}vertical"{}, command=self.\+canvas.\+yview)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01523}{1523}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_a9139c02e823538cd4aba564431844b97}\index{GWeasy.FFT@{GWeasy.FFT}!toggle\_button@{toggle\_button}}
+\index{toggle\_button@{toggle\_button}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{toggle\_button}{toggle\_button}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_a9139c02e823538cd4aba564431844b97} 
+GWeasy.\+FFT.\+toggle\+\_\+button = ttk.\+Button(conversion\+\_\+frame, text="{}Switch to UTC → GPS"{}, command=self.\+toggle\+\_\+mode)}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01588}{1588}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+\Hypertarget{class_g_weasy_1_1_f_f_t_ac74e497cf908f42e963a3fb3f349be14}\index{GWeasy.FFT@{GWeasy.FFT}!url\_dropdown@{url\_dropdown}}
+\index{url\_dropdown@{url\_dropdown}!GWeasy.FFT@{GWeasy.FFT}}
+\doxysubsubsection{\texorpdfstring{url\_dropdown}{url\_dropdown}}
+{\footnotesize\ttfamily \label{class_g_weasy_1_1_f_f_t_ac74e497cf908f42e963a3fb3f349be14} 
+GWeasy.\+FFT.\+url\+\_\+dropdown = ttk.\+Combobox(url\+\_\+frame, state="{}readonly"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_g_weasy_8py_source_l01595}{1595}} of file \mbox{\hyperlink{_g_weasy_8py_source}{GWeasy.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+HP/\+Desktop/docs/\+GWeasy/\mbox{\hyperlink{_g_weasy_8py}{GWeasy.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="d4/d49/class_g_weasy_1_1_application" kind="class" language="Python" prot="public">
+    <compoundname>GWeasy::Application</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>GWeasy.Application.root</qualifiedname>
+        <initializer>=  root</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="37" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="37" bodyend="-1"/>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1aab12d78dfddb4aba7659676598e91522" compoundref="d6/d99/_g_weasy_8py" startline="1611" endline="1620">GWeasy.FFT.copy_url</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a402df04c08cec6d25843172097faa039" compoundref="d6/d99/_g_weasy_8py" startline="1896" endline="1905">GWeasy.PSDs.copy_url</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1aa1891be13ba82b9e223104fe517ae82d" compoundref="d6/d99/_g_weasy_8py" startline="1328" endline="1337">GWeasy.TimeSrswaveform.copy_url</referencedby>
+        <referencedby refid="de/db4/class_g_weasy_1_1_f_f_t_1a038a4dd70a65ea610af4bfbc9dcfb469" compoundref="d6/d99/_g_weasy_8py" startline="1743" endline="1787">GWeasy.FFT.fft</referencedby>
+        <referencedby refid="d6/d74/class_g_weasy_1_1_omicron_app_1ab2b3c69f76e7fb912821086703715181" compoundref="d6/d99/_g_weasy_8py" startline="517" endline="581">GWeasy.OmicronApp.open_custom_segs_dialog</referencedby>
+        <referencedby refid="d5/d54/class_g_weasy_1_1_time_srswaveform_1a5b8dd264aa566ccc79ea8b991995227f" compoundref="d6/d99/_g_weasy_8py" startline="1462" endline="1512">GWeasy.TimeSrswaveform.plot_gw_event</referencedby>
+        <referencedby refid="dc/da1/class_g_weasy_1_1_p_s_ds_1a6354f71fd3340e414796be6c75824f24" compoundref="d6/d99/_g_weasy_8py" startline="2030" endline="2103">GWeasy.PSDs.psds</referencedby>
+        <referencedby refid="d8/d2c/class_g_weasy_1_1_spectrogram_1a6f77b2386b99cb766cbdebb22ddf97cc" compoundref="d6/d99/_g_weasy_8py" startline="2267" endline="2312">GWeasy.Spectrogram.specgrams</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a8cee61c03f2fd253874edc49a950f995" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::notebook</definition>
+        <argsstring></argsstring>
+        <name>notebook</name>
+        <qualifiedname>GWeasy.Application.notebook</qualifiedname>
+        <initializer>=  ttk.Notebook(self.root)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="41" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a76a7c0e4dde8ef63f78c02a265986eb5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::gwosc_tab</definition>
+        <argsstring></argsstring>
+        <name>gwosc_tab</name>
+        <qualifiedname>GWeasy.Application.gwosc_tab</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="47" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a241f6a3220ed2ef836595a1e6ebbd764" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::gravfetch_tab</definition>
+        <argsstring></argsstring>
+        <name>gravfetch_tab</name>
+        <qualifiedname>GWeasy.Application.gravfetch_tab</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="51" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a45fc9a76c5105fe9cc8807f504e6566b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::omicron_tab</definition>
+        <argsstring></argsstring>
+        <name>omicron_tab</name>
+        <qualifiedname>GWeasy.Application.omicron_tab</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="55" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a7bc6ab7c3130c8de427616eb7c4ea3f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::omiviz_tab</definition>
+        <argsstring></argsstring>
+        <name>omiviz_tab</name>
+        <qualifiedname>GWeasy.Application.omiviz_tab</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="59" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1ae0f2627098c0d7f97c3ae23ce788d48a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::TimeSeriesWav</definition>
+        <argsstring></argsstring>
+        <name>TimeSeriesWav</name>
+        <qualifiedname>GWeasy.Application.TimeSeriesWav</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="62" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a7bf75c5cd17d3a8ee6dc65ac544dfabb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::FFT</definition>
+        <argsstring></argsstring>
+        <name>FFT</name>
+        <qualifiedname>GWeasy.Application.FFT</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="65" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1ae2f975d1b87b7ef8a6748fd27af74a73" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::PSDs</definition>
+        <argsstring></argsstring>
+        <name>PSDs</name>
+        <qualifiedname>GWeasy.Application.PSDs</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="68" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1afcde0fb66e24e27244fcdd4c511945da" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::Spectrogram</definition>
+        <argsstring></argsstring>
+        <name>Spectrogram</name>
+        <qualifiedname>GWeasy.Application.Spectrogram</qualifiedname>
+        <initializer>=  ttk.Frame(self.notebook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="71" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a3225ec3d521f18af44236da7fae45879" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::gravfetch_app</definition>
+        <argsstring></argsstring>
+        <name>gravfetch_app</name>
+        <qualifiedname>GWeasy.Application.gravfetch_app</qualifiedname>
+        <initializer>=  <ref refid="d8/d0c/class_g_weasy_1_1_gravfetch_app" kindref="compound">GravfetchApp</ref>(self.gravfetch_tab)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="75" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1ad0eb78803237bf932019e67ddee546e2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::omicron_app</definition>
+        <argsstring></argsstring>
+        <name>omicron_app</name>
+        <qualifiedname>GWeasy.Application.omicron_app</qualifiedname>
+        <initializer>=  <ref refid="d6/d74/class_g_weasy_1_1_omicron_app" kindref="compound">OmicronApp</ref>(self.omicron_tab)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="76" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1a62ad26c38e1c1f15d75c11000b57cb9f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::omiviz_app</definition>
+        <argsstring></argsstring>
+        <name>omiviz_app</name>
+        <qualifiedname>GWeasy.Application.omiviz_app</qualifiedname>
+        <initializer>=  <ref refid="da/da4/class_g_weasy_1_1_omiviz" kindref="compound">Omiviz</ref>(self.omiviz_tab)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="77" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d49/class_g_weasy_1_1_application_1adfc418e37a5a0609e7894e442378e569" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>GWeasy.Application::TimeSeriesWav_app</definition>
+        <argsstring></argsstring>
+        <name>TimeSeriesWav_app</name>
+        <qualifiedname>GWeasy.Application.TimeSeriesWav_app</qualifiedname>
+        <initializer>=  <ref refid="d5/d54/class_g_weasy_1_1_time_srswaveform" kindref="compound">TimeSrswaveform</ref>(self.TimeSeriesWav)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="78" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d4/d49/class_g_weasy_1_1_application_1a6a82475449f5f569d6c70edffb38e053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GWeasy.Application.__init__</definition>
+        <argsstring>(self, root)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>GWeasy.Application.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" kindref="member">root</ref></type>
+          <defname>root</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="36" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="36" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" line="34" column="1" bodyfile="C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py" bodystart="34" bodyend="83"/>
+    <listofallmembers>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a6a82475449f5f569d6c70edffb38e053" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>__init__</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a7bf75c5cd17d3a8ee6dc65ac544dfabb" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>FFT</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a3225ec3d521f18af44236da7fae45879" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>gravfetch_app</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a241f6a3220ed2ef836595a1e6ebbd764" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>gravfetch_tab</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a76a7c0e4dde8ef63f78c02a265986eb5" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>gwosc_tab</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a8cee61c03f2fd253874edc49a950f995" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>notebook</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1ad0eb78803237bf932019e67ddee546e2" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>omicron_app</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a45fc9a76c5105fe9cc8807f504e6566b" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>omicron_tab</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a62ad26c38e1c1f15d75c11000b57cb9f" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>omiviz_app</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a7bc6ab7c3130c8de427616eb7c4ea3f9" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>omiviz_tab</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1ae2f975d1b87b7ef8a6748fd27af74a73" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>PSDs</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1a156017695aee4338fc2c6722c0aea509" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>root</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1afcde0fb66e24e27244fcdd4c511945da" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>Spectrogram</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1ae0f2627098c0d7f97c3ae23ce788d48a" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>TimeSeriesWav</name></member>
+      <member refid="d4/d49/class_g_weasy_1_1_application_1adfc418e37a5a0609e7894e442378e569" prot="public" virt="non-virtual"><scope>GWeasy::Application</scope><name>TimeSeriesWav_app</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

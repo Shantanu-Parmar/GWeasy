@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__g_weasy_8py" xml:lang="en-US">
+<title>C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py File Reference</title>
+<indexterm><primary>C:/Users/HP/Desktop/docs/GWeasy/GWeasy.py</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_application">GWeasy.Application</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_terminal_frame">GWeasy.TerminalFrame</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_omicron_app">GWeasy.OmicronApp</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_gravfetch_app">GWeasy.GravfetchApp</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_g_w_o_s_c_app">GWeasy.GWOSCApp</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_omiviz">GWeasy.Omiviz</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_time_srswaveform">GWeasy.TimeSrswaveform</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_f_f_t">GWeasy.FFT</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_p_s_ds">GWeasy.PSDs</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_g_weasy_1_1_spectrogram">GWeasy.Spectrogram</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespace_g_weasy">GWeasy</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespace_g_weasy_1aadd942b7e384f53231f90808fd59daf6">GWeasy.filename</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1aa0d500f63f52ea5eb9b3f4d39782328f">GWeasy.level</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1ab3c2ebee4c4cb7c1b663be24a71b904c">GWeasy.format</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_namespace_g_weasy_1aef4518f6a9a83e5451e9aed5ebc7c1e8">GWeasy.HISTORY_FILE</link> = &quot;gravfetch_history.json&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade">GWeasy.root</link> = tk.Tk()</para>
+</listitem>
+            <listitem><para><link linkend="_namespace_g_weasy_1a2125844c45bf2046cfb55dcd033ead6c">GWeasy.app</link> = <link linkend="_class_g_weasy_1_1_application">Application</link>(<link linkend="_namespace_g_weasy_1aae8aebd4f824e2b7a0ebde097a9f6ade">root</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

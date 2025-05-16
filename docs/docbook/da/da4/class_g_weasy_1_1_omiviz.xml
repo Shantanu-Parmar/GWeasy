@@ -1,0 +1,535 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_weasy_1_1_omiviz" xml:lang="en-US">
+<title>GWeasy.Omiviz Class Reference</title>
+<indexterm><primary>GWeasy.Omiviz</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a8a1abcaa0bdbf764f7620e3d4f9ede3a">__init__</link> (self, <link linkend="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a5927086beaab150b73ee9fe248920864">start_loading</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a940521e496d5867e69a6e9e835875eec">stop_loading</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a0ca93a57b9356b0242c9c7b1ba79de98">update_progress</link> (self, text)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f">show_previous_plot</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc">show_next_plot</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a">update_navigation_buttons</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0">create_widgets</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc">valent</link> (self, label, key, frame=None, row=0, col=0, editable=True)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc">create_output_path_selector</link> (self, label, key, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ade2bd10cac8ce57726871553b88241e7">select_output_folder</link> (self, var)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9">create_file_selector</link> (self, label, key, frame=None, row=0, column=0)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a">select_file_or_folder</link> (self, var)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1aa7fea33189709387c6cfb10249f15d91">run_omicron_plot</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0">execute_command</link> (self, command, gps_start, gps_end, output_folder)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629">show_plot</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969">load_plots</link> (self, folder)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e">root</link> = root</para>
+</listitem>
+            <listitem><para>dict <link linkend="_class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012">config_data</link> = {}</para>
+</listitem>
+            <listitem><para>dict <link linkend="_class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4">ui_elements</link> = {}</para>
+</listitem>
+            <listitem><para>list <link linkend="_class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0">plot_files</link> = []</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c">current_plot_index</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1acd11d586944d13007833c5a3b54de21a">canvas</link> = tk.Canvas(<link linkend="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e">root</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a45d62f4c1a9b1a689ef1b2d8920ba593">scrollbar</link> = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324">scrollable_frame</link> = ttk.Frame(self.canvas)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a3618182f89f51a5438cc31dcb635e807">window_frame</link> = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor=&quot;nw&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1aa1f14e87b54591311fda4c3e33ecce86">run_button</link> = tk.Button(button_frame, text=&quot;Run Omicron Plot&quot;, command=self.run_omicron_plot)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a2ce005202325aeb7de3cfe86162aa10d">image_frame</link> = tk.Frame(self.scrollable_frame)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ab6530003f7b04524c258a442f6e87d8d">image_label</link> = tk.Label(self.image_frame, text=&quot;No Plot Available&quot;, width=50, height=25, bg=&quot;gray&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a3a5d7bfb5b5c3a473f482b17ba280124">prev_button</link> = tk.Button(nav_frame, text=&quot;⬅ Previous&quot;, command=self.show_previous_plot, state=tk.DISABLED)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1ab17c3478c3c3842c9ef750dcb223dc8c">next_button</link> = tk.Button(nav_frame, text=&quot;Next ➡&quot;, command=self.show_next_plot, state=tk.DISABLED)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af">progress</link> = ttk.Progressbar(self.scrollable_frame, orient=&quot;horizontal&quot;, length=300, mode=&quot;indeterminate&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a12522060e133892fbded6e79dbf6c55a">wsl_project_dir</link> = output_folder</para>
+</listitem>
+            <listitem><para><link linkend="_class_g_weasy_1_1_omiviz_1a73317d4f4e1e4aebe3bfc13c76332b25">photo</link> = ImageTk.PhotoImage(image)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00892">892</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a8a1abcaa0bdbf764f7620e3d4f9ede3a"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.__init__ ( self,  root)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00893">893</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1afe5b5ed7d3c8ac2eb212ee8b13b4b4f9"/><section>
+    <title>create_file_selector()</title>
+<indexterm><primary>create_file_selector</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>create_file_selector</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.create_file_selector ( self,  label,  key,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Allows selecting either a single file or a folder containing `.root` files.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01017">1017</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_afe5b5ed7d3c8ac2eb212ee8b13b4b4f9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a458e270d3ea14516f84e77ec74b55bcc"/><section>
+    <title>create_output_path_selector()</title>
+<indexterm><primary>create_output_path_selector</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>create_output_path_selector</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.create_output_path_selector ( self,  label,  key,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  column = <computeroutput>0</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Allows selecting an output folder.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00998">998</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a458e270d3ea14516f84e77ec74b55bcc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ac25ba894e63d6addfb816a28fb9615d0"/><section>
+    <title>create_widgets()</title>
+<indexterm><primary>create_widgets</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>create_widgets</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.create_widgets ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00953">953</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_ac25ba894e63d6addfb816a28fb9615d0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1aac58d816df8df0bff000113f500c38f0"/><section>
+    <title>execute_command()</title>
+<indexterm><primary>execute_command</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>execute_command</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.execute_command ( self,  command,  gps_start,  gps_end,  output_folder)</computeroutput></para>
+<para><literallayout><computeroutput>Runs the Omicron plot command inside a full WSL shell session with logging.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01130">1130</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_aac58d816df8df0bff000113f500c38f0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ad356caaa70d952c12d4661bd0715c969"/><section>
+    <title>load_plots()</title>
+<indexterm><primary>load_plots</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>load_plots</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.load_plots ( self,  folder)</computeroutput></para>
+<para><literallayout><computeroutput>Loads the plots from WSL and updates the GUI.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01205">1205</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_ad356caaa70d952c12d4661bd0715c969_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1aa7fea33189709387c6cfb10249f15d91"/><section>
+    <title>run_omicron_plot()</title>
+<indexterm><primary>run_omicron_plot</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>run_omicron_plot</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.run_omicron_plot ( self)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01068">1068</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1afa0801404d631921e5d212ee675ad32a"/><section>
+    <title>select_file_or_folder()</title>
+<indexterm><primary>select_file_or_folder</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>select_file_or_folder</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.select_file_or_folder ( self,  var)</computeroutput></para>
+<para><literallayout><computeroutput>Allows selecting a folder (grabs all `.root` files) or an individual file.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01030">1030</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_afa0801404d631921e5d212ee675ad32a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ade2bd10cac8ce57726871553b88241e7"/><section>
+    <title>select_output_folder()</title>
+<indexterm><primary>select_output_folder</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>select_output_folder</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.select_output_folder ( self,  var)</computeroutput></para>
+<para><literallayout><computeroutput>Allows selecting an output folder.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01011">1011</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_ade2bd10cac8ce57726871553b88241e7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ae7a0ad2a1b444d30fe6769555a7113bc"/><section>
+    <title>show_next_plot()</title>
+<indexterm><primary>show_next_plot</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>show_next_plot</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.show_next_plot ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Scrolls forward through the plots.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00940">940</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_ae7a0ad2a1b444d30fe6769555a7113bc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ae394ef0c843904de3cb2195e777d1629"/><section>
+    <title>show_plot()</title>
+<indexterm><primary>show_plot</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>show_plot</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.show_plot ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Displays the current plot in the GUI.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01166">1166</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_ae394ef0c843904de3cb2195e777d1629_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a00290848b4f49fa8fed9dca6bb47ec2f"/><section>
+    <title>show_previous_plot()</title>
+<indexterm><primary>show_previous_plot</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>show_previous_plot</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.show_previous_plot ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Scrolls backward through the plots.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00933">933</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a00290848b4f49fa8fed9dca6bb47ec2f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a5927086beaab150b73ee9fe248920864"/><section>
+    <title>start_loading()</title>
+<indexterm><primary>start_loading</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>start_loading</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.start_loading ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Start the loading animation.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00920">920</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a5927086beaab150b73ee9fe248920864_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a940521e496d5867e69a6e9e835875eec"/><section>
+    <title>stop_loading()</title>
+<indexterm><primary>stop_loading</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>stop_loading</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.stop_loading ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Stop the loading animation.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00924">924</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a940521e496d5867e69a6e9e835875eec_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a28528940b4c8998eca58e6ca71d2d24a"/><section>
+    <title>update_navigation_buttons()</title>
+<indexterm><primary>update_navigation_buttons</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>update_navigation_buttons</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.update_navigation_buttons ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Updates the state of navigation buttons.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00947">947</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a28528940b4c8998eca58e6ca71d2d24a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a0ca93a57b9356b0242c9c7b1ba79de98"/><section>
+    <title>update_progress()</title>
+<indexterm><primary>update_progress</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>update_progress</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.update_progress ( self,  text)</computeroutput></para>
+<para><literallayout><computeroutput>Update progress based on Omicron output.</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00928">928</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a0ca93a57b9356b0242c9c7b1ba79de98_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a957f6e8833cee2c4f431ac4f1ee8b1cc"/><section>
+    <title>valent()</title>
+<indexterm><primary>valent</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>valent</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.valent ( self,  label,  key,  frame = <computeroutput>None</computeroutput>
+,  row = <computeroutput>0</computeroutput>
+,  col = <computeroutput>0</computeroutput>
+,  editable = <computeroutput>True</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00990">990</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/da4/class_g_weasy_1_1_omiviz_a957f6e8833cee2c4f431ac4f1ee8b1cc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1acd11d586944d13007833c5a3b54de21a"/><section>
+    <title>canvas</title>
+<indexterm><primary>canvas</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>canvas</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.canvas = tk.Canvas(<link linkend="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e">root</link>)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00901">901</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a31057d5270b45172b1df404b98ace012"/><section>
+    <title>config_data</title>
+<indexterm><primary>config_data</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>config_data</secondary></indexterm>
+<para><computeroutput>dict GWeasy.Omiviz.config_data = {}</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00895">895</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a30fad9c2937c4c8534e144a376fff08c"/><section>
+    <title>current_plot_index</title>
+<indexterm><primary>current_plot_index</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>current_plot_index</secondary></indexterm>
+<para><computeroutput>int GWeasy.Omiviz.current_plot_index = 0</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00898">898</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a2ce005202325aeb7de3cfe86162aa10d"/><section>
+    <title>image_frame</title>
+<indexterm><primary>image_frame</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>image_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.image_frame = tk.Frame(self.scrollable_frame)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00972">972</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ab6530003f7b04524c258a442f6e87d8d"/><section>
+    <title>image_label</title>
+<indexterm><primary>image_label</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>image_label</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.image_label = tk.Label(self.image_frame, text=&quot;No Plot Available&quot;, width=50, height=25, bg=&quot;gray&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00975">975</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1ab17c3478c3c3842c9ef750dcb223dc8c"/><section>
+    <title>next_button</title>
+<indexterm><primary>next_button</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>next_button</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.next_button = tk.Button(nav_frame, text=&quot;Next ➡&quot;, command=self.show_next_plot, state=tk.DISABLED)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00985">985</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a73317d4f4e1e4aebe3bfc13c76332b25"/><section>
+    <title>photo</title>
+<indexterm><primary>photo</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>photo</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.photo = ImageTk.PhotoImage(image)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01191">1191</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a93f21da01ec8f6261ad5f5a10dd36de0"/><section>
+    <title>plot_files</title>
+<indexterm><primary>plot_files</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>plot_files</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.plot_files = []</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00897">897</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a3a5d7bfb5b5c3a473f482b17ba280124"/><section>
+    <title>prev_button</title>
+<indexterm><primary>prev_button</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>prev_button</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.prev_button = tk.Button(nav_frame, text=&quot;⬅ Previous&quot;, command=self.show_previous_plot, state=tk.DISABLED)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00982">982</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1aeaf7da465545e6f1ad2d9f1350e0e8af"/><section>
+    <title>progress</title>
+<indexterm><primary>progress</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>progress</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.progress = ttk.Progressbar(self.scrollable_frame, orient=&quot;horizontal&quot;, length=300, mode=&quot;indeterminate&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00987">987</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e"/><section>
+    <title>root</title>
+<indexterm><primary>root</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>root</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.root = root</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00894">894</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1aa1f14e87b54591311fda4c3e33ecce86"/><section>
+    <title>run_button</title>
+<indexterm><primary>run_button</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>run_button</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.run_button = tk.Button(button_frame, text=&quot;Run Omicron Plot&quot;, command=self.run_omicron_plot)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00968">968</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1aa6eef08d7f08860f607cc371be946324"/><section>
+    <title>scrollable_frame</title>
+<indexterm><primary>scrollable_frame</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>scrollable_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.scrollable_frame = ttk.Frame(self.canvas)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00903">903</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a45d62f4c1a9b1a689ef1b2d8920ba593"/><section>
+    <title>scrollbar</title>
+<indexterm><primary>scrollbar</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>scrollbar</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.scrollbar = ttk.Scrollbar(<link linkend="_class_g_weasy_1_1_omiviz_1a02810f20efec6e648f99c46bb90ae85e">root</link>, orient=&quot;vertical&quot;, command=self.canvas.yview)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00902">902</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a7a444b147f3dfcf4fd6ee19ccb7d96d4"/><section>
+    <title>ui_elements</title>
+<indexterm><primary>ui_elements</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>ui_elements</secondary></indexterm>
+<para><computeroutput>dict GWeasy.Omiviz.ui_elements = {}</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00896">896</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a3618182f89f51a5438cc31dcb635e807"/><section>
+    <title>window_frame</title>
+<indexterm><primary>window_frame</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>window_frame</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.window_frame = self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor=&quot;nw&quot;)</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l00910">910</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<anchor xml:id="_class_g_weasy_1_1_omiviz_1a12522060e133892fbded6e79dbf6c55a"/><section>
+    <title>wsl_project_dir</title>
+<indexterm><primary>wsl_project_dir</primary><secondary>GWeasy.Omiviz</secondary></indexterm>
+<indexterm><primary>GWeasy.Omiviz</primary><secondary>wsl_project_dir</secondary></indexterm>
+<para><computeroutput>GWeasy.Omiviz.wsl_project_dir = output_folder</computeroutput></para><para>
+Definition at line <link linkend="__g_weasy_8py_source_1l01117">1117</link> of file <link linkend="__g_weasy_8py_source">GWeasy.py</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/HP/Desktop/docs/GWeasy/<link linkend="__g_weasy_8py">GWeasy.py</link></section>
+</section>
