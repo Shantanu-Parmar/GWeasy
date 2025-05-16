@@ -1,7 +1,7 @@
 0# GWeasy
 
 ## GWeasy: Multiplatform GUI Software for Gravitational Wave Data Analysis
-
+For Documentation and function list, refer: [https://shantanu-parmar.github.io/GWeasy/](https://shantanu-parmar.github.io/GWeasy/)
 ### **Overview**
 [![YouTube](https://github.com/user-attachments/assets/d6054686-f59f-4ba9-a407-a137eaca1222)](https://www.youtube.com/watch?v=WbjKwl0-VA0)
 
