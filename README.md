@@ -10,7 +10,6 @@ For Documentation and function list, refer: [https://shantanu-parmar.github.io/G
 ### **Project Details**
 - **Project Timeline:** February - April 2025
 - **Lead Developer:** Shantanusinh Parmar
-- **Supervisor:** Prof. Chandrasinh Parmar
 - **Target Platforms:** Windows , Linux 
 - **Primary Software Components:**
   - LIGO data fetching
