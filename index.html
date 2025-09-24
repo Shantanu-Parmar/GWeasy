@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWeasy - Gravitational Wave Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D0D2B;
+            color: #FFFFFF;
+        }
+        .hero-bg {
+            background-image: url('https://github.com/shantanu-parmar/GWeasy/raw/main/images/starry-bg.jpg'), linear-gradient(180deg, rgba(0, 196, 180, 0.7), rgba(255, 87, 51, 0.7));
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            height: 80vh; /* Reduced height for compactness */
+        }
+        .spacetime-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cg%3E%3Cpath d='M0 0 L100 10 Q50 20 0 10 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M0 20 L100 30 Q50 40 0 30 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M0 40 L100 50 Q60 60 0 50 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M0 60 L100 70 Q50 80 0 70 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M0 0 L10 100 Q20 50 10 0 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M20 0 L30 100 Q40 50 30 0 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M40 0 L50 100 Q60 50 50 0 Z' fill='none' stroke='%23FFC107' stroke-width='0.5' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+            animation: warp 20s linear infinite;
+        }
+        @keyframes warp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10%); }
+        }
+        .section-divider {
+            background: linear-gradient(90deg, #00C4B4, #FFC107, #FF5733);
+            height: 3px; /* Thinner divider for compactness */
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .wave-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0 5 Q25 0 50 5 T100 5' stroke='%23FF5733' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 5 Q25 10 50 5 T100 5' stroke='%2300C4B4' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+        .notice-board {
+            height: 300px;
+            overflow-y: auto;
+            background-color: #1A1A3D;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            position: relative;
+        }
+        .notice-content {
+            animation: autoScroll 30s linear infinite;
+        }
+        @keyframes autoScroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+        .notice-board:hover .notice-content {
+            animation-play-state: paused; /* Pause on hover for manual scrolling */
+        }
+        .video-notice-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: stretch;
+        }
+        .video-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px; /* Reduced video width */
+        }
+        .notice-container {
+            flex: 1;
+            min-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-[#00C4B4] to-[#FF5733] text-white shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="https://raw.githubusercontent.com/Shantanu-Parmar/GWeasy/1551388afc8bcd918c1195df1dae72b741c1fc4a/logo.png" alt="GWeasy Logo" class="h-10 w-10 mr-2"></a>
+                    <h1 class="text-2xl font-bold">GWeasy</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Home">Home</a>
+                    <a href="installation.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Installation Instructions">Installation</a>
+                    <a href="usage.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Usage Guide">Usage</a>
+                    <a href="features.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Features">Features</a>
+                    <a href="timeline.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Development Timeline">Timeline</a>
+                    <a href="contributing.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Contribute to GWeasy">Contributing</a>
+                    <a href="license.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy License Information">License</a>
+                    <a href="about.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="About Shantanusinh Parmar">About</a>
+                    <a href="https://github.com/shantanu-parmar/GWeasy" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy GitHub Repository">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg flex items-center justify-center text-white pt-16 pb-8 relative">
+        <div class="spacetime-grid"></div>
+        <div class="text-center fade-in z-10">
+            <h2 class="text-4xl font-bold mb-3">GWeasy: Surfing Spacetime’s Waves</h2>
+            <p class="text-lg mb-4">A vibrant GUI for fetching, analyzing, and visualizing LIGO gravitational wave data, inspired by Einstein’s General Relativity.</p>
+            <a href="installation.html" class="bg-[#FFC107] text-[#0D0D2B] font-semibold py-2 px-4 rounded pulse" aria-label="Get Started with GWeasy">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Project Overview -->
+        <section class="mb-8 fade-in">
+            <h2 class="text-3xl font-bold mb-3 text-[#00C4B4]">Project Overview</h2>
+            <p class="text-lg mb-3">
+                GWeasy is a multi-platform GUI software that simplifies gravitational wave (GW) data analysis, channeling Einstein’s General Theory of Relativity. It integrates LIGO data fetching, OMICRON pipeline execution, and vibrant visualization, making GW research accessible to scientists and enthusiasts alike.
+            </p>
+            <p class="text-lg mb-3">
+                Developed by Shantanusinh Parmar, GWeasy eliminates the complexity of setting up GW analysis environments. Whether you’re fetching data from LIGO, running OMICRON pipelines, or visualizing spacetime ripples, GWeasy streamlines the process with an intuitive interface.
+            </p>
+            <p class="text-lg">
+                Explore our <a href="https://shantanu-parmar.github.io/GWeasy/" class="text-[#FF5733] hover:underline">documentation</a> or watch our <a href="https://www.youtube.com" class="text-[#FF5733] hover:underline">YouTube demo</a> to dive into the cosmos.
+            </p>
+        </section>
+
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Motivation Section -->
+        <section class="mb-8 fade-in">
+            <h2 class="text-3xl font-bold mb-3 text-[#FF5733]">Why GWeasy?</h2>
+            <p class="text-lg mb-3">
+                Gravitational wave research has been transformative, but the lack of intuitive visual tools and user-friendly interfaces often poses a barrier for early-career researchers and newcomers to the field. Complex command-line setups and steep learning curves can discourage exploration of LIGO data and analysis pipelines like OMICRON.
+            </p>
+            <p class="text-lg mb-3">
+                GWeasy aims to revolutionize this landscape by offering a <span class="text-[#FFC107] font-semibold">no-code solution</span>. With its vibrant GUI, GWeasy empowers users to fetch, analyze, and visualize gravitational wave data without needing extensive programming expertise. By democratizing access to GW research, GWeasy fosters inclusivity and accelerates scientific discovery for students, educators, and researchers new to the field.
+            </p>
+            <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_motivation.png" alt="GWeasy Interface Simplifying Gravitational Wave Analysis" class="w-full max-w-md mb-3 rounded shadow">
+        </section>
+
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Video and Notice Board -->
+        <section class="mb-8 fade-in">
+            <h2 class="text-3xl font-bold mb-3 text-[#00C4B4]">Explore GWeasy</h2>
+            <div class="video-notice-container">
+                <div class="video-container">
+                    <h3 class="text-xl font-semibold mb-2 text-[#FF5733]">Watch GWeasy in Action</h3>
+
+                    <div class="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg">
+                        <iframe
+                        class="absolute top-0 left-0 w-full h-full rounded-lg"
+                        src="https://www.youtube.com/embed/WbjKwl0-VA0"
+                        title="GWeasy Demo Video"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <p class="text-sm mt-2">
+                        See how GWeasy simplifies gravitational wave analysis with its no-code interface.
+                    </p>
+                    </div>
+
+
+                <div class="notice-container">
+                    <h3 class="text-xl font-semibold mb-2 text-[#FF5733]">Notice Board & Recent Activity</h3>
+                    <div class="notice-board">
+                        <div class="notice-content" id="notice-content">
+                            <!-- Static updates -->
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-[#FFC107]">GWeasy Windows Release</h4>
+                                <p class="text-sm text-gray-400">April 2025</p>
+                                <p class="text-sm">The Windows version of GWeasy is now available with a pre-configured WSL image. Download from the <a href="installation.html" class="text-[#FF5733] hover:underline">Installation</a> page.</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="text-lg font-semibold text-[#FFC107]">Linux Beta Release</h4>
+                                <p class="text-sm text-gray-400">March 2025</p>
+                                <p class="text-sm">The Linux version of GWeasy is in beta, offering zero-setup execution. See the <a href="installation.html" class="text-[#FF5733] hover:underline">Installation</a> guide for details.</p>
+                            </div>
+                            <!-- GitHub commits will be appended here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Key Features -->
+        <section class="mb-8 fade-in">
+            <h2 class="text-3xl font-bold mb-3 text-[#00C4B4]">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-[#1A1A3D] p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-[#FFC107]">LIGO Data Fetching</h3>
+                    <p class="text-sm">Retrieve gravitational wave data from LIGO databases with an intuitive, vibrant interface.</p>
+                </div>
+                <div class="bg-[#1A1A3D] p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-[#FFC107]">OMICRON Pipeline</h3>
+                    <p class="text-sm">Run advanced GW analysis pipelines like OMICRON with minimal setup, inspired by spacetime’s dance.</p>
+                </div>
+                <div class="bg-[#1A1A3D] p-4 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-2 text-[#FFC107]">Visualization</h3>
+                    <p class="text-sm">Visualize GW data with dynamic graphical tools, echoing Einstein’s vision of relativity.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#00C4B4] to-[#FF5733] text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm">© 2025 GWeasy. All rights reserved.</p>
+            <p class="text-center text-sm">Unveiling the Universe with Einstein’s Vision!</p>
+            <div class="text-center mt-2">
+                <p class="text-sm">We value your feedback! Submit issues or suggestions on our <a href="https://github.com/shantanu-parmar/GWeasy/issues" class="text-[#FFC107] hover:underline">GitHub Issues</a> page or contact us at <a href="mailto:shantanu.parmar@example.com" class="text-[#FFC107] hover:underline">shantanu.parmar@example.com</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // GitHub API integration for commits
+        async function fetchGitHubCommits() {
+            try {
+                const response = await fetch('https://api.github.com/repos/shantanu-parmar/GWeasy/commits?per_page=100');
+                const commits = await response.json();
+                const noticeContent = document.getElementById('notice-content');
+                commits.forEach(commit => {
+                    const commitDiv = document.createElement('div');
+                    commitDiv.className = 'mb-4';
+                    commitDiv.innerHTML = `
+                        <h4 class="text-lg font-semibold text-[#FFC107]">${commit.commit.message}</h4>
+                        <p class="text-sm text-gray-400">${new Date(commit.commit.author.date).toLocaleDateString()}</p>
+                        <p class="text-sm">By ${commit.commit.author.name}</p>
+                        <a href="${commit.html_url}" class="text-[#FF5733] hover:underline text-sm" target="_blank">View Commit</a>
+                    `;
+                    noticeContent.appendChild(commitDiv);
+                });
+            } catch (error) {
+                console.error('Error fetching GitHub commits:', error);
+                const noticeContent = document.getElementById('notice-content');
+                noticeContent.innerHTML += '<p class="text-sm text-center text-gray-400">Unable to load commits. Please check back later.</p>';
+            }
+        }
+
+        fetchGitHubCommits();
+
+        // Auto-scroll loop reset
+        const noticeContent = document.querySelector('.notice-content');
+        noticeContent.addEventListener('animationiteration', () => {
+            noticeContent.style.animation = 'none';
+            requestAnimationFrame(() => {
+                noticeContent.style.animation = 'autoScroll 30s linear infinite';
+            });
+        });
+    </script>
+</body>
+</html>

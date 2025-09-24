@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation - GWeasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D0D2B;
+            color: #FFFFFF;
+        }
+        .section-divider {
+            background: linear-gradient(90deg, #00C4B4, #FFC107, #FF5733);
+            height: 3px; /* Thinner for compactness */
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .wave-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0 5 Q25 0 50 5 T100 5' stroke='%23FF5733' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 5 Q25 10 50 5 T100 5' stroke='%2300C4B4' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+        .installation-card {
+            background-color: #1A1A3D;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .coming-soon {
+            opacity: 0.6;
+            background: linear-gradient(135deg, #1A1A3D, #2A1B3D);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="bg-gradient-to-r from-[#00C4B4] to-[#FF5733] text-white shadow-lg fixed top-0 w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html"><img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/logo.png" alt="GWeasy Logo" class="h-10 w-10 mr-2"></a>
+                    <h1 class="text-2xl font-bold">GWeasy</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Home">Home</a>
+                    <a href="installation.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Installation Instructions">Installation</a>
+                    <a href="usage.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Usage Guide">Usage</a>
+                    <a href="features.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Features">Features</a>
+                    <a href="timeline.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Development Timeline">Timeline</a>
+                    <a href="contributing.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Contribute to GWeasy">Contributing</a>
+                    <a href="license.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy License Information">License</a>
+                    <a href="about.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="About Shantanusinh Parmar">About</a>
+                    <a href="https://github.com/shantanu-parmar/GWeasy" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy GitHub Repository">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 class="text-3xl font-bold mb-6 text-[#00C4B4] fade-in">Installation Guide</h2>
+        <p class="text-lg mb-8 fade-in">GWeasy offers multiple installation methods for Windows and Linux. Choose the option that best fits your workflow. All methods are designed for simplicity and minimal setup.</p>
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Windows Section -->
+        <section class="mb-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Windows Installation</h3>
+            <p class="text-lg mb-4">GWeasy supports Windows through WSL integration, standalone EXE, and zip-based runs. Follow the steps below for your preferred method.</p>
+
+            <!-- Windows + WSL -->
+            <div class="installation-card">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Windows + WSL (Recommended)</h4>
+                <ol class="list-decimal list-inside space-y-2 text-sm">
+                    <li><strong>Fetch WSL Copy:</strong> Download the pre-configured GWeasy WSL image from <a href="https://zenodo.org/records/placeholder" class="text-[#FF5733] hover:underline" target="_blank">Zenodo</a> (unless using your own WSL; see Custom WSL section below).</li>
+                    <li><strong>Setup WSL on Your PC:</strong> Enable WSL via Windows Features (search "Turn Windows features on or off" > check "Windows Subsystem for Linux"). Install Ubuntu from Microsoft Store.</li>
+                    <li><strong>Import WSL Image:</strong> Open PowerShell as admin and run: <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl --import GWeasyWSL C:\WSL\GWeasy path\to\GWeasywsl.tar</code>.</li>
+                    <li><strong>Launch and Run:</strong> Start WSL with <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl -d GWeasyWSL</code>, then execute <code class="bg-[#2A1B3D] px-2 py-1 rounded">./GWeasy</code>.</li>
+                </ol>
+                <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_wsl.png" alt="GWeasy WSL Installation Steps" class="w-full max-w-md mt-4 rounded shadow">
+                <div class="mt-3">
+                    <h5 class="text-sm font-semibold text-[#FFC107]">Custom WSL:</h5>
+                    <p class="text-sm">If using your own WSL distro, install dependencies (Miniconda, GW libraries) manually and clone the repo: <code class="bg-[#2A1B3D] px-2 py-1 rounded">git clone https://github.com/shantanu-parmar/GWeasy.git</code>.</p>
+                </div>
+            </div>
+
+            <!-- Standalone EXE -->
+            <div class="installation-card">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Standalone EXE</h4>
+                <ol class="list-decimal list-inside space-y-2 text-sm">
+                    <li><strong>Fetch Conda Copy:</strong> Download the Conda environment from <a href="https://zenodo.org/records/placeholder" class="text-[#FF5733] hover:underline" target="_blank">Zenodo</a>.</li>
+                    <li><strong>Setup Conda on Your PC:</strong> Install Miniconda from <a href="https://docs.conda.io/en/latest/miniconda.html" class="text-[#FF5733] hover:underline" target="_blank">official site</a>.</li>
+                    <li><strong>Fetch Installer and Run:</strong> Download the installer script from GitHub Releases and run it to set up the environment.</li>
+                    <li><strong>Standalone EXE Ready:</strong> Fetch the built EXE from Releases, double-click to run.</li>
+                </ol>
+                <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_standalone.png" alt="GWeasy Standalone EXE Setup" class="w-full max-w-md mt-4 rounded shadow">
+            </div>
+
+            <!-- Zip Based Run -->
+            <div class="installation-card">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Zip-Based Run with Built EXE</h4>
+                <ol class="list-decimal list-inside space-y-2 text-sm">
+                    <li><strong>Download Zip:</strong> Get the pre-built zip from <a href="https://github.com/shantanu-parmar/GWeasy/releases" class="text-[#FF5733] hover:underline" target="_blank">GitHub Releases</a>.</li>
+                    <li><strong>Extract and Run:</strong> Unzip the file and double-click the EXE to launch GWeasy.</li>
+                    <li><strong>Python Script Option:</strong> For custom runs, use <code class="bg-[#2A1B3D] px-2 py-1 rounded">python main.py</code> after installing dependencies.</li>
+                </ol>
+                <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_zip.png" alt="GWeasy Zip-Based Installation" class="w-full max-w-md mt-4 rounded shadow">
+            </div>
+        </section>
+
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Linux Section -->
+        <section class="mb-8 fade-in coming-soon">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Linux Installation (Coming Soon)</h3>
+            <p class="text-lg mb-4">GWeasy on Linux will offer seamless integration. Stay tuned for updates!</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="installation-card">
+                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Snapcraft Image</h4>
+                    <p class="text-sm">Install via Snapcraft for easy distribution and updates.</p>
+                </div>
+                <div class="installation-card">
+                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Executable via chmod</h4>
+                    <p class="text-sm">Download the binary and run with <code class="bg-[#2A1B3D] px-2 py-1 rounded">chmod +x GWeasy && ./GWeasy</code>.</p>
+                </div>
+                <div class="installation-card">
+                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Python-Based</h4>
+                    <p class="text-sm">Clone the repo and run with Python dependencies.</p>
+                </div>
+            </div>
+            <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_linux.png" alt="GWeasy Linux Installation Preview" class="w-full max-w-md mt-4 rounded shadow">
+        </section>
+
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Web/Server Mounted -->
+        <section class="mb-8 fade-in coming-soon">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Web/Server Mounted (Coming Soon)</h3>
+            <p class="text-lg mb-4">Run GWeasy on a server or access via web browser for collaborative analysis. More details coming soon.</p>
+            <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_web.png" alt="GWeasy Web/Server Installation Concept" class="w-full max-w-md mt-4 rounded shadow">
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#00C4B4] to-[#FF5733] text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center">© 2025 GWeasy. All rights reserved.</p>
+            <p class="text-center">Unveiling the Universe with Einstein’s Vision!</p>
+            <div class="text-center mt-4">
+                <p class="text-sm">We value your feedback! Submit issues or suggestions on our <a href="https://github.com/shantanu-parmar/GWeasy/issues" class="text-[#FFC107] hover:underline">GitHub Issues</a> page or contact us at <a href="mailto:shantanu.parmar@example.com" class="text-[#FFC107] hover:underline">shantanu.parmar@example.com</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
