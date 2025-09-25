@@ -13,7 +13,7 @@
         }
         .section-divider {
             background: linear-gradient(90deg, #00C4B4, #FFC107, #FF5733);
-            height: 3px; /* Thinner for compactness */
+            height: 3px;
         }
         .fade-in {
             animation: fadeIn 1s ease-in;
@@ -37,6 +37,17 @@
             opacity: 0.6;
             background: linear-gradient(135deg, #1A1A3D, #2A1B3D);
         }
+        .download-btn {
+            background-color: #FFC107;
+            color: #0D0D2B;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #FF5733;
+        }
     </style>
 </head>
 <body>
@@ -53,11 +64,8 @@
                     <a href="installation.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Installation Instructions">Installation</a>
                     <a href="usage.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Usage Guide">Usage</a>
                     <a href="features.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Features">Features</a>
-                    <!-- <a href="timeline.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Development Timeline">Timeline</a> -->
-                    <!-- <a href="contributing.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Contribute to GWeasy">Contributing</a>
-                    <a href="license.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy License Information">License</a> -->
                     <a href="about.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="About Shantanusinh Parmar">About</a>
-                   <a href="https://shantanu-parmar.github.io/GWeasy/docs/html/dd/d9c/namespace_g_weasy.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Documentation">Documentation</a>
+                    <a href="https://shantanu-parmar.github.io/GWeasy/docs/html/dd/d9c/namespace_g_weasy.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Documentation">Documentation</a>
                     <a href="https://github.com/shantanu-parmar/GWeasy" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy GitHub Repository">GitHub</a>
                 </div>
             </div>
@@ -67,27 +75,62 @@
     <!-- Main Content -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 class="text-3xl font-bold mb-6 text-[#00C4B4] fade-in">Installation Guide</h2>
-        <p class="text-lg mb-8 fade-in">GWeasy offers multiple installation methods for Windows and Linux. Choose the option that best fits your workflow. All methods are designed for simplicity and minimal setup.</p>
+        <p class="text-lg mb-8 fade-in">GWeasy requires Windows Subsystem for Linux (WSL) to support OMICRON pipelines and gravitational wave analysis libraries. Follow the steps below to configure WSL and select an installation method.</p>
         <div class="section-divider mb-8 wave-pattern h-3"></div>
 
-        <!-- Windows Section -->
-        <section class="mb-8 fade-in">
-            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Windows Installation</h3>
-            <p class="text-lg mb-4">GWeasy supports Windows through WSL integration, standalone EXE, and zip-based runs. Follow the steps below for your preferred method.</p>
-
-            <!-- Windows + WSL -->
+        <!-- Mandatory WSL Setup -->
+        <section class="mb-8 fade-in" id="mandatory-wsl-setup">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Mandatory WSL Setup</h3>
+            <p class="text-lg mb-4">All Windows installation methods for GWeasy require WSL to run OMICRON and associated dependencies.</p>
             <div class="installation-card">
-                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Windows + WSL (Recommended)</h4>
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Step-by-Step WSL Configuration</h4>
                 <ol class="list-decimal list-inside space-y-2 text-sm">
-                    <li><strong>Fetch WSL Copy:</strong> Download the pre-configured GWeasy WSL image from <a href="https://zenodo.org/records/placeholder" class="text-[#FF5733] hover:underline" target="_blank">Zenodo</a> (unless using your own WSL; see Custom WSL section below).</li>
-                    <li><strong>Setup WSL on Your PC:</strong> Enable WSL via Windows Features (search "Turn Windows features on or off" > check "Windows Subsystem for Linux"). Install Ubuntu from Microsoft Store.</li>
-                    <li><strong>Import WSL Image:</strong> Open PowerShell as admin and run: <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl --import GWeasyWSL C:\WSL\GWeasy path\to\GWeasywsl.tar</code>.</li>
-                    <li><strong>Launch and Run:</strong> Start WSL with <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl -d GWeasyWSL</code>, then execute <code class="bg-[#2A1B3D] px-2 py-1 rounded">./GWeasy</code>.</li>
+                    <li>
+                        <strong>Enable WSL:</strong> Open "Turn Windows features on or off," select "Windows Subsystem for Linux," and restart your computer. Refer to <a href="https://learn.microsoft.com/en-us/windows/wsl/install" class="text-[#FF5733] hover:underline" target="_blank">Microsoft’s WSL setup guide</a> for details.
+                    </li>
+                    <li>
+                        <strong>Select WSL Environment:</strong> Choose the pre-configured Ubuntu-based WSL image (recommended, see <a href="#pre-configured-wsl" class="text-[#FF5733] hover:underline">Pre-Configured WSL</a>) or configure a custom WSL distribution (see <a href="#custom-wsl-setup" class="text-[#FF5733] hover:underline">Custom WSL Setup</a> if you have an existing WSL installation or prefer manual configuration). Multiple WSL distributions are supported.
+                    </li>
+                    <li>
+                        <strong>Install WSL2:</strong> Open PowerShell as Administrator and run: <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl --install</code>. This installs WSL2 and a default distribution if not using the pre-configured image.
+                    </li>
+                    <li>
+                        <strong>Retrieve WSL Username:</strong> Launch WSL with <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl</code>, then run <code class="bg-[#2A1B3D] px-2 py-1 rounded">whoami</code> to obtain your username for OMICRON configuration.
+                    </li>
                 </ol>
-                <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_wsl.png" alt="GWeasy WSL Installation Steps" class="w-full max-w-md mt-4 rounded shadow">
-                <div class="mt-3">
-                    <h5 class="text-sm font-semibold text-[#FFC107]">Custom WSL:</h5>
-                    <p class="text-sm">If using your own WSL distro, install dependencies (Miniconda, GW libraries) manually and clone the repo: <code class="bg-[#2A1B3D] px-2 py-1 rounded">git clone https://github.com/shantanu-parmar/GWeasy.git</code>.</p>
+            </div>
+        </section>
+
+        <div class="section-divider mb-8 wave-pattern h-3"></div>
+
+        <!-- Windows Installation Options -->
+        <section class="mb-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Windows Installation Options</h3>
+            <p class="text-lg mb-4">After configuring WSL, select one of the following methods to install GWeasy.</p>
+
+            <!-- Pre-Configured WSL (Recommended) -->
+            <div class="installation-card" id="pre-configured-wsl">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Pre-Configured WSL (Recommended)</h4>
+                <ol class="list-decimal list-inside space-y-2 text-sm">
+                    <li>
+                        <strong>Download WSL Image:</strong> Obtain the pre-configured Ubuntu-based GWeasy WSL image: <a href="https://zenodo.org/records/placeholder/files/GWeasywsl.tar?download=1" class="download-btn inline-block" download>Download GWeasywsl.tar</a>.
+                    </li>
+                    <li>
+                        <strong>Download Batch File:</strong> Acquire the WSL import script: <a href="https://github.com/shantanu-parmar/GWeasy/raw/main/installwsl.bat" class="download-btn inline-block" download>Download installwsl.bat</a>.
+                    </li>
+                    <li>
+                        <strong>Execute Batch File:</strong> Double-click <code class="bg-[#2A1B3D] px-2 py-1 rounded">installwsl.bat</code> and specify an installation path (default: <code class="bg-[#2A1B3D] px-2 py-1 rounded">C:\Users\%USERNAME%\GWeasywsl</code>).
+                    </li>
+                    <li>
+                        <strong>Launch GWeasy:</strong> Run <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl -d GWeasyWSL ./GWeasy</code> in PowerShell.
+                    </li>
+                    <li>
+                        <strong>Retrieve WSL Username:</strong> In WSL, run <code class="bg-[#2A1B3D] px-2 py-1 rounded">wsl -d GWeasyWSL</code>, then <code class="bg-[#2A1B3D] px-2 py-1 rounded">whoami</code> to obtain your username for OMICRON configuration.
+                    </li>
+                </ol>
+                <div class="mt-3" id="custom-wsl-setup">
+                    <h5 class="text-sm font-semibold text-[#FFC107]">Custom WSL Setup</h5>
+                    <p class="text-sm">For users with an existing WSL installation or those preferring manual configuration, install dependencies as outlined in <a href="https://github.com/shantanu-parmar/GWeasy/blob/main/WSLREADME.md" class="text-[#FF5733] hover:underline" target="_blank">WSLREADME.md</a>. Clone the repository: <code class="bg-[#2A1B3D] px-2 py-1 rounded">git clone https://github.com/shantanu-parmar/GWeasy.git</code>. Multiple WSL distributions are supported.</p>
                 </div>
             </div>
 
@@ -95,23 +138,51 @@
             <div class="installation-card">
                 <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Standalone EXE</h4>
                 <ol class="list-decimal list-inside space-y-2 text-sm">
-                    <li><strong>Fetch Conda Copy:</strong> Download the Conda environment from <a href="https://zenodo.org/records/placeholder" class="text-[#FF5733] hover:underline" target="_blank">Zenodo</a>.</li>
-                    <li><strong>Setup Conda on Your PC:</strong> Install Miniconda from <a href="https://docs.conda.io/en/latest/miniconda.html" class="text-[#FF5733] hover:underline" target="_blank">official site</a>.</li>
-                    <li><strong>Fetch Installer and Run:</strong> Download the installer script from GitHub Releases and run it to set up the environment.</li>
-                    <li><strong>Standalone EXE Ready:</strong> Fetch the built EXE from Releases, double-click to run.</li>
+                    <li>
+                        <strong>Verify WSL Configuration:</strong> Complete the <a href="#mandatory-wsl-setup" class="text-[#FF5733] hover:underline">Mandatory WSL Setup</a> to enable the required environment.
+                    </li>
+                    <li>
+                        <strong>Download EXE:</strong> Obtain the pre-built GWeasy executable: <a href="https://zenodo.org/records/placeholder/files/GWeasy.exe?download=1" class="download-btn inline-block" download>Download GWeasy.exe</a>.
+                    </li>
+                    <li>
+                        <strong>Run EXE:</strong> Double-click <code class="bg-[#2A1B3D] px-2 py-1 rounded">GWeasy.exe</code> to launch GWeasy.
+                    </li>
                 </ol>
-                <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_standalone.png" alt="GWeasy Standalone EXE Setup" class="w-full max-w-md mt-4 rounded shadow">
             </div>
 
-            <!-- Zip Based Run -->
+            <!-- Zip-Based Run -->
             <div class="installation-card">
-                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Zip-Based Run with Built EXE</h4>
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Zip-Based Run</h4>
                 <ol class="list-decimal list-inside space-y-2 text-sm">
-                    <li><strong>Download Zip:</strong> Get the pre-built zip from <a href="https://github.com/shantanu-parmar/GWeasy/releases" class="text-[#FF5733] hover:underline" target="_blank">GitHub Releases</a>.</li>
-                    <li><strong>Extract and Run:</strong> Unzip the file and double-click the EXE to launch GWeasy.</li>
-                    <li><strong>Python Script Option:</strong> For custom runs, use <code class="bg-[#2A1B3D] px-2 py-1 rounded">python main.py</code> after installing dependencies.</li>
+                    <li>
+                        <strong>Verify WSL Configuration:</strong> Complete the <a href="#mandatory-wsl-setup" class="text-[#FF5733] hover:underline">Mandatory WSL Setup</a> to enable the required environment.
+                    </li>
+                    <li>
+                        <strong>Download Zip:</strong> Obtain the precompiled GWeasy zip: <a href="https://github.com/shantanu-parmar/GWeasy/releases/download/v1.0.0/GWeasy.zip" class="download-btn inline-block" download>Download GWeasy.zip</a>.
+                    </li>
+                    <li>
+                        <strong>Extract and Run:</strong> Extract the zip file and double-click <code class="bg-[#2A1B3D] px-2 py-1 rounded">GWeasy.exe</code> to launch GWeasy.
+                    </li>
                 </ol>
-                <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_zip.png" alt="GWeasy Zip-Based Installation" class="w-full max-w-md mt-4 rounded shadow">
+            </div>
+
+            <!-- Python Installation -->
+            <div class="installation-card">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Python Installation via pip</h4>
+                <ol class="list-decimal list-inside space-y-2 text-sm">
+                    <li>
+                        <strong>Verify WSL Configuration:</strong> Complete the <a href="#mandatory-wsl-setup" class="text-[#FF5733] hover:underline">Mandatory WSL Setup</a> to enable the required environment.
+                    </li>
+                    <li>
+                        <strong>Install Python:</strong> Install Python 3.8+ from <a href="https://www.python.org/downloads/" class="text-[#FF5733] hover:underline" target="_blank">python.org</a> and ensure it is accessible in WSL.
+                    </li>
+                    <li>
+                        <strong>Install GWeasy:</strong> In a WSL terminal, run: <code class="bg-[#2A1B3D] px-2 py-1 rounded">pip install gweasy</code>. For manual dependency configuration, refer to <a href="https://github.com/shantanu-parmar/GWeasy/blob/main/WSLREADME.md" class="text-[#FF5733] hover:underline" target="_blank">WSLREADME.md</a>.
+                    </li>
+                    <li>
+                        <strong>Run GWeasy:</strong> Launch GWeasy with <code class="bg-[#2A1B3D] px-2 py-1 rounded">python -m gweasy</code> in WSL.
+                    </li>
+                </ol>
             </div>
         </section>
 
@@ -135,7 +206,6 @@
                     <p class="text-sm">Clone the repo and run with Python dependencies.</p>
                 </div>
             </div>
-            <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_linux.png" alt="GWeasy Linux Installation Preview" class="w-full max-w-md mt-4 rounded shadow">
         </section>
 
         <div class="section-divider mb-8 wave-pattern h-3"></div>
@@ -144,7 +214,6 @@
         <section class="mb-8 fade-in coming-soon">
             <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Web/Server Mounted (Coming Soon)</h3>
             <p class="text-lg mb-4">Run GWeasy on a server or access via web browser for collaborative analysis. More details coming soon.</p>
-            <img src="https://github.com/shantanu-parmar/GWeasy/raw/main/images/placeholder_install_web.png" alt="GWeasy Web/Server Installation Concept" class="w-full max-w-md mt-4 rounded shadow">
         </section>
     </div>
 
@@ -154,7 +223,7 @@
             <p class="text-center">© 2025 GWeasy. All rights reserved.</p>
             <p class="text-center">Unveiling the Universe with Einstein’s Vision!</p>
             <div class="text-center mt-4">
-                <p class="text-sm">We value your feedback! Submit issues or suggestions on our <a href="https://github.com/shantanu-parmar/GWeasy/issues" class="text-[#FFC107] hover:underline">GitHub Issues</a> page or contact us at <a href="mailto:shantanu.parmar@example.com" class="text-[#FFC107] hover:underline">shantanu.parmar@example.com</a>.</p>
+                <p class="text-sm">We value your feedback! Submit issues or suggestions on our <a href="https://github.com/shantanu-parmar/GWeasy/issues" class="text-[#FFC107] hover:underline">GitHub Issues</a> page or contact us at <a href="mailto:gweasysoftware@gmail.com" class="text-[#FFC107] hover:underline">gweasysoftware@gmail.com</a>.</p>
             </div>
         </div>
     </footer>
