@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -85,6 +46,13 @@
             margin-bottom: 1.5rem;
             font-size: 1.25rem;
         }
+        .installation-card {
+            background-color: #1A1A3D;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -101,9 +69,6 @@
                     <a href="installation.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Installation Instructions">Installation</a>
                     <a href="usage.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Usage Guide">Usage</a>
                     <a href="features.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Features">Features</a>
-                    <!-- <a href="timeline.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Development Timeline">Timeline</a>
-                    <a href="contributing.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Contribute to GWeasy">Contributing</a>
-                    <a href="license.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy License Information">License</a> -->
                     <a href="about.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="About Shantanusinh Parmar">About</a>
                     <a href="https://shantanu-parmar.github.io/GWeasy/docs/html/dd/d9c/namespace_g_weasy.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Documentation">Documentation</a>
                     <a href="https://github.com/shantanu-parmar/GWeasy" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy GitHub Repository">GitHub</a>
@@ -124,28 +89,54 @@
                 With a background in software development and a fascination with the cosmos, Shantanu crafted GWeasy to streamline LIGO data fetching, OMICRON pipeline execution, and visualization. As an advocate for open-source collaboration, he encourages contributions to enhance GWeasy’s impact in the scientific community.
             </p>
             <p class="text-lg mb-4">
-                Connect with Shantanu via <a href="mailto:shantanu.parmar@example.com" class="text-[#FF5733] hover:underline">email</a> or explore the <a href="https://github.com/shantanu-parmar/GWeasy" class="text-[#FF5733] hover:underline">GitHub repository</a> to join the journey of unveiling the universe’s secrets.
+                Connect with Shantanu via <a href="mailto:shantanu.c.parmar@gmail.com" class="text-[#FF5733] hover:underline">email</a> or explore their <a href="https://github.com/shantanu-parmar/" class="text-[#FF5733] hover:underline">GitHub repository</a> to join the journey of unveiling the universe’s secrets.
             </p>
             <img src="https://raw.githubusercontent.com/Shantanu-Parmar/Shantanu-Parmar.github.io/40aea1f99403b0d2843fa8dd870010667ce891cc/profile.jpg" alt="Shantanusinh Parmar Profile Picture" class="w-full max-w-md mb-4 rounded shadow">
         </section>
         <div class="section-divider mb-12 wave-pattern h-4"></div>
         <section class="mb-12 fade-in">
-            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Acknowledgments</h3>
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Special Thanks</h3>
+            Without these folks, their mentoring and their unwavering support, this wouldn't have been possible. 
             <div class="credits-scroll">
                 <div class="credits-content">
                     <p class="font-semibold text-[#FFC107]">Dr. Marco Cavaglia</p>
-                    <p>For invaluable mentorship and guidance in gravitational wave research.</p>
+                    <p>For invaluable mentorship and guidance in gravitational wave research and feature identification</p>
                     <p class="font-semibold text-[#FFC107]">Dr. Kai Staats</p>
-                    <p>For supporting the vision of accessible GW analysis tools.</p>
+                    <p>For supporting the vision of accessible GW analysis tools and development analysis</p>
                     <p class="font-semibold text-[#FFC107]">Dr. Florent Robinet</p>
                     <p>For expertise in OMICRON pipeline integration.</p>
                     <p class="font-semibold text-[#FFC107]">Dr. Jonah Kanner</p>
-                    <p>For contributions to LIGO data accessibility.</p>
+                    <p>For help with LIGO data accessibility and queries.</p>
+                    <p class="font-semibold text-[#FFC107]">Mr. Federico Romeo</p>
+                    <p>For support in testing the software's features iteratively.</p>
                     <p class="font-semibold text-[#FFC107]">LIGO Scientific Collaboration</p>
                     <p>For pioneering gravitational wave detection and open data initiatives.</p>
-                    <p class="font-semibold text-[#FFC107]">Open-Source Community</p>
-                    <p>For feedback, contributions, and collaboration on GWeasy.</p>
                 </div>
+            </div>
+        </section>
+        <div class="section-divider mb-12 wave-pattern h-4"></div>
+        <section class="mb-12 fade-in">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Citations and Acknowledgments</h3>
+            <div class="installation-card">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Data Usage and Citation</h4>
+                <p class="text-sm mb-4">
+                    Data from this website are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" class="text-[#FF5733] hover:underline" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+                </p>
+                <p class="text-sm mb-4">
+                    If your work uses LIGO resources suing this software, please cite one of the following references:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-sm mb-4">
+                    <li>The LIGO Scientific Collaboration, the Virgo Collaboration, the KAGRA Collaboration, "Open Data from LIGO, Virgo, and KAGRA through the First Part of the Fourth Observing Run", <a href="https://inspirehep.net/literature/2508.18079" class="text-[#FF5733] hover:underline" target="_blank">arXiv:2508.18079</a> -- INSPIRE</li>
+                    <li>R. Abbott et al. (LIGO Scientific Collaboration, Virgo Collaboration and KAGRA Collaboration), "Open data from the third observing run of LIGO, Virgo, KAGRA and GEO", <a href="https://inspirehep.net/literature/267.29" class="text-[#FF5733] hover:underline" target="_blank">ApJS 267 29 (2023)</a> -- INSPIRE</li>
+                    <li>R. Abbott et al. (LIGO Scientific Collaboration and Virgo Collaboration), "Open data from the first and second observing runs of Advanced LIGO and Advanced Virgo", <a href="https://inspirehep.net/literature/100658" class="text-[#FF5733] hover:underline" target="_blank">SoftwareX 13 (2021) 100658</a> -- INSPIRE</li>
+                </ul>
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Acknowledgment</h4>
+                <p class="text-sm mb-4">
+                    This research has made use of data or software obtained from the Gravitational Wave Open Science Center (gwosc.org), a service of the LIGO Scientific Collaboration, the Virgo Collaboration, and KAGRA. This material is based upon work supported by NSF's LIGO Laboratory which is a major facility fully funded by the National Science Foundation, as well as the Science and Technology Facilities Council (STFC) of the United Kingdom, the Max-Planck-Society (MPS), and the State of Niedersachsen/Germany for support of the construction of Advanced LIGO and construction and operation of the GEO600 detector. Additional support for Advanced LIGO was provided by the Australian Research Council. Virgo is funded, through the European Gravitational Observatory (EGO), by the French Centre National de Recherche Scientifique (CNRS), the Italian Istituto Nazionale di Fisica Nucleare (INFN) and the Dutch Nikhef, with contributions by institutions from Belgium, Germany, Greece, Hungary, Ireland, Japan, Monaco, Poland, Portugal, Spain. KAGRA is supported by Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan Society for the Promotion of Science (JSPS) in Japan; National Research Foundation (NRF) and Ministry of Science and ICT (MSIT) in Korea; Academia Sinica (AS) and National Science and Technology Council (NSTC) in Taiwan.
+                </p>
+                <p class="text-sm">
+                    The LIGO Laboratory is supported by the National Science Foundation and operated jointly by Caltech and MIT. Any opinions, findings, and conclusions or recommendations expressed in this material do not necessarily reflect the views of the National Science Foundation.
+                </p>
             </div>
         </section>
     </div>
@@ -154,13 +145,53 @@
     <footer class="bg-gradient-to-r from-[#00C4B4] to-[#FF5733] text-white py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p class="text-center">© 2025 GWeasy. All rights reserved.</p>
-            <p class="text-center">Unveiling the Universe with Einstein’s Vision!</p>
+            <p class="text-center text-sm">Gravitational Wave analysis made Easy</p>
             <div class="text-center mt-4">
                 <p class="text-sm">We value your feedback! Submit issues or suggestions on our <a href="https://github.com/shantanu-parmar/GWeasy/issues" class="text-[#FFC107] hover:underline">GitHub Issues</a> page or contact us at <a href="mailto:gweasysoftware@gmail.com" class="text-[#FFC107] hover:underline">gweasysoftware@gmail.com</a>.</p>
             </div>
         </div>
     </footer>
 
+    <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+    </script>
     <script>
         // Fade-in animation on scroll
         const observer = new IntersectionObserver((entries) => {
