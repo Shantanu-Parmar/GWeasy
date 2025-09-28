@@ -1,75 +1,72 @@
-GWeasy
-GWeasy is a user-friendly, GUI-based software for fetching, analyzing, and visualizing gravitational wave (GW) data from LIGO and other observatories. It simplifies the setup and execution of GW analysis pipelines like OMICRON, making gravitational wave science accessible to researchers with minimal technical setup.
+# GWeasy
 
-Overview
+**GWeasy** is a user-friendly, GUI-based software for **fetching, analyzing, and visualizing gravitational wave (GW) data** from LIGO and other observatories. It simplifies the setup and execution of GW analysis pipelines like OMICRON, making gravitational wave science accessible to researchers with minimal technical setup.
+
+[![YouTube Demo](https://github.com/user-attachments/assets/d6054686-f59f-4ba9-a407-a137eaca1222)](https://www.youtube.com/watch?v=WbjKwl0-VA0)
+
+## Overview
+
 GWeasy integrates tools for:
+- **Data Fetching**: Retrieve GW data from LIGO databases (Gravfetch tab).
+- **Analysis**: Run OMICRON and other pipelines with configurable settings.
+- **Visualization**: Display results graphically.
+- **Ease of Use**: One-click installation and intuitive GUI for Windows and Linux.
 
-Data Fetching: Retrieve GW data from LIGO databases (Gravfetch tab).
-Analysis: Run OMICRON and other pipelines with configurable settings.
-Visualization: Display results graphically.
-Ease of Use: One-click installation and intuitive GUI for Windows and Linux.
+For detailed documentation and usage instructions, visit: [https://shantanu-parmar.github.io/GWeasy/](https://shantanu-parmar.github.io/GWeasy/)
 
-For detailed documentation and usage instructions, visit: https://shantanu-parmar.github.io/GWeasy/
-Features
+## Features
 
-Multi-Platform Support: Windows, Linux (Beta), MacOS (Planned).
-Minimal Setup: Pre-built executables for Windows (via WSL) and Linux, or script-based setup.
-User-Friendly GUI: Select channels, time segments, and configure pipelines easily.
-Pipeline Integration: Supports OMICRON with plans for additional pipelines (e.g., cWB).
-Visualization Tools: Built-in plotting for GW data analysis.
+- **Multi-Platform Support**: Windows, Linux (Beta), MacOS (Planned).
+- **Minimal Setup**: Pre-built executables for Windows (via WSL) and Linux, or script-based setup.
+- **User-Friendly GUI**: Select channels, time segments, and configure pipelines easily.
+- **Pipeline Integration**: Supports OMICRON with plans for additional pipelines (e.g., cWB).
+- **Visualization Tools**: Built-in plotting for GW data analysis.
 
-Installation
-Option 1: Pre-Built Executables
+## Installation
 
-Windows:
-Download Omeasy.exe and install.bat from the Releases page.
-Download GWeasywsl.tar from Google Drive.
-Place install.bat and GWeasywsl.tar in the same directory.
-Double-click install.bat to set up WSL and OMICRON.
-Run Omeasy.exe for OMICRON analysis.
+### Option 1: Pre-Built Executables
+- **Windows**:
+  1. Download `Omeasy.exe` and `install.bat` from the [Releases](https://github.com/shantanu-parmar/GWeasy/releases) page.
+  2. Download `GWeasywsl.tar` from [Google Drive](https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link).
+  3. Place `install.bat` and `GWeasywsl.tar` in the same directory.
+  4. Double-click `install.bat` to set up WSL and OMICRON.
+  5. Run `Omeasy.exe` for OMICRON analysis.
+- **Linux**:
+  1. Download `GWeasy` from the [Releases](https://github.com/shantanu-parmar/GWeasy/releases) page.
+  2. Make executable: `chmod +x GWeasy`
+  3. Run: `./GWeasy`
 
+### Option 2: Script-Based Setup
+For running `gweasy.py` directly or building from source:
 
-Linux:
-Download GWeasy from the Releases page.
-Make executable: chmod +x GWeasy
-Run: ./GWeasy
+1. **Install Miniconda**:
+   - Download Miniconda for Python 3.9 from [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html).
 
+2. **Create Environment**:
+   - Place `environment.yml` and `requirements.txt` (below) in the same directory as `gweasy.py`.
+   - Run:
+     ```bash
+     conda env create -f environment.yml
+     conda activate GWeasy
+     pip install -r requirements.txt
+     ```
 
+3. **Run GWeasy**:
+   ```bash
+   python gweasy.py
+   ```
 
-Option 2: Script-Based Setup
-For running gweasy.py directly or building from source:
+4. **Optional: Build Executable**:
+   - Install PyInstaller (included in `requirements.txt`).
+   - Use the provided `GWeasy.spec` (if available) or generate one:
+     ```bash
+     pyinstaller --name GWeasy gweasy.py
+     ```
+   - Build: `pyinstaller GWeasy.spec`
+   - Run: `.\dist\GWeasy\GWeasy.exe` (Windows) or `./dist/GWeasy/GWeasy` (Linux).
 
-Install Miniconda:
-
-Download Miniconda for Python 3.9 from https://docs.conda.io/en/latest/miniconda.html.
-
-
-Create Environment:
-
-Place environment.yml and requirements.txt (below) in the same directory as gweasy.py.
-Run:conda env create -f environment.yml
-conda activate GWeasy
-pip install -r requirements.txt
-
-
-
-
-Run GWeasy:
-python gweasy.py
-
-
-Optional: Build Executable:
-
-Install PyInstaller (included in requirements.txt).
-Use the provided GWeasy.spec (if available) or generate one:pyinstaller --name GWeasy gweasy.py
-
-
-Build: pyinstaller GWeasy.spec
-Run: .\dist\GWeasy\GWeasy.exe (Windows) or ./dist/GWeasy/GWeasy (Linux).
-
-
-
-environment.yml
+#### environment.yml
+```yaml
 name: GWeasy
 channels:
   - conda-forge
@@ -84,50 +81,51 @@ dependencies:
   - scipy
   - matplotlib
   - h5py
+```
 
-requirements.txt
+#### requirements.txt
+```text
 pandas
 gwpy
 PyQt5==5.15.9
 requests-pelican
 dateparser
 pyinstaller
+```
 
-Usage
+## Usage
 
-Gravfetch Tab:
+1. **Gravfetch Tab**:
+   - Select `test.csv` for time segments and `4KCHANS.csv` for channels.
+   - Set output directory (default: `gwfout`).
+   - Click "Download Data" to fetch `.gwf` files.
+   - Expect 5-7 minutes per channel/segment.
 
-Select test.csv for time segments and 4KCHANS.csv for channels.
-Set output directory (default: gwfout).
-Click "Download Data" to fetch .gwf files.
-Expect 5-7 minutes per channel/segment.
+2. **Omicron Tab**:
+   - Select a channel from `gwfout` or enter manually.
+   - Choose the corresponding `.ffl` file from `gwfout`.
+   - Configure settings (e.g., sampling rate, frequency range).
+   - Click "Save Config" to generate a config file.
+   - Click "Start Omicron" to run analysis.
 
+For detailed steps and screenshots, refer to: [https://shantanu-parmar.github.io/GWeasy/](https://shantanu-parmar.github.io/GWeasy/)
 
-Omicron Tab:
+## Contributing
 
-Select a channel from gwfout or enter manually.
-Choose the corresponding .ffl file from gwfout.
-Configure settings (e.g., sampling rate, frequency range).
-Click "Save Config" to generate a config file.
-Click "Start Omicron" to run analysis.
+1. Fork the repository: `git clone https://github.com/shantanu-parmar/GWeasy.git`
+2. Create a branch: `git checkout -b feature-branch`
+3. Make changes and commit: `git commit -m "Add feature"`
+4. Push and create a pull request: `git push origin feature-branch`
+5. Report issues on the [GitHub Issues](https://github.com/shantanu-parmar/GWeasy/issues) page.
 
+## License
 
+This project is licensed under the **MIT License**.
 
-For detailed steps and screenshots, refer to: https://shantanu-parmar.github.io/GWeasy/
-Contributing
+## Acknowledgments
 
-Fork the repository: git clone https://github.com/shantanu-parmar/GWeasy.git
-Create a branch: git checkout -b feature-branch
-Make changes and commit: git commit -m "Add feature"
-Push and create a pull request: git push origin feature-branch
-Report issues on the GitHub Issues page.
+- **Lead Developer**: Shantanusinh Parmar
+- **Mentors**: Dr. Kai Staats, Dr. Marco Cavaglia, Dr. Florent Robinet, Dr. Jonah Kanner
+- **Thanks**: LIGO team and GW astrophysics community
 
-License
-This project is licensed under the MIT License.
-Acknowledgments
-
-Lead Developer: Shantanusinh Parmar
-Mentors: Dr. Kai Staats, Dr. Marco Cavaglia, Dr. Florent Robinet, Dr. Jonah Kanner
-Thanks: LIGO team and GW astrophysics community
-
-Join the GWeasy Project – Simplifying Gravitational Wave Analysis for All!
+**Join the GWeasy Project – Simplifying Gravitational Wave Analysis for All!**
