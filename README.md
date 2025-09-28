@@ -26,11 +26,14 @@ For detailed documentation and usage instructions, visit: [https://shantanu-parm
 
 ### Option 1: Pre-Built Executables
 - **Windows**:
-  1. Download `Omeasy.exe` and `install.bat` from the [Releases](https://github.com/shantanu-parmar/GWeasy/releases) page.
-  2. Download `GWeasywsl.tar` from [Google Drive](https://drive.google.com/file/d/1TTU7GewMfHIUteGl6ND3cLCCKAQ677kt/view?usp=drive_link).
-  3. Place `install.bat` and `GWeasywsl.tar` in the same directory.
-  4. Double-click `install.bat` to set up WSL and OMICRON.
-  5. Run `Omeasy.exe` for OMICRON analysis.
+  1. Download `Omeasy.exe`from the Gweasy website [GWeasy](https://shantanu-parmar.github.io/GWeasy/installation.html).
+  2. Enjoy.....
+  If you want to run Omicron also, follow steps 3 onwards
+  3. Download `GWeasywsl.tar` and 'install.bat' from Gweasy website [GWeasy](https://shantanu-parmar.github.io/GWeasy/installation.html).
+  4. Place `install.bat` and `GWeasywsl.tar` in a same directory.
+  5. Double-click `install.bat` to set up WSL and OMICRON.
+  6. Run `Omeasy.exe` for OMICRON analysis.
+
 - **Linux**:
   1. Download `GWeasy` from the [Releases](https://github.com/shantanu-parmar/GWeasy/releases) page.
   2. Make executable: `chmod +x GWeasy`
@@ -40,10 +43,10 @@ For detailed documentation and usage instructions, visit: [https://shantanu-parm
 For running `gweasy.py` directly or building from source:
 
 1. **Install Miniconda**:
-   - Download Miniconda for Python 3.9 from [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html).
+   - Download Miniconda from [https://docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html).
 
 2. **Create Environment**:
-   - Place `environment.yml` and `requirements.txt` (below) in the same directory as `gweasy.py`.
+   - Place `environment.yml` and `requirements.txt` (below) in the same directory as `gweasy.py` from this repository (you dont need to get any other files).
    - Run:
      ```bash
      conda env create -f environment.yml
@@ -56,55 +59,39 @@ For running `gweasy.py` directly or building from source:
    python gweasy.py
    ```
 
-4. **Optional: Build Executable**:
-   - Install PyInstaller (included in `requirements.txt`).
-   - Use the provided `GWeasy.spec` (if available) or generate one:
-     ```bash
-     pyinstaller --name GWeasy gweasy.py
-     ```
-   - Build: `pyinstaller GWeasy.spec`
-   - Run: `.\dist\GWeasy\GWeasy.exe` (Windows) or `./dist/GWeasy/GWeasy` (Linux).
-
 #### environment.yml
-```yaml
+```yml
 name: GWeasy
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9
+  - python=3.10
   - python-nds2-client
   - python-framel
-  - lalframe
-  - lalsuite
-  - numpy
-  - scipy
-  - matplotlib
-  - h5py
 ```
 
 #### requirements.txt
 ```text
 pandas
 gwpy
-PyQt5==5.15.9
+PyQt5
 requests-pelican
-dateparser
 pyinstaller
 ```
 
 ## Usage
 
 1. **Gravfetch Tab**:
-   - Select `test.csv` for time segments and `4KCHANS.csv` for channels.
+   - Select `test.csv` for time segments and `4KCHANS.csv` for channels from this repository /tests.
    - Set output directory (default: `gwfout`).
    - Click "Download Data" to fetch `.gwf` files.
    - Expect 5-7 minutes per channel/segment.
 
 2. **Omicron Tab**:
    - Select a channel from `gwfout` or enter manually.
-   - Choose the corresponding `.ffl` file from `gwfout`.
-   - Configure settings (e.g., sampling rate, frequency range).
+   - Click on Custom segs and choose all time segments you would like. 
+   - Configure parameters (e.g., sampling rate, frequency range).
    - Click "Save Config" to generate a config file.
    - Click "Start Omicron" to run analysis.
 
@@ -125,7 +112,8 @@ This project is licensed under the **MIT License**.
 ## Acknowledgments
 
 - **Lead Developer**: Shantanusinh Parmar
-- **Mentors**: Dr. Kai Staats, Dr. Marco Cavaglia, Dr. Florent Robinet, Dr. Jonah Kanner
+- **Mentors**: Dr. Marco Cavaglia, Dr. Florent Robinet, Dr. Jonah Kanner, Mr. Kai Staats, 
+- **Testing**: Mr. Federico Romeo
 - **Thanks**: LIGO team and GW astrophysics community
 
 **Join the GWeasy Project – Simplifying Gravitational Wave Analysis for All!**
