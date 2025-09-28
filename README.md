@@ -83,7 +83,7 @@ pyinstaller
 ## Usage
 
 1. **Gravfetch Tab**:
-   - Select `test.csv` for time segments and `4KCHANS.csv` for channels from this repository /tests.
+   - Select `test-times.csv` for time segments and `test-chans.csv` for channels from this repository /tests.
    - Set output directory (default: `gwfout`).
    - Click "Download Data" to fetch `.gwf` files.
    - Expect 5-7 minutes per channel/segment.
