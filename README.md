@@ -27,11 +27,11 @@ For detailed documentation and usage instructions, visit: [https://shantanu-parm
 ### Option 1: Pre-Built Executables
 - **Windows**:
   1. Download `Omeasy.exe`from the Gweasy website [GWeasy](https://shantanu-parmar.github.io/GWeasy/installation.html).
-  That's it.....   If you want to run Omicron also, follow steps 3 onwards
-  3. Download `GWeasywsl.tar` and 'install.bat' from Gweasy website [GWeasy](https://shantanu-parmar.github.io/GWeasy/installation.html).
-  4. Place `install.bat` and `GWeasywsl.tar` in a same directory.
-  5. Double-click `install.bat` to set up WSL and OMICRON.
-  6. Run `Omeasy.exe` for OMICRON analysis.
+  ->That's it.....   If you want to run Omicron also, follow steps 2 onwards
+  2. Download `GWeasywsl.tar` and 'install.bat' from Gweasy website [GWeasy](https://shantanu-parmar.github.io/GWeasy/installation.html).
+  3. Place `install.bat` and `GWeasywsl.tar` in a same directory.
+  4. Double-click `install.bat` to set up WSL and OMICRON.
+  5. Run `Omeasy.exe` for OMICRON analysis.
 
 - **Linux**:
   1. Download `GWeasy` from the [Releases](https://github.com/shantanu-parmar/GWeasy/releases) page.
