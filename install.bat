@@ -40,12 +40,12 @@ call pip install -r requirements.txt
 :: Step 3: Install Miniconda in WSL if not installed
 wsl bash -c "[ ! -d \$HOME/miniconda ] && echo 'Installing Miniconda in WSL...' && wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && bash ~/miniconda.sh -b -p \$HOME/miniconda && rm ~/miniconda.sh || echo 'Miniconda is already installed in WSL.'"
 ::wsl sudo apt-get install libc6-dev :: for error's in omicron viz tab
-wsl bash -c "COND=\$(command -v conda); if [ -x \"\$COND\" ]; then echo '✅ Found Conda at: '\$COND; else COND=\$HOME/miniconda/bin/conda; echo '⚠️ Using fallback Conda at: '\$COND; fi; [ -x \"\$COND\" ] && \$COND list | grep -q omicron || \$COND install -c conda-forge omicron -y"
+wsl bash -c "COND=\$(command -v conda); if [ -x \"\$COND\" ]; then echo 'Found Conda at: '\$COND; else COND=\$HOME/miniconda/bin/conda; echo 'Using fallback Conda at: '\$COND; fi; [ -x \"\$COND\" ] && \$COND list | grep -q omicron || \$COND install -c conda-forge omicron -y"
 
 :: ==== RUN FINAL SCRIPT ====
 call conda activate GWeasy
 python GWeasy.py
 
 echo.
-echo ✅ All done!
+echo All done!
 exit
