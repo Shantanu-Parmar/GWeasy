@@ -60,6 +60,7 @@ For running `gweasy.py` directly or building from source:
    ```
 
 #### environment.yml
+For windows
 ```yml
 name: GWeasy
 channels:
@@ -69,6 +70,18 @@ dependencies:
   - python=3.10
   - python-nds2-client
   - python-framel
+```
+
+For Linux/Mac
+```yml
+name: GWeasy
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - python-nds2-client
+  - lalframe
 ```
 
 #### requirements.txt
