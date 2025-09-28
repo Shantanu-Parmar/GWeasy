@@ -77,7 +77,6 @@ pandas
 gwpy
 PyQt5
 requests-pelican
-pyinstaller
 ```
 
 ## Usage
