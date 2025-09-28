@@ -2855,7 +2855,33 @@ def run_cli(args):
             logging.error(f"Unexpected error: {e}")
             print(f"{COLORS['red']}Unexpected error: {e}{COLORS['reset']}")
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description="GWeasy CLI")
+#     parser.add_argument("--cli", action="store_true", help="Run in CLI mode")
+#     parser.add_argument("--tab", choices=["gravfetch", "omicron", "omiviz"], help="Specify tab to run")
+#     parser.add_argument("--time_csv", help="Path to time CSV file")
+#     parser.add_argument("--channel", help="Channel to fetch")
+#     parser.add_argument("--output_dir", help="Output directory")
+#     parser.add_argument("--segments", help="Comma-separated list of segments (e.g., start1_end1,start2_end2)")
+#     parser.add_argument("--ffl_file", help="Path to .ffl file for Omicron")
+#     args = parser.parse_args()
+
+#     if args.cli:
+#         if args.tab:
+#             run_cli(args)
+#         else:
+#             run_cli_interactive()
+#     else:
+#         app = QApplication(sys.argv)
+#         splash = SplashScreen(lambda: MainWindow().show())
+#         splash.show()
+#         sys.exit(app.exec_())
+# def main():
+#     app = GravfetchApp()  # Replace with your main GUI class
+#     app.run()  # Replace with the method to start the GUI
+
+
+def main():
     parser = argparse.ArgumentParser(description="GWeasy CLI")
     parser.add_argument("--cli", action="store_true", help="Run in CLI mode")
     parser.add_argument("--tab", choices=["gravfetch", "omicron", "omiviz"], help="Specify tab to run")
@@ -2877,21 +2903,10 @@ if __name__ == "__main__":
         splash.show()
         sys.exit(app.exec_())
 
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    main()
 
 """
-
 ******    **       **  *******     **      ******   **     **  
 **        **       **  **         ****    **    **  **     **  
 **        **       **  **        **  **   **         **   **    
@@ -2899,5 +2914,4 @@ if __name__ == "__main__":
 **  ****  **  * *  **  **       ********        **     ***   
 **    **  ** *   * **  **       **    **  **    **     ***    
 ********  ***     ***  *******  **    **   ******      ***  
-
 """
