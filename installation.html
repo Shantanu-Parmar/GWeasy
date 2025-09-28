@@ -116,6 +116,12 @@
                         <strong>Download WSL Image:</strong> Obtain the pre-configured Ubuntu-based GWeasy WSL image: <a href="https://zenodo.org/records/placeholder/files/GWeasywsl.tar?download=1" class="download-btn inline-block" download>Download GWeasywsl.tar</a>.
                     </li>
                     <li>
+                        <strong>Download Conda Environment:</strong> Obtain the preconfigured Conda environment: <a href="https://zenodo.org/records/17214184/files/GWeasy_conda_env.tar.gz?download=1" class="download-btn inline-block" download>Download GWeasy_conda_env.tar.gz</a>.
+                    </li>
+                    <li>
+                        <strong>Import Conda Environment:</strong> Extract the Conda environment with <code class="bg-[#2A1B3D] px-2 py-1 rounded">tar -xzf GWeasy_conda_env.tar.gz</code> and import it using <code class="bg-[#2A1B3D] px-2 py-1 rounded">conda env create -f GWeasy_conda_env.yml</code> in the WSL terminal.
+                    </li>
+                    <li>
                         <strong>Download Batch File:</strong> Acquire the WSL import script: <a href="https://github.com/shantanu-parmar/GWeasy/raw/main/installwsl.bat" class="download-btn inline-block" download>Download installwsl.bat</a>.
                     </li>
                     <li>
@@ -135,19 +141,9 @@
             </div>
 
             <!-- Standalone EXE -->
-            <div class="installation-card">
-                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Standalone EXE</h4>
-                <ol class="list-decimal list-inside space-y-2 text-sm">
-                    <li>
-                        <strong>Verify WSL Configuration:</strong> Complete the <a href="#mandatory-wsl-setup" class="text-[#FF5733] hover:underline">Mandatory WSL Setup</a> to enable the required environment.
-                    </li>
-                    <li>
-                        <strong>Download EXE:</strong> Obtain the pre-built GWeasy executable: <a href="https://zenodo.org/records/placeholder/files/GWeasy.exe?download=1" class="download-btn inline-block" download>Download GWeasy.exe</a>.
-                    </li>
-                    <li>
-                        <strong>Run EXE:</strong> Double-click <code class="bg-[#2A1B3D] px-2 py-1 rounded">GWeasy.exe</code> to launch GWeasy.
-                    </li>
-                </ol>
+            <div class="installation-card coming-soon">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Standalone EXE (Coming Soon)</h4>
+                <p class="text-sm">The standalone executable for GWeasy on Windows will be available soon.</p>
             </div>
 
             <!-- Zip-Based Run -->
@@ -167,42 +163,29 @@
             </div>
 
             <!-- Python Installation -->
-            <div class="installation-card">
-                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Python Installation via pip</h4>
-                <ol class="list-decimal list-inside space-y-2 text-sm">
-                    <li>
-                        <strong>Verify WSL Configuration:</strong> Complete the <a href="#mandatory-wsl-setup" class="text-[#FF5733] hover:underline">Mandatory WSL Setup</a> to enable the required environment.
-                    </li>
-                    <li>
-                        <strong>Install Python:</strong> Install Python 3.8+ from <a href="https://www.python.org/downloads/" class="text-[#FF5733] hover:underline" target="_blank">python.org</a> and ensure it is accessible in WSL.
-                    </li>
-                    <li>
-                        <strong>Install GWeasy:</strong> In a WSL terminal, run: <code class="bg-[#2A1B3D] px-2 py-1 rounded">pip install gweasy</code>. For manual dependency configuration, refer to <a href="https://github.com/shantanu-parmar/GWeasy/blob/main/WSLREADME.md" class="text-[#FF5733] hover:underline" target="_blank">WSLREADME.md</a>.
-                    </li>
-                    <li>
-                        <strong>Run GWeasy:</strong> Launch GWeasy with <code class="bg-[#2A1B3D] px-2 py-1 rounded">python -m gweasy</code> in WSL.
-                    </li>
-                </ol>
+            <div class="installation-card coming-soon">
+                <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Python Installation via pip (Coming Soon)</h4>
+                <p class="text-sm">Python-based installation via pip for GWeasy on Windows will be available soon.</p>
             </div>
         </section>
 
         <div class="section-divider mb-8 wave-pattern h-3"></div>
 
-        <!-- Linux Section -->
-        <section class="mb-8 fade-in coming-soon">
-            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Linux Installation (Coming Soon)</h3>
-            <p class="text-lg mb-4">GWeasy on Linux will offer seamless integration. Stay tuned for updates!</p>
+        <!-- Linux Installation -->
+        <section class="mb-8 fade-in">
+            <h3 class="text-2xl font-semibold mb-4 text-[#FF5733]">Linux Installation</h3>
+            <p class="text-lg mb-4">GWeasy on Linux offers seamless integration through the following methods.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="installation-card">
-                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Snapcraft Image</h4>
+                <div class="installation-card coming-soon">
+                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Snapcraft Image (Coming Soon)</h4>
                     <p class="text-sm">Install via Snapcraft for easy distribution and updates.</p>
                 </div>
                 <div class="installation-card">
                     <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Executable via chmod</h4>
-                    <p class="text-sm">Download the binary and run with <code class="bg-[#2A1B3D] px-2 py-1 rounded">chmod +x GWeasy && ./GWeasy</code>.</p>
+                    <p class="text-sm">Download the binary and run with <code class="bg-[#2A1B3D] px-2 py-1 rounded">chmod +x GWeasy && ./GWeasy</code>: <a href="https://zenodo.org/records/placeholder/files/GWeasy?download=1" class="download-btn inline-block" download>Download GWeasy</a>.</p>
                 </div>
-                <div class="installation-card">
-                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Python-Based</h4>
+                <div class="installation-card coming-soon">
+                    <h4 class="text-xl font-semibold mb-3 text-[#FFC107]">Python-Based (Coming Soon)</h4>
                     <p class="text-sm">Clone the repo and run with Python dependencies.</p>
                 </div>
             </div>
