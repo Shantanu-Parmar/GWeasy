@@ -129,7 +129,7 @@
         <div class="spacetime-grid"></div>
         <div class="text-center fade-in z-10 relative w-full">
             <div class="flex justify-end px-4 sm:px-6 lg:px-8 mb-4">
-                <button id="mute-toggle" class="download-btn" aria-label="Pause black holes sound">Hear Black Holes</button>
+                <button id="mute-toggle" class="download-btn" aria-label="Pause black holes sound">Hear Gravitational Waves</button>
             </div>
             <audio id="intro-sound" preload="auto" volume="0.3">
                 <source src="https://raw.githubusercontent.com/Shantanu-Parmar/GWeasy/1ab06b64faeac087aa283983a30b4813ffcf3a18/intro.mp3" type="audio/mpeg">
@@ -298,7 +298,7 @@
         } else {
             audio.pause();
             console.log('Intro sound paused');
-            muteToggle.textContent = 'Mute Black Holes';
+            muteToggle.textContent = 'Mute GWs';
             muteToggle.setAttribute('aria-label', 'Play black holes sound');
         }
     });
