@@ -129,15 +129,15 @@
         <div class="spacetime-grid"></div>
         <div class="text-center fade-in z-10 relative w-full">
             <div class="flex justify-end px-4 sm:px-6 lg:px-8 mb-4">
-                <button id="mute-toggle" class="download-btn" aria-label="Mute intro sound">Mute Sound</button>
+                <button id="mute-toggle" class="download-btn" aria-label="Pause black holes sound">Hear Black Holes</button>
             </div>
-            <audio id="intro-sound" volume="0.3">
+            <audio id="intro-sound" preload="auto" volume="0.3">
                 <source src="https://raw.githubusercontent.com/Shantanu-Parmar/GWeasy/1ab06b64faeac087aa283983a30b4813ffcf3a18/intro.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
             <h2 class="text-4xl font-bold mb-3">GWeasy: Surfing Spacetime’s Waves</h2>
             <p class="text-lg mb-4">A vibrant GUI for fetching, analyzing, and visualizing LIGO gravitational wave data, inspired by Einstein’s General Relativity.</p>
-            <a href="installation.html" class="bg-[#FFC107] text-[#0D0D2B] font-semibold py-2 px-4 rounded pulse" aria-label="Get Started with GWeasy">Get Started</a>
+            <a href="installation.html" id="get-started" class="bg-[#FFC107] text-[#0D0D2B] font-semibold py-2 px-4 rounded pulse" aria-label="Get Started with GWeasy">Get Started</a>
         </div>
     </section>
 
@@ -249,25 +249,55 @@
     </footer>
 
     <script>
-        // Play intro sound only on first page load in session
+        // Play intro sound on first page load in session or on Get Started click
         document.addEventListener('DOMContentLoaded', () => {
             const audio = document.getElementById('intro-sound');
             const hasPlayed = sessionStorage.getItem('hasPlayedIntro');
             if (!hasPlayed) {
-                audio.play().catch(error => {
-                    console.error('Error playing intro sound:', error);
+                audio.play().then(() => {
+                    console.log('Intro sound played successfully');
+                    sessionStorage.setItem('hasPlayedIntro', 'true');
+                }).catch(error => {
+                    console.error('Error playing intro sound on load:', error);
                 });
-                sessionStorage.setItem('hasPlayedIntro', 'true');
+            } else {
+                console.log('Intro sound already played in this session');
             }
         });
 
-        // Mute/Unmute toggle
+        // Play sound on Get Started click if not played
+        const getStartedButton = document.getElementById('get-started');
+        getStartedButton.addEventListener('click', () => {
+            const audio = document.getElementById('intro-sound');
+            const hasPlayed = sessionStorage.getItem('hasPlayedIntro');
+            if (!hasPlayed) {
+                audio.play().then(() => {
+                    console.log('Intro sound played on Get Started click');
+                    sessionStorage.setItem('hasPlayedIntro', 'true');
+                }).catch(error => {
+                    console.error('Error playing intro sound on click:', error);
+                });
+            }
+        });
+
+        // Play/Pause toggle
         const muteToggle = document.getElementById('mute-toggle');
         const audio = document.getElementById('intro-sound');
         muteToggle.addEventListener('click', () => {
-            audio.muted = !audio.muted;
-            muteToggle.textContent = audio.muted ? 'Unmute Sound' : 'Mute Sound';
-            muteToggle.setAttribute('aria-label', audio.muted ? 'Unmute intro sound' : 'Mute intro sound');
+            if (audio.paused) {
+                audio.play().then(() => {
+                    console.log('Intro sound resumed');
+                }).catch(error => {
+                    console.error('Error resuming intro sound:', error);
+                });
+                muteToggle.textContent = 'Hear Black Holes';
+                muteToggle.setAttribute('aria-label', 'Pause black holes sound');
+            } else {
+                audio.pause();
+                console.log('Intro sound paused');
+                muteToggle.textContent = 'Mute Black Holes';
+                muteToggle.setAttribute('aria-label', 'Play black holes sound');
+            }
         });
 
         // Fade-in animation on scroll
