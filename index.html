@@ -18,7 +18,7 @@
             background-position: center;
             position: relative;
             overflow: hidden;
-            height: 80vh; /* Reduced height for compactness */
+            height: 80vh;
         }
         .spacetime-grid {
             position: absolute;
@@ -35,7 +35,7 @@
         }
         .section-divider {
             background: linear-gradient(90deg, #00C4B4, #FFC107, #FF5733);
-            height: 3px; /* Thinner divider for compactness */
+            height: 3px;
         }
         .pulse {
             animation: pulse 2s infinite;
@@ -72,7 +72,7 @@
             100% { transform: translateY(-100%); }
         }
         .notice-board:hover .notice-content {
-            animation-play-state: paused; /* Pause on hover for manual scrolling */
+            animation-play-state: paused;
         }
         .video-notice-container {
             display: flex;
@@ -83,11 +83,22 @@
         .video-container {
             flex: 1;
             min-width: 300px;
-            max-width: 500px; /* Reduced video width */
+            max-width: 500px;
         }
         .notice-container {
             flex: 1;
             min-width: 300px;
+        }
+        .download-btn {
+            background-color: #FFC107;
+            color: #0D0D2B;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #FF5733;
         }
     </style>
 </head>
@@ -105,8 +116,6 @@
                     <a href="installation.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Installation Instructions">Installation</a>
                     <a href="usage.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Usage Guide">Usage</a>
                     <a href="features.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy Features">Features</a>
-                    <!-- <a href="contributing.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Contribute to GWeasy">Contributing</a> -->
-                    <!-- <a href="license.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy License Information">License</a> -->
                     <a href="about.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="About Shantanusinh Parmar">About</a>
                     <a href="https://shantanu-parmar.github.io/GWeasy/docs/html/dd/d9c/namespace_g_weasy.html" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="Documentation">Documentation</a>
                     <a href="https://github.com/shantanu-parmar/GWeasy" class="hover:bg-[#FFC107] hover:text-[#0D0D2B] px-3 py-2 rounded-md transition" aria-label="GWeasy GitHub Repository">GitHub</a>
@@ -118,7 +127,14 @@
     <!-- Hero Section -->
     <section class="hero-bg flex items-center justify-center text-white pt-16 pb-8 relative">
         <div class="spacetime-grid"></div>
-        <div class="text-center fade-in z-10">
+        <div class="text-center fade-in z-10 relative w-full">
+            <div class="flex justify-end px-4 sm:px-6 lg:px-8 mb-4">
+                <button id="mute-toggle" class="download-btn" aria-label="Mute intro sound">Mute Sound</button>
+            </div>
+            <audio id="intro-sound" volume="0.3">
+                <source src="https://raw.githubusercontent.com/Shantanu-Parmar/GWeasy/1ab06b64faeac087aa283983a30b4813ffcf3a18/intro.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <h2 class="text-4xl font-bold mb-3">GWeasy: Surfing Spacetime’s Waves</h2>
             <p class="text-lg mb-4">A vibrant GUI for fetching, analyzing, and visualizing LIGO gravitational wave data, inspired by Einstein’s General Relativity.</p>
             <a href="installation.html" class="bg-[#FFC107] text-[#0D0D2B] font-semibold py-2 px-4 rounded pulse" aria-label="Get Started with GWeasy">Get Started</a>
@@ -165,29 +181,24 @@
             <div class="video-notice-container">
                 <div class="video-container">
                     <h3 class="text-xl font-semibold mb-2 text-[#FF5733]">Watch GWeasy in Action</h3>
-
                     <div class="relative w-full pb-[56.25%] h-0 overflow-hidden rounded-lg">
                         <iframe
-                        class="absolute top-0 left-0 w-full h-full rounded-lg"
-                        src="https://www.youtube.com/embed/WbjKwl0-VA0"
-                        title="GWeasy Demo Video"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                            class="absolute top-0 left-0 w-full h-full rounded-lg"
+                            src="https://www.youtube.com/embed/WbjKwl0-VA0"
+                            title="GWeasy Demo Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
                         </iframe>
                     </div>
-
                     <p class="text-sm mt-2">
                         See how GWeasy simplifies gravitational wave analysis with its no-code interface.
                     </p>
-                    </div>
-
-
+                </div>
                 <div class="notice-container">
                     <h3 class="text-xl font-semibold mb-2 text-[#FF5733]">Notice Board & Recent Activity</h3>
                     <div class="notice-board">
                         <div class="notice-content" id="notice-content">
-                            <!-- Static updates -->
                             <div class="mb-4">
                                 <h4 class="text-lg font-semibold text-[#FFC107]">GWeasy Windows Release</h4>
                                 <p class="text-sm text-gray-400">April 2025</p>
@@ -198,7 +209,6 @@
                                 <p class="text-sm text-gray-400">March 2025</p>
                                 <p class="text-sm">The Linux version of GWeasy is in beta, offering zero-setup execution. See the <a href="installation.html" class="text-[#FF5733] hover:underline">Installation</a> guide for details.</p>
                             </div>
-                            <!-- GitHub commits will be appended here -->
                         </div>
                     </div>
                 </div>
@@ -239,6 +249,27 @@
     </footer>
 
     <script>
+        // Play intro sound only on first page load in session
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('intro-sound');
+            const hasPlayed = sessionStorage.getItem('hasPlayedIntro');
+            if (!hasPlayed) {
+                audio.play().catch(error => {
+                    console.error('Error playing intro sound:', error);
+                });
+                sessionStorage.setItem('hasPlayedIntro', 'true');
+            }
+        });
+
+        // Mute/Unmute toggle
+        const muteToggle = document.getElementById('mute-toggle');
+        const audio = document.getElementById('intro-sound');
+        muteToggle.addEventListener('click', () => {
+            audio.muted = !audio.muted;
+            muteToggle.textContent = audio.muted ? 'Unmute Sound' : 'Mute Sound';
+            muteToggle.setAttribute('aria-label', audio.muted ? 'Unmute intro sound' : 'Mute intro sound');
+        });
+
         // Fade-in animation on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
