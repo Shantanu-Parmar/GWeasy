@@ -249,16 +249,30 @@
     </footer>
 
 <script>
-    // Play intro sound on page load
     document.addEventListener('DOMContentLoaded', () => {
         const audio = document.getElementById('intro-sound');
         audio.play().then(() => {
-            console.log('Intro sound played successfully');
+            console.log('Intro sound played successfully on load');
         }).catch(error => {
             console.error('Error playing intro sound on load:', error);
         });
     });
-
+    
+    // Play sound on first page click
+    let hasPlayedOnClick = false;
+    document.addEventListener('click', function playOnFirstClick() {
+        if (!hasPlayedOnClick) {
+            const audio = document.getElementById('intro-sound');
+            audio.play().then(() => {
+                console.log('Intro sound played on first page click');
+                hasPlayedOnClick = true;
+                document.removeEventListener('click', playOnFirstClick);
+            }).catch(error => {
+                console.error('Error playing intro sound on first click:', error);
+            });
+        }
+    });
+    
     // Play sound on Get Started click
     const getStartedButton = document.getElementById('get-started');
     getStartedButton.addEventListener('click', () => {
@@ -269,7 +283,6 @@
             console.error('Error playing intro sound on click:', error);
         });
     });
-
     // Play/Pause toggle
     const muteToggle = document.getElementById('mute-toggle');
     const audio = document.getElementById('intro-sound');
